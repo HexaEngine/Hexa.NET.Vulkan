@@ -1,0 +1,24 @@
+{
+  "Namespace": "Hexa.NET.Vulkan",
+  "ApiName": "Vulkan",
+  "LibName": "Vulkan",
+  "UseCustomContext": true,
+  "EnableExperimentalOptions": true,
+  "GenerateConstructorsForStructs": true,
+  "GeneratePlaceholderComments": false,
+  "GenerateFunctions": false,
+  "GenerateConstants": false,
+  "GenerateExtensions": false,
+  "GenerateDelegates": false,
+  "GenerateTypes": false,
+  "GenerateHandles": false,
+  "GenerateMetadata": false,
+  "ImportType": "FunctionTable",
+  "ConstantNamingConvention": "Unknown",
+  "TypeMappings": {
+    "API Constants": "APIConstants",
+    "VkSampleMask": "uint"
+  },
+  "IgnoredTypes": [],
+  "Usings": [ "System.Numerics" ]
+}
