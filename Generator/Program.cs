@@ -39,6 +39,11 @@ namespace Generator
             GenerateApi(registry, config, "../../../../Hexa.NET.Vulkan/Generated");
 
             GenerateExtension(registry, config, "VK_KHR", "generator.khr.json", "../../../../Hexa.NET.Vulkan.KHR/Generated", []);
+
+            foreach (var vendor in GatherVendorTags(registry))
+            {
+                GenerateVendorExtension(registry, config, vendor, $"../../../../Hexa.NET.Vulkan.{vendor}/Generated", []);
+            }
         }
 
         private static void GenerateApi(VkRegistry registry, CsCodeGeneratorConfig config, string outputDir)
@@ -447,6 +452,44 @@ namespace Generator
             CsCodeGeneratorConfig config = CsCodeGeneratorConfig.Load(configPath);
             config.Merge(baseConfig, HexaGen.MergeOptions.All);
 
+            GenerateExtensionCore(registry, config, name, outputPath, enumToGroup);
+        }
+
+        // vk.xml extension names are "VK_<VENDOR>_...", and every vendor tag (EXT, NV, AMD, ...)
+        // follows the exact same structure as KHR, just with its own namespace/output folder and
+        // no hand-maintained config file, since there is nothing vendor-specific to configure.
+        private static void GenerateVendorExtension(VkRegistry registry, CsCodeGeneratorConfig baseConfig, string vendor, string outputPath, Dictionary<string, string> enumToGroup)
+        {
+            CsCodeGeneratorConfig config = CsCodeGeneratorConfig.Load($"generator.{vendor.ToLowerInvariant()}.json");
+            config.Namespace = $"Hexa.NET.Vulkan.{vendor}";
+            config.ApiName = $"Extension{vendor}";
+            config.LibName = "Vulkan";
+            config.UseCustomContext = true;
+            config.Merge(baseConfig, HexaGen.MergeOptions.All);
+
+            GenerateExtensionCore(registry, config, $"VK_{vendor}", outputPath, enumToGroup);
+        }
+
+        private static IEnumerable<string> GatherVendorTags(VkRegistry registry)
+        {
+            HashSet<string> seen = [];
+            foreach (var extension in registry.Extensions.Extension)
+            {
+                int firstUnderscore = extension.Name.IndexOf('_', "VK_".Length);
+                if (firstUnderscore == -1) continue;
+
+                string vendor = extension.Name["VK_".Length..firstUnderscore];
+                if (vendor == "KHR" || vendor == "RESERVED") continue;
+
+                if (seen.Add(vendor))
+                {
+                    yield return vendor;
+                }
+            }
+        }
+
+        private static void GenerateExtensionCore(VkRegistry registry, CsCodeGeneratorConfig config, string name, string outputPath, Dictionary<string, string> enumToGroup)
+        {
             string structsFolder = Path.Combine(outputPath, "Structs");
             if (Directory.Exists(structsFolder))
             {

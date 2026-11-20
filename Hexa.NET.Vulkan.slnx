@@ -1,0 +1,27 @@
+<Solution>
+  <Project Path="Example/Example.csproj" />
+  <Project Path="Generator/Generator.csproj" />
+  <Project Path="Hexa.NET.Vulkan.AMD/Hexa.NET.Vulkan.AMD.csproj" />
+  <Project Path="Hexa.NET.Vulkan.AMDX/Hexa.NET.Vulkan.AMDX.csproj" />
+  <Project Path="Hexa.NET.Vulkan.ANDROID/Hexa.NET.Vulkan.ANDROID.csproj" />
+  <Project Path="Hexa.NET.Vulkan.ARM/Hexa.NET.Vulkan.ARM.csproj" />
+  <Project Path="Hexa.NET.Vulkan.EXT/Hexa.NET.Vulkan.EXT.csproj" />
+  <Project Path="Hexa.NET.Vulkan.FUCHSIA/Hexa.NET.Vulkan.FUCHSIA.csproj" />
+  <Project Path="Hexa.NET.Vulkan.GGP/Hexa.NET.Vulkan.GGP.csproj" />
+  <Project Path="Hexa.NET.Vulkan.GOOGLE/Hexa.NET.Vulkan.GOOGLE.csproj" />
+  <Project Path="Hexa.NET.Vulkan.HUAWEI/Hexa.NET.Vulkan.HUAWEI.csproj" />
+  <Project Path="Hexa.NET.Vulkan.IMG/Hexa.NET.Vulkan.IMG.csproj" />
+  <Project Path="Hexa.NET.Vulkan.INTEL/Hexa.NET.Vulkan.INTEL.csproj" />
+  <Project Path="Hexa.NET.Vulkan.KHR/Hexa.NET.Vulkan.KHR.csproj" />
+  <Project Path="Hexa.NET.Vulkan.LUNARG/Hexa.NET.Vulkan.LUNARG.csproj" />
+  <Project Path="Hexa.NET.Vulkan.MESA/Hexa.NET.Vulkan.MESA.csproj" />
+  <Project Path="Hexa.NET.Vulkan.MSFT/Hexa.NET.Vulkan.MSFT.csproj" />
+  <Project Path="Hexa.NET.Vulkan.NN/Hexa.NET.Vulkan.NN.csproj" />
+  <Project Path="Hexa.NET.Vulkan.NV/Hexa.NET.Vulkan.NV.csproj" />
+  <Project Path="Hexa.NET.Vulkan.NVX/Hexa.NET.Vulkan.NVX.csproj" />
+  <Project Path="Hexa.NET.Vulkan.QCOM/Hexa.NET.Vulkan.QCOM.csproj" />
+  <Project Path="Hexa.NET.Vulkan.QNX/Hexa.NET.Vulkan.QNX.csproj" />
+  <Project Path="Hexa.NET.Vulkan.SEC/Hexa.NET.Vulkan.SEC.csproj" />
+  <Project Path="Hexa.NET.Vulkan.VALVE/Hexa.NET.Vulkan.VALVE.csproj" />
+  <Project Path="Hexa.NET.Vulkan/Hexa.NET.Vulkan.csproj" />
+</Solution>

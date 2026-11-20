@@ -899,6 +899,17 @@
         [XmlAttribute(AttributeName = "number")]
         public string? Number { get; set; }
 
+        // Presence of either attribute (even with an empty value, e.g. deprecatedby="") means
+        // the extension is deprecated/obsoleted, regardless of what it names as the replacement.
+        [XmlAttribute(AttributeName = "deprecatedby")]
+        public string? DeprecatedBy { get; set; }
+
+        [XmlAttribute(AttributeName = "obsoletedby")]
+        public string? ObsoletedBy { get; set; }
+
+        [XmlIgnore]
+        public bool IsDeprecated => DeprecatedBy != null || ObsoletedBy != null;
+
         [XmlAttribute(AttributeName = "supported")]
         public string? Supported
         {

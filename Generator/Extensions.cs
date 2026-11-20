@@ -97,6 +97,11 @@
                     continue;
                 }
 
+                if (extension.IsDeprecated)
+                {
+                    continue;
+                }
+
                 if (!extension.Name.StartsWith(featureTarget))
                 {
                     continue;
