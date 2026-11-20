@@ -14,7 +14,6 @@ Hexa.NET.Vulkan is a minimal C# wrapper for the Vulkan library, providing a thin
 
 - **Minimal Wrapper**: Provides a direct, 1:1 mapping to the Vulkan C functions, staying true to the original API
 - **Cross-Platform Compatibility**: Works across all platforms supported by Vulkan, including Windows, Linux, and macOS
-- **Pre-Built Native Libraries**: The package includes pre-built native libraries, so you don't need to worry about installing Vulkan separately
 - **Multi-Target Support**: Compatible with .NET 6, .NET 7, .NET 8, .NET 9, .NET 10, .NET Standard 2.0, and .NET Standard 2.1
 
 ## 📦 Installation

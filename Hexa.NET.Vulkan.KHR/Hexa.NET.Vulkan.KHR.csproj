@@ -16,7 +16,7 @@
 		<PackageId>Hexa.NET.Vulkan.KHR</PackageId>
 		<AssemblyVersion>1.3.0</AssemblyVersion>
 		<PackageVersion>1.2.0</PackageVersion>
-		<Description>A .NET Wrapper for Vulkan (v 1.3.0), generated with the HexaGen code generator. HexaGen allows users to access native libraries easily and with high performance.</Description>
+		<Description>A .NET wrapper for the Vulkan (v 1.3.0) KHR extensions (surfaces, swapchains, ray tracing, video, and more).</Description>
 		<PackageTags>Vulkan Hexa HexaGen Source Generator C# .NET DotNet Sharp Windows macOS Android Bindings Wrapper Native</PackageTags>
 		<Authors>Juna Meinhold</Authors>
 		<Copyright>Copyright (c) 2024 Juna Meinhold</Copyright>
