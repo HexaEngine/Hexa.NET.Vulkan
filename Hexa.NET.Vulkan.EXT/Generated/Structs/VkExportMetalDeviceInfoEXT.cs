@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.EXT
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public MTLDevice_id MtlDevice;
+		public nint MtlDevice;
 	}
 }

@@ -21,7 +21,7 @@ namespace Hexa.NET.Vulkan.QNX
 		public VkStructureType SType;
 		public void* PNext;
 		public uint Flags;
-		public _screen_context* Context;
-		public _screen_window* Window;
+		public nint* Context;
+		public nint* Window;
 	}
 }

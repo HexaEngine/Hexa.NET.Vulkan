@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public zx_handle_t CollectionToken;
+		public uint CollectionToken;
 	}
 }

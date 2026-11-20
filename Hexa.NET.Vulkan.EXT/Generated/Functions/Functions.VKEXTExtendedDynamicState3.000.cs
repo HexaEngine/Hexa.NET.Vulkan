@@ -367,16 +367,16 @@ namespace Hexa.NET.Vulkan.EXT
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal void CmdSetLineRasterizationModeEXTNative(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode)
+		internal void CmdSetLineRasterizationModeEXTNative(VkCommandBuffer commandBuffer, VkLineRasterizationMode lineRasterizationMode)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkLineRasterizationModeEXT, void>)funcTable[18])(commandBuffer, lineRasterizationMode);
+			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkLineRasterizationMode, void>)funcTable[18])(commandBuffer, lineRasterizationMode);
 			#else
-			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkLineRasterizationModeEXT, void>)funcTable[18])(commandBuffer, lineRasterizationMode);
+			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkLineRasterizationMode, void>)funcTable[18])(commandBuffer, lineRasterizationMode);
 			#endif
 		}
 
-		public void CmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode)
+		public void CmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationMode lineRasterizationMode)
 		{
 			CmdSetLineRasterizationModeEXTNative(commandBuffer, lineRasterizationMode);
 		}

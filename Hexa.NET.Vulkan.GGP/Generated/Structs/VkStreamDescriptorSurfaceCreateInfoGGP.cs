@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.GGP
 		public VkStructureType SType;
 		public void* PNext;
 		public uint Flags;
-		public GgpStreamDescriptor StreamDescriptor;
+		public uint StreamDescriptor;
 	}
 }

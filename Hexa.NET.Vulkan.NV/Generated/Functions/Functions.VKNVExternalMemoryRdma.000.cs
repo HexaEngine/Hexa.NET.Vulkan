@@ -17,22 +17,22 @@ namespace Hexa.NET.Vulkan.NV
 	public unsafe partial class VKNVExternalMemoryRdma
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetMemoryRemoteAddressNVNative(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, VkRemoteAddressNV* pAddress)
+		internal VkResult GetMemoryRemoteAddressNVNative(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, nint* pAddress)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetRemoteAddressInfoNV*, VkRemoteAddressNV*, VkResult>)funcTable[0])(device, pMemoryGetRemoteAddressInfo, pAddress);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetRemoteAddressInfoNV*, nint*, VkResult>)funcTable[0])(device, pMemoryGetRemoteAddressInfo, pAddress);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[0])(device, (nint)pMemoryGetRemoteAddressInfo, (nint)pAddress);
 			#endif
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, VkRemoteAddressNV* pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, nint* pAddress)
 		{
 			VkResult ret = GetMemoryRemoteAddressNVNative(device, pMemoryGetRemoteAddressInfo, pAddress);
 			return ret;
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, Span<VkMemoryGetRemoteAddressInfoNV> pMemoryGetRemoteAddressInfo, VkRemoteAddressNV* pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, Span<VkMemoryGetRemoteAddressInfoNV> pMemoryGetRemoteAddressInfo, nint* pAddress)
 		{
 			fixed (VkMemoryGetRemoteAddressInfoNV* ppMemoryGetRemoteAddressInfo0 = pMemoryGetRemoteAddressInfo)
 			{
@@ -41,7 +41,7 @@ namespace Hexa.NET.Vulkan.NV
 			}
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, ref VkMemoryGetRemoteAddressInfoNV pMemoryGetRemoteAddressInfo, VkRemoteAddressNV* pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, ref VkMemoryGetRemoteAddressInfoNV pMemoryGetRemoteAddressInfo, nint* pAddress)
 		{
 			fixed (VkMemoryGetRemoteAddressInfoNV* ppMemoryGetRemoteAddressInfo0 = &pMemoryGetRemoteAddressInfo)
 			{
@@ -50,29 +50,29 @@ namespace Hexa.NET.Vulkan.NV
 			}
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, Span<VkRemoteAddressNV> pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, Span<nint> pAddress)
 		{
-			fixed (VkRemoteAddressNV* ppAddress0 = pAddress)
+			fixed (nint* ppAddress0 = pAddress)
 			{
 				VkResult ret = GetMemoryRemoteAddressNVNative(device, pMemoryGetRemoteAddressInfo, ppAddress0);
 				return ret;
 			}
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, ref VkRemoteAddressNV pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, VkMemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, ref nint pAddress)
 		{
-			fixed (VkRemoteAddressNV* ppAddress0 = &pAddress)
+			fixed (nint* ppAddress0 = &pAddress)
 			{
 				VkResult ret = GetMemoryRemoteAddressNVNative(device, pMemoryGetRemoteAddressInfo, ppAddress0);
 				return ret;
 			}
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, Span<VkMemoryGetRemoteAddressInfoNV> pMemoryGetRemoteAddressInfo, Span<VkRemoteAddressNV> pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, Span<VkMemoryGetRemoteAddressInfoNV> pMemoryGetRemoteAddressInfo, Span<nint> pAddress)
 		{
 			fixed (VkMemoryGetRemoteAddressInfoNV* ppMemoryGetRemoteAddressInfo0 = pMemoryGetRemoteAddressInfo)
 			{
-				fixed (VkRemoteAddressNV* ppAddress1 = pAddress)
+				fixed (nint* ppAddress1 = pAddress)
 				{
 					VkResult ret = GetMemoryRemoteAddressNVNative(device, ppMemoryGetRemoteAddressInfo0, ppAddress1);
 					return ret;
@@ -80,11 +80,11 @@ namespace Hexa.NET.Vulkan.NV
 			}
 		}
 
-		public VkResult GetMemoryRemoteAddressNV(VkDevice device, ref VkMemoryGetRemoteAddressInfoNV pMemoryGetRemoteAddressInfo, ref VkRemoteAddressNV pAddress)
+		public VkResult GetMemoryRemoteAddressNV(VkDevice device, ref VkMemoryGetRemoteAddressInfoNV pMemoryGetRemoteAddressInfo, ref nint pAddress)
 		{
 			fixed (VkMemoryGetRemoteAddressInfoNV* ppMemoryGetRemoteAddressInfo0 = &pMemoryGetRemoteAddressInfo)
 			{
-				fixed (VkRemoteAddressNV* ppAddress1 = &pAddress)
+				fixed (nint* ppAddress1 = &pAddress)
 				{
 					VkResult ret = GetMemoryRemoteAddressNVNative(device, ppMemoryGetRemoteAddressInfo0, ppAddress1);
 					return ret;

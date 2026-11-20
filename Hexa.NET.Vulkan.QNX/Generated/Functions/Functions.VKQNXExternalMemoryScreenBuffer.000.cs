@@ -17,40 +17,40 @@ namespace Hexa.NET.Vulkan.QNX
 	public unsafe partial class VKQNXExternalMemoryScreenBuffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetScreenBufferPropertiesQNXNative(VkDevice device, _screen_buffer* buffer, VkScreenBufferPropertiesQNX* pProperties)
+		internal VkResult GetScreenBufferPropertiesQNXNative(VkDevice device, nint* buffer, VkScreenBufferPropertiesQNX* pProperties)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, _screen_buffer*, VkScreenBufferPropertiesQNX*, VkResult>)funcTable[0])(device, buffer, pProperties);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, nint*, VkScreenBufferPropertiesQNX*, VkResult>)funcTable[0])(device, buffer, pProperties);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[0])(device, (nint)buffer, (nint)pProperties);
 			#endif
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, _screen_buffer* buffer, VkScreenBufferPropertiesQNX* pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, nint* buffer, VkScreenBufferPropertiesQNX* pProperties)
 		{
 			VkResult ret = GetScreenBufferPropertiesQNXNative(device, buffer, pProperties);
 			return ret;
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, Span<_screen_buffer> buffer, VkScreenBufferPropertiesQNX* pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, Span<nint> buffer, VkScreenBufferPropertiesQNX* pProperties)
 		{
-			fixed (_screen_buffer* pbuffer0 = buffer)
+			fixed (nint* pbuffer0 = buffer)
 			{
 				VkResult ret = GetScreenBufferPropertiesQNXNative(device, pbuffer0, pProperties);
 				return ret;
 			}
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, ref _screen_buffer buffer, VkScreenBufferPropertiesQNX* pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, ref nint buffer, VkScreenBufferPropertiesQNX* pProperties)
 		{
-			fixed (_screen_buffer* pbuffer0 = &buffer)
+			fixed (nint* pbuffer0 = &buffer)
 			{
 				VkResult ret = GetScreenBufferPropertiesQNXNative(device, pbuffer0, pProperties);
 				return ret;
 			}
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, _screen_buffer* buffer, Span<VkScreenBufferPropertiesQNX> pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, nint* buffer, Span<VkScreenBufferPropertiesQNX> pProperties)
 		{
 			fixed (VkScreenBufferPropertiesQNX* ppProperties0 = pProperties)
 			{
@@ -59,7 +59,7 @@ namespace Hexa.NET.Vulkan.QNX
 			}
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, _screen_buffer* buffer, ref VkScreenBufferPropertiesQNX pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, nint* buffer, ref VkScreenBufferPropertiesQNX pProperties)
 		{
 			fixed (VkScreenBufferPropertiesQNX* ppProperties0 = &pProperties)
 			{
@@ -68,9 +68,9 @@ namespace Hexa.NET.Vulkan.QNX
 			}
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, Span<_screen_buffer> buffer, Span<VkScreenBufferPropertiesQNX> pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, Span<nint> buffer, Span<VkScreenBufferPropertiesQNX> pProperties)
 		{
-			fixed (_screen_buffer* pbuffer0 = buffer)
+			fixed (nint* pbuffer0 = buffer)
 			{
 				fixed (VkScreenBufferPropertiesQNX* ppProperties1 = pProperties)
 				{
@@ -80,9 +80,9 @@ namespace Hexa.NET.Vulkan.QNX
 			}
 		}
 
-		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, ref _screen_buffer buffer, ref VkScreenBufferPropertiesQNX pProperties)
+		public VkResult GetScreenBufferPropertiesQNX(VkDevice device, ref nint buffer, ref VkScreenBufferPropertiesQNX pProperties)
 		{
-			fixed (_screen_buffer* pbuffer0 = &buffer)
+			fixed (nint* pbuffer0 = &buffer)
 			{
 				fixed (VkScreenBufferPropertiesQNX* ppProperties1 = &pProperties)
 				{

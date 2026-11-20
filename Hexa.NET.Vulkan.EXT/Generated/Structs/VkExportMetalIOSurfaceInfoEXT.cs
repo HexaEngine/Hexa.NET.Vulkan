@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public VkImage Image;
-		public IOSurfaceRef IoSurface;
+		public nint IoSurface;
 	}
 }

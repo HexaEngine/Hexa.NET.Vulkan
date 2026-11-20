@@ -51,22 +51,22 @@ namespace Hexa.NET.Vulkan.EXT
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetRandROutputDisplayEXTNative(VkPhysicalDevice physicalDevice, nint* dpy, RROutput rrOutput, VkDisplayKHR* pDisplay)
+		internal VkResult GetRandROutputDisplayEXTNative(VkPhysicalDevice physicalDevice, nint* dpy, nint rrOutput, VkDisplayKHR* pDisplay)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, nint*, RROutput, VkDisplayKHR*, VkResult>)funcTable[1])(physicalDevice, dpy, rrOutput, pDisplay);
+			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, nint*, nint, VkDisplayKHR*, VkResult>)funcTable[1])(physicalDevice, dpy, rrOutput, pDisplay);
 			#else
-			return (VkResult)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, nint, RROutput, nint, VkResult>)funcTable[1])(physicalDevice, (nint)dpy, rrOutput, (nint)pDisplay);
+			return (VkResult)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, nint, nint, nint, VkResult>)funcTable[1])(physicalDevice, (nint)dpy, rrOutput, (nint)pDisplay);
 			#endif
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, RROutput rrOutput, VkDisplayKHR* pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, nint rrOutput, VkDisplayKHR* pDisplay)
 		{
 			VkResult ret = GetRandROutputDisplayEXTNative(physicalDevice, dpy, rrOutput, pDisplay);
 			return ret;
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, Span<nint> dpy, RROutput rrOutput, VkDisplayKHR* pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, Span<nint> dpy, nint rrOutput, VkDisplayKHR* pDisplay)
 		{
 			fixed (nint* pdpy0 = dpy)
 			{
@@ -75,7 +75,7 @@ namespace Hexa.NET.Vulkan.EXT
 			}
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, ref nint dpy, RROutput rrOutput, VkDisplayKHR* pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, ref nint dpy, nint rrOutput, VkDisplayKHR* pDisplay)
 		{
 			fixed (nint* pdpy0 = &dpy)
 			{
@@ -84,7 +84,7 @@ namespace Hexa.NET.Vulkan.EXT
 			}
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, RROutput rrOutput, Span<VkDisplayKHR> pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, nint rrOutput, Span<VkDisplayKHR> pDisplay)
 		{
 			fixed (VkDisplayKHR* ppDisplay0 = pDisplay)
 			{
@@ -93,7 +93,7 @@ namespace Hexa.NET.Vulkan.EXT
 			}
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, RROutput rrOutput, ref VkDisplayKHR pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, nint* dpy, nint rrOutput, ref VkDisplayKHR pDisplay)
 		{
 			fixed (VkDisplayKHR* ppDisplay0 = &pDisplay)
 			{
@@ -102,7 +102,7 @@ namespace Hexa.NET.Vulkan.EXT
 			}
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, Span<nint> dpy, RROutput rrOutput, Span<VkDisplayKHR> pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, Span<nint> dpy, nint rrOutput, Span<VkDisplayKHR> pDisplay)
 		{
 			fixed (nint* pdpy0 = dpy)
 			{
@@ -114,7 +114,7 @@ namespace Hexa.NET.Vulkan.EXT
 			}
 		}
 
-		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, ref nint dpy, RROutput rrOutput, ref VkDisplayKHR pDisplay)
+		public VkResult GetRandROutputDisplayEXT(VkPhysicalDevice physicalDevice, ref nint dpy, nint rrOutput, ref VkDisplayKHR pDisplay)
 		{
 			fixed (nint* pdpy0 = &dpy)
 			{

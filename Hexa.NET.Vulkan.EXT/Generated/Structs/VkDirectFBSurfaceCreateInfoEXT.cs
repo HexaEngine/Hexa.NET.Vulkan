@@ -21,7 +21,7 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public uint Flags;
-		public IDirectFB* Dfb;
-		public IDirectFBSurface* Surface;
+		public nint* Dfb;
+		public nint* Surface;
 	}
 }

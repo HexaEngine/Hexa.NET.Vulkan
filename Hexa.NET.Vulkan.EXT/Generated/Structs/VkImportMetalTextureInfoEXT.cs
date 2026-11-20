@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public VkImageAspectFlags Plane;
-		public MTLTexture_id MtlTexture;
+		public nint MtlTexture;
 	}
 }

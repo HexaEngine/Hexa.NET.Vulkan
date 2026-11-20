@@ -24,6 +24,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkImageView ImageView;
 		public VkBufferView BufferView;
 		public VkImageAspectFlags Plane;
-		public MTLTexture_id MtlTexture;
+		public nint MtlTexture;
 	}
 }

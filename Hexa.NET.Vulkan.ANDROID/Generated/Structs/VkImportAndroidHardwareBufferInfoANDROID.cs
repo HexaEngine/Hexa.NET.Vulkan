@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.ANDROID
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public AHardwareBuffer* Buffer;
+		public nint* Buffer;
 	}
 }

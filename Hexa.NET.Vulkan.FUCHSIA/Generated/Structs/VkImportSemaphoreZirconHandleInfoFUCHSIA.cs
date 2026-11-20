@@ -23,6 +23,6 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 		public VkSemaphore Semaphore;
 		public VkSemaphoreImportFlags Flags;
 		public VkExternalSemaphoreHandleTypeFlags HandleType;
-		public zx_handle_t ZirconHandle;
+		public uint ZirconHandle;
 	}
 }

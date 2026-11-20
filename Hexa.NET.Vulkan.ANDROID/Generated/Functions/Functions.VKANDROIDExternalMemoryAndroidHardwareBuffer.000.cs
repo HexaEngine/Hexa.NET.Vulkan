@@ -17,40 +17,40 @@ namespace Hexa.NET.Vulkan.ANDROID
 	public unsafe partial class VKANDROIDExternalMemoryAndroidHardwareBuffer
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetAndroidHardwareBufferPropertiesANDROIDNative(VkDevice device, AHardwareBuffer* buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
+		internal VkResult GetAndroidHardwareBufferPropertiesANDROIDNative(VkDevice device, nint* buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, AHardwareBuffer*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)funcTable[0])(device, buffer, pProperties);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, nint*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult>)funcTable[0])(device, buffer, pProperties);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[0])(device, (nint)buffer, (nint)pProperties);
 			#endif
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, AHardwareBuffer* buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, nint* buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
 		{
 			VkResult ret = GetAndroidHardwareBufferPropertiesANDROIDNative(device, buffer, pProperties);
 			return ret;
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, Span<AHardwareBuffer> buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, Span<nint> buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
 		{
-			fixed (AHardwareBuffer* pbuffer0 = buffer)
+			fixed (nint* pbuffer0 = buffer)
 			{
 				VkResult ret = GetAndroidHardwareBufferPropertiesANDROIDNative(device, pbuffer0, pProperties);
 				return ret;
 			}
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, ref AHardwareBuffer buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, ref nint buffer, VkAndroidHardwareBufferPropertiesANDROID* pProperties)
 		{
-			fixed (AHardwareBuffer* pbuffer0 = &buffer)
+			fixed (nint* pbuffer0 = &buffer)
 			{
 				VkResult ret = GetAndroidHardwareBufferPropertiesANDROIDNative(device, pbuffer0, pProperties);
 				return ret;
 			}
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, AHardwareBuffer* buffer, Span<VkAndroidHardwareBufferPropertiesANDROID> pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, nint* buffer, Span<VkAndroidHardwareBufferPropertiesANDROID> pProperties)
 		{
 			fixed (VkAndroidHardwareBufferPropertiesANDROID* ppProperties0 = pProperties)
 			{
@@ -59,7 +59,7 @@ namespace Hexa.NET.Vulkan.ANDROID
 			}
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, AHardwareBuffer* buffer, ref VkAndroidHardwareBufferPropertiesANDROID pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, nint* buffer, ref VkAndroidHardwareBufferPropertiesANDROID pProperties)
 		{
 			fixed (VkAndroidHardwareBufferPropertiesANDROID* ppProperties0 = &pProperties)
 			{
@@ -68,9 +68,9 @@ namespace Hexa.NET.Vulkan.ANDROID
 			}
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, Span<AHardwareBuffer> buffer, Span<VkAndroidHardwareBufferPropertiesANDROID> pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, Span<nint> buffer, Span<VkAndroidHardwareBufferPropertiesANDROID> pProperties)
 		{
-			fixed (AHardwareBuffer* pbuffer0 = buffer)
+			fixed (nint* pbuffer0 = buffer)
 			{
 				fixed (VkAndroidHardwareBufferPropertiesANDROID* ppProperties1 = pProperties)
 				{
@@ -80,9 +80,9 @@ namespace Hexa.NET.Vulkan.ANDROID
 			}
 		}
 
-		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, ref AHardwareBuffer buffer, ref VkAndroidHardwareBufferPropertiesANDROID pProperties)
+		public VkResult GetAndroidHardwareBufferPropertiesANDROID(VkDevice device, ref nint buffer, ref VkAndroidHardwareBufferPropertiesANDROID pProperties)
 		{
-			fixed (AHardwareBuffer* pbuffer0 = &buffer)
+			fixed (nint* pbuffer0 = &buffer)
 			{
 				fixed (VkAndroidHardwareBufferPropertiesANDROID* ppProperties1 = &pProperties)
 				{
@@ -93,22 +93,22 @@ namespace Hexa.NET.Vulkan.ANDROID
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetMemoryAndroidHardwareBufferANDROIDNative(VkDevice device, VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, AHardwareBuffer** pBuffer)
+		internal VkResult GetMemoryAndroidHardwareBufferANDROIDNative(VkDevice device, VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, nint** pBuffer)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, AHardwareBuffer**, VkResult>)funcTable[1])(device, pInfo, pBuffer);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, nint**, VkResult>)funcTable[1])(device, pInfo, pBuffer);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[1])(device, (nint)pInfo, (nint)pBuffer);
 			#endif
 		}
 
-		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, AHardwareBuffer** pBuffer)
+		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, VkMemoryGetAndroidHardwareBufferInfoANDROID* pInfo, nint** pBuffer)
 		{
 			VkResult ret = GetMemoryAndroidHardwareBufferANDROIDNative(device, pInfo, pBuffer);
 			return ret;
 		}
 
-		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, Span<VkMemoryGetAndroidHardwareBufferInfoANDROID> pInfo, AHardwareBuffer** pBuffer)
+		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, Span<VkMemoryGetAndroidHardwareBufferInfoANDROID> pInfo, nint** pBuffer)
 		{
 			fixed (VkMemoryGetAndroidHardwareBufferInfoANDROID* ppInfo0 = pInfo)
 			{
@@ -117,7 +117,7 @@ namespace Hexa.NET.Vulkan.ANDROID
 			}
 		}
 
-		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, ref VkMemoryGetAndroidHardwareBufferInfoANDROID pInfo, AHardwareBuffer** pBuffer)
+		public VkResult GetMemoryAndroidHardwareBufferANDROID(VkDevice device, ref VkMemoryGetAndroidHardwareBufferInfoANDROID pInfo, nint** pBuffer)
 		{
 			fixed (VkMemoryGetAndroidHardwareBufferInfoANDROID* ppInfo0 = &pInfo)
 			{

@@ -17,22 +17,22 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 	public unsafe partial class VKFUCHSIAExternalMemory
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetMemoryZirconHandleFUCHSIANative(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		internal VkResult GetMemoryZirconHandleFUCHSIANative(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)funcTable[0])(device, pGetZirconHandleInfo, pZirconHandle);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, uint*, VkResult>)funcTable[0])(device, pGetZirconHandleInfo, pZirconHandle);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[0])(device, (nint)pGetZirconHandleInfo, (nint)pZirconHandle);
 			#endif
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			VkResult ret = GetMemoryZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, pZirconHandle);
 			return ret;
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, Span<VkMemoryGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, Span<VkMemoryGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			fixed (VkMemoryGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = pGetZirconHandleInfo)
 			{
@@ -41,7 +41,7 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, ref VkMemoryGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, ref VkMemoryGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			fixed (VkMemoryGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = &pGetZirconHandleInfo)
 			{
@@ -50,29 +50,29 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, Span<zx_handle_t> pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, Span<uint> pZirconHandle)
 		{
-			fixed (zx_handle_t* ppZirconHandle0 = pZirconHandle)
+			fixed (uint* ppZirconHandle0 = pZirconHandle)
 			{
 				VkResult ret = GetMemoryZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, ppZirconHandle0);
 				return ret;
 			}
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, ref zx_handle_t pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, VkMemoryGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, ref uint pZirconHandle)
 		{
-			fixed (zx_handle_t* ppZirconHandle0 = &pZirconHandle)
+			fixed (uint* ppZirconHandle0 = &pZirconHandle)
 			{
 				VkResult ret = GetMemoryZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, ppZirconHandle0);
 				return ret;
 			}
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, Span<VkMemoryGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, Span<zx_handle_t> pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, Span<VkMemoryGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, Span<uint> pZirconHandle)
 		{
 			fixed (VkMemoryGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = pGetZirconHandleInfo)
 			{
-				fixed (zx_handle_t* ppZirconHandle1 = pZirconHandle)
+				fixed (uint* ppZirconHandle1 = pZirconHandle)
 				{
 					VkResult ret = GetMemoryZirconHandleFUCHSIANative(device, ppGetZirconHandleInfo0, ppZirconHandle1);
 					return ret;
@@ -80,11 +80,11 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, ref VkMemoryGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, ref zx_handle_t pZirconHandle)
+		public VkResult GetMemoryZirconHandleFUCHSIA(VkDevice device, ref VkMemoryGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, ref uint pZirconHandle)
 		{
 			fixed (VkMemoryGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = &pGetZirconHandleInfo)
 			{
-				fixed (zx_handle_t* ppZirconHandle1 = &pZirconHandle)
+				fixed (uint* ppZirconHandle1 = &pZirconHandle)
 				{
 					VkResult ret = GetMemoryZirconHandleFUCHSIANative(device, ppGetZirconHandleInfo0, ppZirconHandle1);
 					return ret;
@@ -93,22 +93,22 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetMemoryZirconHandlePropertiesFUCHSIANative(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, zx_handle_t zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties)
+		internal VkResult GetMemoryZirconHandlePropertiesFUCHSIANative(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, uint zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, VkExternalMemoryHandleTypeFlags, zx_handle_t, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>)funcTable[1])(device, handleType, zirconHandle, pMemoryZirconHandleProperties);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, VkExternalMemoryHandleTypeFlags, uint, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult>)funcTable[1])(device, handleType, zirconHandle, pMemoryZirconHandleProperties);
 			#else
-			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, VkExternalMemoryHandleTypeFlags, zx_handle_t, nint, VkResult>)funcTable[1])(device, handleType, zirconHandle, (nint)pMemoryZirconHandleProperties);
+			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, VkExternalMemoryHandleTypeFlags, uint, nint, VkResult>)funcTable[1])(device, handleType, zirconHandle, (nint)pMemoryZirconHandleProperties);
 			#endif
 		}
 
-		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, zx_handle_t zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties)
+		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, uint zirconHandle, VkMemoryZirconHandlePropertiesFUCHSIA* pMemoryZirconHandleProperties)
 		{
 			VkResult ret = GetMemoryZirconHandlePropertiesFUCHSIANative(device, handleType, zirconHandle, pMemoryZirconHandleProperties);
 			return ret;
 		}
 
-		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, zx_handle_t zirconHandle, Span<VkMemoryZirconHandlePropertiesFUCHSIA> pMemoryZirconHandleProperties)
+		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, uint zirconHandle, Span<VkMemoryZirconHandlePropertiesFUCHSIA> pMemoryZirconHandleProperties)
 		{
 			fixed (VkMemoryZirconHandlePropertiesFUCHSIA* ppMemoryZirconHandleProperties0 = pMemoryZirconHandleProperties)
 			{
@@ -117,7 +117,7 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, zx_handle_t zirconHandle, ref VkMemoryZirconHandlePropertiesFUCHSIA pMemoryZirconHandleProperties)
+		public VkResult GetMemoryZirconHandlePropertiesFUCHSIA(VkDevice device, VkExternalMemoryHandleTypeFlags handleType, uint zirconHandle, ref VkMemoryZirconHandlePropertiesFUCHSIA pMemoryZirconHandleProperties)
 		{
 			fixed (VkMemoryZirconHandlePropertiesFUCHSIA* ppMemoryZirconHandleProperties0 = &pMemoryZirconHandleProperties)
 			{

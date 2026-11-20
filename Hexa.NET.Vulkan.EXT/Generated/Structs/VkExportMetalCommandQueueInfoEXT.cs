@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public VkQueue Queue;
-		public MTLCommandQueue_id MtlCommandQueue;
+		public nint MtlCommandQueue;
 	}
 }

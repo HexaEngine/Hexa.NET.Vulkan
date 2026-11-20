@@ -22,6 +22,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public void* PNext;
 		public VkSemaphore Semaphore;
 		public VkEvent Event;
-		public MTLSharedEvent_id MtlSharedEvent;
+		public nint MtlSharedEvent;
 	}
 }

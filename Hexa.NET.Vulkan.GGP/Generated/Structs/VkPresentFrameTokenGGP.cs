@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.GGP
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public GgpFrameToken FrameToken;
+		public ulong FrameToken;
 	}
 }

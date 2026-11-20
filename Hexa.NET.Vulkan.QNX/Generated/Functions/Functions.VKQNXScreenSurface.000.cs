@@ -189,33 +189,33 @@ namespace Hexa.NET.Vulkan.QNX
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkBool32 GetPhysicalDeviceScreenPresentationSupportQNXNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, _screen_window* window)
+		internal VkBool32 GetPhysicalDeviceScreenPresentationSupportQNXNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* window)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, _screen_window*, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, window);
+			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, window);
 			#else
 			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)window);
 			#endif
 		}
 
-		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, _screen_window* window)
+		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* window)
 		{
 			VkBool32 ret = GetPhysicalDeviceScreenPresentationSupportQNXNative(physicalDevice, queueFamilyIndex, window);
 			return ret;
 		}
 
-		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<_screen_window> window)
+		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> window)
 		{
-			fixed (_screen_window* pwindow0 = window)
+			fixed (nint* pwindow0 = window)
 			{
 				VkBool32 ret = GetPhysicalDeviceScreenPresentationSupportQNXNative(physicalDevice, queueFamilyIndex, pwindow0);
 				return ret;
 			}
 		}
 
-		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref _screen_window window)
+		public VkBool32 GetPhysicalDeviceScreenPresentationSupportQNX(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint window)
 		{
-			fixed (_screen_window* pwindow0 = &window)
+			fixed (nint* pwindow0 = &window)
 			{
 				VkBool32 ret = GetPhysicalDeviceScreenPresentationSupportQNXNative(physicalDevice, queueFamilyIndex, pwindow0);
 				return ret;

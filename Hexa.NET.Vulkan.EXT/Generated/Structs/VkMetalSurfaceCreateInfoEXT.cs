@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public uint Flags;
-		public CAMetalLayer* PLayer;
+		public nint* PLayer;
 	}
 }

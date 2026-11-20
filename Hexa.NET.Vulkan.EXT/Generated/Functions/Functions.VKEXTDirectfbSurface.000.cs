@@ -189,33 +189,33 @@ namespace Hexa.NET.Vulkan.EXT
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXTNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, IDirectFB* dfb)
+		internal VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXTNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dfb)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, IDirectFB*, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, dfb);
+			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, dfb);
 			#else
 			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)dfb);
 			#endif
 		}
 
-		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, IDirectFB* dfb)
+		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dfb)
 		{
 			VkBool32 ret = GetPhysicalDeviceDirectFBPresentationSupportEXTNative(physicalDevice, queueFamilyIndex, dfb);
 			return ret;
 		}
 
-		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<IDirectFB> dfb)
+		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> dfb)
 		{
-			fixed (IDirectFB* pdfb0 = dfb)
+			fixed (nint* pdfb0 = dfb)
 			{
 				VkBool32 ret = GetPhysicalDeviceDirectFBPresentationSupportEXTNative(physicalDevice, queueFamilyIndex, pdfb0);
 				return ret;
 			}
 		}
 
-		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref IDirectFB dfb)
+		public VkBool32 GetPhysicalDeviceDirectFBPresentationSupportEXT(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint dfb)
 		{
-			fixed (IDirectFB* pdfb0 = &dfb)
+			fixed (nint* pdfb0 = &dfb)
 			{
 				VkBool32 ret = GetPhysicalDeviceDirectFBPresentationSupportEXTNative(physicalDevice, queueFamilyIndex, pdfb0);
 				return ret;

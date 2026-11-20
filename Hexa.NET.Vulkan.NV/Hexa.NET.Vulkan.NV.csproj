@@ -35,6 +35,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Hexa.NET.Vulkan\Hexa.NET.Vulkan.csproj" />
+		<ProjectReference Include="..\Hexa.NET.Vulkan.KHR\Hexa.NET.Vulkan.KHR.csproj" />
+		<ProjectReference Include="..\Hexa.NET.Vulkan.EXT\Hexa.NET.Vulkan.EXT.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

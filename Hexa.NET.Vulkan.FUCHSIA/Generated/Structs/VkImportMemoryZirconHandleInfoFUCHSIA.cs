@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 		public VkStructureType SType;
 		public void* PNext;
 		public VkExternalMemoryHandleTypeFlags HandleType;
-		public zx_handle_t Handle;
+		public uint Handle;
 	}
 }

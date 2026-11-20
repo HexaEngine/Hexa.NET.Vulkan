@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.EXT
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public MTLBuffer_id MtlBuffer;
+		public nint MtlBuffer;
 	}
 }

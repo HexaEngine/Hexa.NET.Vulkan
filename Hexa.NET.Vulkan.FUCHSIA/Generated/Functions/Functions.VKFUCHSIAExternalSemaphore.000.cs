@@ -17,22 +17,22 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 	public unsafe partial class VKFUCHSIAExternalSemaphore
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult GetSemaphoreZirconHandleFUCHSIANative(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		internal VkResult GetSemaphoreZirconHandleFUCHSIANative(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, zx_handle_t*, VkResult>)funcTable[0])(device, pGetZirconHandleInfo, pZirconHandle);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, uint*, VkResult>)funcTable[0])(device, pGetZirconHandleInfo, pZirconHandle);
 			#else
 			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, nint, nint, VkResult>)funcTable[0])(device, (nint)pGetZirconHandleInfo, (nint)pZirconHandle);
 			#endif
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			VkResult ret = GetSemaphoreZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, pZirconHandle);
 			return ret;
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, Span<VkSemaphoreGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, Span<VkSemaphoreGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			fixed (VkSemaphoreGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = pGetZirconHandleInfo)
 			{
@@ -41,7 +41,7 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, ref VkSemaphoreGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, zx_handle_t* pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, ref VkSemaphoreGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, uint* pZirconHandle)
 		{
 			fixed (VkSemaphoreGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = &pGetZirconHandleInfo)
 			{
@@ -50,29 +50,29 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, Span<zx_handle_t> pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, Span<uint> pZirconHandle)
 		{
-			fixed (zx_handle_t* ppZirconHandle0 = pZirconHandle)
+			fixed (uint* ppZirconHandle0 = pZirconHandle)
 			{
 				VkResult ret = GetSemaphoreZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, ppZirconHandle0);
 				return ret;
 			}
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, ref zx_handle_t pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, VkSemaphoreGetZirconHandleInfoFUCHSIA* pGetZirconHandleInfo, ref uint pZirconHandle)
 		{
-			fixed (zx_handle_t* ppZirconHandle0 = &pZirconHandle)
+			fixed (uint* ppZirconHandle0 = &pZirconHandle)
 			{
 				VkResult ret = GetSemaphoreZirconHandleFUCHSIANative(device, pGetZirconHandleInfo, ppZirconHandle0);
 				return ret;
 			}
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, Span<VkSemaphoreGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, Span<zx_handle_t> pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, Span<VkSemaphoreGetZirconHandleInfoFUCHSIA> pGetZirconHandleInfo, Span<uint> pZirconHandle)
 		{
 			fixed (VkSemaphoreGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = pGetZirconHandleInfo)
 			{
-				fixed (zx_handle_t* ppZirconHandle1 = pZirconHandle)
+				fixed (uint* ppZirconHandle1 = pZirconHandle)
 				{
 					VkResult ret = GetSemaphoreZirconHandleFUCHSIANative(device, ppGetZirconHandleInfo0, ppZirconHandle1);
 					return ret;
@@ -80,11 +80,11 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 			}
 		}
 
-		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, ref VkSemaphoreGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, ref zx_handle_t pZirconHandle)
+		public VkResult GetSemaphoreZirconHandleFUCHSIA(VkDevice device, ref VkSemaphoreGetZirconHandleInfoFUCHSIA pGetZirconHandleInfo, ref uint pZirconHandle)
 		{
 			fixed (VkSemaphoreGetZirconHandleInfoFUCHSIA* ppGetZirconHandleInfo0 = &pGetZirconHandleInfo)
 			{
-				fixed (zx_handle_t* ppZirconHandle1 = &pZirconHandle)
+				fixed (uint* ppZirconHandle1 = &pZirconHandle)
 				{
 					VkResult ret = GetSemaphoreZirconHandleFUCHSIANative(device, ppGetZirconHandleInfo0, ppZirconHandle1);
 					return ret;

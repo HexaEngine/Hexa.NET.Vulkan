@@ -20,6 +20,6 @@ namespace Hexa.NET.Vulkan.QNX
 	{
 		public VkStructureType SType;
 		public void* PNext;
-		public _screen_buffer* Buffer;
+		public nint* Buffer;
 	}
 }

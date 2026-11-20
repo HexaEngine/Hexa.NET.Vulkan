@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.FUCHSIA
 		public VkStructureType SType;
 		public void* PNext;
 		public uint Flags;
-		public zx_handle_t ImagePipeHandle;
+		public uint ImagePipeHandle;
 	}
 }

@@ -21,6 +21,6 @@ namespace Hexa.NET.Vulkan.EXT
 		public VkStructureType SType;
 		public void* PNext;
 		public VkDeviceMemory Memory;
-		public MTLBuffer_id MtlBuffer;
+		public nint MtlBuffer;
 	}
 }
