@@ -17,7 +17,15 @@
   "ConstantNamingConvention": "Unknown",
   "TypeMappings": {
     "API Constants": "APIConstants",
-    "VkSampleMask": "uint"
+    "VkSampleMask": "uint",
+    "ANativeWindow": "nint",
+    "SECURITY_ATTRIBUTES": "nint",
+    "wl_display": "nint",
+    "wl_surface": "nint",
+    "xcb_connection_t": "nint",
+    "xcb_window_t": "nint",
+    "Display": "nint",
+    "Window": "nint"
   },
   "IgnoredTypes": [],
   "Usings": [ "System.Numerics" ]

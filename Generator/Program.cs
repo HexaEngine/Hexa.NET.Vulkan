@@ -3,6 +3,7 @@ using HexaGen;
 using HexaGen.Core;
 using HexaGen.Core.CSharp;
 using HexaGen.Metadata;
+using Irony.Parsing.Construction;
 using System.Collections.Frozen;
 using System.Globalization;
 using System.Text;
@@ -26,12 +27,39 @@ namespace Generator
         private static void Main(string[] args)
         {
             logger.LogToConsole();
-            XmlSerializer serializer = new(typeof(VkRegistry));
-            using var fs = File.OpenRead("vk.xml");
-            VkRegistry registry = (VkRegistry)serializer.Deserialize(fs)!;
-
+            VkRegistry registry = VkRegistry.LoadFromFile("vk.xml");
+            VkRegistry video = VkRegistry.LoadFromFile("video.xml");
             CsCodeGeneratorConfig config = CsCodeGeneratorConfig.Load("generator.base.json");
+            CsCodeGeneratorConfig configVideo = CsCodeGeneratorConfig.Load("video/generator.json");
+            PrepareConfig(registry, config);
 
+            CsCodeGenerator generator = new(configVideo);
+            generator.LogToConsole();
+            generator.Generate([.. Directory.GetFiles("video", "*.h")], "../../../../Hexa.NET.Vulkan/Video");
+
+            GenerateApi(registry, config, "../../../../Hexa.NET.Vulkan/Generated");
+
+            GenerateExtension(registry, config, "VK_KHR", "generator.khr.json", "../../../../Hexa.NET.Vulkan.KHR/Generated", []);
+        }
+
+        private static void GenerateApi(VkRegistry registry, CsCodeGeneratorConfig config, string outputDir)
+        {
+            WriteConstants(registry, config, outputDir);
+
+            var groupToEnumName = GenerateEnums(config, registry, outputDir);
+            CsCodeGenerator generator = new(config);
+            generator.LogToConsole();
+            generator.Generate("include/main.h", outputDir);
+
+            var allowedTypes = GatherAllowedTypes(registry).ToFrozenSet();
+            WriteTypesCore(allowedTypes, registry, config, outputDir);
+
+            var allowedFunctions = GatherAllowedFunctions(registry).ToFrozenSet();
+            WriteFunctionsCore(allowedFunctions, registry, config, outputDir, groupToEnumName);
+        }
+
+        private static void PrepareConfig(VkRegistry registry, CsCodeGeneratorConfig config)
+        {
             FrozenSet<string> enumNames = registry.EnumGroups.Select(g => g.Name).ToFrozenSet();
 
             foreach (var command in registry.Commands)
@@ -82,23 +110,9 @@ namespace Generator
                     nameToDelegate.Add(dele.Name, dele);
                 }
             }
-
-            const string outputDir = "../../../../Hexa.NET.Vulkan/Generated";
-
-            WriteConstants(registry, config, outputDir);
-
-            var groupToEnumName = GenerateEnums(config, registry, outputDir);
-            CsCodeGenerator generator = new(config);
-            generator.LogToConsole();
-            generator.Generate("include/main.h", outputDir);
-
-            var allowedTypes = GatherAllowedTypes(registry).ToFrozenSet();
-            WriteTypes(allowedTypes, registry, config, outputDir);
-
-            WriteFunctionsCore(registry, config, outputDir, groupToEnumName);
         }
 
-        private static void WriteFunctionsCore(VkRegistry registry, CsCodeGeneratorConfig config, string outputPath, Dictionary<string, string> groupToEnumName)
+        private static void WriteFunctionsCore(FrozenSet<string> allowedFunctions, VkRegistry registry, CsCodeGeneratorConfig config, string outputPath, Dictionary<string, string> groupToEnumName)
         {
             string functionsFolder = Path.Combine(outputPath, "Functions");
             if (Directory.Exists(functionsFolder))
@@ -106,8 +120,6 @@ namespace Generator
                 Directory.Delete(functionsFolder, true);
             }
             Directory.CreateDirectory(functionsFolder);
-
-            var allowedFunctions = GatherAllowedFunctions(registry).ToFrozenSet();
             FunctionTableBuilder fnBuilderGlobal = new();
             FunctionTableBuilder fnBuilderInstance = new();
             FunctionTableBuilder fnBuilderDevice = new();
@@ -141,6 +153,22 @@ namespace Generator
 
                 WriteFunctionTableDeviceLevel(config, Path.Combine(outputPath, "FunctionTable.Device.cs"), "Device", fnBuilderDevice);
             }
+        }
+
+        private static void WriteFunctionsExtensions(FrozenSet<string> allowedFunctions, VkRegistry registry, CsCodeGeneratorConfig config, Dictionary<string, string> groupToEnumName, string functionsFolder, string extensionName)
+        {
+            if (allowedFunctions.Count == 0) return;
+            FunctionTableBuilder fnBuilderGlobal = new();
+
+            using CsSplitCodeWriter writer = new(Path.Combine(functionsFolder, $"Functions.{extensionName}.cs"), config.Namespace, ["System", "HexaGen.Runtime", "System.Runtime.CompilerServices", "System.Numerics"], null);
+
+            writer.BeginBlock($"public unsafe partial class {extensionName}");
+            WriteFunctions(FunctionLevel.Global, writer, registry, config, allowedFunctions, groupToEnumName, fnBuilderGlobal, "public");
+            WriteFunctions(FunctionLevel.Instance, writer, registry, config, allowedFunctions, groupToEnumName, fnBuilderGlobal, "public");
+            WriteFunctions(FunctionLevel.Device, writer, registry, config, allowedFunctions, groupToEnumName, fnBuilderGlobal, "public");
+            writer.EndBlock();
+
+            WriteFunctionTable(config, Path.Combine(functionsFolder, $"FunctionTable.{extensionName}.cs"), fnBuilderGlobal);
         }
 
         private static void WriteFunctionTable(CsCodeGeneratorConfig config, string outputPath, FunctionTableBuilder functionTableBuilder)
@@ -226,11 +254,44 @@ namespace Generator
             }
         }
 
-        private static void GenerateExtension(VkRegistry registry, CsCodeGeneratorConfig config, string name, string outputPath)
+        private static void GenerateExtension(VkRegistry registry, CsCodeGeneratorConfig baseConfig, string name, string configPath, string outputPath, Dictionary<string, string> enumToGroup)
         {
-            var allowed = GatherAllowedTypes(registry).ToFrozenSet();
+            CsCodeGeneratorConfig config = CsCodeGeneratorConfig.Load(configPath);
+            config.Merge(baseConfig, HexaGen.MergeOptions.All);
 
-            WriteTypes(allowed, registry, config, outputPath);
+            string structsFolder = Path.Combine(outputPath, "Structs");
+            if (Directory.Exists(structsFolder))
+            {
+                Directory.Delete(structsFolder, true);
+            }
+            Directory.CreateDirectory(structsFolder);
+
+            string handleFolder = Path.Combine(outputPath, "Handles");
+            if (Directory.Exists(handleFolder))
+            {
+                Directory.Delete(handleFolder, true);
+            }
+            Directory.CreateDirectory(handleFolder);
+
+            string delegatesFolder = Path.Combine(outputPath, "Delegates");
+            if (Directory.Exists(delegatesFolder))
+            {
+                Directory.Delete(delegatesFolder, true);
+            }
+            Directory.CreateDirectory(delegatesFolder);
+
+            string functionsFolder = Path.Combine(outputPath, "Functions");
+            if (Directory.Exists(functionsFolder))
+            {
+                Directory.Delete(functionsFolder, true);
+            }
+            Directory.CreateDirectory(functionsFolder);
+
+            foreach (var (extensionName, originalName, usedEnums, usedCommands, usedTypes) in registry.GatherUsedTargetsForExtension(name, ["vulkan"]))
+            {
+                WriteTypes(usedTypes.ToFrozenSet(), registry, config, structsFolder, handleFolder, delegatesFolder);
+                WriteFunctionsExtensions(usedCommands.ToFrozenSet(), registry, config, enumToGroup, functionsFolder, extensionName);
+            }
         }
 
         private static void WriteFunctions(FunctionLevel level, CsSplitCodeWriter writer, VkRegistry registry, CsCodeGeneratorConfig config, FrozenSet<string> allowedFunctions, Dictionary<string, string> groupToEnumName, FunctionTableBuilder fnTableBuilder, params string[] modifiers)
@@ -929,7 +990,7 @@ namespace Generator
             }
         }
 
-        private static void WriteTypes(FrozenSet<string> allowedTypes, VkRegistry registry, CsCodeGeneratorConfig config, string output)
+        private static void WriteTypesCore(FrozenSet<string> allowedTypes, VkRegistry registry, CsCodeGeneratorConfig config, string output)
         {
             string structsFolder = Path.Combine(output, "Structs");
             if (Directory.Exists(structsFolder))
@@ -952,6 +1013,11 @@ namespace Generator
             }
             Directory.CreateDirectory(delegatesFolder);
 
+            WriteTypes(allowedTypes, registry, config, structsFolder, handleFolder, delegatesFolder);
+        }
+
+        private static void WriteTypes(FrozenSet<string> allowedTypes, VkRegistry registry, CsCodeGeneratorConfig config, string structsFolder, string handleFolder, string delegatesFolder)
+        {
             foreach (var type in registry.VkTypes.VkTypes)
             {
                 if (!allowedTypes.Contains(type.Name)) continue;
@@ -1123,8 +1189,10 @@ namespace Generator
             }
             using (writer.PushBlock($"public unsafe struct {type.Name}"))
             {
-                foreach (var member in type.Member)
+                int bitfieldGroupIndex = 0;
+                for (int i = 0; i < type.Member.Count; i++)
                 {
+                    Member member = type.Member[i];
                     if (member.Api != null && member.Api != ApiName) continue;
                     var fieldName = config.GetFieldName(member.Name);
                     var fieldType = member.Type;
@@ -1141,13 +1209,40 @@ namespace Generator
 
                     if (member.IsArrayType)
                     {
-                        if (primitiveToSize.ContainsKey(fieldType))
+                        if (primitiveToSize.ContainsKey(fieldType) && member.ArrayTypes.Count == 1)
                         {
                             WriteArrayFixed(writer, member, fieldName, fieldType, isUnion);
                         }
                         else
                         {
                             WriteArrayUnroll(writer, member, fieldName, fieldType, isUnion);
+                        }
+                    }
+                    else if (member.IsBitfield)
+                    {
+                        var sizeInBits = primitiveToSize[fieldType] * 8;
+                        int totalBits = 0;
+                        string backingFieldName = $"_bitfield{bitfieldGroupIndex++}";
+                        writer.WriteLine($"private {fieldType} {backingFieldName};");
+
+                        while (i < type.Member.Count && type.Member[i].IsBitfield)
+                        {
+                            var currentMember = type.Member[i];
+                            var currentFieldName = config.GetFieldName(currentMember.Name);
+                            var currentBitSize = currentMember.BitSize;
+
+                            writer.WriteLine($"public {fieldType} {currentFieldName}");
+                            writer.WriteLine("{");
+                            writer.WriteLine($"    get => ({backingFieldName} >> {totalBits}) & {((1 << currentBitSize) - 1)};");
+                            writer.WriteLine($"    set => {backingFieldName} = ({fieldType})(({backingFieldName} & ~({((1 << currentBitSize) - 1)} << {totalBits})) | ((value & {((1 << currentBitSize) - 1)}) << {totalBits}));");
+                            writer.WriteLine("}");
+
+                            totalBits += currentBitSize;
+
+                            if (totalBits >= sizeInBits)
+                                break;
+
+                            i++;
                         }
                     }
                     else

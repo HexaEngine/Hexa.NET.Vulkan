@@ -1,0 +1,9 @@
+{
+  "BaseConfig": {
+    "Url": "file://generator.json"
+  },
+  "Namespace": "Hexa.NET.Vulkan.KHR",
+  "ApiName": "ExtensionKHR",
+  "LibName": "Vulkan",
+  "UseCustomContext": true
+}

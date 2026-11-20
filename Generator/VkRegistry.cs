@@ -1,7 +1,9 @@
 ﻿namespace Generator
 {
     using ClangSharp;
+    using HexaGen;
     using System;
+    using System.Collections.Frozen;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
@@ -13,6 +15,8 @@
     [XmlRoot("registry")]
     public class VkRegistry
     {
+        private static readonly XmlSerializer serializer = new(typeof(VkRegistry));
+
         [XmlArray("commands")]
         [XmlArrayItem("command")]
         public List<VkCommand> Commands { get; set; } = new List<VkCommand>();
@@ -28,6 +32,12 @@
 
         [XmlElement("types")]
         public Types VkTypes { get; set; } = new();
+
+        public static VkRegistry LoadFromFile(string file)
+        {
+            using var fs = File.OpenRead(file);
+            return (VkRegistry)serializer.Deserialize(fs)!;
+        }
     }
 
     [XmlRoot(ElementName = "types")]
@@ -189,6 +199,10 @@
 
         public List<string> ArrayTypes { get; set; } = [];
 
+        public bool IsBitfield { get; set; }
+
+        public int BitSize { get; set; }
+
         public XmlSchema? GetSchema()
         {
             return null;
@@ -288,6 +302,14 @@
                 {
                     break;
                 }
+            }
+
+            int index = PostText?.IndexOf(':') ?? -1;
+
+            if (index != -1)
+            {
+                IsBitfield = true;
+                BitSize = int.Parse(PostText.AsSpan(index + 1));
             }
 
             reader.ReadEndElement();
@@ -871,7 +893,7 @@
                 SupportedList.Clear();
                 if (value != null)
                 {
-                    SupportedList.AddRange(value.Split('|'));
+                    SupportedList.AddRange(value.Split(','));
                 }
             }
         }

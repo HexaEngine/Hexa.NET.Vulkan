@@ -81,45 +81,23 @@
             }
         }
 
-        public static IEnumerable<(string extensionName, string originalName, HashSet<string> usedEnums, HashSet<string> usedCommands)> GatherUsedTargetsForExtension(this VkRegistry registry, string featureTarget, HashSet<string> apiTargets)
+        public static IEnumerable<(string extensionName, string originalName, HashSet<string> usedEnums, HashSet<string> usedCommands, HashSet<string> usedTypes)> GatherUsedTargetsForExtension(this VkRegistry registry, string featureTarget, HashSet<string> apiTargets)
         {
-            HashSet<string> androidTarget = [
-                "GL_KHR_debug",
-            "GL_KHR_texture_compression_astc_ldr",
-            "GL_KHR_blend_equation_advanced",
-            "GL_OES_sample_shading",
-            "GL_OES_sample_variables",
-            "GL_OES_shader_image_atomic",
-            "GL_OES_shader_multisample_interpolation",
-            "GL_OES_texture_stencil8",
-            "GL_OES_texture_storage_multisample_2d_array",
-            "GL_EXT_copy_image",
-            "GL_EXT_draw_buffers_indexed",
-            "GL_EXT_geometry_shader",
-            "GL_EXT_gpu_shader5",
-            "GL_EXT_primitive_bounding_box",
-            "GL_EXT_shader_io_blocks",
-            "GL_EXT_tessellation_shader",
-            "GL_EXT_texture_border_clamp",
-            "GL_EXT_texture_buffer",
-            "GL_EXT_texture_cube_map_array",
-            "GL_EXT_texture_srgb_decode",
-            ];
             HashSet<string> usedEnums = [];
             HashSet<string> usedCommands = [];
+            HashSet<string> usedTypes = [];
             foreach (var extension in registry.Extensions.Extension)
             {
                 usedEnums.Clear();
                 usedCommands.Clear();
+                usedTypes.Clear();
 
-                if (featureTarget == "GL_ANDROID")
+                if (Config.ExcludedExtensions.Contains(extension.Name))
                 {
-                    if (!androidTarget.Contains(extension.Name))
-                    {
-                        continue;
-                    }
+                    continue;
                 }
-                else if (!extension.Name.StartsWith(featureTarget))
+
+                if (!extension.Name.StartsWith(featureTarget))
                 {
                     continue;
                 }
@@ -142,9 +120,14 @@
                     {
                         usedCommands.Add(command.Name);
                     }
+
+                    foreach (var type in require.Types)
+                    {
+                        usedTypes.Add(type.Name);
+                    }
                 }
 
-                yield return (nameFormatted, extension.Name, usedEnums, usedCommands);
+                yield return (nameFormatted, extension.Name, usedEnums, usedCommands, usedTypes);
             }
         }
 
