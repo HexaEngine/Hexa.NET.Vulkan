@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Midpoint = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		CositedEvenKhr = CositedEven,
+
+		/// <remarks></remarks>
+		MidpointKhr = Midpoint,
 	}
 }

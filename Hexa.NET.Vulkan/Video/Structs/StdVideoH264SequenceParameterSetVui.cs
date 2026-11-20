@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264SequenceParameterSetVui
+	public unsafe struct StdVideoH264SequenceParameterSetVui
 	{
 		public StdVideoH264SpsVuiFlags Flags;
 		public StdVideoH264AspectRatioIdc AspectRatioIdc;
@@ -33,29 +32,6 @@ namespace Hexa.NET.Vulkan
 		public byte ChromaSampleLocTypeTopField;
 		public byte ChromaSampleLocTypeBottomField;
 		public uint Reserved1;
-		public unsafe StdVideoH264HrdParameters* PHrdParameters;
-
-		public unsafe StdVideoH264SequenceParameterSetVui(StdVideoH264SpsVuiFlags flags = default, StdVideoH264AspectRatioIdc aspectRatioIdc = default, ushort sarWidth = default, ushort sarHeight = default, byte videoFormat = default, byte colourPrimaries = default, byte transferCharacteristics = default, byte matrixCoefficients = default, uint numUnitsInTick = default, uint timeScale = default, byte maxNumReorderFrames = default, byte maxDecFrameBuffering = default, byte chromaSampleLocTypeTopField = default, byte chromaSampleLocTypeBottomField = default, uint reserved1 = default, StdVideoH264HrdParameters* pHrdParameters = default)
-		{
-			Flags = flags;
-			AspectRatioIdc = aspectRatioIdc;
-			SarWidth = sarWidth;
-			SarHeight = sarHeight;
-			VideoFormat = videoFormat;
-			ColourPrimaries = colourPrimaries;
-			TransferCharacteristics = transferCharacteristics;
-			MatrixCoefficients = matrixCoefficients;
-			NumUnitsInTick = numUnitsInTick;
-			TimeScale = timeScale;
-			MaxNumReorderFrames = maxNumReorderFrames;
-			MaxDecFrameBuffering = maxDecFrameBuffering;
-			ChromaSampleLocTypeTopField = chromaSampleLocTypeTopField;
-			ChromaSampleLocTypeBottomField = chromaSampleLocTypeBottomField;
-			Reserved1 = reserved1;
-			PHrdParameters = pHrdParameters;
-		}
-
-
+		public StdVideoH264HrdParameters* PHrdParameters;
 	}
-
 }

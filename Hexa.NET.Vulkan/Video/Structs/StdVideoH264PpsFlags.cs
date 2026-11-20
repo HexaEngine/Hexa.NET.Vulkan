@@ -15,31 +15,48 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264PpsFlags
+	public unsafe struct StdVideoH264PpsFlags
 	{
-		public uint Transform8x8ModeFlag;
-		public uint RedundantPicCntPresentFlag;
-		public uint ConstrainedIntraPredFlag;
-		public uint DeblockingFilterControlPresentFlag;
-		public uint WeightedPredFlag;
-		public uint BottomFieldPicOrderInFramePresentFlag;
-		public uint EntropyCodingModeFlag;
-		public uint PicScalingMatrixPresentFlag;
-
-		public unsafe StdVideoH264PpsFlags(uint transform8x8ModeFlag = default, uint redundantPicCntPresentFlag = default, uint constrainedIntraPredFlag = default, uint deblockingFilterControlPresentFlag = default, uint weightedPredFlag = default, uint bottomFieldPicOrderInFramePresentFlag = default, uint entropyCodingModeFlag = default, uint picScalingMatrixPresentFlag = default)
+		private uint _bitfield0;
+		public uint Transform8x8ModeFlag
 		{
-			Transform8x8ModeFlag = transform8x8ModeFlag;
-			RedundantPicCntPresentFlag = redundantPicCntPresentFlag;
-			ConstrainedIntraPredFlag = constrainedIntraPredFlag;
-			DeblockingFilterControlPresentFlag = deblockingFilterControlPresentFlag;
-			WeightedPredFlag = weightedPredFlag;
-			BottomFieldPicOrderInFramePresentFlag = bottomFieldPicOrderInFramePresentFlag;
-			EntropyCodingModeFlag = entropyCodingModeFlag;
-			PicScalingMatrixPresentFlag = picScalingMatrixPresentFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint RedundantPicCntPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint ConstrainedIntraPredFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint DeblockingFilterControlPresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint WeightedPredFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint BottomFieldPicOrderInFramePresentFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint EntropyCodingModeFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint PicScalingMatrixPresentFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
 	}
-
 }

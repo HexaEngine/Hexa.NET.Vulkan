@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRAccelerationStructure
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 16);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 16);
 			funcTable.Load(0, "vkDestroyAccelerationStructureKHR");
 			funcTable.Load(1, "vkCmdCopyAccelerationStructureKHR");
 			funcTable.Load(2, "vkCopyAccelerationStructureKHR");

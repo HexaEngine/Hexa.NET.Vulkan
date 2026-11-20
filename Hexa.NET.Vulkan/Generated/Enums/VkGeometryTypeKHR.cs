@@ -23,5 +23,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		InstancesKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		TrianglesNv = TrianglesKhr,
+
+		/// <remarks></remarks>
+		AabbsNv = AabbsKhr,
 	}
 }

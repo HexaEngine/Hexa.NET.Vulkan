@@ -23,5 +23,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		GenericKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		TopLevelNv = TopLevelKhr,
+
+		/// <remarks></remarks>
+		BottomLevelNv = BottomLevelKhr,
 	}
 }

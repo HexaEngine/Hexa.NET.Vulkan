@@ -23,5 +23,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ProceduralHitGroupKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		GeneralNv = GeneralKhr,
+
+		/// <remarks></remarks>
+		TrianglesHitGroupNv = TrianglesHitGroupKhr,
+
+		/// <remarks></remarks>
+		ProceduralHitGroupNv = ProceduralHitGroupKhr,
 	}
 }

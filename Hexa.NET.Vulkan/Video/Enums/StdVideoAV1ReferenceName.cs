@@ -12,18 +12,33 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1ReferenceName : int
+	public enum StdVideoAV1ReferenceName : uint
 	{
-		IntraFrame = unchecked(0),
-		LastFrame = unchecked(1),
-		Last2Frame = unchecked(2),
-		Last3Frame = unchecked(3),
-		GoldenFrame = unchecked(4),
-		BwdrefFrame = unchecked(5),
-		Altref2Frame = unchecked(6),
-		AltrefFrame = unchecked(7),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		IntraFrame = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		LastFrame = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Last2Frame = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Last3Frame = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		GoldenFrame = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		BwdrefFrame = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Altref2Frame = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		AltrefFrame = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

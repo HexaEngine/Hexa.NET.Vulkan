@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264DisableDeblockingFilterIdc : int
+	public enum StdVideoH264DisableDeblockingFilterIdc : uint
 	{
-		Disabled = unchecked(0),
-		Enabled = unchecked(1),
-		Partial = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Disabled = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Enabled = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Partial = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

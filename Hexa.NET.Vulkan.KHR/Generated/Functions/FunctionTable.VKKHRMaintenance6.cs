@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRMaintenance6
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 2);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 2);
 			funcTable.Load(0, "vkCmdSetDescriptorBufferOffsets2EXT");
 			funcTable.Load(1, "vkCmdBindDescriptorBufferEmbeddedSamplers2EXT");
 		}

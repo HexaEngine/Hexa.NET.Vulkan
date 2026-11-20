@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRPerformanceQuery
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 4);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 4);
 			funcTable.Load(0, "vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR");
 			funcTable.Load(1, "vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR");
 			funcTable.Load(2, "vkAcquireProfilingLockKHR");

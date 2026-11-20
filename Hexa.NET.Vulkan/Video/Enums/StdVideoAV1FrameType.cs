@@ -12,14 +12,21 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1FrameType : int
+	public enum StdVideoAV1FrameType : uint
 	{
-		Key = unchecked(0),
-		Inter = unchecked(1),
-		IntraOnly = unchecked(2),
-		Switch = unchecked(3),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Key = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Inter = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		IntraOnly = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Switch = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

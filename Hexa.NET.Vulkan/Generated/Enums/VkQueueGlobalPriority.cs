@@ -26,5 +26,29 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Realtime = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		LowExt = Low,
+
+		/// <remarks></remarks>
+		MediumExt = Medium,
+
+		/// <remarks></remarks>
+		HighExt = High,
+
+		/// <remarks></remarks>
+		RealtimeExt = Realtime,
+
+		/// <remarks></remarks>
+		LowKhr = Low,
+
+		/// <remarks></remarks>
+		MediumKhr = Medium,
+
+		/// <remarks></remarks>
+		HighKhr = High,
+
+		/// <remarks></remarks>
+		RealtimeKhr = Realtime,
 	}
 }

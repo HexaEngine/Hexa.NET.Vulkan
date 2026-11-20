@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		NoDuplicateAnyHitInvocationBitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		OpaqueBitNv = OpaqueBitKhr,
+
+		/// <remarks></remarks>
+		NoDuplicateAnyHitInvocationBitNv = NoDuplicateAnyHitInvocationBitKhr,
 	}
 }

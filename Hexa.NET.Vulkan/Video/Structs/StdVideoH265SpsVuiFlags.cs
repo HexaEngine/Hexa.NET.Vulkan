@@ -15,51 +15,98 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265SpsVuiFlags
+	public unsafe struct StdVideoH265SpsVuiFlags
 	{
-		public uint AspectRatioInfoPresentFlag;
-		public uint OverscanInfoPresentFlag;
-		public uint OverscanAppropriateFlag;
-		public uint VideoSignalTypePresentFlag;
-		public uint VideoFullRangeFlag;
-		public uint ColourDescriptionPresentFlag;
-		public uint ChromaLocInfoPresentFlag;
-		public uint NeutralChromaIndicationFlag;
-		public uint FieldSeqFlag;
-		public uint FrameFieldInfoPresentFlag;
-		public uint DefaultDisplayWindowFlag;
-		public uint VuiTimingInfoPresentFlag;
-		public uint VuiPocProportionalToTimingFlag;
-		public uint VuiHrdParametersPresentFlag;
-		public uint BitstreamRestrictionFlag;
-		public uint TilesFixedStructureFlag;
-		public uint MotionVectorsOverPicBoundariesFlag;
-		public uint RestrictedRefPicListsFlag;
-
-		public unsafe StdVideoH265SpsVuiFlags(uint aspectRatioInfoPresentFlag = default, uint overscanInfoPresentFlag = default, uint overscanAppropriateFlag = default, uint videoSignalTypePresentFlag = default, uint videoFullRangeFlag = default, uint colourDescriptionPresentFlag = default, uint chromaLocInfoPresentFlag = default, uint neutralChromaIndicationFlag = default, uint fieldSeqFlag = default, uint frameFieldInfoPresentFlag = default, uint defaultDisplayWindowFlag = default, uint vuiTimingInfoPresentFlag = default, uint vuiPocProportionalToTimingFlag = default, uint vuiHrdParametersPresentFlag = default, uint bitstreamRestrictionFlag = default, uint tilesFixedStructureFlag = default, uint motionVectorsOverPicBoundariesFlag = default, uint restrictedRefPicListsFlag = default)
+		private uint _bitfield0;
+		public uint AspectRatioInfoPresentFlag
 		{
-			AspectRatioInfoPresentFlag = aspectRatioInfoPresentFlag;
-			OverscanInfoPresentFlag = overscanInfoPresentFlag;
-			OverscanAppropriateFlag = overscanAppropriateFlag;
-			VideoSignalTypePresentFlag = videoSignalTypePresentFlag;
-			VideoFullRangeFlag = videoFullRangeFlag;
-			ColourDescriptionPresentFlag = colourDescriptionPresentFlag;
-			ChromaLocInfoPresentFlag = chromaLocInfoPresentFlag;
-			NeutralChromaIndicationFlag = neutralChromaIndicationFlag;
-			FieldSeqFlag = fieldSeqFlag;
-			FrameFieldInfoPresentFlag = frameFieldInfoPresentFlag;
-			DefaultDisplayWindowFlag = defaultDisplayWindowFlag;
-			VuiTimingInfoPresentFlag = vuiTimingInfoPresentFlag;
-			VuiPocProportionalToTimingFlag = vuiPocProportionalToTimingFlag;
-			VuiHrdParametersPresentFlag = vuiHrdParametersPresentFlag;
-			BitstreamRestrictionFlag = bitstreamRestrictionFlag;
-			TilesFixedStructureFlag = tilesFixedStructureFlag;
-			MotionVectorsOverPicBoundariesFlag = motionVectorsOverPicBoundariesFlag;
-			RestrictedRefPicListsFlag = restrictedRefPicListsFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint OverscanInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint OverscanAppropriateFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint VideoSignalTypePresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint VideoFullRangeFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint ColourDescriptionPresentFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint ChromaLocInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint NeutralChromaIndicationFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint FieldSeqFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint FrameFieldInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint DefaultDisplayWindowFlag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint VuiTimingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint VuiPocProportionalToTimingFlag
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint VuiHrdParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint BitstreamRestrictionFlag
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint TilesFixedStructureFlag
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
+		public uint MotionVectorsOverPicBoundariesFlag
+		{
+		    get => (_bitfield0 >> 16) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 16)) | ((value & 1) << 16));
+		}
+		public uint RestrictedRefPicListsFlag
+		{
+		    get => (_bitfield0 >> 17) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 17)) | ((value & 1) << 17));
+		}
 	}
-
 }

@@ -15,75 +15,158 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeAV1PictureInfoFlags
+	public unsafe struct StdVideoDecodeAV1PictureInfoFlags
 	{
-		public uint ErrorResilientMode;
-		public uint DisableCdfUpdate;
-		public uint UseSuperres;
-		public uint RenderAndFrameSizeDifferent;
-		public uint AllowScreenContentTools;
-		public uint IsFilterSwitchable;
-		public uint ForceIntegerMv;
-		public uint FrameSizeOverrideFlag;
-		public uint BufferRemovalTimePresentFlag;
-		public uint AllowIntrabc;
-		public uint FrameRefsShortSignaling;
-		public uint AllowHighPrecisionMv;
-		public uint IsMotionModeSwitchable;
-		public uint UseRefFrameMvs;
-		public uint DisableFrameEndUpdateCdf;
-		public uint AllowWarpedMotion;
-		public uint ReducedTxSet;
-		public uint ReferenceSelect;
-		public uint SkipModePresent;
-		public uint DeltaQPresent;
-		public uint DeltaLfPresent;
-		public uint DeltaLfMulti;
-		public uint SegmentationEnabled;
-		public uint SegmentationUpdateMap;
-		public uint SegmentationTemporalUpdate;
-		public uint SegmentationUpdateData;
-		public uint UsesLr;
-		public uint UsesChromaLr;
-		public uint ApplyGrain;
-		public uint Reserved;
-
-		public unsafe StdVideoDecodeAV1PictureInfoFlags(uint errorResilientMode = default, uint disableCdfUpdate = default, uint useSuperres = default, uint renderAndFrameSizeDifferent = default, uint allowScreenContentTools = default, uint isFilterSwitchable = default, uint forceIntegerMv = default, uint frameSizeOverrideFlag = default, uint bufferRemovalTimePresentFlag = default, uint allowIntrabc = default, uint frameRefsShortSignaling = default, uint allowHighPrecisionMv = default, uint isMotionModeSwitchable = default, uint useRefFrameMvs = default, uint disableFrameEndUpdateCdf = default, uint allowWarpedMotion = default, uint reducedTxSet = default, uint referenceSelect = default, uint skipModePresent = default, uint deltaQPresent = default, uint deltaLfPresent = default, uint deltaLfMulti = default, uint segmentationEnabled = default, uint segmentationUpdateMap = default, uint segmentationTemporalUpdate = default, uint segmentationUpdateData = default, uint usesLr = default, uint usesChromaLr = default, uint applyGrain = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint ErrorResilientMode
 		{
-			ErrorResilientMode = errorResilientMode;
-			DisableCdfUpdate = disableCdfUpdate;
-			UseSuperres = useSuperres;
-			RenderAndFrameSizeDifferent = renderAndFrameSizeDifferent;
-			AllowScreenContentTools = allowScreenContentTools;
-			IsFilterSwitchable = isFilterSwitchable;
-			ForceIntegerMv = forceIntegerMv;
-			FrameSizeOverrideFlag = frameSizeOverrideFlag;
-			BufferRemovalTimePresentFlag = bufferRemovalTimePresentFlag;
-			AllowIntrabc = allowIntrabc;
-			FrameRefsShortSignaling = frameRefsShortSignaling;
-			AllowHighPrecisionMv = allowHighPrecisionMv;
-			IsMotionModeSwitchable = isMotionModeSwitchable;
-			UseRefFrameMvs = useRefFrameMvs;
-			DisableFrameEndUpdateCdf = disableFrameEndUpdateCdf;
-			AllowWarpedMotion = allowWarpedMotion;
-			ReducedTxSet = reducedTxSet;
-			ReferenceSelect = referenceSelect;
-			SkipModePresent = skipModePresent;
-			DeltaQPresent = deltaQPresent;
-			DeltaLfPresent = deltaLfPresent;
-			DeltaLfMulti = deltaLfMulti;
-			SegmentationEnabled = segmentationEnabled;
-			SegmentationUpdateMap = segmentationUpdateMap;
-			SegmentationTemporalUpdate = segmentationTemporalUpdate;
-			SegmentationUpdateData = segmentationUpdateData;
-			UsesLr = usesLr;
-			UsesChromaLr = usesChromaLr;
-			ApplyGrain = applyGrain;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint DisableCdfUpdate
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint UseSuperres
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint RenderAndFrameSizeDifferent
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint AllowScreenContentTools
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint IsFilterSwitchable
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint ForceIntegerMv
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint FrameSizeOverrideFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint BufferRemovalTimePresentFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint AllowIntrabc
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint FrameRefsShortSignaling
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint AllowHighPrecisionMv
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint IsMotionModeSwitchable
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint UseRefFrameMvs
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint DisableFrameEndUpdateCdf
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint AllowWarpedMotion
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
+		public uint ReducedTxSet
+		{
+		    get => (_bitfield0 >> 16) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 16)) | ((value & 1) << 16));
+		}
+		public uint ReferenceSelect
+		{
+		    get => (_bitfield0 >> 17) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 17)) | ((value & 1) << 17));
+		}
+		public uint SkipModePresent
+		{
+		    get => (_bitfield0 >> 18) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 18)) | ((value & 1) << 18));
+		}
+		public uint DeltaQPresent
+		{
+		    get => (_bitfield0 >> 19) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 19)) | ((value & 1) << 19));
+		}
+		public uint DeltaLfPresent
+		{
+		    get => (_bitfield0 >> 20) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 20)) | ((value & 1) << 20));
+		}
+		public uint DeltaLfMulti
+		{
+		    get => (_bitfield0 >> 21) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 21)) | ((value & 1) << 21));
+		}
+		public uint SegmentationEnabled
+		{
+		    get => (_bitfield0 >> 22) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 22)) | ((value & 1) << 22));
+		}
+		public uint SegmentationUpdateMap
+		{
+		    get => (_bitfield0 >> 23) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 23)) | ((value & 1) << 23));
+		}
+		public uint SegmentationTemporalUpdate
+		{
+		    get => (_bitfield0 >> 24) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 24)) | ((value & 1) << 24));
+		}
+		public uint SegmentationUpdateData
+		{
+		    get => (_bitfield0 >> 25) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 25)) | ((value & 1) << 25));
+		}
+		public uint UsesLr
+		{
+		    get => (_bitfield0 >> 26) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 26)) | ((value & 1) << 26));
+		}
+		public uint UsesChromaLr
+		{
+		    get => (_bitfield0 >> 27) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 27)) | ((value & 1) << 27));
+		}
+		public uint ApplyGrain
+		{
+		    get => (_bitfield0 >> 28) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 28)) | ((value & 1) << 28));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 29) & 7;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(7 << 29)) | ((value & 7) << 29));
+		}
 	}
-
 }

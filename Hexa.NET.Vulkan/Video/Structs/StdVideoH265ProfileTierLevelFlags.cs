@@ -15,25 +15,33 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265ProfileTierLevelFlags
+	public unsafe struct StdVideoH265ProfileTierLevelFlags
 	{
-		public uint GeneralTierFlag;
-		public uint GeneralProgressiveSourceFlag;
-		public uint GeneralInterlacedSourceFlag;
-		public uint GeneralNonPackedConstraintFlag;
-		public uint GeneralFrameOnlyConstraintFlag;
-
-		public unsafe StdVideoH265ProfileTierLevelFlags(uint generalTierFlag = default, uint generalProgressiveSourceFlag = default, uint generalInterlacedSourceFlag = default, uint generalNonPackedConstraintFlag = default, uint generalFrameOnlyConstraintFlag = default)
+		private uint _bitfield0;
+		public uint GeneralTierFlag
 		{
-			GeneralTierFlag = generalTierFlag;
-			GeneralProgressiveSourceFlag = generalProgressiveSourceFlag;
-			GeneralInterlacedSourceFlag = generalInterlacedSourceFlag;
-			GeneralNonPackedConstraintFlag = generalNonPackedConstraintFlag;
-			GeneralFrameOnlyConstraintFlag = generalFrameOnlyConstraintFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint GeneralProgressiveSourceFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint GeneralInterlacedSourceFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint GeneralNonPackedConstraintFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint GeneralFrameOnlyConstraintFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
 	}
-
 }

@@ -38,5 +38,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		DrawTasksNv = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		DrawMeshTasksNv = unchecked((uint)1000328000),
+
+		/// <remarks></remarks>
+		PipelineNv = unchecked((uint)1000428003),
+
+		/// <remarks></remarks>
+		DispatchNv = unchecked((uint)1000428004),
 	}
 }

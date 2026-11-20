@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264ReferenceInfo
+	public unsafe struct StdVideoEncodeH264ReferenceInfo
 	{
 		public StdVideoEncodeH264ReferenceInfoFlags Flags;
 		public StdVideoH264PictureType PrimaryPicType;
@@ -25,19 +24,5 @@ namespace Hexa.NET.Vulkan
 		public ushort LongTermPicNum;
 		public ushort LongTermFrameIdx;
 		public byte TemporalId;
-
-		public unsafe StdVideoEncodeH264ReferenceInfo(StdVideoEncodeH264ReferenceInfoFlags flags = default, StdVideoH264PictureType primaryPicType = default, uint frameNum = default, int picOrderCnt = default, ushort longTermPicNum = default, ushort longTermFrameIdx = default, byte temporalId = default)
-		{
-			Flags = flags;
-			PrimaryPicType = primaryPicType;
-			FrameNum = frameNum;
-			PicOrderCnt = picOrderCnt;
-			LongTermPicNum = longTermPicNum;
-			LongTermFrameIdx = longTermFrameIdx;
-			TemporalId = temporalId;
-		}
-
-
 	}
-
 }

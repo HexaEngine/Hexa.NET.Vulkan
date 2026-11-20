@@ -20,5 +20,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ResetCommandBufferBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)4),
 	}
 }

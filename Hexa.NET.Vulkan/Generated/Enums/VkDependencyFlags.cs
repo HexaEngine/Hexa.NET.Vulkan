@@ -17,5 +17,26 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		ByRegionBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DeviceGroupBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ViewLocalBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		ViewLocalBitKhr = ViewLocalBit,
+
+		/// <remarks></remarks>
+		DeviceGroupBitKhr = DeviceGroupBit,
+
+		/// <remarks></remarks>
+		FeedbackLoopBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Extension575BitKhr = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Extension586BitImg = unchecked((uint)16),
 	}
 }

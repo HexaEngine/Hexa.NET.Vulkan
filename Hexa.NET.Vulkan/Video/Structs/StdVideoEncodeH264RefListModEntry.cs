@@ -15,21 +15,10 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264RefListModEntry
+	public unsafe struct StdVideoEncodeH264RefListModEntry
 	{
 		public StdVideoH264ModificationOfPicNumsIdc ModificationOfPicNumsIdc;
 		public ushort AbsDiffPicNumMinus1;
 		public ushort LongTermPicNum;
-
-		public unsafe StdVideoEncodeH264RefListModEntry(StdVideoH264ModificationOfPicNumsIdc modificationOfPicNumsIdc = default, ushort absDiffPicNumminus1 = default, ushort longTermPicNum = default)
-		{
-			ModificationOfPicNumsIdc = modificationOfPicNumsIdc;
-			AbsDiffPicNumMinus1 = absDiffPicNumminus1;
-			LongTermPicNum = longTermPicNum;
-		}
-
-
 	}
-
 }

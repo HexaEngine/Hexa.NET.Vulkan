@@ -26,5 +26,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ClampToBorder = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		MirrorClampToEdge = unchecked((uint)4),
 	}
 }

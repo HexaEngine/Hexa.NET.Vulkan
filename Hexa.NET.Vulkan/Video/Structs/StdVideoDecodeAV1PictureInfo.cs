@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeAV1PictureInfo
+	public unsafe struct StdVideoDecodeAV1PictureInfo
 	{
 		public StdVideoDecodeAV1PictureInfoFlags Flags;
 		public StdVideoAV1FrameType FrameType;
@@ -29,152 +28,18 @@ namespace Hexa.NET.Vulkan
 		public StdVideoAV1TxMode TxMode;
 		public byte DeltaQRes;
 		public byte DeltaLfRes;
-		public byte SkipModeFrame_0;
-		public byte SkipModeFrame_1;
+		public fixed byte SkipModeFrame[2];
 		public byte CodedDenom;
-		public byte Reserved2_0;
-		public byte Reserved2_1;
-		public byte Reserved2_2;
-		public byte OrderHints_0;
-		public byte OrderHints_1;
-		public byte OrderHints_2;
-		public byte OrderHints_3;
-		public byte OrderHints_4;
-		public byte OrderHints_5;
-		public byte OrderHints_6;
-		public byte OrderHints_7;
-		public uint ExpectedFrameId_0;
-		public uint ExpectedFrameId_1;
-		public uint ExpectedFrameId_2;
-		public uint ExpectedFrameId_3;
-		public uint ExpectedFrameId_4;
-		public uint ExpectedFrameId_5;
-		public uint ExpectedFrameId_6;
-		public uint ExpectedFrameId_7;
-		public unsafe StdVideoAV1TileInfo* PTileInfo;
-		public unsafe StdVideoAV1Quantization* PQuantization;
-		public unsafe StdVideoAV1Segmentation* PSegmentation;
-		public unsafe StdVideoAV1LoopFilter* PLoopFilter;
-		public unsafe StdVideoAV1CDEF* PCDEF;
-		public unsafe StdVideoAV1LoopRestoration* PLoopRestoration;
-		public unsafe StdVideoAV1GlobalMotion* PGlobalMotion;
-		public unsafe StdVideoAV1FilmGrain* PFilmGrain;
-
-		public unsafe StdVideoDecodeAV1PictureInfo(StdVideoDecodeAV1PictureInfoFlags flags = default, StdVideoAV1FrameType frameType = default, uint currentFrameId = default, byte orderHint = default, byte primaryRefFrame = default, byte refreshFrameFlags = default, byte reserved1 = default, StdVideoAV1InterpolationFilter interpolationFilter = default, StdVideoAV1TxMode txMode = default, byte deltaQRes = default, byte deltaLfRes = default, byte* skipModeFrame = default, byte codedDenom = default, byte* reserved2 = default, byte* orderHints = default, uint* expectedFrameId = default, StdVideoAV1TileInfo* pTileInfo = default, StdVideoAV1Quantization* pQuantization = default, StdVideoAV1Segmentation* pSegmentation = default, StdVideoAV1LoopFilter* pLoopFilter = default, StdVideoAV1CDEF* pcDef = default, StdVideoAV1LoopRestoration* pLoopRestoration = default, StdVideoAV1GlobalMotion* pGlobalMotion = default, StdVideoAV1FilmGrain* pFilmGrain = default)
-		{
-			Flags = flags;
-			FrameType = frameType;
-			CurrentFrameId = currentFrameId;
-			OrderHint = orderHint;
-			PrimaryRefFrame = primaryRefFrame;
-			RefreshFrameFlags = refreshFrameFlags;
-			Reserved1 = reserved1;
-			InterpolationFilter = interpolationFilter;
-			TxMode = txMode;
-			DeltaQRes = deltaQRes;
-			DeltaLfRes = deltaLfRes;
-			if (skipModeFrame != default(byte*))
-			{
-				SkipModeFrame_0 = skipModeFrame[0];
-				SkipModeFrame_1 = skipModeFrame[1];
-			}
-			CodedDenom = codedDenom;
-			if (reserved2 != default(byte*))
-			{
-				Reserved2_0 = reserved2[0];
-				Reserved2_1 = reserved2[1];
-				Reserved2_2 = reserved2[2];
-			}
-			if (orderHints != default(byte*))
-			{
-				OrderHints_0 = orderHints[0];
-				OrderHints_1 = orderHints[1];
-				OrderHints_2 = orderHints[2];
-				OrderHints_3 = orderHints[3];
-				OrderHints_4 = orderHints[4];
-				OrderHints_5 = orderHints[5];
-				OrderHints_6 = orderHints[6];
-				OrderHints_7 = orderHints[7];
-			}
-			if (expectedFrameId != default(uint*))
-			{
-				ExpectedFrameId_0 = expectedFrameId[0];
-				ExpectedFrameId_1 = expectedFrameId[1];
-				ExpectedFrameId_2 = expectedFrameId[2];
-				ExpectedFrameId_3 = expectedFrameId[3];
-				ExpectedFrameId_4 = expectedFrameId[4];
-				ExpectedFrameId_5 = expectedFrameId[5];
-				ExpectedFrameId_6 = expectedFrameId[6];
-				ExpectedFrameId_7 = expectedFrameId[7];
-			}
-			PTileInfo = pTileInfo;
-			PQuantization = pQuantization;
-			PSegmentation = pSegmentation;
-			PLoopFilter = pLoopFilter;
-			PCDEF = pcDef;
-			PLoopRestoration = pLoopRestoration;
-			PGlobalMotion = pGlobalMotion;
-			PFilmGrain = pFilmGrain;
-		}
-
-		public unsafe StdVideoDecodeAV1PictureInfo(StdVideoDecodeAV1PictureInfoFlags flags = default, StdVideoAV1FrameType frameType = default, uint currentFrameId = default, byte orderHint = default, byte primaryRefFrame = default, byte refreshFrameFlags = default, byte reserved1 = default, StdVideoAV1InterpolationFilter interpolationFilter = default, StdVideoAV1TxMode txMode = default, byte deltaQRes = default, byte deltaLfRes = default, Span<byte> skipModeFrame = default, byte codedDenom = default, Span<byte> reserved2 = default, Span<byte> orderHints = default, Span<uint> expectedFrameId = default, StdVideoAV1TileInfo* pTileInfo = default, StdVideoAV1Quantization* pQuantization = default, StdVideoAV1Segmentation* pSegmentation = default, StdVideoAV1LoopFilter* pLoopFilter = default, StdVideoAV1CDEF* pcDef = default, StdVideoAV1LoopRestoration* pLoopRestoration = default, StdVideoAV1GlobalMotion* pGlobalMotion = default, StdVideoAV1FilmGrain* pFilmGrain = default)
-		{
-			Flags = flags;
-			FrameType = frameType;
-			CurrentFrameId = currentFrameId;
-			OrderHint = orderHint;
-			PrimaryRefFrame = primaryRefFrame;
-			RefreshFrameFlags = refreshFrameFlags;
-			Reserved1 = reserved1;
-			InterpolationFilter = interpolationFilter;
-			TxMode = txMode;
-			DeltaQRes = deltaQRes;
-			DeltaLfRes = deltaLfRes;
-			if (skipModeFrame != default(Span<byte>))
-			{
-				SkipModeFrame_0 = skipModeFrame[0];
-				SkipModeFrame_1 = skipModeFrame[1];
-			}
-			CodedDenom = codedDenom;
-			if (reserved2 != default(Span<byte>))
-			{
-				Reserved2_0 = reserved2[0];
-				Reserved2_1 = reserved2[1];
-				Reserved2_2 = reserved2[2];
-			}
-			if (orderHints != default(Span<byte>))
-			{
-				OrderHints_0 = orderHints[0];
-				OrderHints_1 = orderHints[1];
-				OrderHints_2 = orderHints[2];
-				OrderHints_3 = orderHints[3];
-				OrderHints_4 = orderHints[4];
-				OrderHints_5 = orderHints[5];
-				OrderHints_6 = orderHints[6];
-				OrderHints_7 = orderHints[7];
-			}
-			if (expectedFrameId != default(Span<uint>))
-			{
-				ExpectedFrameId_0 = expectedFrameId[0];
-				ExpectedFrameId_1 = expectedFrameId[1];
-				ExpectedFrameId_2 = expectedFrameId[2];
-				ExpectedFrameId_3 = expectedFrameId[3];
-				ExpectedFrameId_4 = expectedFrameId[4];
-				ExpectedFrameId_5 = expectedFrameId[5];
-				ExpectedFrameId_6 = expectedFrameId[6];
-				ExpectedFrameId_7 = expectedFrameId[7];
-			}
-			PTileInfo = pTileInfo;
-			PQuantization = pQuantization;
-			PSegmentation = pSegmentation;
-			PLoopFilter = pLoopFilter;
-			PCDEF = pcDef;
-			PLoopRestoration = pLoopRestoration;
-			PGlobalMotion = pGlobalMotion;
-			PFilmGrain = pFilmGrain;
-		}
-
-
+		public fixed byte Reserved2[3];
+		public fixed byte OrderHints[8];
+		public fixed uint ExpectedFrameId[8];
+		public StdVideoAV1TileInfo* PTileInfo;
+		public StdVideoAV1Quantization* PQuantization;
+		public StdVideoAV1Segmentation* PSegmentation;
+		public StdVideoAV1LoopFilter* PLoopFilter;
+		public StdVideoAV1CDEF* PCDEF;
+		public StdVideoAV1LoopRestoration* PLoopRestoration;
+		public StdVideoAV1GlobalMotion* PGlobalMotion;
+		public StdVideoAV1FilmGrain* PFilmGrain;
 	}
-
 }

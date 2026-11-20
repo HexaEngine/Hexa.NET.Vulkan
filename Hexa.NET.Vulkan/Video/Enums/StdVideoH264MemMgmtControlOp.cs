@@ -12,17 +12,30 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264MemMgmtControlOp : int
+	public enum StdVideoH264MemMgmtControlOp : uint
 	{
-		End = unchecked(0),
-		UnmarkShortTerm = unchecked(1),
-		UnmarkLongTerm = unchecked(2),
-		MarkLongTerm = unchecked(3),
-		SetMaxLongTermIndex = unchecked(4),
-		UnmarkAll = unchecked(5),
-		MarkCurrentAsLongTerm = unchecked(6),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		End = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		UnmarkShortTerm = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		UnmarkLongTerm = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		MarkLongTerm = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		SetMaxLongTermIndex = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		UnmarkAll = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		MarkCurrentAsLongTerm = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

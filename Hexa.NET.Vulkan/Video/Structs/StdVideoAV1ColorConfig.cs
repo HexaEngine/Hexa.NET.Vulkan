@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1ColorConfig
+	public unsafe struct StdVideoAV1ColorConfig
 	{
 		public StdVideoAV1ColorConfigFlags Flags;
 		public byte BitDepth;
@@ -27,21 +26,5 @@ namespace Hexa.NET.Vulkan
 		public StdVideoAV1TransferCharacteristics TransferCharacteristics;
 		public StdVideoAV1MatrixCoefficients MatrixCoefficients;
 		public StdVideoAV1ChromaSamplePosition ChromaSamplePosition;
-
-		public unsafe StdVideoAV1ColorConfig(StdVideoAV1ColorConfigFlags flags = default, byte bitDepth = default, byte subsamplingX = default, byte subsamplingY = default, byte reserved1 = default, StdVideoAV1ColorPrimaries colorPrimaries = default, StdVideoAV1TransferCharacteristics transferCharacteristics = default, StdVideoAV1MatrixCoefficients matrixCoefficients = default, StdVideoAV1ChromaSamplePosition chromaSamplePosition = default)
-		{
-			Flags = flags;
-			BitDepth = bitDepth;
-			SubsamplingX = subsamplingX;
-			SubsamplingY = subsamplingY;
-			Reserved1 = reserved1;
-			ColorPrimaries = colorPrimaries;
-			TransferCharacteristics = transferCharacteristics;
-			MatrixCoefficients = matrixCoefficients;
-			ChromaSamplePosition = chromaSamplePosition;
-		}
-
-
 	}
-
 }

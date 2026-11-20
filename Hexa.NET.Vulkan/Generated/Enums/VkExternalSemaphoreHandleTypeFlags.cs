@@ -32,5 +32,26 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SyncFdBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		OpaqueFdBitKhr = OpaqueFdBit,
+
+		/// <remarks></remarks>
+		OpaqueWin32BitKhr = OpaqueWin32Bit,
+
+		/// <remarks></remarks>
+		OpaqueWin32KmtBitKhr = OpaqueWin32KmtBit,
+
+		/// <remarks></remarks>
+		D3D12FenceBitKhr = D3D12FenceBit,
+
+		/// <remarks></remarks>
+		SyncFdBitKhr = SyncFdBit,
+
+		/// <remarks></remarks>
+		ZirconEventBitFuchsia = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		SciSyncObjBitNv = unchecked((uint)32),
 	}
 }

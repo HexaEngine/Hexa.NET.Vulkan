@@ -15,19 +15,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265ShortTermRefPicSetFlags
+	public unsafe struct StdVideoH265ShortTermRefPicSetFlags
 	{
-		public uint InterRefPicSetPredictionFlag;
-		public uint DeltaRpsSign;
-
-		public unsafe StdVideoH265ShortTermRefPicSetFlags(uint interRefPicSetPredictionFlag = default, uint deltaRpsSign = default)
+		private uint _bitfield0;
+		public uint InterRefPicSetPredictionFlag
 		{
-			InterRefPicSetPredictionFlag = interRefPicSetPredictionFlag;
-			DeltaRpsSign = deltaRpsSign;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint DeltaRpsSign
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
 	}
-
 }

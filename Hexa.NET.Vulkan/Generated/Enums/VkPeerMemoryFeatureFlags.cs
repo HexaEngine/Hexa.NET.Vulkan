@@ -26,5 +26,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		GenericDstBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		CopySrcBitKhr = CopySrcBit,
+
+		/// <remarks></remarks>
+		CopyDstBitKhr = CopyDstBit,
+
+		/// <remarks></remarks>
+		GenericSrcBitKhr = GenericSrcBit,
+
+		/// <remarks></remarks>
+		GenericDstBitKhr = GenericDstBit,
 	}
 }

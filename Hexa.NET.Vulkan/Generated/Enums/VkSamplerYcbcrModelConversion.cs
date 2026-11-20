@@ -29,5 +29,20 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Ycbcr2020 = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		RgbIdentityKhr = RgbIdentity,
+
+		/// <remarks></remarks>
+		IdentityKhr = Identity,
+
+		/// <remarks></remarks>
+		Ycbcr709Khr = Ycbcr709,
+
+		/// <remarks></remarks>
+		Ycbcr601Khr = Ycbcr601,
+
+		/// <remarks></remarks>
+		Ycbcr2020Khr = Ycbcr2020,
 	}
 }

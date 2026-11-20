@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		One = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		SafetyCriticalOne = unchecked((uint)1000298001),
 	}
 }

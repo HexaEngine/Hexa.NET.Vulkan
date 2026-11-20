@@ -21,11 +21,14 @@ namespace Hexa.NET.Vulkan.KHR
 		public float Matrix_0_0;
 		public float Matrix_0_1;
 		public float Matrix_0_2;
+		public float Matrix_0_3;
 		public float Matrix_1_0;
 		public float Matrix_1_1;
 		public float Matrix_1_2;
+		public float Matrix_1_3;
 		public float Matrix_2_0;
 		public float Matrix_2_1;
 		public float Matrix_2_2;
+		public float Matrix_2_3;
 	}
 }

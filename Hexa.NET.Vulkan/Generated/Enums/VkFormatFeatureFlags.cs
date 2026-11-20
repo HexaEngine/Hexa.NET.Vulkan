@@ -53,5 +53,92 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SampledImageFilterLinearBit = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		TransferSrcBit = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		TransferDstBit = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		MidpointChromaSamplesBit = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionLinearFilterBit = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionSeparateReconstructionFilterBit = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionChromaReconstructionExplicitBit = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionChromaReconstructionExplicitForceableBit = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		DisjointBit = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		CositedChromaSamplesBit = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		SampledImageFilterMinmaxBit = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		SampledImageFilterCubicBitImg = SampledImageFilterCubicBitExt,
+
+		/// <remarks></remarks>
+		VideoDecodeOutputBitKhr = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		VideoDecodeDpbBitKhr = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		TransferSrcBitKhr = TransferSrcBit,
+
+		/// <remarks></remarks>
+		TransferDstBitKhr = TransferDstBit,
+
+		/// <remarks></remarks>
+		SampledImageFilterMinmaxBitExt = SampledImageFilterMinmaxBit,
+
+		/// <remarks></remarks>
+		AccelerationStructureVertexBufferBitKhr = unchecked((uint)536870912),
+
+		/// <remarks></remarks>
+		MidpointChromaSamplesBitKhr = MidpointChromaSamplesBit,
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionLinearFilterBitKhr = SampledImageYcbcrConversionLinearFilterBit,
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionSeparateReconstructionFilterBitKhr = SampledImageYcbcrConversionSeparateReconstructionFilterBit,
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionChromaReconstructionExplicitBitKhr = SampledImageYcbcrConversionChromaReconstructionExplicitBit,
+
+		/// <remarks></remarks>
+		SampledImageYcbcrConversionChromaReconstructionExplicitForceableBitKhr = SampledImageYcbcrConversionChromaReconstructionExplicitForceableBit,
+
+		/// <remarks></remarks>
+		DisjointBitKhr = DisjointBit,
+
+		/// <remarks></remarks>
+		CositedChromaSamplesBitKhr = CositedChromaSamplesBit,
+
+		/// <remarks></remarks>
+		SampledImageFilterCubicBitExt = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		FragmentDensityMapBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentBitKhr = unchecked((uint)1073741824),
+
+		/// <remarks></remarks>
+		VideoEncodeInputBitKhr = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		VideoEncodeDpbBitKhr = unchecked((uint)268435456),
 	}
 }

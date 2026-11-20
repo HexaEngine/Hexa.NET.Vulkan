@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264PocType : int
+	public enum StdVideoH264PocType : uint
 	{
-		Type0 = unchecked(0),
-		Type1 = unchecked(1),
-		Type2 = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Type0 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Type1 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Type2 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

@@ -20,5 +20,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Compute = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ExecutionGraphAmdx = unchecked((uint)1000134000),
+
+		/// <remarks></remarks>
+		RayTracingKhr = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		RayTracingNv = RayTracingKhr,
+
+		/// <remarks></remarks>
+		SubpassShadingHuawei = unchecked((uint)1000369003),
 	}
 }

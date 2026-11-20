@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264WeightTable
+	public unsafe struct StdVideoEncodeH264WeightTable
 	{
 		public StdVideoEncodeH264WeightTableFlags Flags;
 		public byte LumaLog2WeightDenom;
@@ -85,70 +84,134 @@ namespace Hexa.NET.Vulkan
 		public sbyte LumaOffsetL0_29;
 		public sbyte LumaOffsetL0_30;
 		public sbyte LumaOffsetL0_31;
-		public unsafe sbyte* ChromaWeightL0_0;
-		public unsafe sbyte* ChromaWeightL0_1;
-		public unsafe sbyte* ChromaWeightL0_2;
-		public unsafe sbyte* ChromaWeightL0_3;
-		public unsafe sbyte* ChromaWeightL0_4;
-		public unsafe sbyte* ChromaWeightL0_5;
-		public unsafe sbyte* ChromaWeightL0_6;
-		public unsafe sbyte* ChromaWeightL0_7;
-		public unsafe sbyte* ChromaWeightL0_8;
-		public unsafe sbyte* ChromaWeightL0_9;
-		public unsafe sbyte* ChromaWeightL0_10;
-		public unsafe sbyte* ChromaWeightL0_11;
-		public unsafe sbyte* ChromaWeightL0_12;
-		public unsafe sbyte* ChromaWeightL0_13;
-		public unsafe sbyte* ChromaWeightL0_14;
-		public unsafe sbyte* ChromaWeightL0_15;
-		public unsafe sbyte* ChromaWeightL0_16;
-		public unsafe sbyte* ChromaWeightL0_17;
-		public unsafe sbyte* ChromaWeightL0_18;
-		public unsafe sbyte* ChromaWeightL0_19;
-		public unsafe sbyte* ChromaWeightL0_20;
-		public unsafe sbyte* ChromaWeightL0_21;
-		public unsafe sbyte* ChromaWeightL0_22;
-		public unsafe sbyte* ChromaWeightL0_23;
-		public unsafe sbyte* ChromaWeightL0_24;
-		public unsafe sbyte* ChromaWeightL0_25;
-		public unsafe sbyte* ChromaWeightL0_26;
-		public unsafe sbyte* ChromaWeightL0_27;
-		public unsafe sbyte* ChromaWeightL0_28;
-		public unsafe sbyte* ChromaWeightL0_29;
-		public unsafe sbyte* ChromaWeightL0_30;
-		public unsafe sbyte* ChromaWeightL0_31;
-		public unsafe sbyte* ChromaOffsetL0_0;
-		public unsafe sbyte* ChromaOffsetL0_1;
-		public unsafe sbyte* ChromaOffsetL0_2;
-		public unsafe sbyte* ChromaOffsetL0_3;
-		public unsafe sbyte* ChromaOffsetL0_4;
-		public unsafe sbyte* ChromaOffsetL0_5;
-		public unsafe sbyte* ChromaOffsetL0_6;
-		public unsafe sbyte* ChromaOffsetL0_7;
-		public unsafe sbyte* ChromaOffsetL0_8;
-		public unsafe sbyte* ChromaOffsetL0_9;
-		public unsafe sbyte* ChromaOffsetL0_10;
-		public unsafe sbyte* ChromaOffsetL0_11;
-		public unsafe sbyte* ChromaOffsetL0_12;
-		public unsafe sbyte* ChromaOffsetL0_13;
-		public unsafe sbyte* ChromaOffsetL0_14;
-		public unsafe sbyte* ChromaOffsetL0_15;
-		public unsafe sbyte* ChromaOffsetL0_16;
-		public unsafe sbyte* ChromaOffsetL0_17;
-		public unsafe sbyte* ChromaOffsetL0_18;
-		public unsafe sbyte* ChromaOffsetL0_19;
-		public unsafe sbyte* ChromaOffsetL0_20;
-		public unsafe sbyte* ChromaOffsetL0_21;
-		public unsafe sbyte* ChromaOffsetL0_22;
-		public unsafe sbyte* ChromaOffsetL0_23;
-		public unsafe sbyte* ChromaOffsetL0_24;
-		public unsafe sbyte* ChromaOffsetL0_25;
-		public unsafe sbyte* ChromaOffsetL0_26;
-		public unsafe sbyte* ChromaOffsetL0_27;
-		public unsafe sbyte* ChromaOffsetL0_28;
-		public unsafe sbyte* ChromaOffsetL0_29;
-		public unsafe sbyte* ChromaOffsetL0_30;
-		public unsafe sbyte* ChromaOffsetL0_31;
+		public sbyte ChromaWeightL0_0_0;
+		public sbyte ChromaWeightL0_0_1;
+		public sbyte ChromaWeightL0_1_0;
+		public sbyte ChromaWeightL0_1_1;
+		public sbyte ChromaWeightL0_2_0;
+		public sbyte ChromaWeightL0_2_1;
+		public sbyte ChromaWeightL0_3_0;
+		public sbyte ChromaWeightL0_3_1;
+		public sbyte ChromaWeightL0_4_0;
+		public sbyte ChromaWeightL0_4_1;
+		public sbyte ChromaWeightL0_5_0;
+		public sbyte ChromaWeightL0_5_1;
+		public sbyte ChromaWeightL0_6_0;
+		public sbyte ChromaWeightL0_6_1;
+		public sbyte ChromaWeightL0_7_0;
+		public sbyte ChromaWeightL0_7_1;
+		public sbyte ChromaWeightL0_8_0;
+		public sbyte ChromaWeightL0_8_1;
+		public sbyte ChromaWeightL0_9_0;
+		public sbyte ChromaWeightL0_9_1;
+		public sbyte ChromaWeightL0_10_0;
+		public sbyte ChromaWeightL0_10_1;
+		public sbyte ChromaWeightL0_11_0;
+		public sbyte ChromaWeightL0_11_1;
+		public sbyte ChromaWeightL0_12_0;
+		public sbyte ChromaWeightL0_12_1;
+		public sbyte ChromaWeightL0_13_0;
+		public sbyte ChromaWeightL0_13_1;
+		public sbyte ChromaWeightL0_14_0;
+		public sbyte ChromaWeightL0_14_1;
+		public sbyte ChromaWeightL0_15_0;
+		public sbyte ChromaWeightL0_15_1;
+		public sbyte ChromaWeightL0_16_0;
+		public sbyte ChromaWeightL0_16_1;
+		public sbyte ChromaWeightL0_17_0;
+		public sbyte ChromaWeightL0_17_1;
+		public sbyte ChromaWeightL0_18_0;
+		public sbyte ChromaWeightL0_18_1;
+		public sbyte ChromaWeightL0_19_0;
+		public sbyte ChromaWeightL0_19_1;
+		public sbyte ChromaWeightL0_20_0;
+		public sbyte ChromaWeightL0_20_1;
+		public sbyte ChromaWeightL0_21_0;
+		public sbyte ChromaWeightL0_21_1;
+		public sbyte ChromaWeightL0_22_0;
+		public sbyte ChromaWeightL0_22_1;
+		public sbyte ChromaWeightL0_23_0;
+		public sbyte ChromaWeightL0_23_1;
+		public sbyte ChromaWeightL0_24_0;
+		public sbyte ChromaWeightL0_24_1;
+		public sbyte ChromaWeightL0_25_0;
+		public sbyte ChromaWeightL0_25_1;
+		public sbyte ChromaWeightL0_26_0;
+		public sbyte ChromaWeightL0_26_1;
+		public sbyte ChromaWeightL0_27_0;
+		public sbyte ChromaWeightL0_27_1;
+		public sbyte ChromaWeightL0_28_0;
+		public sbyte ChromaWeightL0_28_1;
+		public sbyte ChromaWeightL0_29_0;
+		public sbyte ChromaWeightL0_29_1;
+		public sbyte ChromaWeightL0_30_0;
+		public sbyte ChromaWeightL0_30_1;
+		public sbyte ChromaWeightL0_31_0;
+		public sbyte ChromaWeightL0_31_1;
+		public sbyte ChromaOffsetL0_0_0;
+		public sbyte ChromaOffsetL0_0_1;
+		public sbyte ChromaOffsetL0_1_0;
+		public sbyte ChromaOffsetL0_1_1;
+		public sbyte ChromaOffsetL0_2_0;
+		public sbyte ChromaOffsetL0_2_1;
+		public sbyte ChromaOffsetL0_3_0;
+		public sbyte ChromaOffsetL0_3_1;
+		public sbyte ChromaOffsetL0_4_0;
+		public sbyte ChromaOffsetL0_4_1;
+		public sbyte ChromaOffsetL0_5_0;
+		public sbyte ChromaOffsetL0_5_1;
+		public sbyte ChromaOffsetL0_6_0;
+		public sbyte ChromaOffsetL0_6_1;
+		public sbyte ChromaOffsetL0_7_0;
+		public sbyte ChromaOffsetL0_7_1;
+		public sbyte ChromaOffsetL0_8_0;
+		public sbyte ChromaOffsetL0_8_1;
+		public sbyte ChromaOffsetL0_9_0;
+		public sbyte ChromaOffsetL0_9_1;
+		public sbyte ChromaOffsetL0_10_0;
+		public sbyte ChromaOffsetL0_10_1;
+		public sbyte ChromaOffsetL0_11_0;
+		public sbyte ChromaOffsetL0_11_1;
+		public sbyte ChromaOffsetL0_12_0;
+		public sbyte ChromaOffsetL0_12_1;
+		public sbyte ChromaOffsetL0_13_0;
+		public sbyte ChromaOffsetL0_13_1;
+		public sbyte ChromaOffsetL0_14_0;
+		public sbyte ChromaOffsetL0_14_1;
+		public sbyte ChromaOffsetL0_15_0;
+		public sbyte ChromaOffsetL0_15_1;
+		public sbyte ChromaOffsetL0_16_0;
+		public sbyte ChromaOffsetL0_16_1;
+		public sbyte ChromaOffsetL0_17_0;
+		public sbyte ChromaOffsetL0_17_1;
+		public sbyte ChromaOffsetL0_18_0;
+		public sbyte ChromaOffsetL0_18_1;
+		public sbyte ChromaOffsetL0_19_0;
+		public sbyte ChromaOffsetL0_19_1;
+		public sbyte ChromaOffsetL0_20_0;
+		public sbyte ChromaOffsetL0_20_1;
+		public sbyte ChromaOffsetL0_21_0;
+		public sbyte ChromaOffsetL0_21_1;
+		public sbyte ChromaOffsetL0_22_0;
+		public sbyte ChromaOffsetL0_22_1;
+		public sbyte ChromaOffsetL0_23_0;
+		public sbyte ChromaOffsetL0_23_1;
+		public sbyte ChromaOffsetL0_24_0;
+		public sbyte ChromaOffsetL0_24_1;
+		public sbyte ChromaOffsetL0_25_0;
+		public sbyte ChromaOffsetL0_25_1;
+		public sbyte ChromaOffsetL0_26_0;
+		public sbyte ChromaOffsetL0_26_1;
+		public sbyte ChromaOffsetL0_27_0;
+		public sbyte ChromaOffsetL0_27_1;
+		public sbyte ChromaOffsetL0_28_0;
+		public sbyte ChromaOffsetL0_28_1;
+		public sbyte ChromaOffsetL0_29_0;
+		public sbyte ChromaOffsetL0_29_1;
+		public sbyte ChromaOffsetL0_30_0;
+		public sbyte ChromaOffsetL0_30_1;
+		public sbyte ChromaOffsetL0_31_0;
+		public sbyte ChromaOffsetL0_31_1;
 		public sbyte LumaWeightL1_0;
 		public sbyte LumaWeightL1_1;
 		public sbyte LumaWeightL1_2;
@@ -213,690 +276,133 @@ namespace Hexa.NET.Vulkan
 		public sbyte LumaOffsetL1_29;
 		public sbyte LumaOffsetL1_30;
 		public sbyte LumaOffsetL1_31;
-		public unsafe sbyte* ChromaWeightL1_0;
-		public unsafe sbyte* ChromaWeightL1_1;
-		public unsafe sbyte* ChromaWeightL1_2;
-		public unsafe sbyte* ChromaWeightL1_3;
-		public unsafe sbyte* ChromaWeightL1_4;
-		public unsafe sbyte* ChromaWeightL1_5;
-		public unsafe sbyte* ChromaWeightL1_6;
-		public unsafe sbyte* ChromaWeightL1_7;
-		public unsafe sbyte* ChromaWeightL1_8;
-		public unsafe sbyte* ChromaWeightL1_9;
-		public unsafe sbyte* ChromaWeightL1_10;
-		public unsafe sbyte* ChromaWeightL1_11;
-		public unsafe sbyte* ChromaWeightL1_12;
-		public unsafe sbyte* ChromaWeightL1_13;
-		public unsafe sbyte* ChromaWeightL1_14;
-		public unsafe sbyte* ChromaWeightL1_15;
-		public unsafe sbyte* ChromaWeightL1_16;
-		public unsafe sbyte* ChromaWeightL1_17;
-		public unsafe sbyte* ChromaWeightL1_18;
-		public unsafe sbyte* ChromaWeightL1_19;
-		public unsafe sbyte* ChromaWeightL1_20;
-		public unsafe sbyte* ChromaWeightL1_21;
-		public unsafe sbyte* ChromaWeightL1_22;
-		public unsafe sbyte* ChromaWeightL1_23;
-		public unsafe sbyte* ChromaWeightL1_24;
-		public unsafe sbyte* ChromaWeightL1_25;
-		public unsafe sbyte* ChromaWeightL1_26;
-		public unsafe sbyte* ChromaWeightL1_27;
-		public unsafe sbyte* ChromaWeightL1_28;
-		public unsafe sbyte* ChromaWeightL1_29;
-		public unsafe sbyte* ChromaWeightL1_30;
-		public unsafe sbyte* ChromaWeightL1_31;
-		public unsafe sbyte* ChromaOffsetL1_0;
-		public unsafe sbyte* ChromaOffsetL1_1;
-		public unsafe sbyte* ChromaOffsetL1_2;
-		public unsafe sbyte* ChromaOffsetL1_3;
-		public unsafe sbyte* ChromaOffsetL1_4;
-		public unsafe sbyte* ChromaOffsetL1_5;
-		public unsafe sbyte* ChromaOffsetL1_6;
-		public unsafe sbyte* ChromaOffsetL1_7;
-		public unsafe sbyte* ChromaOffsetL1_8;
-		public unsafe sbyte* ChromaOffsetL1_9;
-		public unsafe sbyte* ChromaOffsetL1_10;
-		public unsafe sbyte* ChromaOffsetL1_11;
-		public unsafe sbyte* ChromaOffsetL1_12;
-		public unsafe sbyte* ChromaOffsetL1_13;
-		public unsafe sbyte* ChromaOffsetL1_14;
-		public unsafe sbyte* ChromaOffsetL1_15;
-		public unsafe sbyte* ChromaOffsetL1_16;
-		public unsafe sbyte* ChromaOffsetL1_17;
-		public unsafe sbyte* ChromaOffsetL1_18;
-		public unsafe sbyte* ChromaOffsetL1_19;
-		public unsafe sbyte* ChromaOffsetL1_20;
-		public unsafe sbyte* ChromaOffsetL1_21;
-		public unsafe sbyte* ChromaOffsetL1_22;
-		public unsafe sbyte* ChromaOffsetL1_23;
-		public unsafe sbyte* ChromaOffsetL1_24;
-		public unsafe sbyte* ChromaOffsetL1_25;
-		public unsafe sbyte* ChromaOffsetL1_26;
-		public unsafe sbyte* ChromaOffsetL1_27;
-		public unsafe sbyte* ChromaOffsetL1_28;
-		public unsafe sbyte* ChromaOffsetL1_29;
-		public unsafe sbyte* ChromaOffsetL1_30;
-		public unsafe sbyte* ChromaOffsetL1_31;
-
-		public unsafe StdVideoEncodeH264WeightTable(StdVideoEncodeH264WeightTableFlags flags = default, byte lumalog2WeightDenom = default, byte chromalog2WeightDenom = default, sbyte* lumaWeightl0 = default, sbyte* lumaOffsetl0 = default, sbyte** chromaWeightl0 = default, sbyte** chromaOffsetl0 = default, sbyte* lumaWeightl1 = default, sbyte* lumaOffsetl1 = default, sbyte** chromaWeightl1 = default, sbyte** chromaOffsetl1 = default)
-		{
-			Flags = flags;
-			LumaLog2WeightDenom = lumalog2WeightDenom;
-			ChromaLog2WeightDenom = chromalog2WeightDenom;
-			if (lumaWeightl0 != default(sbyte*))
-			{
-				LumaWeightL0_0 = lumaWeightl0[0];
-				LumaWeightL0_1 = lumaWeightl0[1];
-				LumaWeightL0_2 = lumaWeightl0[2];
-				LumaWeightL0_3 = lumaWeightl0[3];
-				LumaWeightL0_4 = lumaWeightl0[4];
-				LumaWeightL0_5 = lumaWeightl0[5];
-				LumaWeightL0_6 = lumaWeightl0[6];
-				LumaWeightL0_7 = lumaWeightl0[7];
-				LumaWeightL0_8 = lumaWeightl0[8];
-				LumaWeightL0_9 = lumaWeightl0[9];
-				LumaWeightL0_10 = lumaWeightl0[10];
-				LumaWeightL0_11 = lumaWeightl0[11];
-				LumaWeightL0_12 = lumaWeightl0[12];
-				LumaWeightL0_13 = lumaWeightl0[13];
-				LumaWeightL0_14 = lumaWeightl0[14];
-				LumaWeightL0_15 = lumaWeightl0[15];
-				LumaWeightL0_16 = lumaWeightl0[16];
-				LumaWeightL0_17 = lumaWeightl0[17];
-				LumaWeightL0_18 = lumaWeightl0[18];
-				LumaWeightL0_19 = lumaWeightl0[19];
-				LumaWeightL0_20 = lumaWeightl0[20];
-				LumaWeightL0_21 = lumaWeightl0[21];
-				LumaWeightL0_22 = lumaWeightl0[22];
-				LumaWeightL0_23 = lumaWeightl0[23];
-				LumaWeightL0_24 = lumaWeightl0[24];
-				LumaWeightL0_25 = lumaWeightl0[25];
-				LumaWeightL0_26 = lumaWeightl0[26];
-				LumaWeightL0_27 = lumaWeightl0[27];
-				LumaWeightL0_28 = lumaWeightl0[28];
-				LumaWeightL0_29 = lumaWeightl0[29];
-				LumaWeightL0_30 = lumaWeightl0[30];
-				LumaWeightL0_31 = lumaWeightl0[31];
-			}
-			if (lumaOffsetl0 != default(sbyte*))
-			{
-				LumaOffsetL0_0 = lumaOffsetl0[0];
-				LumaOffsetL0_1 = lumaOffsetl0[1];
-				LumaOffsetL0_2 = lumaOffsetl0[2];
-				LumaOffsetL0_3 = lumaOffsetl0[3];
-				LumaOffsetL0_4 = lumaOffsetl0[4];
-				LumaOffsetL0_5 = lumaOffsetl0[5];
-				LumaOffsetL0_6 = lumaOffsetl0[6];
-				LumaOffsetL0_7 = lumaOffsetl0[7];
-				LumaOffsetL0_8 = lumaOffsetl0[8];
-				LumaOffsetL0_9 = lumaOffsetl0[9];
-				LumaOffsetL0_10 = lumaOffsetl0[10];
-				LumaOffsetL0_11 = lumaOffsetl0[11];
-				LumaOffsetL0_12 = lumaOffsetl0[12];
-				LumaOffsetL0_13 = lumaOffsetl0[13];
-				LumaOffsetL0_14 = lumaOffsetl0[14];
-				LumaOffsetL0_15 = lumaOffsetl0[15];
-				LumaOffsetL0_16 = lumaOffsetl0[16];
-				LumaOffsetL0_17 = lumaOffsetl0[17];
-				LumaOffsetL0_18 = lumaOffsetl0[18];
-				LumaOffsetL0_19 = lumaOffsetl0[19];
-				LumaOffsetL0_20 = lumaOffsetl0[20];
-				LumaOffsetL0_21 = lumaOffsetl0[21];
-				LumaOffsetL0_22 = lumaOffsetl0[22];
-				LumaOffsetL0_23 = lumaOffsetl0[23];
-				LumaOffsetL0_24 = lumaOffsetl0[24];
-				LumaOffsetL0_25 = lumaOffsetl0[25];
-				LumaOffsetL0_26 = lumaOffsetl0[26];
-				LumaOffsetL0_27 = lumaOffsetl0[27];
-				LumaOffsetL0_28 = lumaOffsetl0[28];
-				LumaOffsetL0_29 = lumaOffsetl0[29];
-				LumaOffsetL0_30 = lumaOffsetl0[30];
-				LumaOffsetL0_31 = lumaOffsetl0[31];
-			}
-			if (chromaWeightl0 != default(sbyte**))
-			{
-				ChromaWeightL0_0 = chromaWeightl0[0];
-				ChromaWeightL0_1 = chromaWeightl0[1];
-				ChromaWeightL0_2 = chromaWeightl0[2];
-				ChromaWeightL0_3 = chromaWeightl0[3];
-				ChromaWeightL0_4 = chromaWeightl0[4];
-				ChromaWeightL0_5 = chromaWeightl0[5];
-				ChromaWeightL0_6 = chromaWeightl0[6];
-				ChromaWeightL0_7 = chromaWeightl0[7];
-				ChromaWeightL0_8 = chromaWeightl0[8];
-				ChromaWeightL0_9 = chromaWeightl0[9];
-				ChromaWeightL0_10 = chromaWeightl0[10];
-				ChromaWeightL0_11 = chromaWeightl0[11];
-				ChromaWeightL0_12 = chromaWeightl0[12];
-				ChromaWeightL0_13 = chromaWeightl0[13];
-				ChromaWeightL0_14 = chromaWeightl0[14];
-				ChromaWeightL0_15 = chromaWeightl0[15];
-				ChromaWeightL0_16 = chromaWeightl0[16];
-				ChromaWeightL0_17 = chromaWeightl0[17];
-				ChromaWeightL0_18 = chromaWeightl0[18];
-				ChromaWeightL0_19 = chromaWeightl0[19];
-				ChromaWeightL0_20 = chromaWeightl0[20];
-				ChromaWeightL0_21 = chromaWeightl0[21];
-				ChromaWeightL0_22 = chromaWeightl0[22];
-				ChromaWeightL0_23 = chromaWeightl0[23];
-				ChromaWeightL0_24 = chromaWeightl0[24];
-				ChromaWeightL0_25 = chromaWeightl0[25];
-				ChromaWeightL0_26 = chromaWeightl0[26];
-				ChromaWeightL0_27 = chromaWeightl0[27];
-				ChromaWeightL0_28 = chromaWeightl0[28];
-				ChromaWeightL0_29 = chromaWeightl0[29];
-				ChromaWeightL0_30 = chromaWeightl0[30];
-				ChromaWeightL0_31 = chromaWeightl0[31];
-			}
-			if (chromaOffsetl0 != default(sbyte**))
-			{
-				ChromaOffsetL0_0 = chromaOffsetl0[0];
-				ChromaOffsetL0_1 = chromaOffsetl0[1];
-				ChromaOffsetL0_2 = chromaOffsetl0[2];
-				ChromaOffsetL0_3 = chromaOffsetl0[3];
-				ChromaOffsetL0_4 = chromaOffsetl0[4];
-				ChromaOffsetL0_5 = chromaOffsetl0[5];
-				ChromaOffsetL0_6 = chromaOffsetl0[6];
-				ChromaOffsetL0_7 = chromaOffsetl0[7];
-				ChromaOffsetL0_8 = chromaOffsetl0[8];
-				ChromaOffsetL0_9 = chromaOffsetl0[9];
-				ChromaOffsetL0_10 = chromaOffsetl0[10];
-				ChromaOffsetL0_11 = chromaOffsetl0[11];
-				ChromaOffsetL0_12 = chromaOffsetl0[12];
-				ChromaOffsetL0_13 = chromaOffsetl0[13];
-				ChromaOffsetL0_14 = chromaOffsetl0[14];
-				ChromaOffsetL0_15 = chromaOffsetl0[15];
-				ChromaOffsetL0_16 = chromaOffsetl0[16];
-				ChromaOffsetL0_17 = chromaOffsetl0[17];
-				ChromaOffsetL0_18 = chromaOffsetl0[18];
-				ChromaOffsetL0_19 = chromaOffsetl0[19];
-				ChromaOffsetL0_20 = chromaOffsetl0[20];
-				ChromaOffsetL0_21 = chromaOffsetl0[21];
-				ChromaOffsetL0_22 = chromaOffsetl0[22];
-				ChromaOffsetL0_23 = chromaOffsetl0[23];
-				ChromaOffsetL0_24 = chromaOffsetl0[24];
-				ChromaOffsetL0_25 = chromaOffsetl0[25];
-				ChromaOffsetL0_26 = chromaOffsetl0[26];
-				ChromaOffsetL0_27 = chromaOffsetl0[27];
-				ChromaOffsetL0_28 = chromaOffsetl0[28];
-				ChromaOffsetL0_29 = chromaOffsetl0[29];
-				ChromaOffsetL0_30 = chromaOffsetl0[30];
-				ChromaOffsetL0_31 = chromaOffsetl0[31];
-			}
-			if (lumaWeightl1 != default(sbyte*))
-			{
-				LumaWeightL1_0 = lumaWeightl1[0];
-				LumaWeightL1_1 = lumaWeightl1[1];
-				LumaWeightL1_2 = lumaWeightl1[2];
-				LumaWeightL1_3 = lumaWeightl1[3];
-				LumaWeightL1_4 = lumaWeightl1[4];
-				LumaWeightL1_5 = lumaWeightl1[5];
-				LumaWeightL1_6 = lumaWeightl1[6];
-				LumaWeightL1_7 = lumaWeightl1[7];
-				LumaWeightL1_8 = lumaWeightl1[8];
-				LumaWeightL1_9 = lumaWeightl1[9];
-				LumaWeightL1_10 = lumaWeightl1[10];
-				LumaWeightL1_11 = lumaWeightl1[11];
-				LumaWeightL1_12 = lumaWeightl1[12];
-				LumaWeightL1_13 = lumaWeightl1[13];
-				LumaWeightL1_14 = lumaWeightl1[14];
-				LumaWeightL1_15 = lumaWeightl1[15];
-				LumaWeightL1_16 = lumaWeightl1[16];
-				LumaWeightL1_17 = lumaWeightl1[17];
-				LumaWeightL1_18 = lumaWeightl1[18];
-				LumaWeightL1_19 = lumaWeightl1[19];
-				LumaWeightL1_20 = lumaWeightl1[20];
-				LumaWeightL1_21 = lumaWeightl1[21];
-				LumaWeightL1_22 = lumaWeightl1[22];
-				LumaWeightL1_23 = lumaWeightl1[23];
-				LumaWeightL1_24 = lumaWeightl1[24];
-				LumaWeightL1_25 = lumaWeightl1[25];
-				LumaWeightL1_26 = lumaWeightl1[26];
-				LumaWeightL1_27 = lumaWeightl1[27];
-				LumaWeightL1_28 = lumaWeightl1[28];
-				LumaWeightL1_29 = lumaWeightl1[29];
-				LumaWeightL1_30 = lumaWeightl1[30];
-				LumaWeightL1_31 = lumaWeightl1[31];
-			}
-			if (lumaOffsetl1 != default(sbyte*))
-			{
-				LumaOffsetL1_0 = lumaOffsetl1[0];
-				LumaOffsetL1_1 = lumaOffsetl1[1];
-				LumaOffsetL1_2 = lumaOffsetl1[2];
-				LumaOffsetL1_3 = lumaOffsetl1[3];
-				LumaOffsetL1_4 = lumaOffsetl1[4];
-				LumaOffsetL1_5 = lumaOffsetl1[5];
-				LumaOffsetL1_6 = lumaOffsetl1[6];
-				LumaOffsetL1_7 = lumaOffsetl1[7];
-				LumaOffsetL1_8 = lumaOffsetl1[8];
-				LumaOffsetL1_9 = lumaOffsetl1[9];
-				LumaOffsetL1_10 = lumaOffsetl1[10];
-				LumaOffsetL1_11 = lumaOffsetl1[11];
-				LumaOffsetL1_12 = lumaOffsetl1[12];
-				LumaOffsetL1_13 = lumaOffsetl1[13];
-				LumaOffsetL1_14 = lumaOffsetl1[14];
-				LumaOffsetL1_15 = lumaOffsetl1[15];
-				LumaOffsetL1_16 = lumaOffsetl1[16];
-				LumaOffsetL1_17 = lumaOffsetl1[17];
-				LumaOffsetL1_18 = lumaOffsetl1[18];
-				LumaOffsetL1_19 = lumaOffsetl1[19];
-				LumaOffsetL1_20 = lumaOffsetl1[20];
-				LumaOffsetL1_21 = lumaOffsetl1[21];
-				LumaOffsetL1_22 = lumaOffsetl1[22];
-				LumaOffsetL1_23 = lumaOffsetl1[23];
-				LumaOffsetL1_24 = lumaOffsetl1[24];
-				LumaOffsetL1_25 = lumaOffsetl1[25];
-				LumaOffsetL1_26 = lumaOffsetl1[26];
-				LumaOffsetL1_27 = lumaOffsetl1[27];
-				LumaOffsetL1_28 = lumaOffsetl1[28];
-				LumaOffsetL1_29 = lumaOffsetl1[29];
-				LumaOffsetL1_30 = lumaOffsetl1[30];
-				LumaOffsetL1_31 = lumaOffsetl1[31];
-			}
-			if (chromaWeightl1 != default(sbyte**))
-			{
-				ChromaWeightL1_0 = chromaWeightl1[0];
-				ChromaWeightL1_1 = chromaWeightl1[1];
-				ChromaWeightL1_2 = chromaWeightl1[2];
-				ChromaWeightL1_3 = chromaWeightl1[3];
-				ChromaWeightL1_4 = chromaWeightl1[4];
-				ChromaWeightL1_5 = chromaWeightl1[5];
-				ChromaWeightL1_6 = chromaWeightl1[6];
-				ChromaWeightL1_7 = chromaWeightl1[7];
-				ChromaWeightL1_8 = chromaWeightl1[8];
-				ChromaWeightL1_9 = chromaWeightl1[9];
-				ChromaWeightL1_10 = chromaWeightl1[10];
-				ChromaWeightL1_11 = chromaWeightl1[11];
-				ChromaWeightL1_12 = chromaWeightl1[12];
-				ChromaWeightL1_13 = chromaWeightl1[13];
-				ChromaWeightL1_14 = chromaWeightl1[14];
-				ChromaWeightL1_15 = chromaWeightl1[15];
-				ChromaWeightL1_16 = chromaWeightl1[16];
-				ChromaWeightL1_17 = chromaWeightl1[17];
-				ChromaWeightL1_18 = chromaWeightl1[18];
-				ChromaWeightL1_19 = chromaWeightl1[19];
-				ChromaWeightL1_20 = chromaWeightl1[20];
-				ChromaWeightL1_21 = chromaWeightl1[21];
-				ChromaWeightL1_22 = chromaWeightl1[22];
-				ChromaWeightL1_23 = chromaWeightl1[23];
-				ChromaWeightL1_24 = chromaWeightl1[24];
-				ChromaWeightL1_25 = chromaWeightl1[25];
-				ChromaWeightL1_26 = chromaWeightl1[26];
-				ChromaWeightL1_27 = chromaWeightl1[27];
-				ChromaWeightL1_28 = chromaWeightl1[28];
-				ChromaWeightL1_29 = chromaWeightl1[29];
-				ChromaWeightL1_30 = chromaWeightl1[30];
-				ChromaWeightL1_31 = chromaWeightl1[31];
-			}
-			if (chromaOffsetl1 != default(sbyte**))
-			{
-				ChromaOffsetL1_0 = chromaOffsetl1[0];
-				ChromaOffsetL1_1 = chromaOffsetl1[1];
-				ChromaOffsetL1_2 = chromaOffsetl1[2];
-				ChromaOffsetL1_3 = chromaOffsetl1[3];
-				ChromaOffsetL1_4 = chromaOffsetl1[4];
-				ChromaOffsetL1_5 = chromaOffsetl1[5];
-				ChromaOffsetL1_6 = chromaOffsetl1[6];
-				ChromaOffsetL1_7 = chromaOffsetl1[7];
-				ChromaOffsetL1_8 = chromaOffsetl1[8];
-				ChromaOffsetL1_9 = chromaOffsetl1[9];
-				ChromaOffsetL1_10 = chromaOffsetl1[10];
-				ChromaOffsetL1_11 = chromaOffsetl1[11];
-				ChromaOffsetL1_12 = chromaOffsetl1[12];
-				ChromaOffsetL1_13 = chromaOffsetl1[13];
-				ChromaOffsetL1_14 = chromaOffsetl1[14];
-				ChromaOffsetL1_15 = chromaOffsetl1[15];
-				ChromaOffsetL1_16 = chromaOffsetl1[16];
-				ChromaOffsetL1_17 = chromaOffsetl1[17];
-				ChromaOffsetL1_18 = chromaOffsetl1[18];
-				ChromaOffsetL1_19 = chromaOffsetl1[19];
-				ChromaOffsetL1_20 = chromaOffsetl1[20];
-				ChromaOffsetL1_21 = chromaOffsetl1[21];
-				ChromaOffsetL1_22 = chromaOffsetl1[22];
-				ChromaOffsetL1_23 = chromaOffsetl1[23];
-				ChromaOffsetL1_24 = chromaOffsetl1[24];
-				ChromaOffsetL1_25 = chromaOffsetl1[25];
-				ChromaOffsetL1_26 = chromaOffsetl1[26];
-				ChromaOffsetL1_27 = chromaOffsetl1[27];
-				ChromaOffsetL1_28 = chromaOffsetl1[28];
-				ChromaOffsetL1_29 = chromaOffsetl1[29];
-				ChromaOffsetL1_30 = chromaOffsetl1[30];
-				ChromaOffsetL1_31 = chromaOffsetl1[31];
-			}
-		}
-
-		public unsafe StdVideoEncodeH264WeightTable(StdVideoEncodeH264WeightTableFlags flags = default, byte lumalog2WeightDenom = default, byte chromalog2WeightDenom = default, Span<sbyte> lumaWeightl0 = default, Span<sbyte> lumaOffsetl0 = default, Span<Pointer<sbyte>> chromaWeightl0 = default, Span<Pointer<sbyte>> chromaOffsetl0 = default, Span<sbyte> lumaWeightl1 = default, Span<sbyte> lumaOffsetl1 = default, Span<Pointer<sbyte>> chromaWeightl1 = default, Span<Pointer<sbyte>> chromaOffsetl1 = default)
-		{
-			Flags = flags;
-			LumaLog2WeightDenom = lumalog2WeightDenom;
-			ChromaLog2WeightDenom = chromalog2WeightDenom;
-			if (lumaWeightl0 != default(Span<sbyte>))
-			{
-				LumaWeightL0_0 = lumaWeightl0[0];
-				LumaWeightL0_1 = lumaWeightl0[1];
-				LumaWeightL0_2 = lumaWeightl0[2];
-				LumaWeightL0_3 = lumaWeightl0[3];
-				LumaWeightL0_4 = lumaWeightl0[4];
-				LumaWeightL0_5 = lumaWeightl0[5];
-				LumaWeightL0_6 = lumaWeightl0[6];
-				LumaWeightL0_7 = lumaWeightl0[7];
-				LumaWeightL0_8 = lumaWeightl0[8];
-				LumaWeightL0_9 = lumaWeightl0[9];
-				LumaWeightL0_10 = lumaWeightl0[10];
-				LumaWeightL0_11 = lumaWeightl0[11];
-				LumaWeightL0_12 = lumaWeightl0[12];
-				LumaWeightL0_13 = lumaWeightl0[13];
-				LumaWeightL0_14 = lumaWeightl0[14];
-				LumaWeightL0_15 = lumaWeightl0[15];
-				LumaWeightL0_16 = lumaWeightl0[16];
-				LumaWeightL0_17 = lumaWeightl0[17];
-				LumaWeightL0_18 = lumaWeightl0[18];
-				LumaWeightL0_19 = lumaWeightl0[19];
-				LumaWeightL0_20 = lumaWeightl0[20];
-				LumaWeightL0_21 = lumaWeightl0[21];
-				LumaWeightL0_22 = lumaWeightl0[22];
-				LumaWeightL0_23 = lumaWeightl0[23];
-				LumaWeightL0_24 = lumaWeightl0[24];
-				LumaWeightL0_25 = lumaWeightl0[25];
-				LumaWeightL0_26 = lumaWeightl0[26];
-				LumaWeightL0_27 = lumaWeightl0[27];
-				LumaWeightL0_28 = lumaWeightl0[28];
-				LumaWeightL0_29 = lumaWeightl0[29];
-				LumaWeightL0_30 = lumaWeightl0[30];
-				LumaWeightL0_31 = lumaWeightl0[31];
-			}
-			if (lumaOffsetl0 != default(Span<sbyte>))
-			{
-				LumaOffsetL0_0 = lumaOffsetl0[0];
-				LumaOffsetL0_1 = lumaOffsetl0[1];
-				LumaOffsetL0_2 = lumaOffsetl0[2];
-				LumaOffsetL0_3 = lumaOffsetl0[3];
-				LumaOffsetL0_4 = lumaOffsetl0[4];
-				LumaOffsetL0_5 = lumaOffsetl0[5];
-				LumaOffsetL0_6 = lumaOffsetl0[6];
-				LumaOffsetL0_7 = lumaOffsetl0[7];
-				LumaOffsetL0_8 = lumaOffsetl0[8];
-				LumaOffsetL0_9 = lumaOffsetl0[9];
-				LumaOffsetL0_10 = lumaOffsetl0[10];
-				LumaOffsetL0_11 = lumaOffsetl0[11];
-				LumaOffsetL0_12 = lumaOffsetl0[12];
-				LumaOffsetL0_13 = lumaOffsetl0[13];
-				LumaOffsetL0_14 = lumaOffsetl0[14];
-				LumaOffsetL0_15 = lumaOffsetl0[15];
-				LumaOffsetL0_16 = lumaOffsetl0[16];
-				LumaOffsetL0_17 = lumaOffsetl0[17];
-				LumaOffsetL0_18 = lumaOffsetl0[18];
-				LumaOffsetL0_19 = lumaOffsetl0[19];
-				LumaOffsetL0_20 = lumaOffsetl0[20];
-				LumaOffsetL0_21 = lumaOffsetl0[21];
-				LumaOffsetL0_22 = lumaOffsetl0[22];
-				LumaOffsetL0_23 = lumaOffsetl0[23];
-				LumaOffsetL0_24 = lumaOffsetl0[24];
-				LumaOffsetL0_25 = lumaOffsetl0[25];
-				LumaOffsetL0_26 = lumaOffsetl0[26];
-				LumaOffsetL0_27 = lumaOffsetl0[27];
-				LumaOffsetL0_28 = lumaOffsetl0[28];
-				LumaOffsetL0_29 = lumaOffsetl0[29];
-				LumaOffsetL0_30 = lumaOffsetl0[30];
-				LumaOffsetL0_31 = lumaOffsetl0[31];
-			}
-			if (chromaWeightl0 != default(Span<Pointer<sbyte>>))
-			{
-				ChromaWeightL0_0 = chromaWeightl0[0];
-				ChromaWeightL0_1 = chromaWeightl0[1];
-				ChromaWeightL0_2 = chromaWeightl0[2];
-				ChromaWeightL0_3 = chromaWeightl0[3];
-				ChromaWeightL0_4 = chromaWeightl0[4];
-				ChromaWeightL0_5 = chromaWeightl0[5];
-				ChromaWeightL0_6 = chromaWeightl0[6];
-				ChromaWeightL0_7 = chromaWeightl0[7];
-				ChromaWeightL0_8 = chromaWeightl0[8];
-				ChromaWeightL0_9 = chromaWeightl0[9];
-				ChromaWeightL0_10 = chromaWeightl0[10];
-				ChromaWeightL0_11 = chromaWeightl0[11];
-				ChromaWeightL0_12 = chromaWeightl0[12];
-				ChromaWeightL0_13 = chromaWeightl0[13];
-				ChromaWeightL0_14 = chromaWeightl0[14];
-				ChromaWeightL0_15 = chromaWeightl0[15];
-				ChromaWeightL0_16 = chromaWeightl0[16];
-				ChromaWeightL0_17 = chromaWeightl0[17];
-				ChromaWeightL0_18 = chromaWeightl0[18];
-				ChromaWeightL0_19 = chromaWeightl0[19];
-				ChromaWeightL0_20 = chromaWeightl0[20];
-				ChromaWeightL0_21 = chromaWeightl0[21];
-				ChromaWeightL0_22 = chromaWeightl0[22];
-				ChromaWeightL0_23 = chromaWeightl0[23];
-				ChromaWeightL0_24 = chromaWeightl0[24];
-				ChromaWeightL0_25 = chromaWeightl0[25];
-				ChromaWeightL0_26 = chromaWeightl0[26];
-				ChromaWeightL0_27 = chromaWeightl0[27];
-				ChromaWeightL0_28 = chromaWeightl0[28];
-				ChromaWeightL0_29 = chromaWeightl0[29];
-				ChromaWeightL0_30 = chromaWeightl0[30];
-				ChromaWeightL0_31 = chromaWeightl0[31];
-			}
-			if (chromaOffsetl0 != default(Span<Pointer<sbyte>>))
-			{
-				ChromaOffsetL0_0 = chromaOffsetl0[0];
-				ChromaOffsetL0_1 = chromaOffsetl0[1];
-				ChromaOffsetL0_2 = chromaOffsetl0[2];
-				ChromaOffsetL0_3 = chromaOffsetl0[3];
-				ChromaOffsetL0_4 = chromaOffsetl0[4];
-				ChromaOffsetL0_5 = chromaOffsetl0[5];
-				ChromaOffsetL0_6 = chromaOffsetl0[6];
-				ChromaOffsetL0_7 = chromaOffsetl0[7];
-				ChromaOffsetL0_8 = chromaOffsetl0[8];
-				ChromaOffsetL0_9 = chromaOffsetl0[9];
-				ChromaOffsetL0_10 = chromaOffsetl0[10];
-				ChromaOffsetL0_11 = chromaOffsetl0[11];
-				ChromaOffsetL0_12 = chromaOffsetl0[12];
-				ChromaOffsetL0_13 = chromaOffsetl0[13];
-				ChromaOffsetL0_14 = chromaOffsetl0[14];
-				ChromaOffsetL0_15 = chromaOffsetl0[15];
-				ChromaOffsetL0_16 = chromaOffsetl0[16];
-				ChromaOffsetL0_17 = chromaOffsetl0[17];
-				ChromaOffsetL0_18 = chromaOffsetl0[18];
-				ChromaOffsetL0_19 = chromaOffsetl0[19];
-				ChromaOffsetL0_20 = chromaOffsetl0[20];
-				ChromaOffsetL0_21 = chromaOffsetl0[21];
-				ChromaOffsetL0_22 = chromaOffsetl0[22];
-				ChromaOffsetL0_23 = chromaOffsetl0[23];
-				ChromaOffsetL0_24 = chromaOffsetl0[24];
-				ChromaOffsetL0_25 = chromaOffsetl0[25];
-				ChromaOffsetL0_26 = chromaOffsetl0[26];
-				ChromaOffsetL0_27 = chromaOffsetl0[27];
-				ChromaOffsetL0_28 = chromaOffsetl0[28];
-				ChromaOffsetL0_29 = chromaOffsetl0[29];
-				ChromaOffsetL0_30 = chromaOffsetl0[30];
-				ChromaOffsetL0_31 = chromaOffsetl0[31];
-			}
-			if (lumaWeightl1 != default(Span<sbyte>))
-			{
-				LumaWeightL1_0 = lumaWeightl1[0];
-				LumaWeightL1_1 = lumaWeightl1[1];
-				LumaWeightL1_2 = lumaWeightl1[2];
-				LumaWeightL1_3 = lumaWeightl1[3];
-				LumaWeightL1_4 = lumaWeightl1[4];
-				LumaWeightL1_5 = lumaWeightl1[5];
-				LumaWeightL1_6 = lumaWeightl1[6];
-				LumaWeightL1_7 = lumaWeightl1[7];
-				LumaWeightL1_8 = lumaWeightl1[8];
-				LumaWeightL1_9 = lumaWeightl1[9];
-				LumaWeightL1_10 = lumaWeightl1[10];
-				LumaWeightL1_11 = lumaWeightl1[11];
-				LumaWeightL1_12 = lumaWeightl1[12];
-				LumaWeightL1_13 = lumaWeightl1[13];
-				LumaWeightL1_14 = lumaWeightl1[14];
-				LumaWeightL1_15 = lumaWeightl1[15];
-				LumaWeightL1_16 = lumaWeightl1[16];
-				LumaWeightL1_17 = lumaWeightl1[17];
-				LumaWeightL1_18 = lumaWeightl1[18];
-				LumaWeightL1_19 = lumaWeightl1[19];
-				LumaWeightL1_20 = lumaWeightl1[20];
-				LumaWeightL1_21 = lumaWeightl1[21];
-				LumaWeightL1_22 = lumaWeightl1[22];
-				LumaWeightL1_23 = lumaWeightl1[23];
-				LumaWeightL1_24 = lumaWeightl1[24];
-				LumaWeightL1_25 = lumaWeightl1[25];
-				LumaWeightL1_26 = lumaWeightl1[26];
-				LumaWeightL1_27 = lumaWeightl1[27];
-				LumaWeightL1_28 = lumaWeightl1[28];
-				LumaWeightL1_29 = lumaWeightl1[29];
-				LumaWeightL1_30 = lumaWeightl1[30];
-				LumaWeightL1_31 = lumaWeightl1[31];
-			}
-			if (lumaOffsetl1 != default(Span<sbyte>))
-			{
-				LumaOffsetL1_0 = lumaOffsetl1[0];
-				LumaOffsetL1_1 = lumaOffsetl1[1];
-				LumaOffsetL1_2 = lumaOffsetl1[2];
-				LumaOffsetL1_3 = lumaOffsetl1[3];
-				LumaOffsetL1_4 = lumaOffsetl1[4];
-				LumaOffsetL1_5 = lumaOffsetl1[5];
-				LumaOffsetL1_6 = lumaOffsetl1[6];
-				LumaOffsetL1_7 = lumaOffsetl1[7];
-				LumaOffsetL1_8 = lumaOffsetl1[8];
-				LumaOffsetL1_9 = lumaOffsetl1[9];
-				LumaOffsetL1_10 = lumaOffsetl1[10];
-				LumaOffsetL1_11 = lumaOffsetl1[11];
-				LumaOffsetL1_12 = lumaOffsetl1[12];
-				LumaOffsetL1_13 = lumaOffsetl1[13];
-				LumaOffsetL1_14 = lumaOffsetl1[14];
-				LumaOffsetL1_15 = lumaOffsetl1[15];
-				LumaOffsetL1_16 = lumaOffsetl1[16];
-				LumaOffsetL1_17 = lumaOffsetl1[17];
-				LumaOffsetL1_18 = lumaOffsetl1[18];
-				LumaOffsetL1_19 = lumaOffsetl1[19];
-				LumaOffsetL1_20 = lumaOffsetl1[20];
-				LumaOffsetL1_21 = lumaOffsetl1[21];
-				LumaOffsetL1_22 = lumaOffsetl1[22];
-				LumaOffsetL1_23 = lumaOffsetl1[23];
-				LumaOffsetL1_24 = lumaOffsetl1[24];
-				LumaOffsetL1_25 = lumaOffsetl1[25];
-				LumaOffsetL1_26 = lumaOffsetl1[26];
-				LumaOffsetL1_27 = lumaOffsetl1[27];
-				LumaOffsetL1_28 = lumaOffsetl1[28];
-				LumaOffsetL1_29 = lumaOffsetl1[29];
-				LumaOffsetL1_30 = lumaOffsetl1[30];
-				LumaOffsetL1_31 = lumaOffsetl1[31];
-			}
-			if (chromaWeightl1 != default(Span<Pointer<sbyte>>))
-			{
-				ChromaWeightL1_0 = chromaWeightl1[0];
-				ChromaWeightL1_1 = chromaWeightl1[1];
-				ChromaWeightL1_2 = chromaWeightl1[2];
-				ChromaWeightL1_3 = chromaWeightl1[3];
-				ChromaWeightL1_4 = chromaWeightl1[4];
-				ChromaWeightL1_5 = chromaWeightl1[5];
-				ChromaWeightL1_6 = chromaWeightl1[6];
-				ChromaWeightL1_7 = chromaWeightl1[7];
-				ChromaWeightL1_8 = chromaWeightl1[8];
-				ChromaWeightL1_9 = chromaWeightl1[9];
-				ChromaWeightL1_10 = chromaWeightl1[10];
-				ChromaWeightL1_11 = chromaWeightl1[11];
-				ChromaWeightL1_12 = chromaWeightl1[12];
-				ChromaWeightL1_13 = chromaWeightl1[13];
-				ChromaWeightL1_14 = chromaWeightl1[14];
-				ChromaWeightL1_15 = chromaWeightl1[15];
-				ChromaWeightL1_16 = chromaWeightl1[16];
-				ChromaWeightL1_17 = chromaWeightl1[17];
-				ChromaWeightL1_18 = chromaWeightl1[18];
-				ChromaWeightL1_19 = chromaWeightl1[19];
-				ChromaWeightL1_20 = chromaWeightl1[20];
-				ChromaWeightL1_21 = chromaWeightl1[21];
-				ChromaWeightL1_22 = chromaWeightl1[22];
-				ChromaWeightL1_23 = chromaWeightl1[23];
-				ChromaWeightL1_24 = chromaWeightl1[24];
-				ChromaWeightL1_25 = chromaWeightl1[25];
-				ChromaWeightL1_26 = chromaWeightl1[26];
-				ChromaWeightL1_27 = chromaWeightl1[27];
-				ChromaWeightL1_28 = chromaWeightl1[28];
-				ChromaWeightL1_29 = chromaWeightl1[29];
-				ChromaWeightL1_30 = chromaWeightl1[30];
-				ChromaWeightL1_31 = chromaWeightl1[31];
-			}
-			if (chromaOffsetl1 != default(Span<Pointer<sbyte>>))
-			{
-				ChromaOffsetL1_0 = chromaOffsetl1[0];
-				ChromaOffsetL1_1 = chromaOffsetl1[1];
-				ChromaOffsetL1_2 = chromaOffsetl1[2];
-				ChromaOffsetL1_3 = chromaOffsetl1[3];
-				ChromaOffsetL1_4 = chromaOffsetl1[4];
-				ChromaOffsetL1_5 = chromaOffsetl1[5];
-				ChromaOffsetL1_6 = chromaOffsetl1[6];
-				ChromaOffsetL1_7 = chromaOffsetl1[7];
-				ChromaOffsetL1_8 = chromaOffsetl1[8];
-				ChromaOffsetL1_9 = chromaOffsetl1[9];
-				ChromaOffsetL1_10 = chromaOffsetl1[10];
-				ChromaOffsetL1_11 = chromaOffsetl1[11];
-				ChromaOffsetL1_12 = chromaOffsetl1[12];
-				ChromaOffsetL1_13 = chromaOffsetl1[13];
-				ChromaOffsetL1_14 = chromaOffsetl1[14];
-				ChromaOffsetL1_15 = chromaOffsetl1[15];
-				ChromaOffsetL1_16 = chromaOffsetl1[16];
-				ChromaOffsetL1_17 = chromaOffsetl1[17];
-				ChromaOffsetL1_18 = chromaOffsetl1[18];
-				ChromaOffsetL1_19 = chromaOffsetl1[19];
-				ChromaOffsetL1_20 = chromaOffsetl1[20];
-				ChromaOffsetL1_21 = chromaOffsetl1[21];
-				ChromaOffsetL1_22 = chromaOffsetl1[22];
-				ChromaOffsetL1_23 = chromaOffsetl1[23];
-				ChromaOffsetL1_24 = chromaOffsetl1[24];
-				ChromaOffsetL1_25 = chromaOffsetl1[25];
-				ChromaOffsetL1_26 = chromaOffsetl1[26];
-				ChromaOffsetL1_27 = chromaOffsetl1[27];
-				ChromaOffsetL1_28 = chromaOffsetl1[28];
-				ChromaOffsetL1_29 = chromaOffsetl1[29];
-				ChromaOffsetL1_30 = chromaOffsetl1[30];
-				ChromaOffsetL1_31 = chromaOffsetl1[31];
-			}
-		}
-
-
-		public unsafe Span<Pointer<sbyte>> ChromaWeightL0
-		
-		{
-			get
-			{
-				fixed (sbyte** p = &this.ChromaWeightL0_0)
-				{
-					return new Span<Pointer<sbyte>>(p, 32);
-				}
-			}
-		}
-		public unsafe Span<Pointer<sbyte>> ChromaOffsetL0
-		
-		{
-			get
-			{
-				fixed (sbyte** p = &this.ChromaOffsetL0_0)
-				{
-					return new Span<Pointer<sbyte>>(p, 32);
-				}
-			}
-		}
-		public unsafe Span<Pointer<sbyte>> ChromaWeightL1
-		
-		{
-			get
-			{
-				fixed (sbyte** p = &this.ChromaWeightL1_0)
-				{
-					return new Span<Pointer<sbyte>>(p, 32);
-				}
-			}
-		}
-		public unsafe Span<Pointer<sbyte>> ChromaOffsetL1
-		
-		{
-			get
-			{
-				fixed (sbyte** p = &this.ChromaOffsetL1_0)
-				{
-					return new Span<Pointer<sbyte>>(p, 32);
-				}
-			}
-		}
+		public sbyte ChromaWeightL1_0_0;
+		public sbyte ChromaWeightL1_0_1;
+		public sbyte ChromaWeightL1_1_0;
+		public sbyte ChromaWeightL1_1_1;
+		public sbyte ChromaWeightL1_2_0;
+		public sbyte ChromaWeightL1_2_1;
+		public sbyte ChromaWeightL1_3_0;
+		public sbyte ChromaWeightL1_3_1;
+		public sbyte ChromaWeightL1_4_0;
+		public sbyte ChromaWeightL1_4_1;
+		public sbyte ChromaWeightL1_5_0;
+		public sbyte ChromaWeightL1_5_1;
+		public sbyte ChromaWeightL1_6_0;
+		public sbyte ChromaWeightL1_6_1;
+		public sbyte ChromaWeightL1_7_0;
+		public sbyte ChromaWeightL1_7_1;
+		public sbyte ChromaWeightL1_8_0;
+		public sbyte ChromaWeightL1_8_1;
+		public sbyte ChromaWeightL1_9_0;
+		public sbyte ChromaWeightL1_9_1;
+		public sbyte ChromaWeightL1_10_0;
+		public sbyte ChromaWeightL1_10_1;
+		public sbyte ChromaWeightL1_11_0;
+		public sbyte ChromaWeightL1_11_1;
+		public sbyte ChromaWeightL1_12_0;
+		public sbyte ChromaWeightL1_12_1;
+		public sbyte ChromaWeightL1_13_0;
+		public sbyte ChromaWeightL1_13_1;
+		public sbyte ChromaWeightL1_14_0;
+		public sbyte ChromaWeightL1_14_1;
+		public sbyte ChromaWeightL1_15_0;
+		public sbyte ChromaWeightL1_15_1;
+		public sbyte ChromaWeightL1_16_0;
+		public sbyte ChromaWeightL1_16_1;
+		public sbyte ChromaWeightL1_17_0;
+		public sbyte ChromaWeightL1_17_1;
+		public sbyte ChromaWeightL1_18_0;
+		public sbyte ChromaWeightL1_18_1;
+		public sbyte ChromaWeightL1_19_0;
+		public sbyte ChromaWeightL1_19_1;
+		public sbyte ChromaWeightL1_20_0;
+		public sbyte ChromaWeightL1_20_1;
+		public sbyte ChromaWeightL1_21_0;
+		public sbyte ChromaWeightL1_21_1;
+		public sbyte ChromaWeightL1_22_0;
+		public sbyte ChromaWeightL1_22_1;
+		public sbyte ChromaWeightL1_23_0;
+		public sbyte ChromaWeightL1_23_1;
+		public sbyte ChromaWeightL1_24_0;
+		public sbyte ChromaWeightL1_24_1;
+		public sbyte ChromaWeightL1_25_0;
+		public sbyte ChromaWeightL1_25_1;
+		public sbyte ChromaWeightL1_26_0;
+		public sbyte ChromaWeightL1_26_1;
+		public sbyte ChromaWeightL1_27_0;
+		public sbyte ChromaWeightL1_27_1;
+		public sbyte ChromaWeightL1_28_0;
+		public sbyte ChromaWeightL1_28_1;
+		public sbyte ChromaWeightL1_29_0;
+		public sbyte ChromaWeightL1_29_1;
+		public sbyte ChromaWeightL1_30_0;
+		public sbyte ChromaWeightL1_30_1;
+		public sbyte ChromaWeightL1_31_0;
+		public sbyte ChromaWeightL1_31_1;
+		public sbyte ChromaOffsetL1_0_0;
+		public sbyte ChromaOffsetL1_0_1;
+		public sbyte ChromaOffsetL1_1_0;
+		public sbyte ChromaOffsetL1_1_1;
+		public sbyte ChromaOffsetL1_2_0;
+		public sbyte ChromaOffsetL1_2_1;
+		public sbyte ChromaOffsetL1_3_0;
+		public sbyte ChromaOffsetL1_3_1;
+		public sbyte ChromaOffsetL1_4_0;
+		public sbyte ChromaOffsetL1_4_1;
+		public sbyte ChromaOffsetL1_5_0;
+		public sbyte ChromaOffsetL1_5_1;
+		public sbyte ChromaOffsetL1_6_0;
+		public sbyte ChromaOffsetL1_6_1;
+		public sbyte ChromaOffsetL1_7_0;
+		public sbyte ChromaOffsetL1_7_1;
+		public sbyte ChromaOffsetL1_8_0;
+		public sbyte ChromaOffsetL1_8_1;
+		public sbyte ChromaOffsetL1_9_0;
+		public sbyte ChromaOffsetL1_9_1;
+		public sbyte ChromaOffsetL1_10_0;
+		public sbyte ChromaOffsetL1_10_1;
+		public sbyte ChromaOffsetL1_11_0;
+		public sbyte ChromaOffsetL1_11_1;
+		public sbyte ChromaOffsetL1_12_0;
+		public sbyte ChromaOffsetL1_12_1;
+		public sbyte ChromaOffsetL1_13_0;
+		public sbyte ChromaOffsetL1_13_1;
+		public sbyte ChromaOffsetL1_14_0;
+		public sbyte ChromaOffsetL1_14_1;
+		public sbyte ChromaOffsetL1_15_0;
+		public sbyte ChromaOffsetL1_15_1;
+		public sbyte ChromaOffsetL1_16_0;
+		public sbyte ChromaOffsetL1_16_1;
+		public sbyte ChromaOffsetL1_17_0;
+		public sbyte ChromaOffsetL1_17_1;
+		public sbyte ChromaOffsetL1_18_0;
+		public sbyte ChromaOffsetL1_18_1;
+		public sbyte ChromaOffsetL1_19_0;
+		public sbyte ChromaOffsetL1_19_1;
+		public sbyte ChromaOffsetL1_20_0;
+		public sbyte ChromaOffsetL1_20_1;
+		public sbyte ChromaOffsetL1_21_0;
+		public sbyte ChromaOffsetL1_21_1;
+		public sbyte ChromaOffsetL1_22_0;
+		public sbyte ChromaOffsetL1_22_1;
+		public sbyte ChromaOffsetL1_23_0;
+		public sbyte ChromaOffsetL1_23_1;
+		public sbyte ChromaOffsetL1_24_0;
+		public sbyte ChromaOffsetL1_24_1;
+		public sbyte ChromaOffsetL1_25_0;
+		public sbyte ChromaOffsetL1_25_1;
+		public sbyte ChromaOffsetL1_26_0;
+		public sbyte ChromaOffsetL1_26_1;
+		public sbyte ChromaOffsetL1_27_0;
+		public sbyte ChromaOffsetL1_27_1;
+		public sbyte ChromaOffsetL1_28_0;
+		public sbyte ChromaOffsetL1_28_1;
+		public sbyte ChromaOffsetL1_29_0;
+		public sbyte ChromaOffsetL1_29_1;
+		public sbyte ChromaOffsetL1_30_0;
+		public sbyte ChromaOffsetL1_30_1;
+		public sbyte ChromaOffsetL1_31_0;
+		public sbyte ChromaOffsetL1_31_1;
 	}
-
 }

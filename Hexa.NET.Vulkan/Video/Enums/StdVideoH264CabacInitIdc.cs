@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264CabacInitIdc : int
+	public enum StdVideoH264CabacInitIdc : uint
 	{
-		Idc0 = unchecked(0),
-		Idc1 = unchecked(1),
-		Idc2 = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Idc0 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Idc1 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Idc2 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

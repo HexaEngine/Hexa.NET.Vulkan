@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRExternalFenceFd
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 2);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 2);
 			funcTable.Load(0, "vkGetFenceFdKHR");
 			funcTable.Load(1, "vkImportFenceFdKHR");
 		}

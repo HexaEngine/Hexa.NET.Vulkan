@@ -95,5 +95,41 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Reserved27 = unchecked((uint)27),
+
+		/// <remarks></remarks>
+		AmdProprietaryKhr = AmdProprietary,
+
+		/// <remarks></remarks>
+		AmdOpenSourceKhr = AmdOpenSource,
+
+		/// <remarks></remarks>
+		MesaRadvKhr = MesaRadv,
+
+		/// <remarks></remarks>
+		NvidiaProprietaryKhr = NvidiaProprietary,
+
+		/// <remarks></remarks>
+		IntelProprietaryWindowsKhr = IntelProprietaryWindows,
+
+		/// <remarks></remarks>
+		IntelOpenSourceMesaKhr = IntelOpenSourceMesa,
+
+		/// <remarks></remarks>
+		ImaginationProprietaryKhr = ImaginationProprietary,
+
+		/// <remarks></remarks>
+		QualcommProprietaryKhr = QualcommProprietary,
+
+		/// <remarks></remarks>
+		ArmProprietaryKhr = ArmProprietary,
+
+		/// <remarks></remarks>
+		GoogleSwiftshaderKhr = GoogleSwiftshader,
+
+		/// <remarks></remarks>
+		GgpProprietaryKhr = GgpProprietary,
+
+		/// <remarks></remarks>
+		BroadcomProprietaryKhr = BroadcomProprietary,
 	}
 }

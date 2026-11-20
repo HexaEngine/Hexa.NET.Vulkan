@@ -92,5 +92,167 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Stage2PreRasterizationShadersBit = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		Stage2VideoDecodeBitKhr = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		Stage2VideoEncodeBitKhr = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		Stage2NoneKhr = Stage2None,
+
+		/// <remarks></remarks>
+		Stage2TopOfPipeBitKhr = Stage2TopOfPipeBit,
+
+		/// <remarks></remarks>
+		Stage2DrawIndirectBitKhr = Stage2DrawIndirectBit,
+
+		/// <remarks></remarks>
+		Stage2VertexInputBitKhr = Stage2VertexInputBit,
+
+		/// <remarks></remarks>
+		Stage2VertexShaderBitKhr = Stage2VertexShaderBit,
+
+		/// <remarks></remarks>
+		Stage2TessellationControlShaderBitKhr = Stage2TessellationControlShaderBit,
+
+		/// <remarks></remarks>
+		Stage2TessellationEvaluationShaderBitKhr = Stage2TessellationEvaluationShaderBit,
+
+		/// <remarks></remarks>
+		Stage2GeometryShaderBitKhr = Stage2GeometryShaderBit,
+
+		/// <remarks></remarks>
+		Stage2FragmentShaderBitKhr = Stage2FragmentShaderBit,
+
+		/// <remarks></remarks>
+		Stage2EarlyFragmentTestsBitKhr = Stage2EarlyFragmentTestsBit,
+
+		/// <remarks></remarks>
+		Stage2LateFragmentTestsBitKhr = Stage2LateFragmentTestsBit,
+
+		/// <remarks></remarks>
+		Stage2ColorAttachmentOutputBitKhr = Stage2ColorAttachmentOutputBit,
+
+		/// <remarks></remarks>
+		Stage2ComputeShaderBitKhr = Stage2ComputeShaderBit,
+
+		/// <remarks></remarks>
+		Stage2AllTransferBitKhr = Stage2AllTransferBit,
+
+		/// <remarks></remarks>
+		Stage2TransferBitKhr = Stage2AllTransferBit,
+
+		/// <remarks></remarks>
+		Stage2BottomOfPipeBitKhr = Stage2BottomOfPipeBit,
+
+		/// <remarks></remarks>
+		Stage2HostBitKhr = Stage2HostBit,
+
+		/// <remarks></remarks>
+		Stage2AllGraphicsBitKhr = Stage2AllGraphicsBit,
+
+		/// <remarks></remarks>
+		Stage2AllCommandsBitKhr = Stage2AllCommandsBit,
+
+		/// <remarks></remarks>
+		Stage2CopyBitKhr = Stage2CopyBit,
+
+		/// <remarks></remarks>
+		Stage2ResolveBitKhr = Stage2ResolveBit,
+
+		/// <remarks></remarks>
+		Stage2BlitBitKhr = Stage2BlitBit,
+
+		/// <remarks></remarks>
+		Stage2ClearBitKhr = Stage2ClearBit,
+
+		/// <remarks></remarks>
+		Stage2IndexInputBitKhr = Stage2IndexInputBit,
+
+		/// <remarks></remarks>
+		Stage2VertexAttributeInputBitKhr = Stage2VertexAttributeInputBit,
+
+		/// <remarks></remarks>
+		Stage2PreRasterizationShadersBitKhr = Stage2PreRasterizationShadersBit,
+
+		/// <remarks></remarks>
+		Stage2TransformFeedbackBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Stage2ConditionalRenderingBitExt = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		Stage2CommandPreprocessBitNv = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		Stage2CommandPreprocessBitExt = Stage2CommandPreprocessBitNv,
+
+		/// <remarks></remarks>
+		Stage2FragmentShadingRateAttachmentBitKhr = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		Stage2ShadingRateImageBitNv = Stage2FragmentShadingRateAttachmentBitKhr,
+
+		/// <remarks></remarks>
+		Stage2AccelerationStructureBuildBitKhr = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Stage2RayTracingShaderBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		Stage2RayTracingShaderBitNv = Stage2RayTracingShaderBitKhr,
+
+		/// <remarks></remarks>
+		Stage2AccelerationStructureBuildBitNv = Stage2AccelerationStructureBuildBitKhr,
+
+		/// <remarks></remarks>
+		Stage2FragmentDensityProcessBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		Stage2TaskShaderBitNv = Stage2TaskShaderBitExt,
+
+		/// <remarks></remarks>
+		Stage2MeshShaderBitNv = Stage2MeshShaderBitExt,
+
+		/// <remarks></remarks>
+		Stage2TaskShaderBitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		Stage2MeshShaderBitExt = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		Stage2SubpassShaderBitHuawei = unchecked((uint)549755813888),
+
+		/// <remarks></remarks>
+		Stage2InvocationMaskBitHuawei = unchecked((uint)1099511627776),
+
+		/// <remarks></remarks>
+		Stage2AccelerationStructureCopyBitKhr = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		Stage2MicromapBuildBitExt = unchecked((uint)1073741824),
+
+		/// <remarks></remarks>
+		Stage2ClusterCullingShaderBitHuawei = unchecked((uint)2199023255552),
+
+		/// <remarks></remarks>
+		Stage2Reserved43BitArm = unchecked((uint)8796093022208),
+
+		/// <remarks></remarks>
+		Stage2OpticalFlowBitNv = unchecked((uint)536870912),
+
+		/// <remarks></remarks>
+		Stage2Reserved44BitNv = unchecked((uint)17592186044416),
+
+		/// <remarks></remarks>
+		Stage2Reserved42BitExt = unchecked((uint)4398046511104),
+
+		/// <remarks></remarks>
+		Stage2Reserved46BitNv = unchecked((uint)70368744177664),
+
+		/// <remarks></remarks>
+		Stage2Reserved45BitNv = unchecked((uint)35184372088832),
 	}
 }

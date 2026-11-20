@@ -29,5 +29,23 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		TriangleFrontCounterclockwiseBitKhr = TriangleFlipFacingBitKhr,
+
+		/// <remarks></remarks>
+		TriangleCullDisableBitNv = TriangleFacingCullDisableBitKhr,
+
+		/// <remarks></remarks>
+		TriangleFrontCounterclockwiseBitNv = TriangleFrontCounterclockwiseBitKhr,
+
+		/// <remarks></remarks>
+		ForceOpaqueBitNv = ForceOpaqueBitKhr,
+
+		/// <remarks></remarks>
+		ForceNoOpaqueBitNv = ForceNoOpaqueBitKhr,
+
+		/// <remarks></remarks>
+		ForceOpacityMicromap2StateExt = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		DisableOpacityMicromapsExt = unchecked((uint)32),
 	}
 }

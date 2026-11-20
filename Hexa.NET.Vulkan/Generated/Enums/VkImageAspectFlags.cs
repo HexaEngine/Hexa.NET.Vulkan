@@ -26,5 +26,41 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		MetadataBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Plane0Bit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		Plane1Bit = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Plane2Bit = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		None = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Plane0BitKhr = Plane0Bit,
+
+		/// <remarks></remarks>
+		Plane1BitKhr = Plane1Bit,
+
+		/// <remarks></remarks>
+		Plane2BitKhr = Plane2Bit,
+
+		/// <remarks></remarks>
+		MemoryPlane0BitExt = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		MemoryPlane1BitExt = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		MemoryPlane2BitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		MemoryPlane3BitExt = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		NoneKhr = None,
 	}
 }

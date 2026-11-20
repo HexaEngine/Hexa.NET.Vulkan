@@ -12,34 +12,81 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1Level : int
+	public enum StdVideoAV1Level : uint
 	{
-		Level20 = unchecked(0),
-		Level21 = unchecked(1),
-		Level22 = unchecked(2),
-		Level23 = unchecked(3),
-		Level30 = unchecked(4),
-		Level31 = unchecked(5),
-		Level32 = unchecked(6),
-		Level33 = unchecked(7),
-		Level40 = unchecked(8),
-		Level41 = unchecked(9),
-		Level42 = unchecked(10),
-		Level43 = unchecked(11),
-		Level50 = unchecked(12),
-		Level51 = unchecked(13),
-		Level52 = unchecked(14),
-		Level53 = unchecked(15),
-		Level60 = unchecked(16),
-		Level61 = unchecked(17),
-		Level62 = unchecked(18),
-		Level63 = unchecked(19),
-		Level70 = unchecked(20),
-		Level71 = unchecked(21),
-		Level72 = unchecked(22),
-		Level73 = unchecked(23),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Level20 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Level21 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Level22 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Level23 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Level30 = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Level31 = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Level32 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Level33 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		Level40 = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Level41 = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Level42 = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Level43 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		Level50 = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		Level51 = unchecked((uint)13),
+
+		/// <remarks></remarks>
+		Level52 = unchecked((uint)14),
+
+		/// <remarks></remarks>
+		Level53 = unchecked((uint)15),
+
+		/// <remarks></remarks>
+		Level60 = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		Level61 = unchecked((uint)17),
+
+		/// <remarks></remarks>
+		Level62 = unchecked((uint)18),
+
+		/// <remarks></remarks>
+		Level63 = unchecked((uint)19),
+
+		/// <remarks></remarks>
+		Level70 = unchecked((uint)20),
+
+		/// <remarks></remarks>
+		Level71 = unchecked((uint)21),
+
+		/// <remarks></remarks>
+		Level72 = unchecked((uint)22),
+
+		/// <remarks></remarks>
+		Level73 = unchecked((uint)23),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

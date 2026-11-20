@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265ShortTermRefPicSet
+	public unsafe struct StdVideoH265ShortTermRefPicSet
 	{
 		public StdVideoH265ShortTermRefPicSetFlags Flags;
 		public uint DeltaIdxMinus1;
@@ -62,116 +61,5 @@ namespace Hexa.NET.Vulkan
 		public ushort DeltaPocS1Minus1_13;
 		public ushort DeltaPocS1Minus1_14;
 		public ushort DeltaPocS1Minus1_15;
-
-		public unsafe StdVideoH265ShortTermRefPicSet(StdVideoH265ShortTermRefPicSetFlags flags = default, uint deltaIdxminus1 = default, ushort useDeltaFlag = default, ushort absDeltaRpsminus1 = default, ushort usedByCurrPicFlag = default, ushort usedByCurrPics0Flag = default, ushort usedByCurrPics1Flag = default, ushort reserved1 = default, byte reserved2 = default, byte reserved3 = default, byte numNegativePics = default, byte numPositivePics = default, ushort* deltaPocs0minus1 = default, ushort* deltaPocs1minus1 = default)
-		{
-			Flags = flags;
-			DeltaIdxMinus1 = deltaIdxminus1;
-			UseDeltaFlag = useDeltaFlag;
-			AbsDeltaRpsMinus1 = absDeltaRpsminus1;
-			UsedByCurrPicFlag = usedByCurrPicFlag;
-			UsedByCurrPicS0Flag = usedByCurrPics0Flag;
-			UsedByCurrPicS1Flag = usedByCurrPics1Flag;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			Reserved3 = reserved3;
-			NumNegativePics = numNegativePics;
-			NumPositivePics = numPositivePics;
-			if (deltaPocs0minus1 != default(ushort*))
-			{
-				DeltaPocS0Minus1_0 = deltaPocs0minus1[0];
-				DeltaPocS0Minus1_1 = deltaPocs0minus1[1];
-				DeltaPocS0Minus1_2 = deltaPocs0minus1[2];
-				DeltaPocS0Minus1_3 = deltaPocs0minus1[3];
-				DeltaPocS0Minus1_4 = deltaPocs0minus1[4];
-				DeltaPocS0Minus1_5 = deltaPocs0minus1[5];
-				DeltaPocS0Minus1_6 = deltaPocs0minus1[6];
-				DeltaPocS0Minus1_7 = deltaPocs0minus1[7];
-				DeltaPocS0Minus1_8 = deltaPocs0minus1[8];
-				DeltaPocS0Minus1_9 = deltaPocs0minus1[9];
-				DeltaPocS0Minus1_10 = deltaPocs0minus1[10];
-				DeltaPocS0Minus1_11 = deltaPocs0minus1[11];
-				DeltaPocS0Minus1_12 = deltaPocs0minus1[12];
-				DeltaPocS0Minus1_13 = deltaPocs0minus1[13];
-				DeltaPocS0Minus1_14 = deltaPocs0minus1[14];
-				DeltaPocS0Minus1_15 = deltaPocs0minus1[15];
-			}
-			if (deltaPocs1minus1 != default(ushort*))
-			{
-				DeltaPocS1Minus1_0 = deltaPocs1minus1[0];
-				DeltaPocS1Minus1_1 = deltaPocs1minus1[1];
-				DeltaPocS1Minus1_2 = deltaPocs1minus1[2];
-				DeltaPocS1Minus1_3 = deltaPocs1minus1[3];
-				DeltaPocS1Minus1_4 = deltaPocs1minus1[4];
-				DeltaPocS1Minus1_5 = deltaPocs1minus1[5];
-				DeltaPocS1Minus1_6 = deltaPocs1minus1[6];
-				DeltaPocS1Minus1_7 = deltaPocs1minus1[7];
-				DeltaPocS1Minus1_8 = deltaPocs1minus1[8];
-				DeltaPocS1Minus1_9 = deltaPocs1minus1[9];
-				DeltaPocS1Minus1_10 = deltaPocs1minus1[10];
-				DeltaPocS1Minus1_11 = deltaPocs1minus1[11];
-				DeltaPocS1Minus1_12 = deltaPocs1minus1[12];
-				DeltaPocS1Minus1_13 = deltaPocs1minus1[13];
-				DeltaPocS1Minus1_14 = deltaPocs1minus1[14];
-				DeltaPocS1Minus1_15 = deltaPocs1minus1[15];
-			}
-		}
-
-		public unsafe StdVideoH265ShortTermRefPicSet(StdVideoH265ShortTermRefPicSetFlags flags = default, uint deltaIdxminus1 = default, ushort useDeltaFlag = default, ushort absDeltaRpsminus1 = default, ushort usedByCurrPicFlag = default, ushort usedByCurrPics0Flag = default, ushort usedByCurrPics1Flag = default, ushort reserved1 = default, byte reserved2 = default, byte reserved3 = default, byte numNegativePics = default, byte numPositivePics = default, Span<ushort> deltaPocs0minus1 = default, Span<ushort> deltaPocs1minus1 = default)
-		{
-			Flags = flags;
-			DeltaIdxMinus1 = deltaIdxminus1;
-			UseDeltaFlag = useDeltaFlag;
-			AbsDeltaRpsMinus1 = absDeltaRpsminus1;
-			UsedByCurrPicFlag = usedByCurrPicFlag;
-			UsedByCurrPicS0Flag = usedByCurrPics0Flag;
-			UsedByCurrPicS1Flag = usedByCurrPics1Flag;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			Reserved3 = reserved3;
-			NumNegativePics = numNegativePics;
-			NumPositivePics = numPositivePics;
-			if (deltaPocs0minus1 != default(Span<ushort>))
-			{
-				DeltaPocS0Minus1_0 = deltaPocs0minus1[0];
-				DeltaPocS0Minus1_1 = deltaPocs0minus1[1];
-				DeltaPocS0Minus1_2 = deltaPocs0minus1[2];
-				DeltaPocS0Minus1_3 = deltaPocs0minus1[3];
-				DeltaPocS0Minus1_4 = deltaPocs0minus1[4];
-				DeltaPocS0Minus1_5 = deltaPocs0minus1[5];
-				DeltaPocS0Minus1_6 = deltaPocs0minus1[6];
-				DeltaPocS0Minus1_7 = deltaPocs0minus1[7];
-				DeltaPocS0Minus1_8 = deltaPocs0minus1[8];
-				DeltaPocS0Minus1_9 = deltaPocs0minus1[9];
-				DeltaPocS0Minus1_10 = deltaPocs0minus1[10];
-				DeltaPocS0Minus1_11 = deltaPocs0minus1[11];
-				DeltaPocS0Minus1_12 = deltaPocs0minus1[12];
-				DeltaPocS0Minus1_13 = deltaPocs0minus1[13];
-				DeltaPocS0Minus1_14 = deltaPocs0minus1[14];
-				DeltaPocS0Minus1_15 = deltaPocs0minus1[15];
-			}
-			if (deltaPocs1minus1 != default(Span<ushort>))
-			{
-				DeltaPocS1Minus1_0 = deltaPocs1minus1[0];
-				DeltaPocS1Minus1_1 = deltaPocs1minus1[1];
-				DeltaPocS1Minus1_2 = deltaPocs1minus1[2];
-				DeltaPocS1Minus1_3 = deltaPocs1minus1[3];
-				DeltaPocS1Minus1_4 = deltaPocs1minus1[4];
-				DeltaPocS1Minus1_5 = deltaPocs1minus1[5];
-				DeltaPocS1Minus1_6 = deltaPocs1minus1[6];
-				DeltaPocS1Minus1_7 = deltaPocs1minus1[7];
-				DeltaPocS1Minus1_8 = deltaPocs1minus1[8];
-				DeltaPocS1Minus1_9 = deltaPocs1minus1[9];
-				DeltaPocS1Minus1_10 = deltaPocs1minus1[10];
-				DeltaPocS1Minus1_11 = deltaPocs1minus1[11];
-				DeltaPocS1Minus1_12 = deltaPocs1minus1[12];
-				DeltaPocS1Minus1_13 = deltaPocs1minus1[13];
-				DeltaPocS1Minus1_14 = deltaPocs1minus1[14];
-				DeltaPocS1Minus1_15 = deltaPocs1minus1[15];
-			}
-		}
-
-
 	}
-
 }

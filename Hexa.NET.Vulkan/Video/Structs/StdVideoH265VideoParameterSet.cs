@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265VideoParameterSet
+	public unsafe struct StdVideoH265VideoParameterSet
 	{
 		public StdVideoH265VpsFlags Flags;
 		public byte VpsVideoParameterSetId;
@@ -27,27 +26,8 @@ namespace Hexa.NET.Vulkan
 		public uint VpsTimeScale;
 		public uint VpsNumTicksPocDiffOneMinus1;
 		public uint Reserved3;
-		public unsafe StdVideoH265DecPicBufMgr* PDecPicBufMgr;
-		public unsafe StdVideoH265HrdParameters* PHrdParameters;
-		public unsafe StdVideoH265ProfileTierLevel* PProfileTierLevel;
-
-		public unsafe StdVideoH265VideoParameterSet(StdVideoH265VpsFlags flags = default, byte vpsVideoParameterSetId = default, byte vpsMaxSubLayersminus1 = default, byte reserved1 = default, byte reserved2 = default, uint vpsNumUnitsInTick = default, uint vpsTimeScale = default, uint vpsNumTicksPocDiffOneminus1 = default, uint reserved3 = default, StdVideoH265DecPicBufMgr* pDecPicBufMgr = default, StdVideoH265HrdParameters* pHrdParameters = default, StdVideoH265ProfileTierLevel* pProfileTierLevel = default)
-		{
-			Flags = flags;
-			VpsVideoParameterSetId = vpsVideoParameterSetId;
-			VpsMaxSubLayersMinus1 = vpsMaxSubLayersminus1;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			VpsNumUnitsInTick = vpsNumUnitsInTick;
-			VpsTimeScale = vpsTimeScale;
-			VpsNumTicksPocDiffOneMinus1 = vpsNumTicksPocDiffOneminus1;
-			Reserved3 = reserved3;
-			PDecPicBufMgr = pDecPicBufMgr;
-			PHrdParameters = pHrdParameters;
-			PProfileTierLevel = pProfileTierLevel;
-		}
-
-
+		public StdVideoH265DecPicBufMgr* PDecPicBufMgr;
+		public StdVideoH265HrdParameters* PHrdParameters;
+		public StdVideoH265ProfileTierLevel* PProfileTierLevel;
 	}
-
 }

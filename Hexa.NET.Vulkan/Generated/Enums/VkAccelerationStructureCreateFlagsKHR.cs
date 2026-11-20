@@ -17,5 +17,11 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		DeviceAddressCaptureReplayBitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DescriptorBufferCaptureReplayBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		MotionBitNv = unchecked((uint)4),
 	}
 }

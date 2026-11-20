@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH265SliceSegmentHeader
+	public unsafe struct StdVideoEncodeH265SliceSegmentHeader
 	{
 		public StdVideoEncodeH265SliceSegmentHeaderFlags Flags;
 		public StdVideoH265SliceType SliceType;
@@ -32,28 +31,6 @@ namespace Hexa.NET.Vulkan
 		public sbyte SliceActCrQpOffset;
 		public sbyte SliceQpDelta;
 		public ushort Reserved1;
-		public unsafe StdVideoEncodeH265WeightTable* PWeightTable;
-
-		public unsafe StdVideoEncodeH265SliceSegmentHeader(StdVideoEncodeH265SliceSegmentHeaderFlags flags = default, StdVideoH265SliceType sliceType = default, uint sliceSegmentAddress = default, byte collocatedRefIdx = default, byte maxNumMergeCand = default, sbyte sliceCbQpOffset = default, sbyte sliceCrQpOffset = default, sbyte sliceBetaOffsetdiv2 = default, sbyte sliceTcOffsetdiv2 = default, sbyte sliceActYQpOffset = default, sbyte sliceActCbQpOffset = default, sbyte sliceActCrQpOffset = default, sbyte sliceQpDelta = default, ushort reserved1 = default, StdVideoEncodeH265WeightTable* pWeightTable = default)
-		{
-			Flags = flags;
-			SliceType = sliceType;
-			SliceSegmentAddress = sliceSegmentAddress;
-			CollocatedRefIdx = collocatedRefIdx;
-			MaxNumMergeCand = maxNumMergeCand;
-			SliceCbQpOffset = sliceCbQpOffset;
-			SliceCrQpOffset = sliceCrQpOffset;
-			SliceBetaOffsetDiv2 = sliceBetaOffsetdiv2;
-			SliceTcOffsetDiv2 = sliceTcOffsetdiv2;
-			SliceActYQpOffset = sliceActYQpOffset;
-			SliceActCbQpOffset = sliceActCbQpOffset;
-			SliceActCrQpOffset = sliceActCrQpOffset;
-			SliceQpDelta = sliceQpDelta;
-			Reserved1 = reserved1;
-			PWeightTable = pWeightTable;
-		}
-
-
+		public StdVideoEncodeH265WeightTable* PWeightTable;
 	}
-
 }

@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264SequenceParameterSet
+	public unsafe struct StdVideoH264SequenceParameterSet
 	{
 		public StdVideoH264SpsFlags Flags;
 		public StdVideoH264ProfileIdc ProfileIdc;
@@ -40,40 +39,8 @@ namespace Hexa.NET.Vulkan
 		public uint FrameCropTopOffset;
 		public uint FrameCropBottomOffset;
 		public uint Reserved2;
-		public unsafe int* POffsetForRefFrame;
-		public unsafe StdVideoH264ScalingLists* PScalingLists;
-		public unsafe StdVideoH264SequenceParameterSetVui* PSequenceParameterSetVui;
-
-		public unsafe StdVideoH264SequenceParameterSet(StdVideoH264SpsFlags flags = default, StdVideoH264ProfileIdc profileIdc = default, StdVideoH264LevelIdc levelIdc = default, StdVideoH264ChromaFormatIdc chromaFormatIdc = default, byte seqParameterSetId = default, byte bitDepthLumaminus8 = default, byte bitDepthChromaminus8 = default, byte log2MaxFrameNumminus4 = default, StdVideoH264PocType picOrderCntType = default, int offsetForNonRefPic = default, int offsetForTopToBottomField = default, byte log2MaxPicOrderCntLsbminus4 = default, byte numRefFramesInPicOrderCntCycle = default, byte maxNumRefFrames = default, byte reserved1 = default, uint picWidthInMbsminus1 = default, uint picHeightInMapUnitsminus1 = default, uint frameCropLeftOffset = default, uint frameCropRightOffset = default, uint frameCropTopOffset = default, uint frameCropBottomOffset = default, uint reserved2 = default, int* pOffsetForRefFrame = default, StdVideoH264ScalingLists* pScalingLists = default, StdVideoH264SequenceParameterSetVui* pSequenceParameterSetVui = default)
-		{
-			Flags = flags;
-			ProfileIdc = profileIdc;
-			LevelIdc = levelIdc;
-			ChromaFormatIdc = chromaFormatIdc;
-			SeqParameterSetId = seqParameterSetId;
-			BitDepthLumaMinus8 = bitDepthLumaminus8;
-			BitDepthChromaMinus8 = bitDepthChromaminus8;
-			Log2MaxFrameNumMinus4 = log2MaxFrameNumminus4;
-			PicOrderCntType = picOrderCntType;
-			OffsetForNonRefPic = offsetForNonRefPic;
-			OffsetForTopToBottomField = offsetForTopToBottomField;
-			Log2MaxPicOrderCntLsbMinus4 = log2MaxPicOrderCntLsbminus4;
-			NumRefFramesInPicOrderCntCycle = numRefFramesInPicOrderCntCycle;
-			MaxNumRefFrames = maxNumRefFrames;
-			Reserved1 = reserved1;
-			PicWidthInMbsMinus1 = picWidthInMbsminus1;
-			PicHeightInMapUnitsMinus1 = picHeightInMapUnitsminus1;
-			FrameCropLeftOffset = frameCropLeftOffset;
-			FrameCropRightOffset = frameCropRightOffset;
-			FrameCropTopOffset = frameCropTopOffset;
-			FrameCropBottomOffset = frameCropBottomOffset;
-			Reserved2 = reserved2;
-			POffsetForRefFrame = pOffsetForRefFrame;
-			PScalingLists = pScalingLists;
-			PSequenceParameterSetVui = pSequenceParameterSetVui;
-		}
-
-
+		public int* POffsetForRefFrame;
+		public StdVideoH264ScalingLists* PScalingLists;
+		public StdVideoH264SequenceParameterSetVui* PSequenceParameterSetVui;
 	}
-
 }

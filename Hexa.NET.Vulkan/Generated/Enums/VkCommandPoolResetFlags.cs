@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		ReleaseResourcesBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Reserved1BitCoreavi = unchecked((uint)2),
 	}
 }

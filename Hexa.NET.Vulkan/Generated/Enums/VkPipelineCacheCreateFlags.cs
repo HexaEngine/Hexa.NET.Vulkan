@@ -15,5 +15,16 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPipelineCacheCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		ExternallySynchronizedBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ReadOnlyBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		UseApplicationStorageBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ExternallySynchronizedBitExt = ExternallySynchronizedBit,
 	}
 }

@@ -15,19 +15,9 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH265ReferenceInfo
+	public unsafe struct StdVideoDecodeH265ReferenceInfo
 	{
 		public StdVideoDecodeH265ReferenceInfoFlags Flags;
 		public int PicOrderCntVal;
-
-		public unsafe StdVideoDecodeH265ReferenceInfo(StdVideoDecodeH265ReferenceInfoFlags flags = default, int picOrderCntVal = default)
-		{
-			Flags = flags;
-			PicOrderCntVal = picOrderCntVal;
-		}
-
-
 	}
-
 }

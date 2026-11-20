@@ -15,27 +15,38 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264PictureInfoFlags
+	public unsafe struct StdVideoEncodeH264PictureInfoFlags
 	{
-		public uint IdrPicFlag;
-		public uint IsReference;
-		public uint NoOutputOfPriorPicsFlag;
-		public uint LongTermReferenceFlag;
-		public uint AdaptiveRefPicMarkingModeFlag;
-		public uint Reserved;
-
-		public unsafe StdVideoEncodeH264PictureInfoFlags(uint idrPicFlag = default, uint isReference = default, uint noOutputOfPriorPicsFlag = default, uint longTermReferenceFlag = default, uint adaptiveRefPicMarkingModeFlag = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint IdrPicFlag
 		{
-			IdrPicFlag = idrPicFlag;
-			IsReference = isReference;
-			NoOutputOfPriorPicsFlag = noOutputOfPriorPicsFlag;
-			LongTermReferenceFlag = longTermReferenceFlag;
-			AdaptiveRefPicMarkingModeFlag = adaptiveRefPicMarkingModeFlag;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint IsReference
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint NoOutputOfPriorPicsFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint LongTermReferenceFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint AdaptiveRefPicMarkingModeFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 5) & 134217727;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(134217727 << 5)) | ((value & 134217727) << 5));
+		}
 	}
-
 }

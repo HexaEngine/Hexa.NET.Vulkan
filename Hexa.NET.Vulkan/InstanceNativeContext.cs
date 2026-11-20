@@ -24,7 +24,8 @@
 
         public bool TryGetProcAddress(string procName, out nint procAddress)
         {
-            throw new NotImplementedException();
+            procAddress = GetProcAddress(procName);
+            return procAddress != 0;
         }
 
         public void Dispose()
@@ -53,7 +54,8 @@
 
         public bool TryGetProcAddress(string procName, out nint procAddress)
         {
-            throw new NotImplementedException();
+            procAddress = GetProcAddress(procName);
+            return procAddress != 0;
         }
 
         public void Dispose()

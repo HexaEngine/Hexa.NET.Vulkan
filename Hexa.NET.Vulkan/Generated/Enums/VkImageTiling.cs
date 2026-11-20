@@ -20,5 +20,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Linear = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DrmFormatModifierExt = unchecked((uint)1000158000),
 	}
 }

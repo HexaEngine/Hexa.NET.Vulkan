@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		UserClipPlanesOnly = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		AllClipPlanesKhr = AllClipPlanes,
+
+		/// <remarks></remarks>
+		UserClipPlanesOnlyKhr = UserClipPlanesOnly,
 	}
 }

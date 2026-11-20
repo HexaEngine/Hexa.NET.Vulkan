@@ -32,5 +32,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		IntOpaqueWhite = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		FloatCustomExt = unchecked((uint)1000287003),
+
+		/// <remarks></remarks>
+		IntCustomExt = unchecked((uint)1000287004),
 	}
 }

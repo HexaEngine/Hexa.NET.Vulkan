@@ -15,5 +15,19 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPipelineShaderStageCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		AllowVaryingSubgroupSizeBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		RequireFullSubgroupsBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		AllowVaryingSubgroupSizeBitExt = AllowVaryingSubgroupSizeBit,
+
+		/// <remarks></remarks>
+		RequireFullSubgroupsBitExt = RequireFullSubgroupsBit,
+
+		/// <remarks></remarks>
+		Reserved3BitKhr = unchecked((uint)8),
 	}
 }

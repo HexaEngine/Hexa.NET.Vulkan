@@ -29,5 +29,26 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ModifyingFeaturesBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		ValidationBitExt = ValidationBit,
+
+		/// <remarks></remarks>
+		ProfilingBitExt = ProfilingBit,
+
+		/// <remarks></remarks>
+		TracingBitExt = TracingBit,
+
+		/// <remarks></remarks>
+		AdditionalFeaturesBitExt = AdditionalFeaturesBit,
+
+		/// <remarks></remarks>
+		ModifyingFeaturesBitExt = ModifyingFeaturesBit,
+
+		/// <remarks></remarks>
+		DebugReportingBitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		DebugMarkersBitExt = unchecked((uint)64),
 	}
 }

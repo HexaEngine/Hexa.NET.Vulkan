@@ -15,77 +15,163 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265PpsFlags
+	public unsafe struct StdVideoH265PpsFlags
 	{
-		public uint DependentSliceSegmentsEnabledFlag;
-		public uint OutputFlagPresentFlag;
-		public uint SignDataHidingEnabledFlag;
-		public uint CabacInitPresentFlag;
-		public uint ConstrainedIntraPredFlag;
-		public uint TransformSkipEnabledFlag;
-		public uint CuQpDeltaEnabledFlag;
-		public uint PpsSliceChromaQpOffsetsPresentFlag;
-		public uint WeightedPredFlag;
-		public uint WeightedBipredFlag;
-		public uint TransquantBypassEnabledFlag;
-		public uint TilesEnabledFlag;
-		public uint EntropyCodingSyncEnabledFlag;
-		public uint UniformSpacingFlag;
-		public uint LoopFilterAcrossTilesEnabledFlag;
-		public uint PpsLoopFilterAcrossSlicesEnabledFlag;
-		public uint DeblockingFilterControlPresentFlag;
-		public uint DeblockingFilterOverrideEnabledFlag;
-		public uint PpsDeblockingFilterDisabledFlag;
-		public uint PpsScalingListDataPresentFlag;
-		public uint ListsModificationPresentFlag;
-		public uint SliceSegmentHeaderExtensionPresentFlag;
-		public uint PpsExtensionPresentFlag;
-		public uint CrossComponentPredictionEnabledFlag;
-		public uint ChromaQpOffsetListEnabledFlag;
-		public uint PpsCurrPicRefEnabledFlag;
-		public uint ResidualAdaptiveColourTransformEnabledFlag;
-		public uint PpsSliceActQpOffsetsPresentFlag;
-		public uint PpsPalettePredictorInitializersPresentFlag;
-		public uint MonochromePaletteFlag;
-		public uint PpsRangeExtensionFlag;
-
-		public unsafe StdVideoH265PpsFlags(uint dependentSliceSegmentsEnabledFlag = default, uint outputFlagPresentFlag = default, uint signDataHidingEnabledFlag = default, uint cabacInitPresentFlag = default, uint constrainedIntraPredFlag = default, uint transformSkipEnabledFlag = default, uint cuQpDeltaEnabledFlag = default, uint ppsSliceChromaQpOffsetsPresentFlag = default, uint weightedPredFlag = default, uint weightedBipredFlag = default, uint transquantBypassEnabledFlag = default, uint tilesEnabledFlag = default, uint entropyCodingSyncEnabledFlag = default, uint uniformSpacingFlag = default, uint loopFilterAcrossTilesEnabledFlag = default, uint ppsLoopFilterAcrossSlicesEnabledFlag = default, uint deblockingFilterControlPresentFlag = default, uint deblockingFilterOverrideEnabledFlag = default, uint ppsDeblockingFilterDisabledFlag = default, uint ppsScalingListDataPresentFlag = default, uint listsModificationPresentFlag = default, uint sliceSegmentHeaderExtensionPresentFlag = default, uint ppsExtensionPresentFlag = default, uint crossComponentPredictionEnabledFlag = default, uint chromaQpOffsetListEnabledFlag = default, uint ppsCurrPicRefEnabledFlag = default, uint residualAdaptiveColourTransformEnabledFlag = default, uint ppsSliceActQpOffsetsPresentFlag = default, uint ppsPalettePredictorInitializersPresentFlag = default, uint monochromePaletteFlag = default, uint ppsRangeExtensionFlag = default)
+		private uint _bitfield0;
+		public uint DependentSliceSegmentsEnabledFlag
 		{
-			DependentSliceSegmentsEnabledFlag = dependentSliceSegmentsEnabledFlag;
-			OutputFlagPresentFlag = outputFlagPresentFlag;
-			SignDataHidingEnabledFlag = signDataHidingEnabledFlag;
-			CabacInitPresentFlag = cabacInitPresentFlag;
-			ConstrainedIntraPredFlag = constrainedIntraPredFlag;
-			TransformSkipEnabledFlag = transformSkipEnabledFlag;
-			CuQpDeltaEnabledFlag = cuQpDeltaEnabledFlag;
-			PpsSliceChromaQpOffsetsPresentFlag = ppsSliceChromaQpOffsetsPresentFlag;
-			WeightedPredFlag = weightedPredFlag;
-			WeightedBipredFlag = weightedBipredFlag;
-			TransquantBypassEnabledFlag = transquantBypassEnabledFlag;
-			TilesEnabledFlag = tilesEnabledFlag;
-			EntropyCodingSyncEnabledFlag = entropyCodingSyncEnabledFlag;
-			UniformSpacingFlag = uniformSpacingFlag;
-			LoopFilterAcrossTilesEnabledFlag = loopFilterAcrossTilesEnabledFlag;
-			PpsLoopFilterAcrossSlicesEnabledFlag = ppsLoopFilterAcrossSlicesEnabledFlag;
-			DeblockingFilterControlPresentFlag = deblockingFilterControlPresentFlag;
-			DeblockingFilterOverrideEnabledFlag = deblockingFilterOverrideEnabledFlag;
-			PpsDeblockingFilterDisabledFlag = ppsDeblockingFilterDisabledFlag;
-			PpsScalingListDataPresentFlag = ppsScalingListDataPresentFlag;
-			ListsModificationPresentFlag = listsModificationPresentFlag;
-			SliceSegmentHeaderExtensionPresentFlag = sliceSegmentHeaderExtensionPresentFlag;
-			PpsExtensionPresentFlag = ppsExtensionPresentFlag;
-			CrossComponentPredictionEnabledFlag = crossComponentPredictionEnabledFlag;
-			ChromaQpOffsetListEnabledFlag = chromaQpOffsetListEnabledFlag;
-			PpsCurrPicRefEnabledFlag = ppsCurrPicRefEnabledFlag;
-			ResidualAdaptiveColourTransformEnabledFlag = residualAdaptiveColourTransformEnabledFlag;
-			PpsSliceActQpOffsetsPresentFlag = ppsSliceActQpOffsetsPresentFlag;
-			PpsPalettePredictorInitializersPresentFlag = ppsPalettePredictorInitializersPresentFlag;
-			MonochromePaletteFlag = monochromePaletteFlag;
-			PpsRangeExtensionFlag = ppsRangeExtensionFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint OutputFlagPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint SignDataHidingEnabledFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint CabacInitPresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint ConstrainedIntraPredFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint TransformSkipEnabledFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint CuQpDeltaEnabledFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint PpsSliceChromaQpOffsetsPresentFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint WeightedPredFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint WeightedBipredFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint TransquantBypassEnabledFlag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint TilesEnabledFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint EntropyCodingSyncEnabledFlag
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint UniformSpacingFlag
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint LoopFilterAcrossTilesEnabledFlag
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint PpsLoopFilterAcrossSlicesEnabledFlag
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
+		public uint DeblockingFilterControlPresentFlag
+		{
+		    get => (_bitfield0 >> 16) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 16)) | ((value & 1) << 16));
+		}
+		public uint DeblockingFilterOverrideEnabledFlag
+		{
+		    get => (_bitfield0 >> 17) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 17)) | ((value & 1) << 17));
+		}
+		public uint PpsDeblockingFilterDisabledFlag
+		{
+		    get => (_bitfield0 >> 18) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 18)) | ((value & 1) << 18));
+		}
+		public uint PpsScalingListDataPresentFlag
+		{
+		    get => (_bitfield0 >> 19) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 19)) | ((value & 1) << 19));
+		}
+		public uint ListsModificationPresentFlag
+		{
+		    get => (_bitfield0 >> 20) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 20)) | ((value & 1) << 20));
+		}
+		public uint SliceSegmentHeaderExtensionPresentFlag
+		{
+		    get => (_bitfield0 >> 21) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 21)) | ((value & 1) << 21));
+		}
+		public uint PpsExtensionPresentFlag
+		{
+		    get => (_bitfield0 >> 22) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 22)) | ((value & 1) << 22));
+		}
+		public uint CrossComponentPredictionEnabledFlag
+		{
+		    get => (_bitfield0 >> 23) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 23)) | ((value & 1) << 23));
+		}
+		public uint ChromaQpOffsetListEnabledFlag
+		{
+		    get => (_bitfield0 >> 24) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 24)) | ((value & 1) << 24));
+		}
+		public uint PpsCurrPicRefEnabledFlag
+		{
+		    get => (_bitfield0 >> 25) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 25)) | ((value & 1) << 25));
+		}
+		public uint ResidualAdaptiveColourTransformEnabledFlag
+		{
+		    get => (_bitfield0 >> 26) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 26)) | ((value & 1) << 26));
+		}
+		public uint PpsSliceActQpOffsetsPresentFlag
+		{
+		    get => (_bitfield0 >> 27) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 27)) | ((value & 1) << 27));
+		}
+		public uint PpsPalettePredictorInitializersPresentFlag
+		{
+		    get => (_bitfield0 >> 28) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 28)) | ((value & 1) << 28));
+		}
+		public uint MonochromePaletteFlag
+		{
+		    get => (_bitfield0 >> 29) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 29)) | ((value & 1) << 29));
+		}
+		public uint PpsRangeExtensionFlag
+		{
+		    get => (_bitfield0 >> 30) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 30)) | ((value & 1) << 30));
+		}
 	}
-
 }

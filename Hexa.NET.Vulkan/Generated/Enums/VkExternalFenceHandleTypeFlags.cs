@@ -26,5 +26,23 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SyncFdBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		OpaqueFdBitKhr = OpaqueFdBit,
+
+		/// <remarks></remarks>
+		OpaqueWin32BitKhr = OpaqueWin32Bit,
+
+		/// <remarks></remarks>
+		OpaqueWin32KmtBitKhr = OpaqueWin32KmtBit,
+
+		/// <remarks></remarks>
+		SyncFdBitKhr = SyncFdBit,
+
+		/// <remarks></remarks>
+		SciSyncObjBitNv = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		SciSyncFenceBitNv = unchecked((uint)32),
 	}
 }

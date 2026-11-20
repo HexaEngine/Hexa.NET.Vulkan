@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Timeline = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		BinaryKhr = Binary,
+
+		/// <remarks></remarks>
+		TimelineKhr = Timeline,
 	}
 }

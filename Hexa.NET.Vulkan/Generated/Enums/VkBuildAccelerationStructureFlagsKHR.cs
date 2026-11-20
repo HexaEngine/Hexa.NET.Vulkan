@@ -29,5 +29,38 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		LowMemoryBitKhr = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		AllowUpdateBitNv = AllowUpdateBitKhr,
+
+		/// <remarks></remarks>
+		AllowCompactionBitNv = AllowCompactionBitKhr,
+
+		/// <remarks></remarks>
+		PreferFastTraceBitNv = PreferFastTraceBitKhr,
+
+		/// <remarks></remarks>
+		PreferFastBuildBitNv = PreferFastBuildBitKhr,
+
+		/// <remarks></remarks>
+		LowMemoryBitNv = LowMemoryBitKhr,
+
+		/// <remarks></remarks>
+		MotionBitNv = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		AllowOpacityMicromapUpdateExt = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		AllowDisableOpacityMicromapsExt = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		AllowOpacityMicromapDataUpdateExt = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		AllowDisplacementMicromapUpdateNv = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		AllowDataAccessKhr = unchecked((uint)2048),
 	}
 }

@@ -12,23 +12,48 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH265LevelIdc : int
+	public enum StdVideoH265LevelIdc : uint
 	{
-		Idc10 = unchecked(0),
-		Idc20 = unchecked(1),
-		Idc21 = unchecked(2),
-		Idc30 = unchecked(3),
-		Idc31 = unchecked(4),
-		Idc40 = unchecked(5),
-		Idc41 = unchecked(6),
-		Idc50 = unchecked(7),
-		Idc51 = unchecked(8),
-		Idc52 = unchecked(9),
-		Idc60 = unchecked(10),
-		Idc61 = unchecked(11),
-		Idc62 = unchecked(12),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Idc10 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Idc20 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Idc21 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Idc30 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Idc31 = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Idc40 = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Idc41 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Idc50 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		Idc51 = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Idc52 = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Idc60 = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Idc61 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		Idc62 = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

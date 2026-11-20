@@ -15,5 +15,16 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPipelineDepthStencilStateCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentDepthAccessBitArm = RasterizationOrderAttachmentDepthAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentStencilAccessBitArm = RasterizationOrderAttachmentStencilAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentDepthAccessBitExt = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentStencilAccessBitExt = unchecked((uint)2),
 	}
 }

@@ -41,5 +41,248 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		StencilReference = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		CullMode = unchecked((uint)1000267000),
+
+		/// <remarks></remarks>
+		FrontFace = unchecked((uint)1000267001),
+
+		/// <remarks></remarks>
+		PrimitiveTopology = unchecked((uint)1000267002),
+
+		/// <remarks></remarks>
+		ViewportWithCount = unchecked((uint)1000267003),
+
+		/// <remarks></remarks>
+		ScissorWithCount = unchecked((uint)1000267004),
+
+		/// <remarks></remarks>
+		VertexInputBindingStride = unchecked((uint)1000267005),
+
+		/// <remarks></remarks>
+		DepthTestEnable = unchecked((uint)1000267006),
+
+		/// <remarks></remarks>
+		DepthWriteEnable = unchecked((uint)1000267007),
+
+		/// <remarks></remarks>
+		DepthCompareOp = unchecked((uint)1000267008),
+
+		/// <remarks></remarks>
+		DepthBoundsTestEnable = unchecked((uint)1000267009),
+
+		/// <remarks></remarks>
+		StencilTestEnable = unchecked((uint)1000267010),
+
+		/// <remarks></remarks>
+		StencilOp = unchecked((uint)1000267011),
+
+		/// <remarks></remarks>
+		RasterizerDiscardEnable = unchecked((uint)1000377001),
+
+		/// <remarks></remarks>
+		DepthBiasEnable = unchecked((uint)1000377002),
+
+		/// <remarks></remarks>
+		PrimitiveRestartEnable = unchecked((uint)1000377004),
+
+		/// <remarks></remarks>
+		LineStipple = unchecked((uint)1000259000),
+
+		/// <remarks></remarks>
+		ViewportWScalingNv = unchecked((uint)1000087000),
+
+		/// <remarks></remarks>
+		DiscardRectangleExt = unchecked((uint)1000099000),
+
+		/// <remarks></remarks>
+		DiscardRectangleEnableExt = unchecked((uint)1000099001),
+
+		/// <remarks></remarks>
+		DiscardRectangleModeExt = unchecked((uint)1000099002),
+
+		/// <remarks></remarks>
+		SampleLocationsExt = unchecked((uint)1000143000),
+
+		/// <remarks></remarks>
+		RayTracingPipelineStackSizeKhr = unchecked((uint)1000347000),
+
+		/// <remarks></remarks>
+		ViewportShadingRatePaletteNv = unchecked((uint)1000164004),
+
+		/// <remarks></remarks>
+		ViewportCoarseSampleOrderNv = unchecked((uint)1000164006),
+
+		/// <remarks></remarks>
+		ExclusiveScissorEnableNv = unchecked((uint)1000205000),
+
+		/// <remarks></remarks>
+		ExclusiveScissorNv = unchecked((uint)1000205001),
+
+		/// <remarks></remarks>
+		FragmentShadingRateKhr = unchecked((uint)1000226000),
+
+		/// <remarks></remarks>
+		LineStippleExt = LineStipple,
+
+		/// <remarks></remarks>
+		CullModeExt = CullMode,
+
+		/// <remarks></remarks>
+		FrontFaceExt = FrontFace,
+
+		/// <remarks></remarks>
+		PrimitiveTopologyExt = PrimitiveTopology,
+
+		/// <remarks></remarks>
+		ViewportWithCountExt = ViewportWithCount,
+
+		/// <remarks></remarks>
+		ScissorWithCountExt = ScissorWithCount,
+
+		/// <remarks></remarks>
+		VertexInputBindingStrideExt = VertexInputBindingStride,
+
+		/// <remarks></remarks>
+		DepthTestEnableExt = DepthTestEnable,
+
+		/// <remarks></remarks>
+		DepthWriteEnableExt = DepthWriteEnable,
+
+		/// <remarks></remarks>
+		DepthCompareOpExt = DepthCompareOp,
+
+		/// <remarks></remarks>
+		DepthBoundsTestEnableExt = DepthBoundsTestEnable,
+
+		/// <remarks></remarks>
+		StencilTestEnableExt = StencilTestEnable,
+
+		/// <remarks></remarks>
+		StencilOpExt = StencilOp,
+
+		/// <remarks></remarks>
+		VertexInputExt = unchecked((uint)1000352000),
+
+		/// <remarks></remarks>
+		PatchControlPointsExt = unchecked((uint)1000377000),
+
+		/// <remarks></remarks>
+		RasterizerDiscardEnableExt = RasterizerDiscardEnable,
+
+		/// <remarks></remarks>
+		DepthBiasEnableExt = DepthBiasEnable,
+
+		/// <remarks></remarks>
+		LogicOpExt = unchecked((uint)1000377003),
+
+		/// <remarks></remarks>
+		PrimitiveRestartEnableExt = PrimitiveRestartEnable,
+
+		/// <remarks></remarks>
+		ColorWriteEnableExt = unchecked((uint)1000381000),
+
+		/// <remarks></remarks>
+		DepthClampEnableExt = unchecked((uint)1000455003),
+
+		/// <remarks></remarks>
+		PolygonModeExt = unchecked((uint)1000455004),
+
+		/// <remarks></remarks>
+		RasterizationSamplesExt = unchecked((uint)1000455005),
+
+		/// <remarks></remarks>
+		SampleMaskExt = unchecked((uint)1000455006),
+
+		/// <remarks></remarks>
+		AlphaToCoverageEnableExt = unchecked((uint)1000455007),
+
+		/// <remarks></remarks>
+		AlphaToOneEnableExt = unchecked((uint)1000455008),
+
+		/// <remarks></remarks>
+		LogicOpEnableExt = unchecked((uint)1000455009),
+
+		/// <remarks></remarks>
+		ColorBlendEnableExt = unchecked((uint)1000455010),
+
+		/// <remarks></remarks>
+		ColorBlendEquationExt = unchecked((uint)1000455011),
+
+		/// <remarks></remarks>
+		ColorWriteMaskExt = unchecked((uint)1000455012),
+
+		/// <remarks></remarks>
+		TessellationDomainOriginExt = unchecked((uint)1000455002),
+
+		/// <remarks></remarks>
+		RasterizationStreamExt = unchecked((uint)1000455013),
+
+		/// <remarks></remarks>
+		ConservativeRasterizationModeExt = unchecked((uint)1000455014),
+
+		/// <remarks></remarks>
+		ExtraPrimitiveOverestimationSizeExt = unchecked((uint)1000455015),
+
+		/// <remarks></remarks>
+		DepthClipEnableExt = unchecked((uint)1000455016),
+
+		/// <remarks></remarks>
+		SampleLocationsEnableExt = unchecked((uint)1000455017),
+
+		/// <remarks></remarks>
+		ColorBlendAdvancedExt = unchecked((uint)1000455018),
+
+		/// <remarks></remarks>
+		ProvokingVertexModeExt = unchecked((uint)1000455019),
+
+		/// <remarks></remarks>
+		LineRasterizationModeExt = unchecked((uint)1000455020),
+
+		/// <remarks></remarks>
+		LineStippleEnableExt = unchecked((uint)1000455021),
+
+		/// <remarks></remarks>
+		DepthClipNegativeOneToOneExt = unchecked((uint)1000455022),
+
+		/// <remarks></remarks>
+		ViewportWScalingEnableNv = unchecked((uint)1000455023),
+
+		/// <remarks></remarks>
+		ViewportSwizzleNv = unchecked((uint)1000455024),
+
+		/// <remarks></remarks>
+		CoverageToColorEnableNv = unchecked((uint)1000455025),
+
+		/// <remarks></remarks>
+		CoverageToColorLocationNv = unchecked((uint)1000455026),
+
+		/// <remarks></remarks>
+		CoverageModulationModeNv = unchecked((uint)1000455027),
+
+		/// <remarks></remarks>
+		CoverageModulationTableEnableNv = unchecked((uint)1000455028),
+
+		/// <remarks></remarks>
+		CoverageModulationTableNv = unchecked((uint)1000455029),
+
+		/// <remarks></remarks>
+		ShadingRateImageEnableNv = unchecked((uint)1000455030),
+
+		/// <remarks></remarks>
+		RepresentativeFragmentTestEnableNv = unchecked((uint)1000455031),
+
+		/// <remarks></remarks>
+		CoverageReductionModeNv = unchecked((uint)1000455032),
+
+		/// <remarks></remarks>
+		AttachmentFeedbackLoopEnableExt = unchecked((uint)1000524000),
+
+		/// <remarks></remarks>
+		LineStippleKhr = LineStipple,
+
+		/// <remarks></remarks>
+		DepthClampRangeExt = unchecked((uint)1000582000),
 	}
 }

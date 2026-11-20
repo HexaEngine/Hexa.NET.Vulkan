@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1SequenceHeader
+	public unsafe struct StdVideoAV1SequenceHeader
 	{
 		public StdVideoAV1SequenceHeaderFlags Flags;
 		public StdVideoAV1Profile SeqProfile;
@@ -29,65 +28,8 @@ namespace Hexa.NET.Vulkan
 		public byte OrderHintBitsMinus1;
 		public byte SeqForceIntegerMv;
 		public byte SeqForceScreenContentTools;
-		public byte Reserved1_0;
-		public byte Reserved1_1;
-		public byte Reserved1_2;
-		public byte Reserved1_3;
-		public byte Reserved1_4;
-		public unsafe StdVideoAV1ColorConfig* PColorConfig;
-		public unsafe StdVideoAV1TimingInfo* PTimingInfo;
-
-		public unsafe StdVideoAV1SequenceHeader(StdVideoAV1SequenceHeaderFlags flags = default, StdVideoAV1Profile seqProfile = default, byte frameWidthBitsMinus1 = default, byte frameHeightBitsMinus1 = default, ushort maxFrameWidthMinus1 = default, ushort maxFrameHeightMinus1 = default, byte deltaFrameIdLengthMinus2 = default, byte additionalFrameIdLengthMinus1 = default, byte orderHintBitsMinus1 = default, byte seqForceIntegerMv = default, byte seqForceScreenContentTools = default, byte* reserved1 = default, StdVideoAV1ColorConfig* pColorConfig = default, StdVideoAV1TimingInfo* pTimingInfo = default)
-		{
-			Flags = flags;
-			SeqProfile = seqProfile;
-			FrameWidthBitsMinus1 = frameWidthBitsMinus1;
-			FrameHeightBitsMinus1 = frameHeightBitsMinus1;
-			MaxFrameWidthMinus1 = maxFrameWidthMinus1;
-			MaxFrameHeightMinus1 = maxFrameHeightMinus1;
-			DeltaFrameIdLengthMinus2 = deltaFrameIdLengthMinus2;
-			AdditionalFrameIdLengthMinus1 = additionalFrameIdLengthMinus1;
-			OrderHintBitsMinus1 = orderHintBitsMinus1;
-			SeqForceIntegerMv = seqForceIntegerMv;
-			SeqForceScreenContentTools = seqForceScreenContentTools;
-			if (reserved1 != default(byte*))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-			}
-			PColorConfig = pColorConfig;
-			PTimingInfo = pTimingInfo;
-		}
-
-		public unsafe StdVideoAV1SequenceHeader(StdVideoAV1SequenceHeaderFlags flags = default, StdVideoAV1Profile seqProfile = default, byte frameWidthBitsMinus1 = default, byte frameHeightBitsMinus1 = default, ushort maxFrameWidthMinus1 = default, ushort maxFrameHeightMinus1 = default, byte deltaFrameIdLengthMinus2 = default, byte additionalFrameIdLengthMinus1 = default, byte orderHintBitsMinus1 = default, byte seqForceIntegerMv = default, byte seqForceScreenContentTools = default, Span<byte> reserved1 = default, StdVideoAV1ColorConfig* pColorConfig = default, StdVideoAV1TimingInfo* pTimingInfo = default)
-		{
-			Flags = flags;
-			SeqProfile = seqProfile;
-			FrameWidthBitsMinus1 = frameWidthBitsMinus1;
-			FrameHeightBitsMinus1 = frameHeightBitsMinus1;
-			MaxFrameWidthMinus1 = maxFrameWidthMinus1;
-			MaxFrameHeightMinus1 = maxFrameHeightMinus1;
-			DeltaFrameIdLengthMinus2 = deltaFrameIdLengthMinus2;
-			AdditionalFrameIdLengthMinus1 = additionalFrameIdLengthMinus1;
-			OrderHintBitsMinus1 = orderHintBitsMinus1;
-			SeqForceIntegerMv = seqForceIntegerMv;
-			SeqForceScreenContentTools = seqForceScreenContentTools;
-			if (reserved1 != default(Span<byte>))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-			}
-			PColorConfig = pColorConfig;
-			PTimingInfo = pTimingInfo;
-		}
-
-
+		public fixed byte Reserved1[5];
+		public StdVideoAV1ColorConfig* PColorConfig;
+		public StdVideoAV1TimingInfo* PTimingInfo;
 	}
-
 }

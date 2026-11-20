@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		ProtectedBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ProtectedBitKhr = ProtectedBit,
 	}
 }

@@ -15,61 +15,12 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeAV1ReferenceInfo
+	public unsafe struct StdVideoDecodeAV1ReferenceInfo
 	{
 		public StdVideoDecodeAV1ReferenceInfoFlags Flags;
 		public byte FrameType;
 		public byte RefFrameSignBias;
 		public byte OrderHint;
-		public byte SavedOrderHints_0;
-		public byte SavedOrderHints_1;
-		public byte SavedOrderHints_2;
-		public byte SavedOrderHints_3;
-		public byte SavedOrderHints_4;
-		public byte SavedOrderHints_5;
-		public byte SavedOrderHints_6;
-		public byte SavedOrderHints_7;
-
-		public unsafe StdVideoDecodeAV1ReferenceInfo(StdVideoDecodeAV1ReferenceInfoFlags flags = default, byte frameType = default, byte refFrameSignBias = default, byte orderHint = default, byte* savedOrderHints = default)
-		{
-			Flags = flags;
-			FrameType = frameType;
-			RefFrameSignBias = refFrameSignBias;
-			OrderHint = orderHint;
-			if (savedOrderHints != default(byte*))
-			{
-				SavedOrderHints_0 = savedOrderHints[0];
-				SavedOrderHints_1 = savedOrderHints[1];
-				SavedOrderHints_2 = savedOrderHints[2];
-				SavedOrderHints_3 = savedOrderHints[3];
-				SavedOrderHints_4 = savedOrderHints[4];
-				SavedOrderHints_5 = savedOrderHints[5];
-				SavedOrderHints_6 = savedOrderHints[6];
-				SavedOrderHints_7 = savedOrderHints[7];
-			}
-		}
-
-		public unsafe StdVideoDecodeAV1ReferenceInfo(StdVideoDecodeAV1ReferenceInfoFlags flags = default, byte frameType = default, byte refFrameSignBias = default, byte orderHint = default, Span<byte> savedOrderHints = default)
-		{
-			Flags = flags;
-			FrameType = frameType;
-			RefFrameSignBias = refFrameSignBias;
-			OrderHint = orderHint;
-			if (savedOrderHints != default(Span<byte>))
-			{
-				SavedOrderHints_0 = savedOrderHints[0];
-				SavedOrderHints_1 = savedOrderHints[1];
-				SavedOrderHints_2 = savedOrderHints[2];
-				SavedOrderHints_3 = savedOrderHints[3];
-				SavedOrderHints_4 = savedOrderHints[4];
-				SavedOrderHints_5 = savedOrderHints[5];
-				SavedOrderHints_6 = savedOrderHints[6];
-				SavedOrderHints_7 = savedOrderHints[7];
-			}
-		}
-
-
+		public fixed byte SavedOrderHints[8];
 	}
-
 }

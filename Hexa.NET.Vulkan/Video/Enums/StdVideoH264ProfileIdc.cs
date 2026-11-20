@@ -12,14 +12,21 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264ProfileIdc : int
+	public enum StdVideoH264ProfileIdc : uint
 	{
-		Baseline = unchecked(66),
-		Main = unchecked(77),
-		High = unchecked(100),
-		High444Predictive = unchecked(244),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Baseline = unchecked((uint)66),
+
+		/// <remarks></remarks>
+		Main = unchecked((uint)77),
+
+		/// <remarks></remarks>
+		High = unchecked((uint)100),
+
+		/// <remarks></remarks>
+		High444Predictive = unchecked((uint)244),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

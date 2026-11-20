@@ -23,5 +23,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		PerformanceBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		DeviceAddressBindingBitExt = unchecked((uint)8),
 	}
 }

@@ -17,5 +17,23 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		NoneKhr = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		EncodeH264BitKhr = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		EncodeH265BitKhr = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		DecodeH264BitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DecodeH265BitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		DecodeAv1BitKhr = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		EncodeAv1BitKhr = unchecked((uint)262144),
 	}
 }

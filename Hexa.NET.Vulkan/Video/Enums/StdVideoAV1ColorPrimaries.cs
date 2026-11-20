@@ -12,22 +12,45 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1ColorPrimaries : int
+	public enum StdVideoAV1ColorPrimaries : uint
 	{
-		Bt709 = unchecked(1),
-		BtUnspecified = unchecked(2),
-		Bt470M = unchecked(4),
-		Bt470BG = unchecked(5),
-		Bt601 = unchecked(6),
-		Smpte240 = unchecked(7),
-		GenericFilm = unchecked(8),
-		Bt2020 = unchecked(9),
-		Xyz = unchecked(10),
-		Smpte431 = unchecked(11),
-		Smpte432 = unchecked(12),
-		Ebu3213 = unchecked(22),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Bt709 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Unspecified = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Bt470M = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Bt470BG = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Bt601 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Smpte240 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		GenericFilm = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Bt2020 = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Xyz = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Smpte431 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		Smpte432 = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		Ebu3213 = unchecked((uint)22),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

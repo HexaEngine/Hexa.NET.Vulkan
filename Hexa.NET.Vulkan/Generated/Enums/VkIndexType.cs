@@ -20,5 +20,20 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Uint32 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Uint8 = unchecked((uint)1000265000),
+
+		/// <remarks></remarks>
+		NoneKhr = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		NoneNv = NoneKhr,
+
+		/// <remarks></remarks>
+		Uint8Ext = Uint8,
+
+		/// <remarks></remarks>
+		Uint8Khr = Uint8,
 	}
 }

@@ -23,5 +23,110 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		DerivativeBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ViewIndexFromDeviceIndexBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		DispatchBaseBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		DispatchBase = DispatchBaseBit,
+
+		/// <remarks></remarks>
+		FailOnPipelineCompileRequiredBit = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		EarlyReturnOnFailureBit = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		NoProtectedAccessBit = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		ProtectedAccessOnlyBit = unchecked((uint)1073741824),
+
+		/// <remarks></remarks>
+		ViewIndexFromDeviceIndexBitKhr = ViewIndexFromDeviceIndexBit,
+
+		/// <remarks></remarks>
+		DispatchBaseKhr = DispatchBase,
+
+		/// <remarks></remarks>
+		RayTracingNoNullAnyHitShadersBitKhr = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		RayTracingNoNullClosestHitShadersBitKhr = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		RayTracingNoNullMissShadersBitKhr = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		RayTracingNoNullIntersectionShadersBitKhr = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		RayTracingSkipTrianglesBitKhr = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		RayTracingSkipAabbsBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		RayTracingShaderGroupHandleCaptureReplayBitKhr = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		DeferCompileBitNv = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		RenderingFragmentDensityMapAttachmentBitExt = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		RenderingFragmentShadingRateAttachmentBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		CaptureStatisticsBitKhr = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		CaptureInternalRepresentationsBitKhr = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		IndirectBindableBitNv = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		LibraryBitKhr = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		FailOnPipelineCompileRequiredBitExt = FailOnPipelineCompileRequiredBit,
+
+		/// <remarks></remarks>
+		EarlyReturnOnFailureBitExt = EarlyReturnOnFailureBit,
+
+		/// <remarks></remarks>
+		DescriptorBufferBitExt = unchecked((uint)536870912),
+
+		/// <remarks></remarks>
+		RetainLinkTimeOptimizationInfoBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		LinkTimeOptimizationBitExt = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		RayTracingAllowMotionBitNv = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		ColorAttachmentFeedbackLoopBitExt = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		DepthStencilAttachmentFeedbackLoopBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		RayTracingOpacityMicromapBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		RayTracingDisplacementMicromapBitNv = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		NoProtectedAccessBitExt = NoProtectedAccessBit,
+
+		/// <remarks></remarks>
+		ProtectedAccessOnlyBitExt = ProtectedAccessOnlyBit,
 	}
 }

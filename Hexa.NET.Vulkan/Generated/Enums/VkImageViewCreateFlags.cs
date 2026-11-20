@@ -15,5 +15,13 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkImageViewCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		FragmentDensityMapDynamicBitExt = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DescriptorBufferCaptureReplayBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		FragmentDensityMapDeferredBitExt = unchecked((uint)2),
 	}
 }

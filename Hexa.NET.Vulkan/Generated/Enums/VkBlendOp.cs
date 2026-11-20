@@ -29,5 +29,143 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Max = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ZeroExt = unchecked((uint)1000148000),
+
+		/// <remarks></remarks>
+		SrcExt = unchecked((uint)1000148001),
+
+		/// <remarks></remarks>
+		DstExt = unchecked((uint)1000148002),
+
+		/// <remarks></remarks>
+		SrcOverExt = unchecked((uint)1000148003),
+
+		/// <remarks></remarks>
+		DstOverExt = unchecked((uint)1000148004),
+
+		/// <remarks></remarks>
+		SrcInExt = unchecked((uint)1000148005),
+
+		/// <remarks></remarks>
+		DstInExt = unchecked((uint)1000148006),
+
+		/// <remarks></remarks>
+		SrcOutExt = unchecked((uint)1000148007),
+
+		/// <remarks></remarks>
+		DstOutExt = unchecked((uint)1000148008),
+
+		/// <remarks></remarks>
+		SrcAtopExt = unchecked((uint)1000148009),
+
+		/// <remarks></remarks>
+		DstAtopExt = unchecked((uint)1000148010),
+
+		/// <remarks></remarks>
+		XorExt = unchecked((uint)1000148011),
+
+		/// <remarks></remarks>
+		MultiplyExt = unchecked((uint)1000148012),
+
+		/// <remarks></remarks>
+		ScreenExt = unchecked((uint)1000148013),
+
+		/// <remarks></remarks>
+		OverlayExt = unchecked((uint)1000148014),
+
+		/// <remarks></remarks>
+		DarkenExt = unchecked((uint)1000148015),
+
+		/// <remarks></remarks>
+		LightenExt = unchecked((uint)1000148016),
+
+		/// <remarks></remarks>
+		ColordodgeExt = unchecked((uint)1000148017),
+
+		/// <remarks></remarks>
+		ColorburnExt = unchecked((uint)1000148018),
+
+		/// <remarks></remarks>
+		HardlightExt = unchecked((uint)1000148019),
+
+		/// <remarks></remarks>
+		SoftlightExt = unchecked((uint)1000148020),
+
+		/// <remarks></remarks>
+		DifferenceExt = unchecked((uint)1000148021),
+
+		/// <remarks></remarks>
+		ExclusionExt = unchecked((uint)1000148022),
+
+		/// <remarks></remarks>
+		InvertExt = unchecked((uint)1000148023),
+
+		/// <remarks></remarks>
+		InvertRgbExt = unchecked((uint)1000148024),
+
+		/// <remarks></remarks>
+		LineardodgeExt = unchecked((uint)1000148025),
+
+		/// <remarks></remarks>
+		LinearburnExt = unchecked((uint)1000148026),
+
+		/// <remarks></remarks>
+		VividlightExt = unchecked((uint)1000148027),
+
+		/// <remarks></remarks>
+		LinearlightExt = unchecked((uint)1000148028),
+
+		/// <remarks></remarks>
+		PinlightExt = unchecked((uint)1000148029),
+
+		/// <remarks></remarks>
+		HardmixExt = unchecked((uint)1000148030),
+
+		/// <remarks></remarks>
+		HslHueExt = unchecked((uint)1000148031),
+
+		/// <remarks></remarks>
+		HslSaturationExt = unchecked((uint)1000148032),
+
+		/// <remarks></remarks>
+		HslColorExt = unchecked((uint)1000148033),
+
+		/// <remarks></remarks>
+		HslLuminosityExt = unchecked((uint)1000148034),
+
+		/// <remarks></remarks>
+		PlusExt = unchecked((uint)1000148035),
+
+		/// <remarks></remarks>
+		PlusClampedExt = unchecked((uint)1000148036),
+
+		/// <remarks></remarks>
+		PlusClampedAlphaExt = unchecked((uint)1000148037),
+
+		/// <remarks></remarks>
+		PlusDarkerExt = unchecked((uint)1000148038),
+
+		/// <remarks></remarks>
+		MinusExt = unchecked((uint)1000148039),
+
+		/// <remarks></remarks>
+		MinusClampedExt = unchecked((uint)1000148040),
+
+		/// <remarks></remarks>
+		ContrastExt = unchecked((uint)1000148041),
+
+		/// <remarks></remarks>
+		InvertOvgExt = unchecked((uint)1000148042),
+
+		/// <remarks></remarks>
+		RedExt = unchecked((uint)1000148043),
+
+		/// <remarks></remarks>
+		GreenExt = unchecked((uint)1000148044),
+
+		/// <remarks></remarks>
+		BlueExt = unchecked((uint)1000148045),
 	}
 }

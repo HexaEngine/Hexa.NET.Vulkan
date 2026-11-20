@@ -31,11 +31,10 @@ namespace Generator
             VkRegistry video = VkRegistry.LoadFromFile("video.xml");
             CsCodeGeneratorConfig config = CsCodeGeneratorConfig.Load("generator.base.json");
             CsCodeGeneratorConfig configVideo = CsCodeGeneratorConfig.Load("video/generator.json");
+            MergeExtendedEnums(registry);
             PrepareConfig(registry, config);
 
-            CsCodeGenerator generator = new(configVideo);
-            generator.LogToConsole();
-            generator.Generate([.. Directory.GetFiles("video", "*.h")], "../../../../Hexa.NET.Vulkan/Video");
+            GenerateVideo(video, configVideo, "../../../../Hexa.NET.Vulkan/Video");
 
             GenerateApi(registry, config, "../../../../Hexa.NET.Vulkan/Generated");
 
@@ -47,15 +46,200 @@ namespace Generator
             WriteConstants(registry, config, outputDir);
 
             var groupToEnumName = GenerateEnums(config, registry, outputDir);
-            CsCodeGenerator generator = new(config);
-            generator.LogToConsole();
-            generator.Generate("include/main.h", outputDir);
+            WriteEnums(config, outputDir);
 
             var allowedTypes = GatherAllowedTypes(registry).ToFrozenSet();
             WriteTypesCore(allowedTypes, registry, config, outputDir);
 
             var allowedFunctions = GatherAllowedFunctions(registry).ToFrozenSet();
             WriteFunctionsCore(allowedFunctions, registry, config, outputDir, groupToEnumName);
+        }
+
+        // video.xml has no <feature> blocks (it isn't versioned like vk.xml), so every type and
+        // constant referenced by any of its <extensions> is simply always generated.
+        private static void GenerateVideo(VkRegistry video, CsCodeGeneratorConfig config, string outputDir)
+        {
+            var (allowedTypes, constants) = GatherVideoRequirements(video);
+
+            WriteVideoConstants(constants, config, outputDir);
+
+            GenerateEnums(config, video, outputDir);
+            WriteEnums(config, outputDir);
+
+            WriteTypesCore(allowedTypes.ToFrozenSet(), video, config, outputDir);
+        }
+
+        private static (List<string> Types, List<(string Name, string Value)> Constants) GatherVideoRequirements(VkRegistry video)
+        {
+            List<string> types = [];
+            List<(string Name, string Value)> constants = [];
+            HashSet<string> seenTypes = [];
+            HashSet<string> seenConstants = [];
+
+            foreach (var extension in video.Extensions.Extension)
+            {
+                foreach (var require in extension.Require)
+                {
+                    if (require.Types != null)
+                    {
+                        foreach (var type in require.Types)
+                        {
+                            if (seenTypes.Add(type.Name))
+                            {
+                                types.Add(type.Name);
+                            }
+                        }
+                    }
+
+                    if (require.Enums != null)
+                    {
+                        foreach (var @enum in require.Enums)
+                        {
+                            if (@enum.Value == null) continue;
+                            if (!seenConstants.Add(@enum.Name)) continue;
+                            constants.Add((@enum.Name, @enum.Value));
+                        }
+                    }
+                }
+            }
+
+            return (types, constants);
+        }
+
+        private static void WriteVideoConstants(List<(string Name, string Value)> constants, CsCodeGeneratorConfig config, string outputPath)
+        {
+            string constantsFolder = Path.Combine(outputPath, "Constants");
+            if (Directory.Exists(constantsFolder))
+            {
+                Directory.Delete(constantsFolder, true);
+            }
+            Directory.CreateDirectory(constantsFolder);
+
+            var fileName = Path.Combine(constantsFolder, "Constants.cs");
+            using CsSplitCodeWriter writer = new(fileName, config.Namespace, GetUsings(config), null);
+            using (writer.PushBlock($"public static unsafe partial class {config.ApiName}"))
+            {
+                foreach (var (name, rawValue) in constants)
+                {
+                    string value = NormalizeValue(rawValue);
+
+                    if (value.Length > 0 && value[0] == '"')
+                    {
+                        writer.WriteLine($"public const string {name} = {value};");
+                        writer.WriteLine();
+                    }
+                    else if (TryParseIntLiteral(value, out var parsed))
+                    {
+                        constantMap[name] = parsed;
+                        writer.WriteLine($"public const int {name} = {value};");
+                        writer.WriteLine();
+                    }
+                }
+            }
+        }
+
+        private static bool TryParseIntLiteral(string value, out int result)
+        {
+            if (value.StartsWith("0x", StringComparison.OrdinalIgnoreCase))
+            {
+                return int.TryParse(value.AsSpan(2), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out result);
+            }
+
+            return int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out result);
+        }
+
+        // vk.xml only lists an enum group's "native" members inside its own <enums> block.
+        // Every value a <feature> (core 1.1/1.2/1.3/1.4) or <extension> adds via "extends"
+        // (e.g. VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR extending VkStructureType) lives
+        // only in that <feature>/<extension>'s <require> block and has to be merged in here,
+        // otherwise huge swaths of VkStructureType/VkResult/VkObjectType/etc. are simply absent.
+        private static void MergeExtendedEnums(VkRegistry registry)
+        {
+            Dictionary<string, Enums> groupsByName = [];
+            foreach (var group in registry.EnumGroups)
+            {
+                groupsByName[group.Name] = group;
+            }
+
+            HashSet<string> seenNames = [];
+            foreach (var group in registry.EnumGroups)
+            {
+                foreach (var item in group.Items)
+                {
+                    seenNames.Add(item.Name);
+                }
+            }
+
+            foreach (var feature in registry.Features)
+            {
+                foreach (var require in feature.Require)
+                {
+                    MergeExtendedEnumsFromRequire(require, null, groupsByName, seenNames);
+                }
+            }
+
+            foreach (var extension in registry.Extensions.Extension)
+            {
+                int.TryParse(extension.Number, NumberStyles.Integer, CultureInfo.InvariantCulture, out int extensionNumber);
+
+                foreach (var require in extension.Require)
+                {
+                    MergeExtendedEnumsFromRequire(require, extensionNumber, groupsByName, seenNames);
+                }
+            }
+        }
+
+        private static void MergeExtendedEnumsFromRequire(Require require, int? enclosingExtNumber, Dictionary<string, Enums> groupsByName, HashSet<string> seenNames)
+        {
+            if (require.Enums == null)
+            {
+                return;
+            }
+
+            foreach (var featureEnum in require.Enums)
+            {
+                if (featureEnum.Extends == null) continue;
+                if (featureEnum.Deprecated == "aliased") continue;
+                if (!seenNames.Add(featureEnum.Name)) continue;
+                if (!groupsByName.TryGetValue(featureEnum.Extends, out var group)) continue;
+
+                string? value = null;
+                string? alias = featureEnum.Alias;
+
+                if (alias == null)
+                {
+                    if (featureEnum.Value != null)
+                    {
+                        value = featureEnum.Value;
+                    }
+                    else if (featureEnum.Bitpos != null && int.TryParse(featureEnum.Bitpos, NumberStyles.Integer, CultureInfo.InvariantCulture, out int bitpos))
+                    {
+                        value = (1L << bitpos).ToString(CultureInfo.InvariantCulture);
+                    }
+                    else if (featureEnum.Offset != null && int.TryParse(featureEnum.Offset, NumberStyles.Integer, CultureInfo.InvariantCulture, out int offset))
+                    {
+                        int extNumber = enclosingExtNumber ?? 0;
+                        if (featureEnum.ExtNumber != null)
+                        {
+                            int.TryParse(featureEnum.ExtNumber, NumberStyles.Integer, CultureInfo.InvariantCulture, out extNumber);
+                        }
+
+                        long computed = 1000000000L + (extNumber - 1) * 1000L + offset;
+                        if (featureEnum.Dir == "-")
+                        {
+                            computed = -computed;
+                        }
+
+                        value = computed.ToString(CultureInfo.InvariantCulture);
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                group.Items.Add(new Enum { Name = featureEnum.Name, Value = value!, Alias = alias });
+            }
         }
 
         private static void PrepareConfig(VkRegistry registry, CsCodeGeneratorConfig config)
@@ -168,22 +352,26 @@ namespace Generator
             WriteFunctions(FunctionLevel.Device, writer, registry, config, allowedFunctions, groupToEnumName, fnBuilderGlobal, "public");
             writer.EndBlock();
 
-            WriteFunctionTable(config, Path.Combine(functionsFolder, $"FunctionTable.{extensionName}.cs"), fnBuilderGlobal);
+            WriteFunctionTable(config, Path.Combine(functionsFolder, $"FunctionTable.{extensionName}.cs"), fnBuilderGlobal, extensionName, isStatic: false);
         }
 
-        private static void WriteFunctionTable(CsCodeGeneratorConfig config, string outputPath, FunctionTableBuilder functionTableBuilder)
+        private static void WriteFunctionTable(CsCodeGeneratorConfig config, string outputPath, FunctionTableBuilder functionTableBuilder, string? className = null, bool isStatic = true)
         {
             var initString = functionTableBuilder.Finish(out var count);
+            string modifier = isStatic ? "static " : "";
             using var writer = new CsCodeWriter(outputPath, config.Namespace, ["System", "HexaGen.Runtime", "System.Numerics"], config.HeaderInjector);
-            using (writer.PushBlock($"public static unsafe partial class {config.ApiName}"))
+            using (writer.PushBlock($"public {modifier}unsafe partial class {className ?? config.ApiName}"))
             {
-                writer.WriteLine("internal static FunctionTable funcTable;");
+                writer.WriteLine($"internal {modifier}FunctionTable funcTable;");
 
                 writer.WriteLine();
 
-                using (writer.PushBlock($"public static void InitApi()"))
+                // Extension classes live in a different namespace/class than the core "Vulkan"
+                // class that defines GetLibraryName(), so they need to call it qualified.
+                string getLibraryNameCall = isStatic ? "GetLibraryName()" : "global::Hexa.NET.Vulkan.Vulkan.GetLibraryName()";
+                using (writer.PushBlock($"public {modifier}void InitApi()"))
                 {
-                    writer.WriteLine($"funcTable = new FunctionTable(GetLibraryName(), {count});");
+                    writer.WriteLine($"funcTable = new FunctionTable({getLibraryNameCall}, {count});");
                     writer.WriteLines(initString);
                 }
                 writer.WriteLine();
@@ -318,6 +506,15 @@ namespace Generator
                 for (int i = 0; i < command.Params.Count; i++)
                 {
                     Param param = command.Params[i];
+
+                    // vk.xml sometimes lists the same logical parameter twice with different
+                    // metadata for the "vulkan" and "vulkansc" API profiles (e.g. vkCreateSwapchainKHR's
+                    // pCreateInfo); only keep the one for the API we're generating.
+                    if (param.Api != null && param.Api != ApiName)
+                    {
+                        continue;
+                    }
+
                     var paramType = ParseType(config, param);
                     var paramName = config.GetParameterName(i, param.Name);
                     var paramIsBool = paramType == "byte";
@@ -409,7 +606,7 @@ namespace Generator
 
                 for (int j = 0; j < parameters.Length; j++)
                 {
-                    var bit = (ix & 1 << j - 64) != 0;
+                    var bit = (ix & (1L << j)) != 0;
 
                     Parameter parameter = parameters[j];
 
@@ -659,6 +856,14 @@ namespace Generator
             if (result == "float[2]") return "Vector2";
             if (result == "float[3]") return "Vector3";
             if (result == "float[4]") return "Vector4";
+
+            // Any other fixed-size array (e.g. "VkFragmentShadingRateCombinerOpKHR[2]") decays
+            // to a pointer in the native ABI, since C passes arrays by pointer to the first element.
+            var arrayMatch = FixedArrayPostfixRegex.Match(result);
+            if (arrayMatch.Success)
+            {
+                result = $"{arrayMatch.Groups[1].Value}*";
+            }
 
             return result;
         }
@@ -937,6 +1142,59 @@ namespace Generator
                 using CsCodeWriter writer = new(fileName, config.Namespace, GetUsings(config), null);
                 GenerateConstantsFile(config, group, writer);
             }
+        }
+
+        // Writes config.CustomEnums (populated by GenerateEnums) directly from the registry
+        // metadata, instead of going through HexaGen's own CsCodeGenerator.Generate(...): that
+        // engine deletes and recreates its whole output directory on every call, which would
+        // wipe out the Constants/Structs/etc. folders this generator writes by hand alongside it.
+        private static void WriteEnums(CsCodeGeneratorConfig config, string outputPath)
+        {
+            string enumsFolder = Path.Combine(outputPath, "Enums");
+            if (Directory.Exists(enumsFolder))
+            {
+                Directory.Delete(enumsFolder, true);
+            }
+            Directory.CreateDirectory(enumsFolder);
+
+            List<string> usings = ["System", "HexaGen.Runtime", .. config.Usings];
+
+            foreach (var metadata in config.CustomEnums)
+            {
+                var fileName = Path.Combine(enumsFolder, $"{metadata.Name}.cs");
+                using CsCodeWriter writer = new(fileName, config.Namespace, usings, null);
+
+                writer.WriteLines(metadata.Attributes);
+
+                if (metadata.Comment != null)
+                {
+                    writer.WriteLines(metadata.Comment);
+                }
+
+                using (writer.PushBlock($"public enum {metadata.Name} : {metadata.BaseType}"))
+                {
+                    bool first = true;
+                    foreach (var item in metadata.Items)
+                    {
+                        if (!first)
+                        {
+                            writer.WriteLine();
+                        }
+                        first = false;
+
+                        if (item.Comment != null)
+                        {
+                            writer.WriteLines(item.Comment);
+                        }
+
+                        writer.WriteLines(item.Attributes);
+
+                        writer.WriteLine($"{item.Name} = {item.Value},");
+                    }
+                }
+            }
+
+            config.CustomEnums.Clear();
         }
 
         private static List<string> GetUsings(CsCodeGeneratorConfig config)
@@ -1499,5 +1757,10 @@ namespace Generator
 
         [GeneratedRegex(@"\s+")]
         private static partial Regex CreateWhitespaceRegex();
+
+        private static readonly Regex FixedArrayPostfixRegex = CreateFixedArrayPostfixRegex();
+
+        [GeneratedRegex(@"^(.+)\[\d+\]$")]
+        private static partial Regex CreateFixedArrayPostfixRegex();
     }
 }

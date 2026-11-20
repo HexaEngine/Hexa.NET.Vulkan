@@ -17,298 +17,148 @@ namespace Hexa.NET.Vulkan.KHR
 	public unsafe partial class VKKHRDisplaySwapchain
 	{
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkResult CreateSharedSwapchainsKHRNative(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
+		internal VkResult CreateSharedSwapchainsKHRNative(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)funcTable[0])(device, swapchainCount, pCreateInfos, pCreateInfos, pAllocator, pSwapchains);
+			return ((delegate* unmanaged[Cdecl]<VkDevice, uint, VkSwapchainCreateInfoKHR*, VkAllocationCallbacks*, VkSwapchainKHR*, VkResult>)funcTable[0])(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains);
 			#else
-			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, uint, nint, nint, nint, nint, VkResult>)funcTable[0])(device, swapchainCount, (nint)pCreateInfos, (nint)pCreateInfos, (nint)pAllocator, (nint)pSwapchains);
+			return (VkResult)((delegate* unmanaged[Cdecl]<VkDevice, uint, nint, nint, nint, VkResult>)funcTable[0])(device, swapchainCount, (nint)pCreateInfos, (nint)pAllocator, (nint)pSwapchains);
 			#endif
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
 		{
-			VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, pAllocator, pSwapchains);
+			VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains);
 			return ret;
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, pAllocator, pSwapchains);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pAllocator, pSwapchains);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, pAllocator, pSwapchains);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pAllocator, pSwapchains);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, pAllocator, pSwapchains);
-				return ret;
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, pAllocator, pSwapchains);
-				return ret;
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = pCreateInfos)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, pAllocator, pSwapchains);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = &pCreateInfos)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, pAllocator, pSwapchains);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkAllocationCallbacks* ppAllocator0 = pAllocator)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, ppAllocator0, pSwapchains);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppAllocator0, pSwapchains);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkAllocationCallbacks* ppAllocator0 = &pAllocator)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, ppAllocator0, pSwapchains);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppAllocator0, pSwapchains);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
 			{
 				fixed (VkAllocationCallbacks* ppAllocator1 = pAllocator)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, ppAllocator1, pSwapchains);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppAllocator1, pSwapchains);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
 			{
 				fixed (VkAllocationCallbacks* ppAllocator1 = &pAllocator)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, ppAllocator1, pSwapchains);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppAllocator1, pSwapchains);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkAllocationCallbacks* ppAllocator1 = pAllocator)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, ppAllocator1, pSwapchains);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkAllocationCallbacks* ppAllocator1 = &pAllocator)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, ppAllocator1, pSwapchains);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = pCreateInfos)
-				{
-					fixed (VkAllocationCallbacks* ppAllocator2 = pAllocator)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, ppAllocator2, pSwapchains);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, VkSwapchainKHR* pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = &pCreateInfos)
-				{
-					fixed (VkAllocationCallbacks* ppAllocator2 = &pAllocator)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, ppAllocator2, pSwapchains);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
 		{
 			fixed (VkSwapchainKHR* ppSwapchains0 = pSwapchains)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, pAllocator, ppSwapchains0);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pAllocator, ppSwapchains0);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
 		{
 			fixed (VkSwapchainKHR* ppSwapchains0 = &pSwapchains)
 			{
-				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, pAllocator, ppSwapchains0);
+				VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pAllocator, ppSwapchains0);
 				return ret;
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
 			{
 				fixed (VkSwapchainKHR* ppSwapchains1 = pSwapchains)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, pAllocator, ppSwapchains1);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pAllocator, ppSwapchains1);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
 			{
 				fixed (VkSwapchainKHR* ppSwapchains1 = &pSwapchains)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, pAllocator, ppSwapchains1);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pAllocator, ppSwapchains1);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkSwapchainKHR* ppSwapchains1 = pSwapchains)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, pAllocator, ppSwapchains1);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkSwapchainKHR* ppSwapchains1 = &pSwapchains)
-				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, pAllocator, ppSwapchains1);
-					return ret;
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkAllocationCallbacks* pAllocator, Span<VkSwapchainKHR> pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = pCreateInfos)
-				{
-					fixed (VkSwapchainKHR* ppSwapchains2 = pSwapchains)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, pAllocator, ppSwapchains2);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks* pAllocator, ref VkSwapchainKHR pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = &pCreateInfos)
-				{
-					fixed (VkSwapchainKHR* ppSwapchains2 = &pSwapchains)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, pAllocator, ppSwapchains2);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
 		{
 			fixed (VkAllocationCallbacks* ppAllocator0 = pAllocator)
 			{
 				fixed (VkSwapchainKHR* ppSwapchains1 = pSwapchains)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, ppAllocator0, ppSwapchains1);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppAllocator0, ppSwapchains1);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
 		{
 			fixed (VkAllocationCallbacks* ppAllocator0 = &pAllocator)
 			{
 				fixed (VkSwapchainKHR* ppSwapchains1 = &pSwapchains)
 				{
-					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, pCreateInfos, ppAllocator0, ppSwapchains1);
+					VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppAllocator0, ppSwapchains1);
 					return ret;
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
 			{
@@ -316,14 +166,14 @@ namespace Hexa.NET.Vulkan.KHR
 				{
 					fixed (VkSwapchainKHR* ppSwapchains2 = pSwapchains)
 					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, ppAllocator1, ppSwapchains2);
+						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppAllocator1, ppSwapchains2);
 						return ret;
 					}
 				}
 			}
 		}
 
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
+		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
 		{
 			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
 			{
@@ -331,74 +181,8 @@ namespace Hexa.NET.Vulkan.KHR
 				{
 					fixed (VkSwapchainKHR* ppSwapchains2 = &pSwapchains)
 					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, pCreateInfos, ppAllocator1, ppSwapchains2);
+						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppAllocator1, ppSwapchains2);
 						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkAllocationCallbacks* ppAllocator1 = pAllocator)
-				{
-					fixed (VkSwapchainKHR* ppSwapchains2 = pSwapchains)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, ppAllocator1, ppSwapchains2);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, VkSwapchainCreateInfoKHR* pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkAllocationCallbacks* ppAllocator1 = &pAllocator)
-				{
-					fixed (VkSwapchainKHR* ppSwapchains2 = &pSwapchains)
-					{
-						VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, pCreateInfos, ppCreateInfos0, ppAllocator1, ppSwapchains2);
-						return ret;
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkSwapchainCreateInfoKHR> pCreateInfos, Span<VkAllocationCallbacks> pAllocator, Span<VkSwapchainKHR> pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = pCreateInfos)
-				{
-					fixed (VkAllocationCallbacks* ppAllocator2 = pAllocator)
-					{
-						fixed (VkSwapchainKHR* ppSwapchains3 = pSwapchains)
-						{
-							VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, ppAllocator2, ppSwapchains3);
-							return ret;
-						}
-					}
-				}
-			}
-		}
-
-		public VkResult CreateSharedSwapchainsKHR(VkDevice device, uint swapchainCount, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkSwapchainCreateInfoKHR pCreateInfos, ref VkAllocationCallbacks pAllocator, ref VkSwapchainKHR pSwapchains)
-		{
-			fixed (VkSwapchainCreateInfoKHR* ppCreateInfos0 = &pCreateInfos)
-			{
-				fixed (VkSwapchainCreateInfoKHR* ppCreateInfos1 = &pCreateInfos)
-				{
-					fixed (VkAllocationCallbacks* ppAllocator2 = &pAllocator)
-					{
-						fixed (VkSwapchainKHR* ppSwapchains3 = &pSwapchains)
-						{
-							VkResult ret = CreateSharedSwapchainsKHRNative(device, swapchainCount, ppCreateInfos0, ppCreateInfos1, ppAllocator2, ppSwapchains3);
-							return ret;
-						}
 					}
 				}
 			}

@@ -15,23 +15,28 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH265PictureInfoFlags
+	public unsafe struct StdVideoDecodeH265PictureInfoFlags
 	{
-		public uint IrapPicFlag;
-		public uint IdrPicFlag;
-		public uint IsReference;
-		public uint ShortTermRefPicSetSpsFlag;
-
-		public unsafe StdVideoDecodeH265PictureInfoFlags(uint irapPicFlag = default, uint idrPicFlag = default, uint isReference = default, uint shortTermRefPicSetSpsFlag = default)
+		private uint _bitfield0;
+		public uint IrapPicFlag
 		{
-			IrapPicFlag = irapPicFlag;
-			IdrPicFlag = idrPicFlag;
-			IsReference = isReference;
-			ShortTermRefPicSetSpsFlag = shortTermRefPicSetSpsFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint IdrPicFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint IsReference
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint ShortTermRefPicSetSpsFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
 	}
-
 }

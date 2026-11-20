@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		OpacityMicromapExt = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		DisplacementMicromapNv = unchecked((uint)1000397000),
 	}
 }

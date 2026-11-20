@@ -12,15 +12,24 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1InterpolationFilter : int
+	public enum StdVideoAV1InterpolationFilter : uint
 	{
-		Eighttap = unchecked(0),
-		EighttapSmooth = unchecked(1),
-		EighttapSharp = unchecked(2),
-		Bilinear = unchecked(3),
-		Switchable = unchecked(4),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Eighttap = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		EighttapSmooth = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		EighttapSharp = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Bilinear = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Switchable = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

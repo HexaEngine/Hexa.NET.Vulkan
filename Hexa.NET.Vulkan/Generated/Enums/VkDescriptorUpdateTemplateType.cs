@@ -17,5 +17,14 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		Set = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		PushDescriptors = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		PushDescriptorsKhr = PushDescriptors,
+
+		/// <remarks></remarks>
+		SetKhr = Set,
 	}
 }

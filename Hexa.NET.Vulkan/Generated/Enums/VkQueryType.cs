@@ -23,5 +23,47 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Timestamp = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		ResultStatusOnlyKhr = unchecked((uint)1000023000),
+
+		/// <remarks></remarks>
+		TransformFeedbackStreamExt = unchecked((uint)1000028004),
+
+		/// <remarks></remarks>
+		PerformanceQueryKhr = unchecked((uint)1000116000),
+
+		/// <remarks></remarks>
+		AccelerationStructureCompactedSizeKhr = unchecked((uint)1000150000),
+
+		/// <remarks></remarks>
+		AccelerationStructureSerializationSizeKhr = unchecked((uint)1000150001),
+
+		/// <remarks></remarks>
+		AccelerationStructureCompactedSizeNv = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		PerformanceQueryIntel = unchecked((uint)1000210000),
+
+		/// <remarks></remarks>
+		VideoEncodeFeedbackKhr = unchecked((uint)1000299000),
+
+		/// <remarks></remarks>
+		MeshPrimitivesGeneratedExt = unchecked((uint)1000328000),
+
+		/// <remarks></remarks>
+		PrimitivesGeneratedExt = unchecked((uint)1000382000),
+
+		/// <remarks></remarks>
+		AccelerationStructureSerializationBottomLevelPointersKhr = unchecked((uint)1000386000),
+
+		/// <remarks></remarks>
+		AccelerationStructureSizeKhr = unchecked((uint)1000386001),
+
+		/// <remarks></remarks>
+		MicromapSerializationSizeExt = unchecked((uint)1000396000),
+
+		/// <remarks></remarks>
+		MicromapCompactedSizeExt = unchecked((uint)1000396001),
 	}
 }

@@ -47,5 +47,29 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		InputAttachment = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		InlineUniformBlock = unchecked((uint)1000138000),
+
+		/// <remarks></remarks>
+		InlineUniformBlockExt = InlineUniformBlock,
+
+		/// <remarks></remarks>
+		AccelerationStructureKhr = unchecked((uint)1000150000),
+
+		/// <remarks></remarks>
+		AccelerationStructureNv = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		MutableValve = MutableExt,
+
+		/// <remarks></remarks>
+		SampleWeightImageQcom = unchecked((uint)1000440000),
+
+		/// <remarks></remarks>
+		BlockMatchImageQcom = unchecked((uint)1000440001),
+
+		/// <remarks></remarks>
+		MutableExt = unchecked((uint)1000351000),
 	}
 }

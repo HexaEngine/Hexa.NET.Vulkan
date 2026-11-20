@@ -41,5 +41,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		GeneratePrefixNaluBitKhr = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		MbQpDiffWraparoundBitKhr = unchecked((uint)512),
 	}
 }

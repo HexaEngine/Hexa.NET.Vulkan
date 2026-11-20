@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SecondaryCommandBuffers = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		InlineAndSecondaryCommandBuffersExt = InlineAndSecondaryCommandBuffersKhr,
+
+		/// <remarks></remarks>
+		InlineAndSecondaryCommandBuffersKhr = unchecked((uint)1000451000),
 	}
 }

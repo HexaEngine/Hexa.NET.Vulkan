@@ -24,8 +24,11 @@
     "wl_surface": "nint",
     "xcb_connection_t": "nint",
     "xcb_window_t": "nint",
+    "xcb_visualid_t": "nint",
     "Display": "nint",
-    "Window": "nint"
+    "Window": "nint",
+    "VisualID": "nint",
+    "HANDLE": "nint"
   },
   "IgnoredTypes": [],
   "Usings": [ "System.Numerics" ]

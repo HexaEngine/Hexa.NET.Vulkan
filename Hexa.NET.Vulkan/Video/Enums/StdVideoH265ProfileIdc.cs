@@ -12,15 +12,24 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH265ProfileIdc : int
+	public enum StdVideoH265ProfileIdc : uint
 	{
-		Main = unchecked(1),
-		Main10 = unchecked(2),
-		MainStillPicture = unchecked(3),
-		FormatRangeExtensions = unchecked(4),
-		SccExtensions = unchecked(9),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Main = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Main10 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		MainStillPicture = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		FormatRangeExtensions = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		SccExtensions = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

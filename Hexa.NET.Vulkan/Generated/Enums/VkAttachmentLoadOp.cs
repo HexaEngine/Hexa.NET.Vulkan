@@ -23,5 +23,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		DontCare = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		None = unchecked((uint)1000400000),
+
+		/// <remarks></remarks>
+		NoneExt = None,
+
+		/// <remarks></remarks>
+		NoneKhr = None,
 	}
 }

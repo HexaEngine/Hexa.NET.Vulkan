@@ -95,5 +95,101 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		CommandPool = unchecked((uint)25),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversion = unchecked((uint)1000156000),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplate = unchecked((uint)1000085000),
+
+		/// <remarks></remarks>
+		PrivateDataSlot = unchecked((uint)1000295000),
+
+		/// <remarks></remarks>
+		SurfaceKhr = unchecked((uint)1000000000),
+
+		/// <remarks></remarks>
+		SwapchainKhr = unchecked((uint)1000001000),
+
+		/// <remarks></remarks>
+		DisplayKhr = unchecked((uint)1000002000),
+
+		/// <remarks></remarks>
+		DisplayModeKhr = unchecked((uint)1000002001),
+
+		/// <remarks></remarks>
+		DebugReportCallbackExt = unchecked((uint)1000011000),
+
+		/// <remarks></remarks>
+		VideoSessionKhr = unchecked((uint)1000023000),
+
+		/// <remarks></remarks>
+		VideoSessionParametersKhr = unchecked((uint)1000023001),
+
+		/// <remarks></remarks>
+		CuModuleNvx = unchecked((uint)1000029000),
+
+		/// <remarks></remarks>
+		CuFunctionNvx = unchecked((uint)1000029001),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplateKhr = DescriptorUpdateTemplate,
+
+		/// <remarks></remarks>
+		DebugUtilsMessengerExt = unchecked((uint)1000128000),
+
+		/// <remarks></remarks>
+		AccelerationStructureKhr = unchecked((uint)1000150000),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionKhr = SamplerYcbcrConversion,
+
+		/// <remarks></remarks>
+		ValidationCacheExt = unchecked((uint)1000160000),
+
+		/// <remarks></remarks>
+		AccelerationStructureNv = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		PerformanceConfigurationIntel = unchecked((uint)1000210000),
+
+		/// <remarks></remarks>
+		DeferredOperationKhr = unchecked((uint)1000268000),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutNv = unchecked((uint)1000277000),
+
+		/// <remarks></remarks>
+		PrivateDataSlotExt = PrivateDataSlot,
+
+		/// <remarks></remarks>
+		CudaModuleNv = unchecked((uint)1000307000),
+
+		/// <remarks></remarks>
+		CudaFunctionNv = unchecked((uint)1000307001),
+
+		/// <remarks></remarks>
+		BufferCollectionFuchsia = unchecked((uint)1000366000),
+
+		/// <remarks></remarks>
+		MicromapExt = unchecked((uint)1000396000),
+
+		/// <remarks></remarks>
+		OpticalFlowSessionNv = unchecked((uint)1000464000),
+
+		/// <remarks></remarks>
+		ShaderExt = unchecked((uint)1000482000),
+
+		/// <remarks></remarks>
+		PipelineBinaryKhr = unchecked((uint)1000483000),
+
+		/// <remarks></remarks>
+		SemaphoreSciSyncPoolNv = unchecked((uint)1000489000),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutExt = unchecked((uint)1000572000),
+
+		/// <remarks></remarks>
+		IndirectExecutionSetExt = unchecked((uint)1000572001),
 	}
 }

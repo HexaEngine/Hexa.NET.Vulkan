@@ -12,28 +12,63 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264AspectRatioIdc : int
+	public enum StdVideoH264AspectRatioIdc : uint
 	{
-		Unspecified = unchecked(0),
-		Square = unchecked(1),
-		Idc1211 = unchecked(2),
-		Idc1011 = unchecked(3),
-		Idc1611 = unchecked(4),
-		Idc4033 = unchecked(5),
-		Idc2411 = unchecked(6),
-		Idc2011 = unchecked(7),
-		Idc3211 = unchecked(8),
-		Idc8033 = unchecked(9),
-		Idc1811 = unchecked(10),
-		Idc1511 = unchecked(11),
-		Idc6433 = unchecked(12),
-		Idc16099 = unchecked(13),
-		Idc43 = unchecked(14),
-		Idc32 = unchecked(15),
-		Idc21 = unchecked(16),
-		ExtendedSar = unchecked(255),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Unspecified = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Square = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Idc1211 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Idc1011 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Idc1611 = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Idc4033 = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Idc2411 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Idc2011 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		Idc3211 = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Idc8033 = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Idc1811 = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Idc1511 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		Idc6433 = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		Idc16099 = unchecked((uint)13),
+
+		/// <remarks></remarks>
+		Idc43 = unchecked((uint)14),
+
+		/// <remarks></remarks>
+		Idc32 = unchecked((uint)15),
+
+		/// <remarks></remarks>
+		Idc21 = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		ExtendedSar = unchecked((uint)255),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

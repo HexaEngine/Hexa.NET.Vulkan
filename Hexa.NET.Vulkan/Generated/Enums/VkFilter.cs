@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Linear = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		CubicImg = CubicExt,
+
+		/// <remarks></remarks>
+		CubicExt = unchecked((uint)1000015000),
 	}
 }

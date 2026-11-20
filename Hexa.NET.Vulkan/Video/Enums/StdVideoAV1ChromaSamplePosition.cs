@@ -12,14 +12,21 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1ChromaSamplePosition : int
+	public enum StdVideoAV1ChromaSamplePosition : uint
 	{
-		Unknown = unchecked(0),
-		Vertical = unchecked(1),
-		Colocated = unchecked(2),
-		Reserved = unchecked(3),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Unknown = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Vertical = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Colocated = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Reserved = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

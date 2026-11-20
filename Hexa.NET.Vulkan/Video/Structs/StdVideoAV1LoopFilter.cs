@@ -15,14 +15,10 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1LoopFilter
+	public unsafe struct StdVideoAV1LoopFilter
 	{
 		public StdVideoAV1LoopFilterFlags Flags;
-		public byte LoopFilterLevel_0;
-		public byte LoopFilterLevel_1;
-		public byte LoopFilterLevel_2;
-		public byte LoopFilterLevel_3;
+		public fixed byte LoopFilterLevel[4];
 		public byte LoopFilterSharpness;
 		public byte UpdateRefDelta;
 		public sbyte LoopFilterRefDeltas_0;
@@ -36,70 +32,5 @@ namespace Hexa.NET.Vulkan
 		public byte UpdateModeDelta;
 		public sbyte LoopFilterModeDeltas_0;
 		public sbyte LoopFilterModeDeltas_1;
-
-		public unsafe StdVideoAV1LoopFilter(StdVideoAV1LoopFilterFlags flags = default, byte* loopFilterLevel = default, byte loopFilterSharpness = default, byte updateRefDelta = default, sbyte* loopFilterRefDeltas = default, byte updateModeDelta = default, sbyte* loopFilterModeDeltas = default)
-		{
-			Flags = flags;
-			if (loopFilterLevel != default(byte*))
-			{
-				LoopFilterLevel_0 = loopFilterLevel[0];
-				LoopFilterLevel_1 = loopFilterLevel[1];
-				LoopFilterLevel_2 = loopFilterLevel[2];
-				LoopFilterLevel_3 = loopFilterLevel[3];
-			}
-			LoopFilterSharpness = loopFilterSharpness;
-			UpdateRefDelta = updateRefDelta;
-			if (loopFilterRefDeltas != default(sbyte*))
-			{
-				LoopFilterRefDeltas_0 = loopFilterRefDeltas[0];
-				LoopFilterRefDeltas_1 = loopFilterRefDeltas[1];
-				LoopFilterRefDeltas_2 = loopFilterRefDeltas[2];
-				LoopFilterRefDeltas_3 = loopFilterRefDeltas[3];
-				LoopFilterRefDeltas_4 = loopFilterRefDeltas[4];
-				LoopFilterRefDeltas_5 = loopFilterRefDeltas[5];
-				LoopFilterRefDeltas_6 = loopFilterRefDeltas[6];
-				LoopFilterRefDeltas_7 = loopFilterRefDeltas[7];
-			}
-			UpdateModeDelta = updateModeDelta;
-			if (loopFilterModeDeltas != default(sbyte*))
-			{
-				LoopFilterModeDeltas_0 = loopFilterModeDeltas[0];
-				LoopFilterModeDeltas_1 = loopFilterModeDeltas[1];
-			}
-		}
-
-		public unsafe StdVideoAV1LoopFilter(StdVideoAV1LoopFilterFlags flags = default, Span<byte> loopFilterLevel = default, byte loopFilterSharpness = default, byte updateRefDelta = default, Span<sbyte> loopFilterRefDeltas = default, byte updateModeDelta = default, Span<sbyte> loopFilterModeDeltas = default)
-		{
-			Flags = flags;
-			if (loopFilterLevel != default(Span<byte>))
-			{
-				LoopFilterLevel_0 = loopFilterLevel[0];
-				LoopFilterLevel_1 = loopFilterLevel[1];
-				LoopFilterLevel_2 = loopFilterLevel[2];
-				LoopFilterLevel_3 = loopFilterLevel[3];
-			}
-			LoopFilterSharpness = loopFilterSharpness;
-			UpdateRefDelta = updateRefDelta;
-			if (loopFilterRefDeltas != default(Span<sbyte>))
-			{
-				LoopFilterRefDeltas_0 = loopFilterRefDeltas[0];
-				LoopFilterRefDeltas_1 = loopFilterRefDeltas[1];
-				LoopFilterRefDeltas_2 = loopFilterRefDeltas[2];
-				LoopFilterRefDeltas_3 = loopFilterRefDeltas[3];
-				LoopFilterRefDeltas_4 = loopFilterRefDeltas[4];
-				LoopFilterRefDeltas_5 = loopFilterRefDeltas[5];
-				LoopFilterRefDeltas_6 = loopFilterRefDeltas[6];
-				LoopFilterRefDeltas_7 = loopFilterRefDeltas[7];
-			}
-			UpdateModeDelta = updateModeDelta;
-			if (loopFilterModeDeltas != default(Span<sbyte>))
-			{
-				LoopFilterModeDeltas_0 = loopFilterModeDeltas[0];
-				LoopFilterModeDeltas_1 = loopFilterModeDeltas[1];
-			}
-		}
-
-
 	}
-
 }

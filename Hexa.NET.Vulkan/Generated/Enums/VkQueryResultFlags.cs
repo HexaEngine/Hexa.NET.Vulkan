@@ -26,5 +26,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		PartialBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		WithStatusBitKhr = unchecked((uint)16),
 	}
 }

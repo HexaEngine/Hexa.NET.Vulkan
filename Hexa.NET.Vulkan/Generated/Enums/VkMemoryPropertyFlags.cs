@@ -29,5 +29,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		LazilyAllocatedBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		DeviceCoherentBitAmd = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		DeviceUncachedBitAmd = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		RdmaCapableBitNv = unchecked((uint)256),
 	}
 }

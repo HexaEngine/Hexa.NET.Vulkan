@@ -65,5 +65,56 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		AllCommandsBit = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		None = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		TransformFeedbackBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		ConditionalRenderingBitExt = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		AccelerationStructureBuildBitKhr = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		RayTracingShaderBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		ShadingRateImageBitNv = FragmentShadingRateAttachmentBitKhr,
+
+		/// <remarks></remarks>
+		RayTracingShaderBitNv = RayTracingShaderBitKhr,
+
+		/// <remarks></remarks>
+		AccelerationStructureBuildBitNv = AccelerationStructureBuildBitKhr,
+
+		/// <remarks></remarks>
+		TaskShaderBitNv = TaskShaderBitExt,
+
+		/// <remarks></remarks>
+		MeshShaderBitNv = MeshShaderBitExt,
+
+		/// <remarks></remarks>
+		FragmentDensityProcessBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentBitKhr = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		CommandPreprocessBitNv = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		NoneKhr = None,
+
+		/// <remarks></remarks>
+		TaskShaderBitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		MeshShaderBitExt = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		CommandPreprocessBitExt = CommandPreprocessBitNv,
 	}
 }

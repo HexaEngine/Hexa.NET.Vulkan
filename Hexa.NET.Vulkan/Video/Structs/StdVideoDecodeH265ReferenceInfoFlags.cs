@@ -15,19 +15,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH265ReferenceInfoFlags
+	public unsafe struct StdVideoDecodeH265ReferenceInfoFlags
 	{
-		public uint UsedForLongTermReference;
-		public uint UnusedForReference;
-
-		public unsafe StdVideoDecodeH265ReferenceInfoFlags(uint usedForLongTermReference = default, uint unusedForReference = default)
+		private uint _bitfield0;
+		public uint UsedForLongTermReference
 		{
-			UsedForLongTermReference = usedForLongTermReference;
-			UnusedForReference = unusedForReference;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint UnusedForReference
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
 	}
-
 }

@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkFramebufferCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		ImagelessBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ImagelessBitKhr = ImagelessBit,
 	}
 }

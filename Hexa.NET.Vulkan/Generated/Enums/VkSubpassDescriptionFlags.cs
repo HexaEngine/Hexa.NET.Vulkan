@@ -15,5 +15,37 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkSubpassDescriptionFlags : uint
 	{
+		/// <remarks></remarks>
+		PerViewAttributesBitNvx = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		PerViewPositionXOnlyBitNvx = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		FragmentRegionBitQcom = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ShaderResolveBitQcom = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentColorAccessBitArm = RasterizationOrderAttachmentColorAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentDepthAccessBitArm = RasterizationOrderAttachmentDepthAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentStencilAccessBitArm = RasterizationOrderAttachmentStencilAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentColorAccessBitExt = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentDepthAccessBitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentStencilAccessBitExt = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		EnableLegacyDitheringBitExt = unchecked((uint)128),
 	}
 }

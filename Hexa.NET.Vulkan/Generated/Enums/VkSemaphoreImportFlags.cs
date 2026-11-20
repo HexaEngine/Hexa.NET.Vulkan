@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		TemporaryBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		TemporaryBitKhr = TemporaryBit,
 	}
 }

@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		LowerLeft = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		UpperLeftKhr = UpperLeft,
+
+		/// <remarks></remarks>
+		LowerLeftKhr = LowerLeft,
 	}
 }

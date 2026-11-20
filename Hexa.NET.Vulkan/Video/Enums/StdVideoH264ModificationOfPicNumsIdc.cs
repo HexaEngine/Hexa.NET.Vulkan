@@ -12,14 +12,21 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264ModificationOfPicNumsIdc : int
+	public enum StdVideoH264ModificationOfPicNumsIdc : uint
 	{
-		ShortTermSubtract = unchecked(0),
-		ShortTermAdd = unchecked(1),
-		LongTerm = unchecked(2),
-		End = unchecked(3),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		ShortTermSubtract = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		ShortTermAdd = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		LongTerm = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		End = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

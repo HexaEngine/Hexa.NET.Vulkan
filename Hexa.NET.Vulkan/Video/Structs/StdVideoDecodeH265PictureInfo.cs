@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH265PictureInfo
+	public unsafe struct StdVideoDecodeH265PictureInfo
 	{
 		public StdVideoDecodeH265PictureInfoFlags Flags;
 		public byte SpsVideoParameterSetId;
@@ -26,122 +25,8 @@ namespace Hexa.NET.Vulkan
 		public int PicOrderCntVal;
 		public ushort NumBitsForSTRefPicSetInSlice;
 		public ushort Reserved;
-		public byte RefPicSetStCurrBefore_0;
-		public byte RefPicSetStCurrBefore_1;
-		public byte RefPicSetStCurrBefore_2;
-		public byte RefPicSetStCurrBefore_3;
-		public byte RefPicSetStCurrBefore_4;
-		public byte RefPicSetStCurrBefore_5;
-		public byte RefPicSetStCurrBefore_6;
-		public byte RefPicSetStCurrBefore_7;
-		public byte RefPicSetStCurrAfter_0;
-		public byte RefPicSetStCurrAfter_1;
-		public byte RefPicSetStCurrAfter_2;
-		public byte RefPicSetStCurrAfter_3;
-		public byte RefPicSetStCurrAfter_4;
-		public byte RefPicSetStCurrAfter_5;
-		public byte RefPicSetStCurrAfter_6;
-		public byte RefPicSetStCurrAfter_7;
-		public byte RefPicSetLtCurr_0;
-		public byte RefPicSetLtCurr_1;
-		public byte RefPicSetLtCurr_2;
-		public byte RefPicSetLtCurr_3;
-		public byte RefPicSetLtCurr_4;
-		public byte RefPicSetLtCurr_5;
-		public byte RefPicSetLtCurr_6;
-		public byte RefPicSetLtCurr_7;
-
-		public unsafe StdVideoDecodeH265PictureInfo(StdVideoDecodeH265PictureInfoFlags flags = default, byte spsVideoParameterSetId = default, byte ppsSeqParameterSetId = default, byte ppsPicParameterSetId = default, byte numDeltaPocsOfRefRpsIdx = default, int picOrderCntVal = default, ushort numBitsForStRefPicSetInSlice = default, ushort reserved = default, byte* refPicSetStCurrBefore = default, byte* refPicSetStCurrAfter = default, byte* refPicSetLtCurr = default)
-		{
-			Flags = flags;
-			SpsVideoParameterSetId = spsVideoParameterSetId;
-			PpsSeqParameterSetId = ppsSeqParameterSetId;
-			PpsPicParameterSetId = ppsPicParameterSetId;
-			NumDeltaPocsOfRefRpsIdx = numDeltaPocsOfRefRpsIdx;
-			PicOrderCntVal = picOrderCntVal;
-			NumBitsForSTRefPicSetInSlice = numBitsForStRefPicSetInSlice;
-			Reserved = reserved;
-			if (refPicSetStCurrBefore != default(byte*))
-			{
-				RefPicSetStCurrBefore_0 = refPicSetStCurrBefore[0];
-				RefPicSetStCurrBefore_1 = refPicSetStCurrBefore[1];
-				RefPicSetStCurrBefore_2 = refPicSetStCurrBefore[2];
-				RefPicSetStCurrBefore_3 = refPicSetStCurrBefore[3];
-				RefPicSetStCurrBefore_4 = refPicSetStCurrBefore[4];
-				RefPicSetStCurrBefore_5 = refPicSetStCurrBefore[5];
-				RefPicSetStCurrBefore_6 = refPicSetStCurrBefore[6];
-				RefPicSetStCurrBefore_7 = refPicSetStCurrBefore[7];
-			}
-			if (refPicSetStCurrAfter != default(byte*))
-			{
-				RefPicSetStCurrAfter_0 = refPicSetStCurrAfter[0];
-				RefPicSetStCurrAfter_1 = refPicSetStCurrAfter[1];
-				RefPicSetStCurrAfter_2 = refPicSetStCurrAfter[2];
-				RefPicSetStCurrAfter_3 = refPicSetStCurrAfter[3];
-				RefPicSetStCurrAfter_4 = refPicSetStCurrAfter[4];
-				RefPicSetStCurrAfter_5 = refPicSetStCurrAfter[5];
-				RefPicSetStCurrAfter_6 = refPicSetStCurrAfter[6];
-				RefPicSetStCurrAfter_7 = refPicSetStCurrAfter[7];
-			}
-			if (refPicSetLtCurr != default(byte*))
-			{
-				RefPicSetLtCurr_0 = refPicSetLtCurr[0];
-				RefPicSetLtCurr_1 = refPicSetLtCurr[1];
-				RefPicSetLtCurr_2 = refPicSetLtCurr[2];
-				RefPicSetLtCurr_3 = refPicSetLtCurr[3];
-				RefPicSetLtCurr_4 = refPicSetLtCurr[4];
-				RefPicSetLtCurr_5 = refPicSetLtCurr[5];
-				RefPicSetLtCurr_6 = refPicSetLtCurr[6];
-				RefPicSetLtCurr_7 = refPicSetLtCurr[7];
-			}
-		}
-
-		public unsafe StdVideoDecodeH265PictureInfo(StdVideoDecodeH265PictureInfoFlags flags = default, byte spsVideoParameterSetId = default, byte ppsSeqParameterSetId = default, byte ppsPicParameterSetId = default, byte numDeltaPocsOfRefRpsIdx = default, int picOrderCntVal = default, ushort numBitsForStRefPicSetInSlice = default, ushort reserved = default, Span<byte> refPicSetStCurrBefore = default, Span<byte> refPicSetStCurrAfter = default, Span<byte> refPicSetLtCurr = default)
-		{
-			Flags = flags;
-			SpsVideoParameterSetId = spsVideoParameterSetId;
-			PpsSeqParameterSetId = ppsSeqParameterSetId;
-			PpsPicParameterSetId = ppsPicParameterSetId;
-			NumDeltaPocsOfRefRpsIdx = numDeltaPocsOfRefRpsIdx;
-			PicOrderCntVal = picOrderCntVal;
-			NumBitsForSTRefPicSetInSlice = numBitsForStRefPicSetInSlice;
-			Reserved = reserved;
-			if (refPicSetStCurrBefore != default(Span<byte>))
-			{
-				RefPicSetStCurrBefore_0 = refPicSetStCurrBefore[0];
-				RefPicSetStCurrBefore_1 = refPicSetStCurrBefore[1];
-				RefPicSetStCurrBefore_2 = refPicSetStCurrBefore[2];
-				RefPicSetStCurrBefore_3 = refPicSetStCurrBefore[3];
-				RefPicSetStCurrBefore_4 = refPicSetStCurrBefore[4];
-				RefPicSetStCurrBefore_5 = refPicSetStCurrBefore[5];
-				RefPicSetStCurrBefore_6 = refPicSetStCurrBefore[6];
-				RefPicSetStCurrBefore_7 = refPicSetStCurrBefore[7];
-			}
-			if (refPicSetStCurrAfter != default(Span<byte>))
-			{
-				RefPicSetStCurrAfter_0 = refPicSetStCurrAfter[0];
-				RefPicSetStCurrAfter_1 = refPicSetStCurrAfter[1];
-				RefPicSetStCurrAfter_2 = refPicSetStCurrAfter[2];
-				RefPicSetStCurrAfter_3 = refPicSetStCurrAfter[3];
-				RefPicSetStCurrAfter_4 = refPicSetStCurrAfter[4];
-				RefPicSetStCurrAfter_5 = refPicSetStCurrAfter[5];
-				RefPicSetStCurrAfter_6 = refPicSetStCurrAfter[6];
-				RefPicSetStCurrAfter_7 = refPicSetStCurrAfter[7];
-			}
-			if (refPicSetLtCurr != default(Span<byte>))
-			{
-				RefPicSetLtCurr_0 = refPicSetLtCurr[0];
-				RefPicSetLtCurr_1 = refPicSetLtCurr[1];
-				RefPicSetLtCurr_2 = refPicSetLtCurr[2];
-				RefPicSetLtCurr_3 = refPicSetLtCurr[3];
-				RefPicSetLtCurr_4 = refPicSetLtCurr[4];
-				RefPicSetLtCurr_5 = refPicSetLtCurr[5];
-				RefPicSetLtCurr_6 = refPicSetLtCurr[6];
-				RefPicSetLtCurr_7 = refPicSetLtCurr[7];
-			}
-		}
-
-
+		public fixed byte RefPicSetStCurrBefore[8];
+		public fixed byte RefPicSetStCurrAfter[8];
+		public fixed byte RefPicSetLtCurr[8];
 	}
-
 }

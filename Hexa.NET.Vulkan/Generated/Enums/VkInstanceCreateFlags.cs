@@ -15,5 +15,7 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkInstanceCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		EnumeratePortabilityBitKhr = unchecked((uint)1),
 	}
 }

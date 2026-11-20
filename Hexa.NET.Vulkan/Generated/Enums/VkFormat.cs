@@ -572,5 +572,458 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Astc12X12SrgbBlock = unchecked((uint)184),
+
+		/// <remarks></remarks>
+		G8B8G8R8422Unorm = unchecked((uint)1000156000),
+
+		/// <remarks></remarks>
+		B8G8R8G8422Unorm = unchecked((uint)1000156001),
+
+		/// <remarks></remarks>
+		G8B8R83Plane420Unorm = unchecked((uint)1000156002),
+
+		/// <remarks></remarks>
+		G8B8R82Plane420Unorm = unchecked((uint)1000156003),
+
+		/// <remarks></remarks>
+		G8B8R83Plane422Unorm = unchecked((uint)1000156004),
+
+		/// <remarks></remarks>
+		G8B8R82Plane422Unorm = unchecked((uint)1000156005),
+
+		/// <remarks></remarks>
+		G8B8R83Plane444Unorm = unchecked((uint)1000156006),
+
+		/// <remarks></remarks>
+		R10X6UnormPack16 = unchecked((uint)1000156007),
+
+		/// <remarks></remarks>
+		R10X6G10X6Unorm2Pack16 = unchecked((uint)1000156008),
+
+		/// <remarks></remarks>
+		R10X6G10X6B10X6A10X6Unorm4Pack16 = unchecked((uint)1000156009),
+
+		/// <remarks></remarks>
+		G10X6B10X6G10X6R10X6422Unorm4Pack16 = unchecked((uint)1000156010),
+
+		/// <remarks></remarks>
+		B10X6G10X6R10X6G10X6422Unorm4Pack16 = unchecked((uint)1000156011),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane420Unorm3Pack16 = unchecked((uint)1000156012),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane420Unorm3Pack16 = unchecked((uint)1000156013),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane422Unorm3Pack16 = unchecked((uint)1000156014),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane422Unorm3Pack16 = unchecked((uint)1000156015),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane444Unorm3Pack16 = unchecked((uint)1000156016),
+
+		/// <remarks></remarks>
+		R12X4UnormPack16 = unchecked((uint)1000156017),
+
+		/// <remarks></remarks>
+		R12X4G12X4Unorm2Pack16 = unchecked((uint)1000156018),
+
+		/// <remarks></remarks>
+		R12X4G12X4B12X4A12X4Unorm4Pack16 = unchecked((uint)1000156019),
+
+		/// <remarks></remarks>
+		G12X4B12X4G12X4R12X4422Unorm4Pack16 = unchecked((uint)1000156020),
+
+		/// <remarks></remarks>
+		B12X4G12X4R12X4G12X4422Unorm4Pack16 = unchecked((uint)1000156021),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane420Unorm3Pack16 = unchecked((uint)1000156022),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane420Unorm3Pack16 = unchecked((uint)1000156023),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane422Unorm3Pack16 = unchecked((uint)1000156024),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane422Unorm3Pack16 = unchecked((uint)1000156025),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane444Unorm3Pack16 = unchecked((uint)1000156026),
+
+		/// <remarks></remarks>
+		G16B16G16R16422Unorm = unchecked((uint)1000156027),
+
+		/// <remarks></remarks>
+		B16G16R16G16422Unorm = unchecked((uint)1000156028),
+
+		/// <remarks></remarks>
+		G16B16R163Plane420Unorm = unchecked((uint)1000156029),
+
+		/// <remarks></remarks>
+		G16B16R162Plane420Unorm = unchecked((uint)1000156030),
+
+		/// <remarks></remarks>
+		G16B16R163Plane422Unorm = unchecked((uint)1000156031),
+
+		/// <remarks></remarks>
+		G16B16R162Plane422Unorm = unchecked((uint)1000156032),
+
+		/// <remarks></remarks>
+		G16B16R163Plane444Unorm = unchecked((uint)1000156033),
+
+		/// <remarks></remarks>
+		G8B8R82Plane444Unorm = unchecked((uint)1000330000),
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane444Unorm3Pack16 = unchecked((uint)1000330001),
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane444Unorm3Pack16 = unchecked((uint)1000330002),
+
+		/// <remarks></remarks>
+		G16B16R162Plane444Unorm = unchecked((uint)1000330003),
+
+		/// <remarks></remarks>
+		A4R4G4B4UnormPack16 = unchecked((uint)1000340000),
+
+		/// <remarks></remarks>
+		A4B4G4R4UnormPack16 = unchecked((uint)1000340001),
+
+		/// <remarks></remarks>
+		Astc4X4SfloatBlock = unchecked((uint)1000066000),
+
+		/// <remarks></remarks>
+		Astc5X4SfloatBlock = unchecked((uint)1000066001),
+
+		/// <remarks></remarks>
+		Astc5X5SfloatBlock = unchecked((uint)1000066002),
+
+		/// <remarks></remarks>
+		Astc6X5SfloatBlock = unchecked((uint)1000066003),
+
+		/// <remarks></remarks>
+		Astc6X6SfloatBlock = unchecked((uint)1000066004),
+
+		/// <remarks></remarks>
+		Astc8X5SfloatBlock = unchecked((uint)1000066005),
+
+		/// <remarks></remarks>
+		Astc8X6SfloatBlock = unchecked((uint)1000066006),
+
+		/// <remarks></remarks>
+		Astc8X8SfloatBlock = unchecked((uint)1000066007),
+
+		/// <remarks></remarks>
+		Astc10X5SfloatBlock = unchecked((uint)1000066008),
+
+		/// <remarks></remarks>
+		Astc10X6SfloatBlock = unchecked((uint)1000066009),
+
+		/// <remarks></remarks>
+		Astc10X8SfloatBlock = unchecked((uint)1000066010),
+
+		/// <remarks></remarks>
+		Astc10X10SfloatBlock = unchecked((uint)1000066011),
+
+		/// <remarks></remarks>
+		Astc12X10SfloatBlock = unchecked((uint)1000066012),
+
+		/// <remarks></remarks>
+		Astc12X12SfloatBlock = unchecked((uint)1000066013),
+
+		/// <remarks></remarks>
+		A1B5G5R5UnormPack16 = unchecked((uint)1000470000),
+
+		/// <remarks></remarks>
+		A8Unorm = unchecked((uint)1000470001),
+
+		/// <remarks></remarks>
+		Pvrtc12BppUnormBlockImg = unchecked((uint)1000054000),
+
+		/// <remarks></remarks>
+		Pvrtc14BppUnormBlockImg = unchecked((uint)1000054001),
+
+		/// <remarks></remarks>
+		Pvrtc22BppUnormBlockImg = unchecked((uint)1000054002),
+
+		/// <remarks></remarks>
+		Pvrtc24BppUnormBlockImg = unchecked((uint)1000054003),
+
+		/// <remarks></remarks>
+		Pvrtc12BppSrgbBlockImg = unchecked((uint)1000054004),
+
+		/// <remarks></remarks>
+		Pvrtc14BppSrgbBlockImg = unchecked((uint)1000054005),
+
+		/// <remarks></remarks>
+		Pvrtc22BppSrgbBlockImg = unchecked((uint)1000054006),
+
+		/// <remarks></remarks>
+		Pvrtc24BppSrgbBlockImg = unchecked((uint)1000054007),
+
+		/// <remarks></remarks>
+		Astc4X4SfloatBlockExt = Astc4X4SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc5X4SfloatBlockExt = Astc5X4SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc5X5SfloatBlockExt = Astc5X5SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc6X5SfloatBlockExt = Astc6X5SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc6X6SfloatBlockExt = Astc6X6SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc8X5SfloatBlockExt = Astc8X5SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc8X6SfloatBlockExt = Astc8X6SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc8X8SfloatBlockExt = Astc8X8SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc10X5SfloatBlockExt = Astc10X5SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc10X6SfloatBlockExt = Astc10X6SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc10X8SfloatBlockExt = Astc10X8SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc10X10SfloatBlockExt = Astc10X10SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc12X10SfloatBlockExt = Astc12X10SfloatBlock,
+
+		/// <remarks></remarks>
+		Astc12X12SfloatBlockExt = Astc12X12SfloatBlock,
+
+		/// <remarks></remarks>
+		G8B8G8R8422UnormKhr = G8B8G8R8422Unorm,
+
+		/// <remarks></remarks>
+		B8G8R8G8422UnormKhr = B8G8R8G8422Unorm,
+
+		/// <remarks></remarks>
+		G8B8R83Plane420UnormKhr = G8B8R83Plane420Unorm,
+
+		/// <remarks></remarks>
+		G8B8R82Plane420UnormKhr = G8B8R82Plane420Unorm,
+
+		/// <remarks></remarks>
+		G8B8R83Plane422UnormKhr = G8B8R83Plane422Unorm,
+
+		/// <remarks></remarks>
+		G8B8R82Plane422UnormKhr = G8B8R82Plane422Unorm,
+
+		/// <remarks></remarks>
+		G8B8R83Plane444UnormKhr = G8B8R83Plane444Unorm,
+
+		/// <remarks></remarks>
+		R10X6UnormPack16Khr = R10X6UnormPack16,
+
+		/// <remarks></remarks>
+		R10X6G10X6Unorm2Pack16Khr = R10X6G10X6Unorm2Pack16,
+
+		/// <remarks></remarks>
+		R10X6G10X6B10X6A10X6Unorm4Pack16Khr = R10X6G10X6B10X6A10X6Unorm4Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6G10X6R10X6422Unorm4Pack16Khr = G10X6B10X6G10X6R10X6422Unorm4Pack16,
+
+		/// <remarks></remarks>
+		B10X6G10X6R10X6G10X6422Unorm4Pack16Khr = B10X6G10X6R10X6G10X6422Unorm4Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane420Unorm3Pack16Khr = G10X6B10X6R10X63Plane420Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane420Unorm3Pack16Khr = G10X6B10X6R10X62Plane420Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane422Unorm3Pack16Khr = G10X6B10X6R10X63Plane422Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane422Unorm3Pack16Khr = G10X6B10X6R10X62Plane422Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X63Plane444Unorm3Pack16Khr = G10X6B10X6R10X63Plane444Unorm3Pack16,
+
+		/// <remarks></remarks>
+		R12X4UnormPack16Khr = R12X4UnormPack16,
+
+		/// <remarks></remarks>
+		R12X4G12X4Unorm2Pack16Khr = R12X4G12X4Unorm2Pack16,
+
+		/// <remarks></remarks>
+		R12X4G12X4B12X4A12X4Unorm4Pack16Khr = R12X4G12X4B12X4A12X4Unorm4Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4G12X4R12X4422Unorm4Pack16Khr = G12X4B12X4G12X4R12X4422Unorm4Pack16,
+
+		/// <remarks></remarks>
+		B12X4G12X4R12X4G12X4422Unorm4Pack16Khr = B12X4G12X4R12X4G12X4422Unorm4Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane420Unorm3Pack16Khr = G12X4B12X4R12X43Plane420Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane420Unorm3Pack16Khr = G12X4B12X4R12X42Plane420Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane422Unorm3Pack16Khr = G12X4B12X4R12X43Plane422Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane422Unorm3Pack16Khr = G12X4B12X4R12X42Plane422Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X43Plane444Unorm3Pack16Khr = G12X4B12X4R12X43Plane444Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G16B16G16R16422UnormKhr = G16B16G16R16422Unorm,
+
+		/// <remarks></remarks>
+		B16G16R16G16422UnormKhr = B16G16R16G16422Unorm,
+
+		/// <remarks></remarks>
+		G16B16R163Plane420UnormKhr = G16B16R163Plane420Unorm,
+
+		/// <remarks></remarks>
+		G16B16R162Plane420UnormKhr = G16B16R162Plane420Unorm,
+
+		/// <remarks></remarks>
+		G16B16R163Plane422UnormKhr = G16B16R163Plane422Unorm,
+
+		/// <remarks></remarks>
+		G16B16R162Plane422UnormKhr = G16B16R162Plane422Unorm,
+
+		/// <remarks></remarks>
+		G16B16R163Plane444UnormKhr = G16B16R163Plane444Unorm,
+
+		/// <remarks></remarks>
+		Astc3X3X3UnormBlockExt = unchecked((uint)1000288000),
+
+		/// <remarks></remarks>
+		Astc3X3X3SrgbBlockExt = unchecked((uint)1000288001),
+
+		/// <remarks></remarks>
+		Astc3X3X3SfloatBlockExt = unchecked((uint)1000288002),
+
+		/// <remarks></remarks>
+		Astc4X3X3UnormBlockExt = unchecked((uint)1000288003),
+
+		/// <remarks></remarks>
+		Astc4X3X3SrgbBlockExt = unchecked((uint)1000288004),
+
+		/// <remarks></remarks>
+		Astc4X3X3SfloatBlockExt = unchecked((uint)1000288005),
+
+		/// <remarks></remarks>
+		Astc4X4X3UnormBlockExt = unchecked((uint)1000288006),
+
+		/// <remarks></remarks>
+		Astc4X4X3SrgbBlockExt = unchecked((uint)1000288007),
+
+		/// <remarks></remarks>
+		Astc4X4X3SfloatBlockExt = unchecked((uint)1000288008),
+
+		/// <remarks></remarks>
+		Astc4X4X4UnormBlockExt = unchecked((uint)1000288009),
+
+		/// <remarks></remarks>
+		Astc4X4X4SrgbBlockExt = unchecked((uint)1000288010),
+
+		/// <remarks></remarks>
+		Astc4X4X4SfloatBlockExt = unchecked((uint)1000288011),
+
+		/// <remarks></remarks>
+		Astc5X4X4UnormBlockExt = unchecked((uint)1000288012),
+
+		/// <remarks></remarks>
+		Astc5X4X4SrgbBlockExt = unchecked((uint)1000288013),
+
+		/// <remarks></remarks>
+		Astc5X4X4SfloatBlockExt = unchecked((uint)1000288014),
+
+		/// <remarks></remarks>
+		Astc5X5X4UnormBlockExt = unchecked((uint)1000288015),
+
+		/// <remarks></remarks>
+		Astc5X5X4SrgbBlockExt = unchecked((uint)1000288016),
+
+		/// <remarks></remarks>
+		Astc5X5X4SfloatBlockExt = unchecked((uint)1000288017),
+
+		/// <remarks></remarks>
+		Astc5X5X5UnormBlockExt = unchecked((uint)1000288018),
+
+		/// <remarks></remarks>
+		Astc5X5X5SrgbBlockExt = unchecked((uint)1000288019),
+
+		/// <remarks></remarks>
+		Astc5X5X5SfloatBlockExt = unchecked((uint)1000288020),
+
+		/// <remarks></remarks>
+		Astc6X5X5UnormBlockExt = unchecked((uint)1000288021),
+
+		/// <remarks></remarks>
+		Astc6X5X5SrgbBlockExt = unchecked((uint)1000288022),
+
+		/// <remarks></remarks>
+		Astc6X5X5SfloatBlockExt = unchecked((uint)1000288023),
+
+		/// <remarks></remarks>
+		Astc6X6X5UnormBlockExt = unchecked((uint)1000288024),
+
+		/// <remarks></remarks>
+		Astc6X6X5SrgbBlockExt = unchecked((uint)1000288025),
+
+		/// <remarks></remarks>
+		Astc6X6X5SfloatBlockExt = unchecked((uint)1000288026),
+
+		/// <remarks></remarks>
+		Astc6X6X6UnormBlockExt = unchecked((uint)1000288027),
+
+		/// <remarks></remarks>
+		Astc6X6X6SrgbBlockExt = unchecked((uint)1000288028),
+
+		/// <remarks></remarks>
+		Astc6X6X6SfloatBlockExt = unchecked((uint)1000288029),
+
+		/// <remarks></remarks>
+		G8B8R82Plane444UnormExt = G8B8R82Plane444Unorm,
+
+		/// <remarks></remarks>
+		G10X6B10X6R10X62Plane444Unorm3Pack16Ext = G10X6B10X6R10X62Plane444Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G12X4B12X4R12X42Plane444Unorm3Pack16Ext = G12X4B12X4R12X42Plane444Unorm3Pack16,
+
+		/// <remarks></remarks>
+		G16B16R162Plane444UnormExt = G16B16R162Plane444Unorm,
+
+		/// <remarks></remarks>
+		A4R4G4B4UnormPack16Ext = A4R4G4B4UnormPack16,
+
+		/// <remarks></remarks>
+		A4B4G4R4UnormPack16Ext = A4B4G4R4UnormPack16,
+
+		/// <remarks></remarks>
+		R16G16Sfixed5Nv = unchecked((uint)1000464000),
+
+		/// <remarks></remarks>
+		A1B5G5R5UnormPack16Khr = A1B5G5R5UnormPack16,
+
+		/// <remarks></remarks>
+		A8UnormKhr = A8Unorm,
 	}
 }

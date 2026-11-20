@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkRenderPassCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		Reserved0BitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		TransformBitQcom = unchecked((uint)2),
 	}
 }

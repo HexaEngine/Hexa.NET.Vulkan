@@ -29,5 +29,23 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		MaxBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		NoneKhr = None,
+
+		/// <remarks></remarks>
+		SampleZeroBitKhr = SampleZeroBit,
+
+		/// <remarks></remarks>
+		AverageBitKhr = AverageBit,
+
+		/// <remarks></remarks>
+		MinBitKhr = MinBit,
+
+		/// <remarks></remarks>
+		MaxBitKhr = MaxBit,
+
+		/// <remarks></remarks>
+		ExternalFormatDownsampleAndroid = unchecked((uint)16),
 	}
 }

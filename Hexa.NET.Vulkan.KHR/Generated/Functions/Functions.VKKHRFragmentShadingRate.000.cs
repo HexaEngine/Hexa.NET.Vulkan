@@ -93,21 +93,21 @@ namespace Hexa.NET.Vulkan.KHR
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal void CmdSetFragmentShadingRateKHRNative(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, VkFragmentShadingRateCombinerOpKHR[2] combinerOps)
+		internal void CmdSetFragmentShadingRateKHRNative(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, VkFragmentShadingRateCombinerOpKHR* combinerOps)
 		{
 			#if NET5_0_OR_GREATER
-			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkExtent2D*, VkFragmentShadingRateCombinerOpKHR[2], void>)funcTable[1])(commandBuffer, pFragmentSize, combinerOps);
+			((delegate* unmanaged[Cdecl]<VkCommandBuffer, VkExtent2D*, VkFragmentShadingRateCombinerOpKHR*, void>)funcTable[1])(commandBuffer, pFragmentSize, combinerOps);
 			#else
-			((delegate* unmanaged[Cdecl]<VkCommandBuffer, nint, VkFragmentShadingRateCombinerOpKHR[2], void>)funcTable[1])(commandBuffer, (nint)pFragmentSize, combinerOps);
+			((delegate* unmanaged[Cdecl]<VkCommandBuffer, nint, nint, void>)funcTable[1])(commandBuffer, (nint)pFragmentSize, (nint)combinerOps);
 			#endif
 		}
 
-		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, VkFragmentShadingRateCombinerOpKHR[2] combinerOps)
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, VkFragmentShadingRateCombinerOpKHR* combinerOps)
 		{
 			CmdSetFragmentShadingRateKHRNative(commandBuffer, pFragmentSize, combinerOps);
 		}
 
-		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, Span<VkExtent2D> pFragmentSize, VkFragmentShadingRateCombinerOpKHR[2] combinerOps)
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, Span<VkExtent2D> pFragmentSize, VkFragmentShadingRateCombinerOpKHR* combinerOps)
 		{
 			fixed (VkExtent2D* ppFragmentSize0 = pFragmentSize)
 			{
@@ -115,11 +115,49 @@ namespace Hexa.NET.Vulkan.KHR
 			}
 		}
 
-		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, ref VkExtent2D pFragmentSize, VkFragmentShadingRateCombinerOpKHR[2] combinerOps)
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, ref VkExtent2D pFragmentSize, VkFragmentShadingRateCombinerOpKHR* combinerOps)
 		{
 			fixed (VkExtent2D* ppFragmentSize0 = &pFragmentSize)
 			{
 				CmdSetFragmentShadingRateKHRNative(commandBuffer, ppFragmentSize0, combinerOps);
+			}
+		}
+
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, Span<VkFragmentShadingRateCombinerOpKHR> combinerOps)
+		{
+			fixed (VkFragmentShadingRateCombinerOpKHR* pcombinerOps0 = combinerOps)
+			{
+				CmdSetFragmentShadingRateKHRNative(commandBuffer, pFragmentSize, pcombinerOps0);
+			}
+		}
+
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, VkExtent2D* pFragmentSize, ref VkFragmentShadingRateCombinerOpKHR combinerOps)
+		{
+			fixed (VkFragmentShadingRateCombinerOpKHR* pcombinerOps0 = &combinerOps)
+			{
+				CmdSetFragmentShadingRateKHRNative(commandBuffer, pFragmentSize, pcombinerOps0);
+			}
+		}
+
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, Span<VkExtent2D> pFragmentSize, Span<VkFragmentShadingRateCombinerOpKHR> combinerOps)
+		{
+			fixed (VkExtent2D* ppFragmentSize0 = pFragmentSize)
+			{
+				fixed (VkFragmentShadingRateCombinerOpKHR* pcombinerOps1 = combinerOps)
+				{
+					CmdSetFragmentShadingRateKHRNative(commandBuffer, ppFragmentSize0, pcombinerOps1);
+				}
+			}
+		}
+
+		public void CmdSetFragmentShadingRateKHR(VkCommandBuffer commandBuffer, ref VkExtent2D pFragmentSize, ref VkFragmentShadingRateCombinerOpKHR combinerOps)
+		{
+			fixed (VkExtent2D* ppFragmentSize0 = &pFragmentSize)
+			{
+				fixed (VkFragmentShadingRateCombinerOpKHR* pcombinerOps1 = &combinerOps)
+				{
+					CmdSetFragmentShadingRateKHRNative(commandBuffer, ppFragmentSize0, pcombinerOps1);
+				}
 			}
 		}
 

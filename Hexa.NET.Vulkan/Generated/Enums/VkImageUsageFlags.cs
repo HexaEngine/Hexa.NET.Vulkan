@@ -38,5 +38,62 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		InputAttachmentBit = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		HostTransferBit = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		VideoDecodeDstBitKhr = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		VideoDecodeSrcBitKhr = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		VideoDecodeDpbBitKhr = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		ShadingRateImageBitNv = FragmentShadingRateAttachmentBitKhr,
+
+		/// <remarks></remarks>
+		FragmentDensityMapBitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentBitKhr = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		HostTransferBitExt = HostTransferBit,
+
+		/// <remarks></remarks>
+		VideoEncodeDstBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		VideoEncodeSrcBitKhr = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		VideoEncodeDpbBitKhr = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		AttachmentFeedbackLoopBitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		InvocationMaskBitHuawei = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		SampleWeightBitQcom = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		SampleBlockMatchBitQcom = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		Reserved24BitCoreavi = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Reserved23BitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		VideoEncodeQuantizationDeltaMapBitKhr = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		VideoEncodeEmphasisMapBitKhr = unchecked((uint)67108864),
 	}
 }

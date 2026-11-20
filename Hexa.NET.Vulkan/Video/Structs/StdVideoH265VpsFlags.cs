@@ -15,23 +15,28 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265VpsFlags
+	public unsafe struct StdVideoH265VpsFlags
 	{
-		public uint VpsTemporalIdNestingFlag;
-		public uint VpsSubLayerOrderingInfoPresentFlag;
-		public uint VpsTimingInfoPresentFlag;
-		public uint VpsPocProportionalToTimingFlag;
-
-		public unsafe StdVideoH265VpsFlags(uint vpsTemporalIdNestingFlag = default, uint vpsSubLayerOrderingInfoPresentFlag = default, uint vpsTimingInfoPresentFlag = default, uint vpsPocProportionalToTimingFlag = default)
+		private uint _bitfield0;
+		public uint VpsTemporalIdNestingFlag
 		{
-			VpsTemporalIdNestingFlag = vpsTemporalIdNestingFlag;
-			VpsSubLayerOrderingInfoPresentFlag = vpsSubLayerOrderingInfoPresentFlag;
-			VpsTimingInfoPresentFlag = vpsTimingInfoPresentFlag;
-			VpsPocProportionalToTimingFlag = vpsPocProportionalToTimingFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint VpsSubLayerOrderingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint VpsTimingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint VpsPocProportionalToTimingFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
 	}
-
 }

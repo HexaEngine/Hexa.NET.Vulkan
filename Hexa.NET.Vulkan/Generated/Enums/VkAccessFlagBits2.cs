@@ -77,5 +77,191 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Access2ShaderStorageWriteBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Access2VideoDecodeReadBitKhr = unchecked((uint)34359738368),
+
+		/// <remarks></remarks>
+		Access2VideoDecodeWriteBitKhr = unchecked((uint)68719476736),
+
+		/// <remarks></remarks>
+		Access2Reserved57BitKhr = unchecked((uint)144115188075855872),
+
+		/// <remarks></remarks>
+		Access2Reserved58BitKhr = unchecked((uint)288230376151711744),
+
+		/// <remarks></remarks>
+		Access2Reserved59BitKhr = unchecked((uint)576460752303423488),
+
+		/// <remarks></remarks>
+		Access2Reserved46BitIntel = unchecked((uint)70368744177664),
+
+		/// <remarks></remarks>
+		Access2VideoEncodeReadBitKhr = unchecked((uint)137438953472),
+
+		/// <remarks></remarks>
+		Access2VideoEncodeWriteBitKhr = unchecked((uint)274877906944),
+
+		/// <remarks></remarks>
+		Access2Reserved51BitQcom = unchecked((uint)2251799813685248),
+
+		/// <remarks></remarks>
+		Access2Reserved52BitQcom = unchecked((uint)4503599627370496),
+
+		/// <remarks></remarks>
+		Access2Reserved53BitQcom = unchecked((uint)9007199254740992),
+
+		/// <remarks></remarks>
+		Access2Reserved54BitQcom = unchecked((uint)18014398509481984),
+
+		/// <remarks></remarks>
+		Access2NoneKhr = Access2None,
+
+		/// <remarks></remarks>
+		Access2IndirectCommandReadBitKhr = Access2IndirectCommandReadBit,
+
+		/// <remarks></remarks>
+		Access2IndexReadBitKhr = Access2IndexReadBit,
+
+		/// <remarks></remarks>
+		Access2VertexAttributeReadBitKhr = Access2VertexAttributeReadBit,
+
+		/// <remarks></remarks>
+		Access2UniformReadBitKhr = Access2UniformReadBit,
+
+		/// <remarks></remarks>
+		Access2InputAttachmentReadBitKhr = Access2InputAttachmentReadBit,
+
+		/// <remarks></remarks>
+		Access2ShaderReadBitKhr = Access2ShaderReadBit,
+
+		/// <remarks></remarks>
+		Access2ShaderWriteBitKhr = Access2ShaderWriteBit,
+
+		/// <remarks></remarks>
+		Access2ColorAttachmentReadBitKhr = Access2ColorAttachmentReadBit,
+
+		/// <remarks></remarks>
+		Access2ColorAttachmentWriteBitKhr = Access2ColorAttachmentWriteBit,
+
+		/// <remarks></remarks>
+		Access2DepthStencilAttachmentReadBitKhr = Access2DepthStencilAttachmentReadBit,
+
+		/// <remarks></remarks>
+		Access2DepthStencilAttachmentWriteBitKhr = Access2DepthStencilAttachmentWriteBit,
+
+		/// <remarks></remarks>
+		Access2TransferReadBitKhr = Access2TransferReadBit,
+
+		/// <remarks></remarks>
+		Access2TransferWriteBitKhr = Access2TransferWriteBit,
+
+		/// <remarks></remarks>
+		Access2HostReadBitKhr = Access2HostReadBit,
+
+		/// <remarks></remarks>
+		Access2HostWriteBitKhr = Access2HostWriteBit,
+
+		/// <remarks></remarks>
+		Access2MemoryReadBitKhr = Access2MemoryReadBit,
+
+		/// <remarks></remarks>
+		Access2MemoryWriteBitKhr = Access2MemoryWriteBit,
+
+		/// <remarks></remarks>
+		Access2ShaderSampledReadBitKhr = Access2ShaderSampledReadBit,
+
+		/// <remarks></remarks>
+		Access2ShaderStorageReadBitKhr = Access2ShaderStorageReadBit,
+
+		/// <remarks></remarks>
+		Access2ShaderStorageWriteBitKhr = Access2ShaderStorageWriteBit,
+
+		/// <remarks></remarks>
+		Access2TransformFeedbackWriteBitExt = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Access2TransformFeedbackCounterReadBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		Access2TransformFeedbackCounterWriteBitExt = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		Access2ConditionalRenderingReadBitExt = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		Access2CommandPreprocessReadBitNv = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		Access2CommandPreprocessWriteBitNv = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		Access2CommandPreprocessReadBitExt = Access2CommandPreprocessReadBitNv,
+
+		/// <remarks></remarks>
+		Access2CommandPreprocessWriteBitExt = Access2CommandPreprocessWriteBitNv,
+
+		/// <remarks></remarks>
+		Access2FragmentShadingRateAttachmentReadBitKhr = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		Access2ShadingRateImageReadBitNv = Access2FragmentShadingRateAttachmentReadBitKhr,
+
+		/// <remarks></remarks>
+		Access2AccelerationStructureReadBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		Access2AccelerationStructureWriteBitKhr = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		Access2AccelerationStructureReadBitNv = Access2AccelerationStructureReadBitKhr,
+
+		/// <remarks></remarks>
+		Access2AccelerationStructureWriteBitNv = Access2AccelerationStructureWriteBitKhr,
+
+		/// <remarks></remarks>
+		Access2FragmentDensityMapReadBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Access2ColorAttachmentReadNoncoherentBitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		Access2DescriptorBufferReadBitExt = unchecked((uint)2199023255552),
+
+		/// <remarks></remarks>
+		Access2InvocationMaskReadBitHuawei = unchecked((uint)549755813888),
+
+		/// <remarks></remarks>
+		Access2ShaderBindingTableReadBitKhr = unchecked((uint)1099511627776),
+
+		/// <remarks></remarks>
+		Access2MicromapReadBitExt = unchecked((uint)17592186044416),
+
+		/// <remarks></remarks>
+		Access2MicromapWriteBitExt = unchecked((uint)35184372088832),
+
+		/// <remarks></remarks>
+		Access2Reserved49BitArm = unchecked((uint)562949953421312),
+
+		/// <remarks></remarks>
+		Access2Reserved50BitArm = unchecked((uint)1125899906842624),
+
+		/// <remarks></remarks>
+		Access2OpticalFlowReadBitNv = unchecked((uint)4398046511104),
+
+		/// <remarks></remarks>
+		Access2OpticalFlowWriteBitNv = unchecked((uint)8796093022208),
+
+		/// <remarks></remarks>
+		Access2Reserved47BitExt = unchecked((uint)140737488355328),
+
+		/// <remarks></remarks>
+		Access2Reserved48BitExt = unchecked((uint)281474976710656),
+
+		/// <remarks></remarks>
+		Access2Reserved55BitNv = unchecked((uint)36028797018963968),
+
+		/// <remarks></remarks>
+		Access2Reserved56BitNv = unchecked((uint)72057594037927936),
 	}
 }

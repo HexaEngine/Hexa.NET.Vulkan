@@ -15,5 +15,7 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkMemoryMapFlags : uint
 	{
+		/// <remarks></remarks>
+		PlacedBitExt = unchecked((uint)1),
 	}
 }

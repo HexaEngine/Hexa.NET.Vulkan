@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkVideoEncodeFlagsKHR : uint
 	{
+		/// <remarks></remarks>
+		WithQuantizationDeltaMapBitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		WithEmphasisMapBitKhr = unchecked((uint)2),
 	}
 }

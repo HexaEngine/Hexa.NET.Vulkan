@@ -12,29 +12,66 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1TransferCharacteristics : int
+	public enum StdVideoAV1TransferCharacteristics : uint
 	{
-		Reserved0 = unchecked(0),
-		Bt709 = unchecked(1),
-		Unspecified = unchecked(2),
-		Reserved3 = unchecked(3),
-		Bt470M = unchecked(4),
-		Bt470BG = unchecked(5),
-		Bt601 = unchecked(6),
-		Smpte240 = unchecked(7),
-		Linear = unchecked(8),
-		Log100 = unchecked(9),
-		Log100Sqrt10 = unchecked(10),
-		Iec61966 = unchecked(11),
-		Bt1361 = unchecked(12),
-		Srgb = unchecked(13),
-		Bt202010Bit = unchecked(14),
-		Bt202012Bit = unchecked(15),
-		Smpte2084 = unchecked(16),
-		Smpte428 = unchecked(17),
-		Hlg = unchecked(18),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Reserved0 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Bt709 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Unspecified = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Reserved3 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Bt470M = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Bt470BG = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Bt601 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Smpte240 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		Linear = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Log100 = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Log100Sqrt10 = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Iec61966 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		Bt1361 = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		Srgb = unchecked((uint)13),
+
+		/// <remarks></remarks>
+		Bt202010Bit = unchecked((uint)14),
+
+		/// <remarks></remarks>
+		Bt202012Bit = unchecked((uint)15),
+
+		/// <remarks></remarks>
+		Smpte2084 = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		Smpte428 = unchecked((uint)17),
+
+		/// <remarks></remarks>
+		Hlg = unchecked((uint)18),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

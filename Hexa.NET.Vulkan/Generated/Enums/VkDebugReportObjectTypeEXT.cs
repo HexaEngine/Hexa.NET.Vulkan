@@ -110,5 +110,38 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ValidationCacheExtExt = unchecked((uint)33),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionExt = unchecked((uint)1000156000),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplateExt = unchecked((uint)1000085000),
+
+		/// <remarks></remarks>
+		CuModuleNvxExt = unchecked((uint)1000029000),
+
+		/// <remarks></remarks>
+		CuFunctionNvxExt = unchecked((uint)1000029001),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplateKhrExt = DescriptorUpdateTemplateExt,
+
+		/// <remarks></remarks>
+		AccelerationStructureKhrExt = unchecked((uint)1000150000),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionKhrExt = SamplerYcbcrConversionExt,
+
+		/// <remarks></remarks>
+		AccelerationStructureNvExt = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		CudaModuleNvExt = unchecked((uint)1000307000),
+
+		/// <remarks></remarks>
+		CudaFunctionNvExt = unchecked((uint)1000307001),
+
+		/// <remarks></remarks>
+		BufferCollectionFuchsiaExt = unchecked((uint)1000366000),
 	}
 }

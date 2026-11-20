@@ -41,5 +41,98 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Preinitialized = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		DepthReadOnlyStencilAttachmentOptimal = unchecked((uint)1000117000),
+
+		/// <remarks></remarks>
+		DepthAttachmentStencilReadOnlyOptimal = unchecked((uint)1000117001),
+
+		/// <remarks></remarks>
+		DepthAttachmentOptimal = unchecked((uint)1000241000),
+
+		/// <remarks></remarks>
+		DepthReadOnlyOptimal = unchecked((uint)1000241001),
+
+		/// <remarks></remarks>
+		StencilAttachmentOptimal = unchecked((uint)1000241002),
+
+		/// <remarks></remarks>
+		StencilReadOnlyOptimal = unchecked((uint)1000241003),
+
+		/// <remarks></remarks>
+		ReadOnlyOptimal = unchecked((uint)1000314000),
+
+		/// <remarks></remarks>
+		AttachmentOptimal = unchecked((uint)1000314001),
+
+		/// <remarks></remarks>
+		RenderingLocalRead = unchecked((uint)1000232000),
+
+		/// <remarks></remarks>
+		PresentSrcKhr = unchecked((uint)1000001002),
+
+		/// <remarks></remarks>
+		VideoDecodeDstKhr = unchecked((uint)1000024000),
+
+		/// <remarks></remarks>
+		VideoDecodeSrcKhr = unchecked((uint)1000024001),
+
+		/// <remarks></remarks>
+		VideoDecodeDpbKhr = unchecked((uint)1000024002),
+
+		/// <remarks></remarks>
+		SharedPresentKhr = unchecked((uint)1000111000),
+
+		/// <remarks></remarks>
+		DepthReadOnlyStencilAttachmentOptimalKhr = DepthReadOnlyStencilAttachmentOptimal,
+
+		/// <remarks></remarks>
+		DepthAttachmentStencilReadOnlyOptimalKhr = DepthAttachmentStencilReadOnlyOptimal,
+
+		/// <remarks></remarks>
+		ShadingRateOptimalNv = FragmentShadingRateAttachmentOptimalKhr,
+
+		/// <remarks></remarks>
+		FragmentDensityMapOptimalExt = unchecked((uint)1000218000),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentOptimalKhr = unchecked((uint)1000164003),
+
+		/// <remarks></remarks>
+		RenderingLocalReadKhr = RenderingLocalRead,
+
+		/// <remarks></remarks>
+		DepthAttachmentOptimalKhr = DepthAttachmentOptimal,
+
+		/// <remarks></remarks>
+		DepthReadOnlyOptimalKhr = DepthReadOnlyOptimal,
+
+		/// <remarks></remarks>
+		StencilAttachmentOptimalKhr = StencilAttachmentOptimal,
+
+		/// <remarks></remarks>
+		StencilReadOnlyOptimalKhr = StencilReadOnlyOptimal,
+
+		/// <remarks></remarks>
+		VideoEncodeDstKhr = unchecked((uint)1000299000),
+
+		/// <remarks></remarks>
+		VideoEncodeSrcKhr = unchecked((uint)1000299001),
+
+		/// <remarks></remarks>
+		VideoEncodeDpbKhr = unchecked((uint)1000299002),
+
+		/// <remarks></remarks>
+		ReadOnlyOptimalKhr = ReadOnlyOptimal,
+
+		/// <remarks></remarks>
+		AttachmentOptimalKhr = AttachmentOptimal,
+
+		/// <remarks></remarks>
+		AttachmentFeedbackLoopOptimalExt = unchecked((uint)1000339000),
+
+		/// <remarks></remarks>
+		VideoEncodeQuantizationMapKhr = unchecked((uint)1000553000),
 	}
 }

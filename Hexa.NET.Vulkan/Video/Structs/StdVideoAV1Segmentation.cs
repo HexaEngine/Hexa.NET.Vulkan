@@ -15,90 +15,72 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1Segmentation
+	public unsafe struct StdVideoAV1Segmentation
 	{
-		public byte FeatureEnabled_0;
-		public byte FeatureEnabled_1;
-		public byte FeatureEnabled_2;
-		public byte FeatureEnabled_3;
-		public byte FeatureEnabled_4;
-		public byte FeatureEnabled_5;
-		public byte FeatureEnabled_6;
-		public byte FeatureEnabled_7;
-		public unsafe short* FeatureData_0;
-		public unsafe short* FeatureData_1;
-		public unsafe short* FeatureData_2;
-		public unsafe short* FeatureData_3;
-		public unsafe short* FeatureData_4;
-		public unsafe short* FeatureData_5;
-		public unsafe short* FeatureData_6;
-		public unsafe short* FeatureData_7;
-
-		public unsafe StdVideoAV1Segmentation(byte* featureEnabled = default, short** featureData = default)
-		{
-			if (featureEnabled != default(byte*))
-			{
-				FeatureEnabled_0 = featureEnabled[0];
-				FeatureEnabled_1 = featureEnabled[1];
-				FeatureEnabled_2 = featureEnabled[2];
-				FeatureEnabled_3 = featureEnabled[3];
-				FeatureEnabled_4 = featureEnabled[4];
-				FeatureEnabled_5 = featureEnabled[5];
-				FeatureEnabled_6 = featureEnabled[6];
-				FeatureEnabled_7 = featureEnabled[7];
-			}
-			if (featureData != default(short**))
-			{
-				FeatureData_0 = featureData[0];
-				FeatureData_1 = featureData[1];
-				FeatureData_2 = featureData[2];
-				FeatureData_3 = featureData[3];
-				FeatureData_4 = featureData[4];
-				FeatureData_5 = featureData[5];
-				FeatureData_6 = featureData[6];
-				FeatureData_7 = featureData[7];
-			}
-		}
-
-		public unsafe StdVideoAV1Segmentation(Span<byte> featureEnabled = default, Span<Pointer<short>> featureData = default)
-		{
-			if (featureEnabled != default(Span<byte>))
-			{
-				FeatureEnabled_0 = featureEnabled[0];
-				FeatureEnabled_1 = featureEnabled[1];
-				FeatureEnabled_2 = featureEnabled[2];
-				FeatureEnabled_3 = featureEnabled[3];
-				FeatureEnabled_4 = featureEnabled[4];
-				FeatureEnabled_5 = featureEnabled[5];
-				FeatureEnabled_6 = featureEnabled[6];
-				FeatureEnabled_7 = featureEnabled[7];
-			}
-			if (featureData != default(Span<Pointer<short>>))
-			{
-				FeatureData_0 = featureData[0];
-				FeatureData_1 = featureData[1];
-				FeatureData_2 = featureData[2];
-				FeatureData_3 = featureData[3];
-				FeatureData_4 = featureData[4];
-				FeatureData_5 = featureData[5];
-				FeatureData_6 = featureData[6];
-				FeatureData_7 = featureData[7];
-			}
-		}
-
-
-		public unsafe Span<Pointer<short>> FeatureData
-		
-		{
-			get
-			{
-				fixed (short** p = &this.FeatureData_0)
-				{
-					return new Span<Pointer<short>>(p, 8);
-				}
-			}
-		}
+		public fixed byte FeatureEnabled[8];
+		public short FeatureData_0_0;
+		public short FeatureData_0_1;
+		public short FeatureData_0_2;
+		public short FeatureData_0_3;
+		public short FeatureData_0_4;
+		public short FeatureData_0_5;
+		public short FeatureData_0_6;
+		public short FeatureData_0_7;
+		public short FeatureData_1_0;
+		public short FeatureData_1_1;
+		public short FeatureData_1_2;
+		public short FeatureData_1_3;
+		public short FeatureData_1_4;
+		public short FeatureData_1_5;
+		public short FeatureData_1_6;
+		public short FeatureData_1_7;
+		public short FeatureData_2_0;
+		public short FeatureData_2_1;
+		public short FeatureData_2_2;
+		public short FeatureData_2_3;
+		public short FeatureData_2_4;
+		public short FeatureData_2_5;
+		public short FeatureData_2_6;
+		public short FeatureData_2_7;
+		public short FeatureData_3_0;
+		public short FeatureData_3_1;
+		public short FeatureData_3_2;
+		public short FeatureData_3_3;
+		public short FeatureData_3_4;
+		public short FeatureData_3_5;
+		public short FeatureData_3_6;
+		public short FeatureData_3_7;
+		public short FeatureData_4_0;
+		public short FeatureData_4_1;
+		public short FeatureData_4_2;
+		public short FeatureData_4_3;
+		public short FeatureData_4_4;
+		public short FeatureData_4_5;
+		public short FeatureData_4_6;
+		public short FeatureData_4_7;
+		public short FeatureData_5_0;
+		public short FeatureData_5_1;
+		public short FeatureData_5_2;
+		public short FeatureData_5_3;
+		public short FeatureData_5_4;
+		public short FeatureData_5_5;
+		public short FeatureData_5_6;
+		public short FeatureData_5_7;
+		public short FeatureData_6_0;
+		public short FeatureData_6_1;
+		public short FeatureData_6_2;
+		public short FeatureData_6_3;
+		public short FeatureData_6_4;
+		public short FeatureData_6_5;
+		public short FeatureData_6_6;
+		public short FeatureData_6_7;
+		public short FeatureData_7_0;
+		public short FeatureData_7_1;
+		public short FeatureData_7_2;
+		public short FeatureData_7_3;
+		public short FeatureData_7_4;
+		public short FeatureData_7_5;
+		public short FeatureData_7_6;
+		public short FeatureData_7_7;
 	}
-
 }

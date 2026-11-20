@@ -235,43 +235,27 @@
                         PostText += reader.Value;
                     }
 
-                    if (reader.Value.StartsWith(']'))
+                    // Process character by character (not per text-node) so a dimension's size
+                    // still parses correctly when it comes from a child <enum> element, which
+                    // splits what would otherwise be one contiguous "[A][B]" text run across
+                    // several Text nodes (e.g. "[", "A", "][", "B", "]").
+                    foreach (char c in reader.Value)
                     {
-                        ArrayTypes.Add(sb.ToString());
-                        sb.Clear();
-                        arrayCapture = false;
-                    }
-
-                    if (arrayCapture)
-                    {
-                        sb.Append(reader.Value);
-                    }
-
-                    if (reader.Value.StartsWith('['))
-                    {
-                        IsArrayType = true;
-                        arrayCapture = true;
-                        ReadOnlySpan<char> val = reader.Value.AsSpan(1);
-                        while (val.Length > 0)
+                        if (c == '[')
                         {
-                            int endIndex = val.IndexOf(']');
-                            if (endIndex != -1)
-                            {
-                                ArrayTypes.Add(val[..endIndex].ToString());
-                                arrayCapture = false;
-                            }
-                            if (endIndex != val.Length - 1)
-                            {
-                                val = val[..(endIndex + 1)];
-                                if (val.StartsWith('['))
-                                {
-                                    arrayCapture = true;
-                                }
-                            }
-                            else
-                            {
-                                break;
-                            }
+                            IsArrayType = true;
+                            arrayCapture = true;
+                            sb.Clear();
+                        }
+                        else if (c == ']')
+                        {
+                            ArrayTypes.Add(sb.ToString());
+                            sb.Clear();
+                            arrayCapture = false;
+                        }
+                        else if (arrayCapture)
+                        {
+                            sb.Append(c);
                         }
                     }
                 }
@@ -590,6 +574,8 @@
 
         public string Postfix { get; set; }
 
+        public string? Api { get; set; }
+
         public List<bool> Optional { get; set; } = [];
 
         public List<ParsePart> Parts { get; set; } = [];
@@ -604,6 +590,7 @@
             Group = reader.GetAttribute("group")!;
             Kind = reader.GetAttribute("kind")!;
             Len = reader.GetAttribute("len")!;
+            Api = reader.GetAttribute("api");
             var optionalAttr = reader.GetAttribute("optional");
             if (optionalAttr != null)
             {
@@ -794,6 +781,32 @@
         [XmlAttribute(AttributeName = "name")]
         public string Name { get; set; }
 
+        [XmlAttribute(AttributeName = "value")]
+        public string? Value { get; set; }
+
+        [XmlAttribute(AttributeName = "alias")]
+        public string? Alias { get; set; }
+
+        // Present when this entry adds a value to an existing enum group (e.g. a KHR extension
+        // adding a VkStructureType member) instead of requiring an already-defined one.
+        [XmlAttribute(AttributeName = "extends")]
+        public string? Extends { get; set; }
+
+        [XmlAttribute(AttributeName = "offset")]
+        public string? Offset { get; set; }
+
+        [XmlAttribute(AttributeName = "extnumber")]
+        public string? ExtNumber { get; set; }
+
+        [XmlAttribute(AttributeName = "dir")]
+        public string? Dir { get; set; }
+
+        [XmlAttribute(AttributeName = "bitpos")]
+        public string? Bitpos { get; set; }
+
+        [XmlAttribute(AttributeName = "deprecated")]
+        public string? Deprecated { get; set; }
+
         public override string ToString()
         {
             return Name;
@@ -882,6 +895,9 @@
 
         [XmlAttribute(AttributeName = "name")]
         public string Name { get; set; }
+
+        [XmlAttribute(AttributeName = "number")]
+        public string? Number { get; set; }
 
         [XmlAttribute(AttributeName = "supported")]
         public string? Supported

@@ -15,41 +15,73 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH265SliceSegmentHeaderFlags
+	public unsafe struct StdVideoEncodeH265SliceSegmentHeaderFlags
 	{
-		public uint FirstSliceSegmentInPicFlag;
-		public uint DependentSliceSegmentFlag;
-		public uint SliceSaoLumaFlag;
-		public uint SliceSaoChromaFlag;
-		public uint NumRefIdxActiveOverrideFlag;
-		public uint MvdL1ZeroFlag;
-		public uint CabacInitFlag;
-		public uint CuChromaQpOffsetEnabledFlag;
-		public uint DeblockingFilterOverrideFlag;
-		public uint SliceDeblockingFilterDisabledFlag;
-		public uint CollocatedFromL0Flag;
-		public uint SliceLoopFilterAcrossSlicesEnabledFlag;
-		public uint Reserved;
-
-		public unsafe StdVideoEncodeH265SliceSegmentHeaderFlags(uint firstSliceSegmentInPicFlag = default, uint dependentSliceSegmentFlag = default, uint sliceSaoLumaFlag = default, uint sliceSaoChromaFlag = default, uint numRefIdxActiveOverrideFlag = default, uint mvdl1ZeroFlag = default, uint cabacInitFlag = default, uint cuChromaQpOffsetEnabledFlag = default, uint deblockingFilterOverrideFlag = default, uint sliceDeblockingFilterDisabledFlag = default, uint collocatedFroml0Flag = default, uint sliceLoopFilterAcrossSlicesEnabledFlag = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint FirstSliceSegmentInPicFlag
 		{
-			FirstSliceSegmentInPicFlag = firstSliceSegmentInPicFlag;
-			DependentSliceSegmentFlag = dependentSliceSegmentFlag;
-			SliceSaoLumaFlag = sliceSaoLumaFlag;
-			SliceSaoChromaFlag = sliceSaoChromaFlag;
-			NumRefIdxActiveOverrideFlag = numRefIdxActiveOverrideFlag;
-			MvdL1ZeroFlag = mvdl1ZeroFlag;
-			CabacInitFlag = cabacInitFlag;
-			CuChromaQpOffsetEnabledFlag = cuChromaQpOffsetEnabledFlag;
-			DeblockingFilterOverrideFlag = deblockingFilterOverrideFlag;
-			SliceDeblockingFilterDisabledFlag = sliceDeblockingFilterDisabledFlag;
-			CollocatedFromL0Flag = collocatedFroml0Flag;
-			SliceLoopFilterAcrossSlicesEnabledFlag = sliceLoopFilterAcrossSlicesEnabledFlag;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint DependentSliceSegmentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint SliceSaoLumaFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint SliceSaoChromaFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint NumRefIdxActiveOverrideFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint MvdL1ZeroFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint CabacInitFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint CuChromaQpOffsetEnabledFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint DeblockingFilterOverrideFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint SliceDeblockingFilterDisabledFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint CollocatedFromL0Flag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint SliceLoopFilterAcrossSlicesEnabledFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 12) & 1048575;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1048575 << 12)) | ((value & 1048575) << 12));
+		}
 	}
-
 }

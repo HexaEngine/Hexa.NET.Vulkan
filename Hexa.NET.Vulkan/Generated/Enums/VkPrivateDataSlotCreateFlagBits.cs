@@ -15,5 +15,7 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPrivateDataSlotCreateFlagBits : uint
 	{
+		/// <remarks></remarks>
+		Reserved0BitNv = unchecked((uint)1),
 	}
 }

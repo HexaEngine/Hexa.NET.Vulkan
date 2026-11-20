@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1LoopRestoration
+	public unsafe struct StdVideoAV1LoopRestoration
 	{
 		public StdVideoAV1FrameRestorationType FrameRestorationType_0;
 		public StdVideoAV1FrameRestorationType FrameRestorationType_1;
@@ -24,51 +23,5 @@ namespace Hexa.NET.Vulkan
 		public ushort LoopRestorationSize_0;
 		public ushort LoopRestorationSize_1;
 		public ushort LoopRestorationSize_2;
-
-		public unsafe StdVideoAV1LoopRestoration(StdVideoAV1FrameRestorationType* frameRestorationType = default, ushort* loopRestorationSize = default)
-		{
-			if (frameRestorationType != default(StdVideoAV1FrameRestorationType*))
-			{
-				FrameRestorationType_0 = frameRestorationType[0];
-				FrameRestorationType_1 = frameRestorationType[1];
-				FrameRestorationType_2 = frameRestorationType[2];
-			}
-			if (loopRestorationSize != default(ushort*))
-			{
-				LoopRestorationSize_0 = loopRestorationSize[0];
-				LoopRestorationSize_1 = loopRestorationSize[1];
-				LoopRestorationSize_2 = loopRestorationSize[2];
-			}
-		}
-
-		public unsafe StdVideoAV1LoopRestoration(Span<StdVideoAV1FrameRestorationType> frameRestorationType = default, Span<ushort> loopRestorationSize = default)
-		{
-			if (frameRestorationType != default(Span<StdVideoAV1FrameRestorationType>))
-			{
-				FrameRestorationType_0 = frameRestorationType[0];
-				FrameRestorationType_1 = frameRestorationType[1];
-				FrameRestorationType_2 = frameRestorationType[2];
-			}
-			if (loopRestorationSize != default(Span<ushort>))
-			{
-				LoopRestorationSize_0 = loopRestorationSize[0];
-				LoopRestorationSize_1 = loopRestorationSize[1];
-				LoopRestorationSize_2 = loopRestorationSize[2];
-			}
-		}
-
-
-		public unsafe Span<StdVideoAV1FrameRestorationType> FrameRestorationType
-		
-		{
-			get
-			{
-				fixed (StdVideoAV1FrameRestorationType* p = &this.FrameRestorationType_0)
-				{
-					return new Span<StdVideoAV1FrameRestorationType>(p, 3);
-				}
-			}
-		}
 	}
-
 }

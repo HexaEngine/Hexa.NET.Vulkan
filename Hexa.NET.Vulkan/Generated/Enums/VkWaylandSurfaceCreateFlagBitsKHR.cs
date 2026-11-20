@@ -15,5 +15,7 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkWaylandSurfaceCreateFlagBitsKHR : uint
 	{
+		/// <remarks></remarks>
+		DisableColorManagement = unchecked((uint)1),
 	}
 }

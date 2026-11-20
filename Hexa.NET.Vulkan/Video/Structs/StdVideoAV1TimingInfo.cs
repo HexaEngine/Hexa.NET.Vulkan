@@ -15,23 +15,11 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1TimingInfo
+	public unsafe struct StdVideoAV1TimingInfo
 	{
 		public StdVideoAV1TimingInfoFlags Flags;
 		public uint NumUnitsInDisplayTick;
 		public uint TimeScale;
 		public uint NumTicksPerPictureMinus1;
-
-		public unsafe StdVideoAV1TimingInfo(StdVideoAV1TimingInfoFlags flags = default, uint numUnitsInDisplayTick = default, uint timeScale = default, uint numTicksPerPictureMinus1 = default)
-		{
-			Flags = flags;
-			NumUnitsInDisplayTick = numUnitsInDisplayTick;
-			TimeScale = timeScale;
-			NumTicksPerPictureMinus1 = numTicksPerPictureMinus1;
-		}
-
-
 	}
-
 }

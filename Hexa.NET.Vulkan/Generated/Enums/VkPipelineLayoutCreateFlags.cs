@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPipelineLayoutCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		Reserved0BitAmd = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		IndependentSetsBitExt = unchecked((uint)2),
 	}
 }

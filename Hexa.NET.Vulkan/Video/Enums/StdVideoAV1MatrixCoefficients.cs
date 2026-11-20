@@ -12,25 +12,54 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1MatrixCoefficients : int
+	public enum StdVideoAV1MatrixCoefficients : uint
 	{
-		Identity = unchecked(0),
-		Bt709 = unchecked(1),
-		Unspecified = unchecked(2),
-		Reserved3 = unchecked(3),
-		Fcc = unchecked(4),
-		Bt470BG = unchecked(5),
-		Bt601 = unchecked(6),
-		Smpte240 = unchecked(7),
-		SmpteYcgco = unchecked(8),
-		Bt2020Ncl = unchecked(9),
-		Bt2020Cl = unchecked(10),
-		Smpte2085 = unchecked(11),
-		ChromatNcl = unchecked(12),
-		ChromatCl = unchecked(13),
-		Ictcp = unchecked(14),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Identity = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Bt709 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Unspecified = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Reserved3 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Fcc = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		Bt470BG = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Bt601 = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Smpte240 = unchecked((uint)7),
+
+		/// <remarks></remarks>
+		SmpteYcgco = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Bt2020Ncl = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		Bt2020Cl = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Smpte2085 = unchecked((uint)11),
+
+		/// <remarks></remarks>
+		ChromatNcl = unchecked((uint)12),
+
+		/// <remarks></remarks>
+		ChromatCl = unchecked((uint)13),
+
+		/// <remarks></remarks>
+		Ictcp = unchecked((uint)14),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

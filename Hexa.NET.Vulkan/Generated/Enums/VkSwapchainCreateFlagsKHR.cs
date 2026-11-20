@@ -15,5 +15,19 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkSwapchainCreateFlagsKHR : uint
 	{
+		/// <remarks></remarks>
+		SplitInstanceBindRegionsBitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ProtectedBitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		MutableFormatBitKhr = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		DeferredMemoryAllocationBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Reserved4BitExt = unchecked((uint)16),
 	}
 }

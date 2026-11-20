@@ -26,5 +26,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		FifoRelaxedKhr = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		SharedDemandRefreshKhr = unchecked((uint)1000111000),
+
+		/// <remarks></remarks>
+		SharedContinuousRefreshKhr = unchecked((uint)1000111001),
+
+		/// <remarks></remarks>
+		FifoLatestReadyExt = unchecked((uint)1000361000),
 	}
 }

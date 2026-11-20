@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ItuNarrow = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		ItuFullKhr = ItuFull,
+
+		/// <remarks></remarks>
+		ItuNarrowKhr = ItuNarrow,
 	}
 }

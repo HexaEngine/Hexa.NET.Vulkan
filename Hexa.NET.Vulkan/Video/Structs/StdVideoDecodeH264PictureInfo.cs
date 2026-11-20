@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH264PictureInfo
+	public unsafe struct StdVideoDecodeH264PictureInfo
 	{
 		public StdVideoDecodeH264PictureInfoFlags Flags;
 		public byte SeqParameterSetId;
@@ -25,42 +24,6 @@ namespace Hexa.NET.Vulkan
 		public byte Reserved2;
 		public ushort FrameNum;
 		public ushort IdrPicId;
-		public int PicOrderCnt_0;
-		public int PicOrderCnt_1;
-
-		public unsafe StdVideoDecodeH264PictureInfo(StdVideoDecodeH264PictureInfoFlags flags = default, byte seqParameterSetId = default, byte picParameterSetId = default, byte reserved1 = default, byte reserved2 = default, ushort frameNum = default, ushort idrPicId = default, int* picOrderCnt = default)
-		{
-			Flags = flags;
-			SeqParameterSetId = seqParameterSetId;
-			PicParameterSetId = picParameterSetId;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			FrameNum = frameNum;
-			IdrPicId = idrPicId;
-			if (picOrderCnt != default(int*))
-			{
-				PicOrderCnt_0 = picOrderCnt[0];
-				PicOrderCnt_1 = picOrderCnt[1];
-			}
-		}
-
-		public unsafe StdVideoDecodeH264PictureInfo(StdVideoDecodeH264PictureInfoFlags flags = default, byte seqParameterSetId = default, byte picParameterSetId = default, byte reserved1 = default, byte reserved2 = default, ushort frameNum = default, ushort idrPicId = default, Span<int> picOrderCnt = default)
-		{
-			Flags = flags;
-			SeqParameterSetId = seqParameterSetId;
-			PicParameterSetId = picParameterSetId;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			FrameNum = frameNum;
-			IdrPicId = idrPicId;
-			if (picOrderCnt != default(Span<int>))
-			{
-				PicOrderCnt_0 = picOrderCnt[0];
-				PicOrderCnt_1 = picOrderCnt[1];
-			}
-		}
-
-
+		public fixed int PicOrderCnt[2];
 	}
-
 }

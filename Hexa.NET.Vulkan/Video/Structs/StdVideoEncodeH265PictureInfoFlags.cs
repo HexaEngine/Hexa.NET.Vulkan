@@ -15,35 +15,58 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH265PictureInfoFlags
+	public unsafe struct StdVideoEncodeH265PictureInfoFlags
 	{
-		public uint IsReference;
-		public uint IrapPicFlag;
-		public uint UsedForLongTermReference;
-		public uint DiscardableFlag;
-		public uint CrossLayerBlaFlag;
-		public uint PicOutputFlag;
-		public uint NoOutputOfPriorPicsFlag;
-		public uint ShortTermRefPicSetSpsFlag;
-		public uint SliceTemporalMvpEnabledFlag;
-		public uint Reserved;
-
-		public unsafe StdVideoEncodeH265PictureInfoFlags(uint isReference = default, uint irapPicFlag = default, uint usedForLongTermReference = default, uint discardableFlag = default, uint crossLayerBlaFlag = default, uint picOutputFlag = default, uint noOutputOfPriorPicsFlag = default, uint shortTermRefPicSetSpsFlag = default, uint sliceTemporalMvpEnabledFlag = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint IsReference
 		{
-			IsReference = isReference;
-			IrapPicFlag = irapPicFlag;
-			UsedForLongTermReference = usedForLongTermReference;
-			DiscardableFlag = discardableFlag;
-			CrossLayerBlaFlag = crossLayerBlaFlag;
-			PicOutputFlag = picOutputFlag;
-			NoOutputOfPriorPicsFlag = noOutputOfPriorPicsFlag;
-			ShortTermRefPicSetSpsFlag = shortTermRefPicSetSpsFlag;
-			SliceTemporalMvpEnabledFlag = sliceTemporalMvpEnabledFlag;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint IrapPicFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint UsedForLongTermReference
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint DiscardableFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint CrossLayerBlaFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint PicOutputFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint NoOutputOfPriorPicsFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint ShortTermRefPicSetSpsFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint SliceTemporalMvpEnabledFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 9) & 8388607;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(8388607 << 9)) | ((value & 8388607) << 9));
+		}
 	}
-
 }

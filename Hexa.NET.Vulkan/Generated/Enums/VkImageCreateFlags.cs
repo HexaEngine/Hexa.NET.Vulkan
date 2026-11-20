@@ -29,5 +29,71 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		CubeCompatibleBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		AliasBit = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		SplitInstanceBindRegionsBit = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		Create2DArrayCompatibleBit = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		BlockTexelViewCompatibleBit = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		ExtendedUsageBit = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		DisjointBit = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		CornerSampledBitNv = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		SplitInstanceBindRegionsBitKhr = SplitInstanceBindRegionsBit,
+
+		/// <remarks></remarks>
+		Create2DArrayCompatibleBitKhr = Create2DArrayCompatibleBit,
+
+		/// <remarks></remarks>
+		BlockTexelViewCompatibleBitKhr = BlockTexelViewCompatibleBit,
+
+		/// <remarks></remarks>
+		ExtendedUsageBitKhr = ExtendedUsageBit,
+
+		/// <remarks></remarks>
+		SampleLocationsCompatibleDepthBitExt = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		DisjointBitKhr = DisjointBit,
+
+		/// <remarks></remarks>
+		AliasBitKhr = AliasBit,
+
+		/// <remarks></remarks>
+		SubsampledBitExt = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		Reserved19BitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		DescriptorBufferCaptureReplayBitExt = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		MultisampledRenderToSingleSampledBitExt = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		Create2DViewCompatibleBitExt = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		FragmentDensityMapOffsetBitQcom = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		VideoProfileIndependentBitKhr = unchecked((uint)1048576),
 	}
 }

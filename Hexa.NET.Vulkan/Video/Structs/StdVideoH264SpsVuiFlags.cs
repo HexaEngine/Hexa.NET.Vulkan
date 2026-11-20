@@ -15,39 +15,68 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264SpsVuiFlags
+	public unsafe struct StdVideoH264SpsVuiFlags
 	{
-		public uint AspectRatioInfoPresentFlag;
-		public uint OverscanInfoPresentFlag;
-		public uint OverscanAppropriateFlag;
-		public uint VideoSignalTypePresentFlag;
-		public uint VideoFullRangeFlag;
-		public uint ColorDescriptionPresentFlag;
-		public uint ChromaLocInfoPresentFlag;
-		public uint TimingInfoPresentFlag;
-		public uint FixedFrameRateFlag;
-		public uint BitstreamRestrictionFlag;
-		public uint NalHrdParametersPresentFlag;
-		public uint VclHrdParametersPresentFlag;
-
-		public unsafe StdVideoH264SpsVuiFlags(uint aspectRatioInfoPresentFlag = default, uint overscanInfoPresentFlag = default, uint overscanAppropriateFlag = default, uint videoSignalTypePresentFlag = default, uint videoFullRangeFlag = default, uint colorDescriptionPresentFlag = default, uint chromaLocInfoPresentFlag = default, uint timingInfoPresentFlag = default, uint fixedFrameRateFlag = default, uint bitstreamRestrictionFlag = default, uint nalHrdParametersPresentFlag = default, uint vclHrdParametersPresentFlag = default)
+		private uint _bitfield0;
+		public uint AspectRatioInfoPresentFlag
 		{
-			AspectRatioInfoPresentFlag = aspectRatioInfoPresentFlag;
-			OverscanInfoPresentFlag = overscanInfoPresentFlag;
-			OverscanAppropriateFlag = overscanAppropriateFlag;
-			VideoSignalTypePresentFlag = videoSignalTypePresentFlag;
-			VideoFullRangeFlag = videoFullRangeFlag;
-			ColorDescriptionPresentFlag = colorDescriptionPresentFlag;
-			ChromaLocInfoPresentFlag = chromaLocInfoPresentFlag;
-			TimingInfoPresentFlag = timingInfoPresentFlag;
-			FixedFrameRateFlag = fixedFrameRateFlag;
-			BitstreamRestrictionFlag = bitstreamRestrictionFlag;
-			NalHrdParametersPresentFlag = nalHrdParametersPresentFlag;
-			VclHrdParametersPresentFlag = vclHrdParametersPresentFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint OverscanInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint OverscanAppropriateFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint VideoSignalTypePresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint VideoFullRangeFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint ColorDescriptionPresentFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint ChromaLocInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint TimingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint FixedFrameRateFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint BitstreamRestrictionFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint NalHrdParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint VclHrdParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
 	}
-
 }

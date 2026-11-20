@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1Quantization
+	public unsafe struct StdVideoAV1Quantization
 	{
 		public StdVideoAV1QuantizationFlags Flags;
 		public byte BaseQIdx;
@@ -28,22 +27,5 @@ namespace Hexa.NET.Vulkan
 		public byte QmY;
 		public byte QmU;
 		public byte QmV;
-
-		public unsafe StdVideoAV1Quantization(StdVideoAV1QuantizationFlags flags = default, byte baseQIdx = default, sbyte deltaQyDc = default, sbyte deltaQuDc = default, sbyte deltaQuAc = default, sbyte deltaQvDc = default, sbyte deltaQvAc = default, byte qmY = default, byte qmU = default, byte qmV = default)
-		{
-			Flags = flags;
-			BaseQIdx = baseQIdx;
-			DeltaQYDc = deltaQyDc;
-			DeltaQUDc = deltaQuDc;
-			DeltaQUAc = deltaQuAc;
-			DeltaQVDc = deltaQvDc;
-			DeltaQVAc = deltaQvAc;
-			QmY = qmY;
-			QmU = qmU;
-			QmV = qmV;
-		}
-
-
 	}
-
 }

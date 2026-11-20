@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH265PictureInfo
+	public unsafe struct StdVideoEncodeH265PictureInfo
 	{
 		public StdVideoEncodeH265PictureInfoFlags Flags;
 		public StdVideoH265PictureType PicType;
@@ -26,68 +25,9 @@ namespace Hexa.NET.Vulkan
 		public byte ShortTermRefPicSetIdx;
 		public int PicOrderCntVal;
 		public byte TemporalId;
-		public byte Reserved1_0;
-		public byte Reserved1_1;
-		public byte Reserved1_2;
-		public byte Reserved1_3;
-		public byte Reserved1_4;
-		public byte Reserved1_5;
-		public byte Reserved1_6;
-		public unsafe StdVideoEncodeH265ReferenceListsInfo* PRefLists;
-		public unsafe StdVideoH265ShortTermRefPicSet* PShortTermRefPicSet;
-		public unsafe StdVideoEncodeH265LongTermRefPics* PLongTermRefPics;
-
-		public unsafe StdVideoEncodeH265PictureInfo(StdVideoEncodeH265PictureInfoFlags flags = default, StdVideoH265PictureType picType = default, byte spsVideoParameterSetId = default, byte ppsSeqParameterSetId = default, byte ppsPicParameterSetId = default, byte shortTermRefPicSetIdx = default, int picOrderCntVal = default, byte temporalId = default, byte* reserved1 = default, StdVideoEncodeH265ReferenceListsInfo* pRefLists = default, StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet = default, StdVideoEncodeH265LongTermRefPics* pLongTermRefPics = default)
-		{
-			Flags = flags;
-			PicType = picType;
-			SpsVideoParameterSetId = spsVideoParameterSetId;
-			PpsSeqParameterSetId = ppsSeqParameterSetId;
-			PpsPicParameterSetId = ppsPicParameterSetId;
-			ShortTermRefPicSetIdx = shortTermRefPicSetIdx;
-			PicOrderCntVal = picOrderCntVal;
-			TemporalId = temporalId;
-			if (reserved1 != default(byte*))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-				Reserved1_5 = reserved1[5];
-				Reserved1_6 = reserved1[6];
-			}
-			PRefLists = pRefLists;
-			PShortTermRefPicSet = pShortTermRefPicSet;
-			PLongTermRefPics = pLongTermRefPics;
-		}
-
-		public unsafe StdVideoEncodeH265PictureInfo(StdVideoEncodeH265PictureInfoFlags flags = default, StdVideoH265PictureType picType = default, byte spsVideoParameterSetId = default, byte ppsSeqParameterSetId = default, byte ppsPicParameterSetId = default, byte shortTermRefPicSetIdx = default, int picOrderCntVal = default, byte temporalId = default, Span<byte> reserved1 = default, StdVideoEncodeH265ReferenceListsInfo* pRefLists = default, StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet = default, StdVideoEncodeH265LongTermRefPics* pLongTermRefPics = default)
-		{
-			Flags = flags;
-			PicType = picType;
-			SpsVideoParameterSetId = spsVideoParameterSetId;
-			PpsSeqParameterSetId = ppsSeqParameterSetId;
-			PpsPicParameterSetId = ppsPicParameterSetId;
-			ShortTermRefPicSetIdx = shortTermRefPicSetIdx;
-			PicOrderCntVal = picOrderCntVal;
-			TemporalId = temporalId;
-			if (reserved1 != default(Span<byte>))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-				Reserved1_5 = reserved1[5];
-				Reserved1_6 = reserved1[6];
-			}
-			PRefLists = pRefLists;
-			PShortTermRefPicSet = pShortTermRefPicSet;
-			PLongTermRefPics = pLongTermRefPics;
-		}
-
-
+		public fixed byte Reserved1[7];
+		public StdVideoEncodeH265ReferenceListsInfo* PRefLists;
+		public StdVideoH265ShortTermRefPicSet* PShortTermRefPicSet;
+		public StdVideoEncodeH265LongTermRefPics* PLongTermRefPics;
 	}
-
 }

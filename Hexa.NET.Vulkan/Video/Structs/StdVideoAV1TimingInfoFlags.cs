@@ -15,19 +15,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1TimingInfoFlags
+	public unsafe struct StdVideoAV1TimingInfoFlags
 	{
-		public uint EqualPictureInterval;
-		public uint Reserved;
-
-		public unsafe StdVideoAV1TimingInfoFlags(uint equalPictureInterval = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint EqualPictureInterval
 		{
-			EqualPictureInterval = equalPictureInterval;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 1) & 2147483647;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(2147483647 << 1)) | ((value & 2147483647) << 1));
+		}
 	}
-
 }

@@ -12,17 +12,30 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264NonVclNaluType : int
+	public enum StdVideoH264NonVclNaluType : uint
 	{
-		Sps = unchecked(0),
-		Pps = unchecked(1),
-		Aud = unchecked(2),
-		Prefix = unchecked(3),
-		EndOfSequence = unchecked(4),
-		EndOfStream = unchecked(5),
-		Precoded = unchecked(6),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Sps = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Pps = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Aud = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Prefix = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		EndOfSequence = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		EndOfStream = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		Precoded = unchecked((uint)6),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

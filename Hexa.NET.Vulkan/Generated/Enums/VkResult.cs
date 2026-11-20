@@ -74,5 +74,131 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ErrorUnknown = unchecked((uint)-13),
+
+		/// <remarks></remarks>
+		ErrorOutOfPoolMemory = unchecked((uint)-1000069000),
+
+		/// <remarks></remarks>
+		ErrorInvalidExternalHandle = unchecked((uint)-1000072003),
+
+		/// <remarks></remarks>
+		ErrorFragmentation = unchecked((uint)-1000161000),
+
+		/// <remarks></remarks>
+		ErrorInvalidOpaqueCaptureAddress = unchecked((uint)-1000257000),
+
+		/// <remarks></remarks>
+		PipelineCompileRequired = unchecked((uint)1000297000),
+
+		/// <remarks></remarks>
+		ErrorNotPermitted = unchecked((uint)-1000174001),
+
+		/// <remarks></remarks>
+		ErrorValidationFailed = unchecked((uint)-1000011001),
+
+		/// <remarks></remarks>
+		ErrorInvalidPipelineCacheData = unchecked((uint)-1000298000),
+
+		/// <remarks></remarks>
+		ErrorNoPipelineMatch = unchecked((uint)-1000298001),
+
+		/// <remarks></remarks>
+		ErrorSurfaceLostKhr = unchecked((uint)-1000000000),
+
+		/// <remarks></remarks>
+		ErrorNativeWindowInUseKhr = unchecked((uint)-1000000001),
+
+		/// <remarks></remarks>
+		SuboptimalKhr = unchecked((uint)1000001003),
+
+		/// <remarks></remarks>
+		ErrorOutOfDateKhr = unchecked((uint)-1000001004),
+
+		/// <remarks></remarks>
+		ErrorIncompatibleDisplayKhr = unchecked((uint)-1000003001),
+
+		/// <remarks></remarks>
+		ErrorValidationFailedExt = unchecked((uint)-1000011001),
+
+		/// <remarks></remarks>
+		ErrorInvalidShaderNv = unchecked((uint)-1000012000),
+
+		/// <remarks></remarks>
+		ErrorImageUsageNotSupportedKhr = unchecked((uint)-1000023000),
+
+		/// <remarks></remarks>
+		ErrorVideoPictureLayoutNotSupportedKhr = unchecked((uint)-1000023001),
+
+		/// <remarks></remarks>
+		ErrorVideoProfileOperationNotSupportedKhr = unchecked((uint)-1000023002),
+
+		/// <remarks></remarks>
+		ErrorVideoProfileFormatNotSupportedKhr = unchecked((uint)-1000023003),
+
+		/// <remarks></remarks>
+		ErrorVideoProfileCodecNotSupportedKhr = unchecked((uint)-1000023004),
+
+		/// <remarks></remarks>
+		ErrorVideoStdVersionNotSupportedKhr = unchecked((uint)-1000023005),
+
+		/// <remarks></remarks>
+		ErrorOutOfPoolMemoryKhr = ErrorOutOfPoolMemory,
+
+		/// <remarks></remarks>
+		ErrorInvalidExternalHandleKhr = ErrorInvalidExternalHandle,
+
+		/// <remarks></remarks>
+		ErrorInvalidDrmFormatModifierPlaneLayoutExt = unchecked((uint)-1000158000),
+
+		/// <remarks></remarks>
+		ErrorFragmentationExt = ErrorFragmentation,
+
+		/// <remarks></remarks>
+		ErrorNotPermittedExt = ErrorNotPermitted,
+
+		/// <remarks></remarks>
+		ErrorNotPermittedKhr = ErrorNotPermitted,
+
+		/// <remarks></remarks>
+		ErrorInvalidDeviceAddressExt = ErrorInvalidOpaqueCaptureAddress,
+
+		/// <remarks></remarks>
+		ErrorFullScreenExclusiveModeLostExt = unchecked((uint)-1000255000),
+
+		/// <remarks></remarks>
+		ErrorInvalidOpaqueCaptureAddressKhr = ErrorInvalidOpaqueCaptureAddress,
+
+		/// <remarks></remarks>
+		ThreadIdleKhr = unchecked((uint)1000268000),
+
+		/// <remarks></remarks>
+		ThreadDoneKhr = unchecked((uint)1000268001),
+
+		/// <remarks></remarks>
+		OperationDeferredKhr = unchecked((uint)1000268002),
+
+		/// <remarks></remarks>
+		OperationNotDeferredKhr = unchecked((uint)1000268003),
+
+		/// <remarks></remarks>
+		PipelineCompileRequiredExt = PipelineCompileRequired,
+
+		/// <remarks></remarks>
+		ErrorPipelineCompileRequiredExt = PipelineCompileRequired,
+
+		/// <remarks></remarks>
+		ErrorInvalidVideoStdParametersKhr = unchecked((uint)-1000299000),
+
+		/// <remarks></remarks>
+		ErrorCompressionExhaustedExt = unchecked((uint)-1000338000),
+
+		/// <remarks></remarks>
+		IncompatibleShaderBinaryExt = unchecked((uint)1000482000),
+
+		/// <remarks></remarks>
+		PipelineBinaryMissingKhr = unchecked((uint)1000483000),
+
+		/// <remarks></remarks>
+		ErrorNotEnoughSpaceKhr = unchecked((uint)-1000483000),
 	}
 }

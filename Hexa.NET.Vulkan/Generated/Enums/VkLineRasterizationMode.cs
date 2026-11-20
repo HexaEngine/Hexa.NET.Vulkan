@@ -26,5 +26,29 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		RectangularSmooth = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		DefaultExt = Default,
+
+		/// <remarks></remarks>
+		RectangularExt = Rectangular,
+
+		/// <remarks></remarks>
+		BresenhamExt = Bresenham,
+
+		/// <remarks></remarks>
+		RectangularSmoothExt = RectangularSmooth,
+
+		/// <remarks></remarks>
+		DefaultKhr = Default,
+
+		/// <remarks></remarks>
+		RectangularKhr = Rectangular,
+
+		/// <remarks></remarks>
+		BresenhamKhr = Bresenham,
+
+		/// <remarks></remarks>
+		RectangularSmoothKhr = RectangularSmooth,
 	}
 }

@@ -15,55 +15,108 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1SequenceHeaderFlags
+	public unsafe struct StdVideoAV1SequenceHeaderFlags
 	{
-		public uint StillPicture;
-		public uint ReducedStillPictureHeader;
-		public uint Use128x128Superblock;
-		public uint EnableFilterIntra;
-		public uint EnableIntraEdgeFilter;
-		public uint EnableInterintraCompound;
-		public uint EnableMaskedCompound;
-		public uint EnableWarpedMotion;
-		public uint EnableDualFilter;
-		public uint EnableOrderHint;
-		public uint EnableJntComp;
-		public uint EnableRefFrameMvs;
-		public uint FrameIdNumbersPresentFlag;
-		public uint EnableSuperres;
-		public uint EnableCdef;
-		public uint EnableRestoration;
-		public uint FilmGrainParamsPresent;
-		public uint TimingInfoPresentFlag;
-		public uint InitialDisplayDelayPresentFlag;
-		public uint Reserved;
-
-		public unsafe StdVideoAV1SequenceHeaderFlags(uint stillPicture = default, uint reducedStillPictureHeader = default, uint use128x128Superblock = default, uint enableFilterIntra = default, uint enableIntraEdgeFilter = default, uint enableInterintraCompound = default, uint enableMaskedCompound = default, uint enableWarpedMotion = default, uint enableDualFilter = default, uint enableOrderHint = default, uint enableJntComp = default, uint enableRefFrameMvs = default, uint frameIdNumbersPresentFlag = default, uint enableSuperres = default, uint enableCdef = default, uint enableRestoration = default, uint filmGrainParamsPresent = default, uint timingInfoPresentFlag = default, uint initialDisplayDelayPresentFlag = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint StillPicture
 		{
-			StillPicture = stillPicture;
-			ReducedStillPictureHeader = reducedStillPictureHeader;
-			Use128x128Superblock = use128x128Superblock;
-			EnableFilterIntra = enableFilterIntra;
-			EnableIntraEdgeFilter = enableIntraEdgeFilter;
-			EnableInterintraCompound = enableInterintraCompound;
-			EnableMaskedCompound = enableMaskedCompound;
-			EnableWarpedMotion = enableWarpedMotion;
-			EnableDualFilter = enableDualFilter;
-			EnableOrderHint = enableOrderHint;
-			EnableJntComp = enableJntComp;
-			EnableRefFrameMvs = enableRefFrameMvs;
-			FrameIdNumbersPresentFlag = frameIdNumbersPresentFlag;
-			EnableSuperres = enableSuperres;
-			EnableCdef = enableCdef;
-			EnableRestoration = enableRestoration;
-			FilmGrainParamsPresent = filmGrainParamsPresent;
-			TimingInfoPresentFlag = timingInfoPresentFlag;
-			InitialDisplayDelayPresentFlag = initialDisplayDelayPresentFlag;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint ReducedStillPictureHeader
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint Use128x128Superblock
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint EnableFilterIntra
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint EnableIntraEdgeFilter
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint EnableInterintraCompound
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint EnableMaskedCompound
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint EnableWarpedMotion
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint EnableDualFilter
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint EnableOrderHint
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint EnableJntComp
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint EnableRefFrameMvs
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint FrameIdNumbersPresentFlag
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint EnableSuperres
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint EnableCdef
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint EnableRestoration
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
+		public uint FilmGrainParamsPresent
+		{
+		    get => (_bitfield0 >> 16) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 16)) | ((value & 1) << 16));
+		}
+		public uint TimingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 17) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 17)) | ((value & 1) << 17));
+		}
+		public uint InitialDisplayDelayPresentFlag
+		{
+		    get => (_bitfield0 >> 18) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 18)) | ((value & 1) << 18));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 19) & 8191;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(8191 << 19)) | ((value & 8191) << 19));
+		}
 	}
-
 }

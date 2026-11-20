@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		Memcpy = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		MemcpyExt = Memcpy,
 	}
 }

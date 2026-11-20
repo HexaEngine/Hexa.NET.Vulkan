@@ -17,5 +17,50 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		SrgbNonlinearKhr = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		DisplayP3NonlinearExt = unchecked((uint)1000104001),
+
+		/// <remarks></remarks>
+		ExtendedSrgbLinearExt = unchecked((uint)1000104002),
+
+		/// <remarks></remarks>
+		DisplayP3LinearExt = unchecked((uint)1000104003),
+
+		/// <remarks></remarks>
+		DciP3NonlinearExt = unchecked((uint)1000104004),
+
+		/// <remarks></remarks>
+		Bt709LinearExt = unchecked((uint)1000104005),
+
+		/// <remarks></remarks>
+		Bt709NonlinearExt = unchecked((uint)1000104006),
+
+		/// <remarks></remarks>
+		Bt2020LinearExt = unchecked((uint)1000104007),
+
+		/// <remarks></remarks>
+		Hdr10St2084Ext = unchecked((uint)1000104008),
+
+		/// <remarks></remarks>
+		DolbyvisionExt = unchecked((uint)1000104009),
+
+		/// <remarks></remarks>
+		Hdr10HlgExt = unchecked((uint)1000104010),
+
+		/// <remarks></remarks>
+		AdobergbLinearExt = unchecked((uint)1000104011),
+
+		/// <remarks></remarks>
+		AdobergbNonlinearExt = unchecked((uint)1000104012),
+
+		/// <remarks></remarks>
+		PassThroughExt = unchecked((uint)1000104013),
+
+		/// <remarks></remarks>
+		ExtendedSrgbNonlinearExt = unchecked((uint)1000104014),
+
+		/// <remarks></remarks>
+		DisplayNativeAmd = unchecked((uint)1000213000),
 	}
 }

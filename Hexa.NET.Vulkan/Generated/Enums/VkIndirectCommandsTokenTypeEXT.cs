@@ -44,5 +44,20 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		DispatchExt = unchecked((uint)9),
+
+		/// <remarks></remarks>
+		DrawMeshTasksNvExt = unchecked((uint)1000202002),
+
+		/// <remarks></remarks>
+		DrawMeshTasksCountNvExt = unchecked((uint)1000202003),
+
+		/// <remarks></remarks>
+		DrawMeshTasksExt = unchecked((uint)1000328000),
+
+		/// <remarks></remarks>
+		DrawMeshTasksCountExt = unchecked((uint)1000328001),
+
+		/// <remarks></remarks>
+		TraceRays2Ext = unchecked((uint)1000386004),
 	}
 }

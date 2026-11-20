@@ -15,21 +15,23 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264ReferenceListsInfoFlags
+	public unsafe struct StdVideoEncodeH264ReferenceListsInfoFlags
 	{
-		public uint RefPicListModificationFlagL0;
-		public uint RefPicListModificationFlagL1;
-		public uint Reserved;
-
-		public unsafe StdVideoEncodeH264ReferenceListsInfoFlags(uint refPicListModificationFlagl0 = default, uint refPicListModificationFlagl1 = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint RefPicListModificationFlagL0
 		{
-			RefPicListModificationFlagL0 = refPicListModificationFlagl0;
-			RefPicListModificationFlagL1 = refPicListModificationFlagl1;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint RefPicListModificationFlagL1
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 2) & 1073741823;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1073741823 << 2)) | ((value & 1073741823) << 2));
+		}
 	}
-
 }

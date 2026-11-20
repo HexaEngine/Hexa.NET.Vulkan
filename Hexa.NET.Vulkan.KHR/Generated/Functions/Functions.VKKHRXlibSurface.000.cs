@@ -189,22 +189,22 @@ namespace Hexa.NET.Vulkan.KHR
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkBool32 GetPhysicalDeviceXlibPresentationSupportKHRNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dpy, VisualID visualID)
+		internal VkBool32 GetPhysicalDeviceXlibPresentationSupportKHRNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dpy, nint visualID)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, VisualID, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, dpy, visualID);
+			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, dpy, visualID);
 			#else
-			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, VisualID, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)dpy, visualID);
+			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)dpy, visualID);
 			#endif
 		}
 
-		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dpy, VisualID visualID)
+		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* dpy, nint visualID)
 		{
 			VkBool32 ret = GetPhysicalDeviceXlibPresentationSupportKHRNative(physicalDevice, queueFamilyIndex, dpy, visualID);
 			return ret;
 		}
 
-		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> dpy, VisualID visualID)
+		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> dpy, nint visualID)
 		{
 			fixed (nint* pdpy0 = dpy)
 			{
@@ -213,7 +213,7 @@ namespace Hexa.NET.Vulkan.KHR
 			}
 		}
 
-		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint dpy, VisualID visualID)
+		public VkBool32 GetPhysicalDeviceXlibPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint dpy, nint visualID)
 		{
 			fixed (nint* pdpy0 = &dpy)
 			{

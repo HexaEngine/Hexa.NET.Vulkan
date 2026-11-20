@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265SequenceParameterSetVui
+	public unsafe struct StdVideoH265SequenceParameterSetVui
 	{
 		public StdVideoH265SpsVuiFlags Flags;
 		public StdVideoH265AspectRatioIdc AspectRatioIdc;
@@ -43,39 +42,6 @@ namespace Hexa.NET.Vulkan
 		public byte MaxBitsPerMinCuDenom;
 		public byte Log2MaxMvLengthHorizontal;
 		public byte Log2MaxMvLengthVertical;
-		public unsafe StdVideoH265HrdParameters* PHrdParameters;
-
-		public unsafe StdVideoH265SequenceParameterSetVui(StdVideoH265SpsVuiFlags flags = default, StdVideoH265AspectRatioIdc aspectRatioIdc = default, ushort sarWidth = default, ushort sarHeight = default, byte videoFormat = default, byte colourPrimaries = default, byte transferCharacteristics = default, byte matrixCoeffs = default, byte chromaSampleLocTypeTopField = default, byte chromaSampleLocTypeBottomField = default, byte reserved1 = default, byte reserved2 = default, ushort defDispWinLeftOffset = default, ushort defDispWinRightOffset = default, ushort defDispWinTopOffset = default, ushort defDispWinBottomOffset = default, uint vuiNumUnitsInTick = default, uint vuiTimeScale = default, uint vuiNumTicksPocDiffOneminus1 = default, ushort minSpatialSegmentationIdc = default, ushort reserved3 = default, byte maxBytesPerPicDenom = default, byte maxBitsPerMinCuDenom = default, byte log2MaxMvLengthHorizontal = default, byte log2MaxMvLengthVertical = default, StdVideoH265HrdParameters* pHrdParameters = default)
-		{
-			Flags = flags;
-			AspectRatioIdc = aspectRatioIdc;
-			SarWidth = sarWidth;
-			SarHeight = sarHeight;
-			VideoFormat = videoFormat;
-			ColourPrimaries = colourPrimaries;
-			TransferCharacteristics = transferCharacteristics;
-			MatrixCoeffs = matrixCoeffs;
-			ChromaSampleLocTypeTopField = chromaSampleLocTypeTopField;
-			ChromaSampleLocTypeBottomField = chromaSampleLocTypeBottomField;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			DefDispWinLeftOffset = defDispWinLeftOffset;
-			DefDispWinRightOffset = defDispWinRightOffset;
-			DefDispWinTopOffset = defDispWinTopOffset;
-			DefDispWinBottomOffset = defDispWinBottomOffset;
-			VuiNumUnitsInTick = vuiNumUnitsInTick;
-			VuiTimeScale = vuiTimeScale;
-			VuiNumTicksPocDiffOneMinus1 = vuiNumTicksPocDiffOneminus1;
-			MinSpatialSegmentationIdc = minSpatialSegmentationIdc;
-			Reserved3 = reserved3;
-			MaxBytesPerPicDenom = maxBytesPerPicDenom;
-			MaxBitsPerMinCuDenom = maxBitsPerMinCuDenom;
-			Log2MaxMvLengthHorizontal = log2MaxMvLengthHorizontal;
-			Log2MaxMvLengthVertical = log2MaxMvLengthVertical;
-			PHrdParameters = pHrdParameters;
-		}
-
-
+		public StdVideoH265HrdParameters* PHrdParameters;
 	}
-
 }

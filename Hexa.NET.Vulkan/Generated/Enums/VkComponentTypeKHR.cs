@@ -47,5 +47,38 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Uint64Khr = unchecked((uint)10),
+
+		/// <remarks></remarks>
+		Float16Nv = Float16Khr,
+
+		/// <remarks></remarks>
+		Float32Nv = Float32Khr,
+
+		/// <remarks></remarks>
+		Float64Nv = Float64Khr,
+
+		/// <remarks></remarks>
+		Sint8Nv = Sint8Khr,
+
+		/// <remarks></remarks>
+		Sint16Nv = Sint16Khr,
+
+		/// <remarks></remarks>
+		Sint32Nv = Sint32Khr,
+
+		/// <remarks></remarks>
+		Sint64Nv = Sint64Khr,
+
+		/// <remarks></remarks>
+		Uint8Nv = Uint8Khr,
+
+		/// <remarks></remarks>
+		Uint16Nv = Uint16Khr,
+
+		/// <remarks></remarks>
+		Uint32Nv = Uint32Khr,
+
+		/// <remarks></remarks>
+		Uint64Nv = Uint64Khr,
 	}
 }

@@ -23,5 +23,23 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SparseAliasedBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		DeviceAddressCaptureReplayBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		DeviceAddressCaptureReplayBitExt = DeviceAddressCaptureReplayBit,
+
+		/// <remarks></remarks>
+		DeviceAddressCaptureReplayBitKhr = DeviceAddressCaptureReplayBit,
+
+		/// <remarks></remarks>
+		DescriptorBufferCaptureReplayBitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		VideoProfileIndependentBitKhr = unchecked((uint)64),
 	}
 }

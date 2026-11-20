@@ -17,5 +17,11 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		ResetBitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		EncodeRateControlBitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		EncodeQualityLevelBitKhr = unchecked((uint)4),
 	}
 }

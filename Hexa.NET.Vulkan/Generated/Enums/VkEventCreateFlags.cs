@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkEventCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		DeviceOnlyBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DeviceOnlyBitKhr = DeviceOnlyBit,
 	}
 }

@@ -17,5 +17,20 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		DeviceMaskBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		DeviceAddressBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		DeviceAddressCaptureReplayBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		DeviceMaskBitKhr = DeviceMaskBit,
+
+		/// <remarks></remarks>
+		DeviceAddressBitKhr = DeviceAddressBit,
+
+		/// <remarks></remarks>
+		DeviceAddressCaptureReplayBitKhr = DeviceAddressCaptureReplayBit,
 	}
 }

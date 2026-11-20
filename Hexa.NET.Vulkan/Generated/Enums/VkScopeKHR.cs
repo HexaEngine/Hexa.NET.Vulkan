@@ -26,5 +26,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		QueueFamilyKhr = unchecked((uint)5),
+
+		/// <remarks></remarks>
+		DeviceNv = DeviceKhr,
+
+		/// <remarks></remarks>
+		WorkgroupNv = WorkgroupKhr,
+
+		/// <remarks></remarks>
+		SubgroupNv = SubgroupKhr,
+
+		/// <remarks></remarks>
+		QueueFamilyNv = QueueFamilyKhr,
 	}
 }

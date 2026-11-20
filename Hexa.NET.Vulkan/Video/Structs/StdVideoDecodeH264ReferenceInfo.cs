@@ -15,40 +15,11 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH264ReferenceInfo
+	public unsafe struct StdVideoDecodeH264ReferenceInfo
 	{
 		public StdVideoDecodeH264ReferenceInfoFlags Flags;
 		public ushort FrameNum;
 		public ushort Reserved;
-		public int PicOrderCnt_0;
-		public int PicOrderCnt_1;
-
-		public unsafe StdVideoDecodeH264ReferenceInfo(StdVideoDecodeH264ReferenceInfoFlags flags = default, ushort frameNum = default, ushort reserved = default, int* picOrderCnt = default)
-		{
-			Flags = flags;
-			FrameNum = frameNum;
-			Reserved = reserved;
-			if (picOrderCnt != default(int*))
-			{
-				PicOrderCnt_0 = picOrderCnt[0];
-				PicOrderCnt_1 = picOrderCnt[1];
-			}
-		}
-
-		public unsafe StdVideoDecodeH264ReferenceInfo(StdVideoDecodeH264ReferenceInfoFlags flags = default, ushort frameNum = default, ushort reserved = default, Span<int> picOrderCnt = default)
-		{
-			Flags = flags;
-			FrameNum = frameNum;
-			Reserved = reserved;
-			if (picOrderCnt != default(Span<int>))
-			{
-				PicOrderCnt_0 = picOrderCnt[0];
-				PicOrderCnt_1 = picOrderCnt[1];
-			}
-		}
-
-
+		public fixed int PicOrderCnt[2];
 	}
-
 }

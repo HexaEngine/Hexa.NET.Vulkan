@@ -20,5 +20,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		CompactKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		SerializeKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		DeserializeKhr = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		CloneNv = CloneKhr,
+
+		/// <remarks></remarks>
+		CompactNv = CompactKhr,
 	}
 }

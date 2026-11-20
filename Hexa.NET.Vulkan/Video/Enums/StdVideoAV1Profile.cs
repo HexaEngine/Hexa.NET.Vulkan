@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1Profile : int
+	public enum StdVideoAV1Profile : uint
 	{
-		Main = unchecked(0),
-		High = unchecked(1),
-		Professional = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Main = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		High = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Professional = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

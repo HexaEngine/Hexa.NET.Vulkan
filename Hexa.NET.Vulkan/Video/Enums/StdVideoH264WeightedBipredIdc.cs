@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH264WeightedBipredIdc : int
+	public enum StdVideoH264WeightedBipredIdc : uint
 	{
-		Default = unchecked(0),
-		Explicit = unchecked(1),
-		Implicit = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Default = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Explicit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Implicit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

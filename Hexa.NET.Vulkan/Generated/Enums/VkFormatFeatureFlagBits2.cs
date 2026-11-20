@@ -92,5 +92,164 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Feature2SampledImageDepthComparisonBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Feature2SampledImageFilterCubicBit = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		Feature2HostImageTransferBit = unchecked((uint)70368744177664),
+
+		/// <remarks></remarks>
+		Feature2VideoDecodeOutputBitKhr = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Feature2VideoDecodeDpbBitKhr = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		Feature2AccelerationStructureVertexBufferBitKhr = unchecked((uint)536870912),
+
+		/// <remarks></remarks>
+		Feature2FragmentDensityMapBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Feature2FragmentShadingRateAttachmentBitKhr = unchecked((uint)1073741824),
+
+		/// <remarks></remarks>
+		Feature2Reserved44BitExt = unchecked((uint)17592186044416),
+
+		/// <remarks></remarks>
+		Feature2Reserved45BitExt = unchecked((uint)35184372088832),
+
+		/// <remarks></remarks>
+		Feature2HostImageTransferBitExt = Feature2HostImageTransferBit,
+
+		/// <remarks></remarks>
+		Feature2VideoEncodeInputBitKhr = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		Feature2VideoEncodeDpbBitKhr = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		Feature2SampledImageBitKhr = Feature2SampledImageBit,
+
+		/// <remarks></remarks>
+		Feature2StorageImageBitKhr = Feature2StorageImageBit,
+
+		/// <remarks></remarks>
+		Feature2StorageImageAtomicBitKhr = Feature2StorageImageAtomicBit,
+
+		/// <remarks></remarks>
+		Feature2UniformTexelBufferBitKhr = Feature2UniformTexelBufferBit,
+
+		/// <remarks></remarks>
+		Feature2StorageTexelBufferBitKhr = Feature2StorageTexelBufferBit,
+
+		/// <remarks></remarks>
+		Feature2StorageTexelBufferAtomicBitKhr = Feature2StorageTexelBufferAtomicBit,
+
+		/// <remarks></remarks>
+		Feature2VertexBufferBitKhr = Feature2VertexBufferBit,
+
+		/// <remarks></remarks>
+		Feature2ColorAttachmentBitKhr = Feature2ColorAttachmentBit,
+
+		/// <remarks></remarks>
+		Feature2ColorAttachmentBlendBitKhr = Feature2ColorAttachmentBlendBit,
+
+		/// <remarks></remarks>
+		Feature2DepthStencilAttachmentBitKhr = Feature2DepthStencilAttachmentBit,
+
+		/// <remarks></remarks>
+		Feature2BlitSrcBitKhr = Feature2BlitSrcBit,
+
+		/// <remarks></remarks>
+		Feature2BlitDstBitKhr = Feature2BlitDstBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageFilterLinearBitKhr = Feature2SampledImageFilterLinearBit,
+
+		/// <remarks></remarks>
+		Feature2TransferSrcBitKhr = Feature2TransferSrcBit,
+
+		/// <remarks></remarks>
+		Feature2TransferDstBitKhr = Feature2TransferDstBit,
+
+		/// <remarks></remarks>
+		Feature2MidpointChromaSamplesBitKhr = Feature2MidpointChromaSamplesBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageYcbcrConversionLinearFilterBitKhr = Feature2SampledImageYcbcrConversionLinearFilterBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageYcbcrConversionSeparateReconstructionFilterBitKhr = Feature2SampledImageYcbcrConversionSeparateReconstructionFilterBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageYcbcrConversionChromaReconstructionExplicitBitKhr = Feature2SampledImageYcbcrConversionChromaReconstructionExplicitBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageYcbcrConversionChromaReconstructionExplicitForceableBitKhr = Feature2SampledImageYcbcrConversionChromaReconstructionExplicitForceableBit,
+
+		/// <remarks></remarks>
+		Feature2DisjointBitKhr = Feature2DisjointBit,
+
+		/// <remarks></remarks>
+		Feature2CositedChromaSamplesBitKhr = Feature2CositedChromaSamplesBit,
+
+		/// <remarks></remarks>
+		Feature2StorageReadWithoutFormatBitKhr = Feature2StorageReadWithoutFormatBit,
+
+		/// <remarks></remarks>
+		Feature2StorageWriteWithoutFormatBitKhr = Feature2StorageWriteWithoutFormatBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageDepthComparisonBitKhr = Feature2SampledImageDepthComparisonBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageFilterMinmaxBitKhr = Feature2SampledImageFilterMinmaxBit,
+
+		/// <remarks></remarks>
+		Feature2SampledImageFilterCubicBitExt = Feature2SampledImageFilterCubicBit,
+
+		/// <remarks></remarks>
+		Feature2Reserved51BitExt = unchecked((uint)2251799813685248),
+
+		/// <remarks></remarks>
+		Feature2LinearColorAttachmentBitNv = unchecked((uint)274877906944),
+
+		/// <remarks></remarks>
+		Feature2WeightImageBitQcom = unchecked((uint)17179869184),
+
+		/// <remarks></remarks>
+		Feature2WeightSampledImageBitQcom = unchecked((uint)34359738368),
+
+		/// <remarks></remarks>
+		Feature2BlockMatchingBitQcom = unchecked((uint)68719476736),
+
+		/// <remarks></remarks>
+		Feature2BoxFilterSampledBitQcom = unchecked((uint)137438953472),
+
+		/// <remarks></remarks>
+		Feature2Reserved47BitArm = unchecked((uint)140737488355328),
+
+		/// <remarks></remarks>
+		Feature2Reserved39BitExt = unchecked((uint)549755813888),
+
+		/// <remarks></remarks>
+		Feature2OpticalFlowImageBitNv = unchecked((uint)1099511627776),
+
+		/// <remarks></remarks>
+		Feature2OpticalFlowVectorBitNv = unchecked((uint)2199023255552),
+
+		/// <remarks></remarks>
+		Feature2OpticalFlowCostBitNv = unchecked((uint)4398046511104),
+
+		/// <remarks></remarks>
+		Feature2Reserved48BitExt = unchecked((uint)281474976710656),
+
+		/// <remarks></remarks>
+		Feature2VideoEncodeQuantizationDeltaMapBitKhr = unchecked((uint)562949953421312),
+
+		/// <remarks></remarks>
+		Feature2VideoEncodeEmphasisMapBitKhr = unchecked((uint)1125899906842624),
 	}
 }

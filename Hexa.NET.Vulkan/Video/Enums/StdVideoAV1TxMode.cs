@@ -12,13 +12,18 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoAV1TxMode : int
+	public enum StdVideoAV1TxMode : uint
 	{
-		Only4X4 = unchecked(0),
-		Largest = unchecked(1),
-		Select = unchecked(2),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Only4X4 = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Largest = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Select = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

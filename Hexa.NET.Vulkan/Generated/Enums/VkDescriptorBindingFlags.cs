@@ -26,5 +26,20 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		VariableDescriptorCountBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		UpdateAfterBindBitExt = UpdateAfterBindBit,
+
+		/// <remarks></remarks>
+		UpdateUnusedWhilePendingBitExt = UpdateUnusedWhilePendingBit,
+
+		/// <remarks></remarks>
+		PartiallyBoundBitExt = PartiallyBoundBit,
+
+		/// <remarks></remarks>
+		VariableDescriptorCountBitExt = VariableDescriptorCountBit,
+
+		/// <remarks></remarks>
+		Reserved4BitQcom = unchecked((uint)16),
 	}
 }

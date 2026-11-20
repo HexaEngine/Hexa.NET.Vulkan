@@ -15,5 +15,7 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkVideoSessionParametersCreateFlagsKHR : uint
 	{
+		/// <remarks></remarks>
+		QuantizationMapCompatibleBitKhr = unchecked((uint)1),
 	}
 }

@@ -8,72 +8,15 @@
 // ------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	public unsafe partial class Vulkan
+	public static unsafe partial class Vulkan
 	{
-		public const int VULKAN_VIDEO_CODECS_COMMON_H_ = 1;
-
-		public const int vulkan_video_codecs_common = 1;
-
-		public const int VULKAN_VIDEO_CODEC_AV1STD_H_ = 1;
-
-		public const int vulkan_video_codec_av1std = 1;
-
-		public const int STD_VIDEO_AV1_NUM_REF_FRAMES = 8;
-
-		public const int STD_VIDEO_AV1_REFS_PER_FRAME = 7;
-
-		public const int STD_VIDEO_AV1_TOTAL_REFS_PER_FRAME = 8;
-
-		public const int STD_VIDEO_AV1_MAX_TILE_COLS = 64;
-
-		public const int STD_VIDEO_AV1_MAX_TILE_ROWS = 64;
-
-		public const int STD_VIDEO_AV1_MAX_SEGMENTS = 8;
-
-		public const int STD_VIDEO_AV1_SEG_LVL_MAX = 8;
-
-		public const int STD_VIDEO_AV1_PRIMARY_REF_NONE = 7;
-
-		public const int STD_VIDEO_AV1_SELECT_INTEGER_MV = 2;
-
-		public const int STD_VIDEO_AV1_SELECT_SCREEN_CONTENT_TOOLS = 2;
-
-		public const int STD_VIDEO_AV1_SKIP_MODE_FRAMES = 2;
-
-		public const int STD_VIDEO_AV1_MAX_LOOP_FILTER_STRENGTHS = 4;
-
-		public const int STD_VIDEO_AV1_LOOP_FILTER_ADJUSTMENTS = 2;
-
-		public const int STD_VIDEO_AV1_MAX_CDEF_FILTER_STRENGTHS = 8;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_PLANES = 3;
-
-		public const int STD_VIDEO_AV1_GLOBAL_MOTION_PARAMS = 6;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_Y_POINTS = 14;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_CB_POINTS = 10;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_CR_POINTS = 10;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_POS_LUMA = 24;
-
-		public const int STD_VIDEO_AV1_MAX_NUM_POS_CHROMA = 25;
-
-		public const int VULKAN_VIDEO_CODEC_AV1STD_DECODE_H_ = 1;
-
-		public const int vulkan_video_codec_av1std_decode = 1;
-
-		public const string VK_STD_VULKAN_VIDEO_CODEC_AV1_DECODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_av1_decode";
-
-		public const int VULKAN_VIDEO_CODEC_H264STD_H_ = 1;
-
-		public const int vulkan_video_codec_h264std = 1;
-
 		public const int STD_VIDEO_H264_CPB_CNT_LIST_SIZE = 32;
 
 		public const int STD_VIDEO_H264_SCALING_LIST_4X4_NUM_LISTS = 6;
@@ -90,23 +33,11 @@ namespace Hexa.NET.Vulkan
 
 		public const int STD_VIDEO_H264_NO_REFERENCE_PICTURE = 0xFF;
 
-		public const int VULKAN_VIDEO_CODEC_H264STD_DECODE_H_ = 1;
-
-		public const int vulkan_video_codec_h264std_decode = 1;
-
 		public const string VK_STD_VULKAN_VIDEO_CODEC_H264_DECODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h264_decode";
 
 		public const int STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE = 2;
 
-		public const int VULKAN_VIDEO_CODEC_H264STD_ENCODE_H_ = 1;
-
-		public const int vulkan_video_codec_h264std_encode = 1;
-
 		public const string VK_STD_VULKAN_VIDEO_CODEC_H264_ENCODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h264_encode";
-
-		public const int VULKAN_VIDEO_CODEC_H265STD_H_ = 1;
-
-		public const int vulkan_video_codec_h265std = 1;
 
 		public const int STD_VIDEO_H265_CPB_CNT_LIST_SIZE = 32;
 
@@ -154,19 +85,57 @@ namespace Hexa.NET.Vulkan
 
 		public const int STD_VIDEO_H265_NO_REFERENCE_PICTURE = 0xFF;
 
-		public const int VULKAN_VIDEO_CODEC_H265STD_DECODE_H_ = 1;
-
-		public const int vulkan_video_codec_h265std_decode = 1;
-
 		public const string VK_STD_VULKAN_VIDEO_CODEC_H265_DECODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h265_decode";
 
 		public const int STD_VIDEO_DECODE_H265_REF_PIC_SET_LIST_SIZE = 8;
 
-		public const int VULKAN_VIDEO_CODEC_H265STD_ENCODE_H_ = 1;
-
-		public const int vulkan_video_codec_h265std_encode = 1;
-
 		public const string VK_STD_VULKAN_VIDEO_CODEC_H265_ENCODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_h265_encode";
+
+		public const int STD_VIDEO_AV1_NUM_REF_FRAMES = 8;
+
+		public const int STD_VIDEO_AV1_REFS_PER_FRAME = 7;
+
+		public const int STD_VIDEO_AV1_TOTAL_REFS_PER_FRAME = 8;
+
+		public const int STD_VIDEO_AV1_MAX_TILE_COLS = 64;
+
+		public const int STD_VIDEO_AV1_MAX_TILE_ROWS = 64;
+
+		public const int STD_VIDEO_AV1_MAX_SEGMENTS = 8;
+
+		public const int STD_VIDEO_AV1_SEG_LVL_MAX = 8;
+
+		public const int STD_VIDEO_AV1_PRIMARY_REF_NONE = 7;
+
+		public const int STD_VIDEO_AV1_SELECT_INTEGER_MV = 2;
+
+		public const int STD_VIDEO_AV1_SELECT_SCREEN_CONTENT_TOOLS = 2;
+
+		public const int STD_VIDEO_AV1_SKIP_MODE_FRAMES = 2;
+
+		public const int STD_VIDEO_AV1_MAX_LOOP_FILTER_STRENGTHS = 4;
+
+		public const int STD_VIDEO_AV1_LOOP_FILTER_ADJUSTMENTS = 2;
+
+		public const int STD_VIDEO_AV1_MAX_CDEF_FILTER_STRENGTHS = 8;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_PLANES = 3;
+
+		public const int STD_VIDEO_AV1_GLOBAL_MOTION_PARAMS = 6;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_Y_POINTS = 14;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_CB_POINTS = 10;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_CR_POINTS = 10;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_POS_LUMA = 24;
+
+		public const int STD_VIDEO_AV1_MAX_NUM_POS_CHROMA = 25;
+
+		public const string VK_STD_VULKAN_VIDEO_CODEC_AV1_DECODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_av1_decode";
+
+		public const string VK_STD_VULKAN_VIDEO_CODEC_AV1_ENCODE_EXTENSION_NAME = "VK_STD_vulkan_video_codec_av1_encode";
 
 	}
 }

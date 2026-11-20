@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		InsufficientBitstreamBufferRangeDetectionBitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		QuantizationDeltaMapBitKhr = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		EmphasisMapBitKhr = unchecked((uint)8),
 	}
 }

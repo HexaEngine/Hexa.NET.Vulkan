@@ -41,5 +41,98 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Usage2IndirectBufferBit = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		Usage2ShaderDeviceAddressBit = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		Usage2ExecutionGraphScratchBitAmdx = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Usage2Reserved28BitKhr = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		Usage2Reserved27BitQcom = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		Usage2TransferSrcBitKhr = Usage2TransferSrcBit,
+
+		/// <remarks></remarks>
+		Usage2TransferDstBitKhr = Usage2TransferDstBit,
+
+		/// <remarks></remarks>
+		Usage2UniformTexelBufferBitKhr = Usage2UniformTexelBufferBit,
+
+		/// <remarks></remarks>
+		Usage2StorageTexelBufferBitKhr = Usage2StorageTexelBufferBit,
+
+		/// <remarks></remarks>
+		Usage2UniformBufferBitKhr = Usage2UniformBufferBit,
+
+		/// <remarks></remarks>
+		Usage2StorageBufferBitKhr = Usage2StorageBufferBit,
+
+		/// <remarks></remarks>
+		Usage2IndexBufferBitKhr = Usage2IndexBufferBit,
+
+		/// <remarks></remarks>
+		Usage2VertexBufferBitKhr = Usage2VertexBufferBit,
+
+		/// <remarks></remarks>
+		Usage2IndirectBufferBitKhr = Usage2IndirectBufferBit,
+
+		/// <remarks></remarks>
+		Usage2ConditionalRenderingBitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		Usage2ShaderBindingTableBitKhr = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		Usage2RayTracingBitNv = Usage2ShaderBindingTableBitKhr,
+
+		/// <remarks></remarks>
+		Usage2TransformFeedbackBufferBitExt = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		Usage2TransformFeedbackCounterBufferBitExt = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		Usage2VideoDecodeSrcBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		Usage2VideoDecodeDstBitKhr = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		Usage2VideoEncodeDstBitKhr = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		Usage2VideoEncodeSrcBitKhr = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		Usage2ShaderDeviceAddressBitKhr = Usage2ShaderDeviceAddressBit,
+
+		/// <remarks></remarks>
+		Usage2AccelerationStructureBuildInputReadOnlyBitKhr = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		Usage2AccelerationStructureStorageBitKhr = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		Usage2SamplerDescriptorBufferBitExt = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		Usage2ResourceDescriptorBufferBitExt = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		Usage2PushDescriptorsDescriptorBufferBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		Usage2MicromapBuildInputReadOnlyBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		Usage2MicromapStorageBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Usage2PreprocessBufferBitExt = unchecked((uint)2147483648),
 	}
 }

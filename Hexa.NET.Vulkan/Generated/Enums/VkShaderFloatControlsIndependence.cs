@@ -23,5 +23,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		None = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Independence32BitOnlyKhr = Independence32BitOnly,
+
+		/// <remarks></remarks>
+		AllKhr = All,
+
+		/// <remarks></remarks>
+		NoneKhr = None,
 	}
 }

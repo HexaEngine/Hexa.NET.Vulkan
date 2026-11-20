@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRRayTracingPipeline
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 7);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 7);
 			funcTable.Load(0, "vkCmdTraceRaysKHR");
 			funcTable.Load(1, "vkGetRayTracingShaderGroupHandlesKHR");
 			funcTable.Load(2, "vkGetRayTracingCaptureReplayShaderGroupHandlesKHR");

@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264SliceHeader
+	public unsafe struct StdVideoEncodeH264SliceHeader
 	{
 		public StdVideoEncodeH264SliceHeaderFlags Flags;
 		public uint FirstMbInSlice;
@@ -27,23 +26,6 @@ namespace Hexa.NET.Vulkan
 		public byte Reserved1;
 		public StdVideoH264CabacInitIdc CabacInitIdc;
 		public StdVideoH264DisableDeblockingFilterIdc DisableDeblockingFilterIdc;
-		public unsafe StdVideoEncodeH264WeightTable* PWeightTable;
-
-		public unsafe StdVideoEncodeH264SliceHeader(StdVideoEncodeH264SliceHeaderFlags flags = default, uint firstMbInSlice = default, StdVideoH264SliceType sliceType = default, sbyte sliceAlphac0Offsetdiv2 = default, sbyte sliceBetaOffsetdiv2 = default, sbyte sliceQpDelta = default, byte reserved1 = default, StdVideoH264CabacInitIdc cabacInitIdc = default, StdVideoH264DisableDeblockingFilterIdc disableDeblockingFilterIdc = default, StdVideoEncodeH264WeightTable* pWeightTable = default)
-		{
-			Flags = flags;
-			FirstMbInSlice = firstMbInSlice;
-			SliceType = sliceType;
-			SliceAlphaC0OffsetDiv2 = sliceAlphac0Offsetdiv2;
-			SliceBetaOffsetDiv2 = sliceBetaOffsetdiv2;
-			SliceQpDelta = sliceQpDelta;
-			Reserved1 = reserved1;
-			CabacInitIdc = cabacInitIdc;
-			DisableDeblockingFilterIdc = disableDeblockingFilterIdc;
-			PWeightTable = pWeightTable;
-		}
-
-
+		public StdVideoEncodeH264WeightTable* PWeightTable;
 	}
-
 }

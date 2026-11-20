@@ -23,5 +23,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		BasePipelineAccelerationBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ValidBitExt = ValidBit,
+
+		/// <remarks></remarks>
+		ApplicationPipelineCacheHitBitExt = ApplicationPipelineCacheHitBit,
+
+		/// <remarks></remarks>
+		BasePipelineAccelerationBitExt = BasePipelineAccelerationBit,
 	}
 }

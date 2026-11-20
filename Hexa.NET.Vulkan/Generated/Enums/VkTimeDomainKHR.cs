@@ -26,5 +26,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		QueryPerformanceCounterKhr = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		DeviceExt = DeviceKhr,
+
+		/// <remarks></remarks>
+		ClockMonotonicExt = ClockMonotonicKhr,
+
+		/// <remarks></remarks>
+		ClockMonotonicRawExt = ClockMonotonicRawKhr,
+
+		/// <remarks></remarks>
+		QueryPerformanceCounterExt = QueryPerformanceCounterKhr,
 	}
 }

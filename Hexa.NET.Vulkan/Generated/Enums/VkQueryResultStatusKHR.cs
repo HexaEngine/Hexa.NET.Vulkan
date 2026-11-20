@@ -23,5 +23,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		CompleteKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		InsufficientBitstreamBufferRangeKhr = unchecked((uint)-1000299000),
 	}
 }

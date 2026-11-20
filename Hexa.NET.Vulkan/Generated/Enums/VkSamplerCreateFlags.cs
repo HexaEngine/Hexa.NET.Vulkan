@@ -15,5 +15,19 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkSamplerCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		SubsampledBitExt = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		SubsampledCoarseReconstructionBitExt = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		DescriptorBufferCaptureReplayBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		NonSeamlessCubeMapBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ImageProcessingBitQcom = unchecked((uint)16),
 	}
 }

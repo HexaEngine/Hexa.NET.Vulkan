@@ -65,5 +65,59 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		MemoryWriteBit = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		None = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		TransformFeedbackWriteBitExt = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		TransformFeedbackCounterReadBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		TransformFeedbackCounterWriteBitExt = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		ConditionalRenderingReadBitExt = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		ColorAttachmentReadNoncoherentBitExt = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		AccelerationStructureReadBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		AccelerationStructureWriteBitKhr = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		ShadingRateImageReadBitNv = FragmentShadingRateAttachmentReadBitKhr,
+
+		/// <remarks></remarks>
+		AccelerationStructureReadBitNv = AccelerationStructureReadBitKhr,
+
+		/// <remarks></remarks>
+		AccelerationStructureWriteBitNv = AccelerationStructureWriteBitKhr,
+
+		/// <remarks></remarks>
+		FragmentDensityMapReadBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentReadBitKhr = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		CommandPreprocessReadBitNv = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		CommandPreprocessWriteBitNv = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		NoneKhr = None,
+
+		/// <remarks></remarks>
+		CommandPreprocessReadBitExt = CommandPreprocessReadBitNv,
+
+		/// <remarks></remarks>
+		CommandPreprocessWriteBitExt = CommandPreprocessWriteBitNv,
 	}
 }

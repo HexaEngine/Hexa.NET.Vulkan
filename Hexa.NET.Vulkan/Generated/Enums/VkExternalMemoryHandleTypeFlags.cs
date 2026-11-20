@@ -35,5 +35,59 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		D3D12ResourceBit = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		OpaqueFdBitKhr = OpaqueFdBit,
+
+		/// <remarks></remarks>
+		OpaqueWin32BitKhr = OpaqueWin32Bit,
+
+		/// <remarks></remarks>
+		OpaqueWin32KmtBitKhr = OpaqueWin32KmtBit,
+
+		/// <remarks></remarks>
+		D3D11TextureBitKhr = D3D11TextureBit,
+
+		/// <remarks></remarks>
+		D3D11TextureKmtBitKhr = D3D11TextureKmtBit,
+
+		/// <remarks></remarks>
+		D3D12HeapBitKhr = D3D12HeapBit,
+
+		/// <remarks></remarks>
+		D3D12ResourceBitKhr = D3D12ResourceBit,
+
+		/// <remarks></remarks>
+		DmaBufBitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferBitAndroid = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		HostAllocationBitExt = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		HostMappedForeignMemoryBitExt = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		ZirconVmoBitFuchsia = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		RdmaAddressBitNv = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		SciBufBitNv = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		ScreenBufferBitQnx = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		Type590BitHuawei = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		Type603BitExt = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		Type603Bit2Ext = unchecked((uint)131072),
 	}
 }

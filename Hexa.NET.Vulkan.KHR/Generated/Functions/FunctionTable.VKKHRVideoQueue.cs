@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRVideoQueue
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 12);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 12);
 			funcTable.Load(0, "vkGetPhysicalDeviceVideoCapabilitiesKHR");
 			funcTable.Load(1, "vkGetPhysicalDeviceVideoFormatPropertiesKHR");
 			funcTable.Load(2, "vkCreateVideoSessionKHR");

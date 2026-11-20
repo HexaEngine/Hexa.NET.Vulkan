@@ -15,47 +15,88 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264SpsFlags
+	public unsafe struct StdVideoH264SpsFlags
 	{
-		public uint ConstraintSet0Flag;
-		public uint ConstraintSet1Flag;
-		public uint ConstraintSet2Flag;
-		public uint ConstraintSet3Flag;
-		public uint ConstraintSet4Flag;
-		public uint ConstraintSet5Flag;
-		public uint Direct8x8InferenceFlag;
-		public uint MbAdaptiveFrameFieldFlag;
-		public uint FrameMbsOnlyFlag;
-		public uint DeltaPicOrderAlwaysZeroFlag;
-		public uint SeparateColourPlaneFlag;
-		public uint GapsInFrameNumValueAllowedFlag;
-		public uint QpprimeYZeroTransformBypassFlag;
-		public uint FrameCroppingFlag;
-		public uint SeqScalingMatrixPresentFlag;
-		public uint VuiParametersPresentFlag;
-
-		public unsafe StdVideoH264SpsFlags(uint constraintset0Flag = default, uint constraintset1Flag = default, uint constraintset2Flag = default, uint constraintset3Flag = default, uint constraintset4Flag = default, uint constraintset5Flag = default, uint direct8x8InferenceFlag = default, uint mbAdaptiveFrameFieldFlag = default, uint frameMbsOnlyFlag = default, uint deltaPicOrderAlwaysZeroFlag = default, uint separateColourPlaneFlag = default, uint gapsInFrameNumValueAllowedFlag = default, uint qpprimeYZeroTransformBypassFlag = default, uint frameCroppingFlag = default, uint seqScalingMatrixPresentFlag = default, uint vuiParametersPresentFlag = default)
+		private uint _bitfield0;
+		public uint ConstraintSet0Flag
 		{
-			ConstraintSet0Flag = constraintset0Flag;
-			ConstraintSet1Flag = constraintset1Flag;
-			ConstraintSet2Flag = constraintset2Flag;
-			ConstraintSet3Flag = constraintset3Flag;
-			ConstraintSet4Flag = constraintset4Flag;
-			ConstraintSet5Flag = constraintset5Flag;
-			Direct8x8InferenceFlag = direct8x8InferenceFlag;
-			MbAdaptiveFrameFieldFlag = mbAdaptiveFrameFieldFlag;
-			FrameMbsOnlyFlag = frameMbsOnlyFlag;
-			DeltaPicOrderAlwaysZeroFlag = deltaPicOrderAlwaysZeroFlag;
-			SeparateColourPlaneFlag = separateColourPlaneFlag;
-			GapsInFrameNumValueAllowedFlag = gapsInFrameNumValueAllowedFlag;
-			QpprimeYZeroTransformBypassFlag = qpprimeYZeroTransformBypassFlag;
-			FrameCroppingFlag = frameCroppingFlag;
-			SeqScalingMatrixPresentFlag = seqScalingMatrixPresentFlag;
-			VuiParametersPresentFlag = vuiParametersPresentFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint ConstraintSet1Flag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint ConstraintSet2Flag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint ConstraintSet3Flag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint ConstraintSet4Flag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint ConstraintSet5Flag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint Direct8x8InferenceFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint MbAdaptiveFrameFieldFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint FrameMbsOnlyFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint DeltaPicOrderAlwaysZeroFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint SeparateColourPlaneFlag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint GapsInFrameNumValueAllowedFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint QpprimeYZeroTransformBypassFlag
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint FrameCroppingFlag
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint SeqScalingMatrixPresentFlag
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint VuiParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
 	}
-
 }

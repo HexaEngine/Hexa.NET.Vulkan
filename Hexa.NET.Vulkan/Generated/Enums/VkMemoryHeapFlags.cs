@@ -17,5 +17,14 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		DeviceLocalBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		MultiInstanceBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		SeuSafeBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		MultiInstanceBitKhr = MultiInstanceBit,
 	}
 }

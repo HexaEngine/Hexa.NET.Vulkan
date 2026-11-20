@@ -189,22 +189,22 @@ namespace Hexa.NET.Vulkan.KHR
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		internal VkBool32 GetPhysicalDeviceXcbPresentationSupportKHRNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* connection, xcb_visualid_t visualId)
+		internal VkBool32 GetPhysicalDeviceXcbPresentationSupportKHRNative(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* connection, nint visualId)
 		{
 			#if NET5_0_OR_GREATER
-			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, xcb_visualid_t, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, connection, visualId);
+			return ((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint*, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, connection, visualId);
 			#else
-			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, xcb_visualid_t, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)connection, visualId);
+			return (VkBool32)((delegate* unmanaged[Cdecl]<VkPhysicalDevice, uint, nint, nint, VkBool32>)funcTable[1])(physicalDevice, queueFamilyIndex, (nint)connection, visualId);
 			#endif
 		}
 
-		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* connection, xcb_visualid_t visualId)
+		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, nint* connection, nint visualId)
 		{
 			VkBool32 ret = GetPhysicalDeviceXcbPresentationSupportKHRNative(physicalDevice, queueFamilyIndex, connection, visualId);
 			return ret;
 		}
 
-		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> connection, xcb_visualid_t visualId)
+		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, Span<nint> connection, nint visualId)
 		{
 			fixed (nint* pconnection0 = connection)
 			{
@@ -213,7 +213,7 @@ namespace Hexa.NET.Vulkan.KHR
 			}
 		}
 
-		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint connection, xcb_visualid_t visualId)
+		public VkBool32 GetPhysicalDeviceXcbPresentationSupportKHR(VkPhysicalDevice physicalDevice, uint queueFamilyIndex, ref nint connection, nint visualId)
 		{
 			fixed (nint* pconnection0 = &connection)
 			{

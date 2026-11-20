@@ -12,12 +12,15 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoDecodeH264FieldOrderCount : int
+	public enum StdVideoDecodeH264FieldOrderCount : uint
 	{
-		Top = unchecked(0),
-		Bottom = unchecked(1),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Top = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Bottom = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

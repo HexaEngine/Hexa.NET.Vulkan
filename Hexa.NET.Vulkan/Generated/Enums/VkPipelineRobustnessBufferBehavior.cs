@@ -26,5 +26,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		RobustBufferAccess2 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		DeviceDefaultExt = DeviceDefault,
+
+		/// <remarks></remarks>
+		DisabledExt = Disabled,
+
+		/// <remarks></remarks>
+		RobustBufferAccessExt = RobustBufferAccess,
+
+		/// <remarks></remarks>
+		RobustBufferAccess2Ext = RobustBufferAccess2,
 	}
 }

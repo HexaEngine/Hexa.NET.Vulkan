@@ -15,23 +15,28 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH264ReferenceInfoFlags
+	public unsafe struct StdVideoDecodeH264ReferenceInfoFlags
 	{
-		public uint TopFieldFlag;
-		public uint BottomFieldFlag;
-		public uint UsedForLongTermReference;
-		public uint IsNonExisting;
-
-		public unsafe StdVideoDecodeH264ReferenceInfoFlags(uint topFieldFlag = default, uint bottomFieldFlag = default, uint usedForLongTermReference = default, uint isNonExisting = default)
+		private uint _bitfield0;
+		public uint TopFieldFlag
 		{
-			TopFieldFlag = topFieldFlag;
-			BottomFieldFlag = bottomFieldFlag;
-			UsedForLongTermReference = usedForLongTermReference;
-			IsNonExisting = isNonExisting;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint BottomFieldFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint UsedForLongTermReference
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint IsNonExisting
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
 	}
-
 }

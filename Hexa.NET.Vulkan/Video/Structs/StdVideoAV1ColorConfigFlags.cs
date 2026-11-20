@@ -15,25 +15,33 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1ColorConfigFlags
+	public unsafe struct StdVideoAV1ColorConfigFlags
 	{
-		public uint MonoChrome;
-		public uint ColorRange;
-		public uint SeparateUvDeltaQ;
-		public uint ColorDescriptionPresentFlag;
-		public uint Reserved;
-
-		public unsafe StdVideoAV1ColorConfigFlags(uint monoChrome = default, uint colorRange = default, uint separateUvDeltaQ = default, uint colorDescriptionPresentFlag = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint MonoChrome
 		{
-			MonoChrome = monoChrome;
-			ColorRange = colorRange;
-			SeparateUvDeltaQ = separateUvDeltaQ;
-			ColorDescriptionPresentFlag = colorDescriptionPresentFlag;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint ColorRange
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint SeparateUvDeltaQ
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint ColorDescriptionPresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 4) & 268435455;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(268435455 << 4)) | ((value & 268435455) << 4));
+		}
 	}
-
 }

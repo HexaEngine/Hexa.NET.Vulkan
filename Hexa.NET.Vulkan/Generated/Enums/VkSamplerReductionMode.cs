@@ -23,5 +23,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Max = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		WeightedAverageExt = WeightedAverage,
+
+		/// <remarks></remarks>
+		MinExt = Min,
+
+		/// <remarks></remarks>
+		MaxExt = Max,
+
+		/// <remarks></remarks>
+		WeightedAverageRangeclampQcom = unchecked((uint)1000521000),
 	}
 }

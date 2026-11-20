@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkDeviceQueueCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Reserved1BitQcom = unchecked((uint)2),
 	}
 }

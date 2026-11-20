@@ -17,5 +17,23 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		ProtectedContentBitKhr = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		AllowEncodeParameterOptimizationsBitKhr = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		InlineQueriesBitKhr = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		AllowEncodeQuantizationDeltaMapBitKhr = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		AllowEncodeEmphasisMapBitKhr = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		Reserved5BitKhr = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Reserved6BitKhr = unchecked((uint)64),
 	}
 }

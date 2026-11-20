@@ -15,29 +15,43 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265HrdFlags
+	public unsafe struct StdVideoH265HrdFlags
 	{
-		public uint NalHrdParametersPresentFlag;
-		public uint VclHrdParametersPresentFlag;
-		public uint SubPicHrdParamsPresentFlag;
-		public uint SubPicCpbParamsInPicTimingSeiFlag;
-		public uint FixedPicRateGeneralFlag;
-		public uint FixedPicRateWithinCvsFlag;
-		public uint LowDelayHrdFlag;
-
-		public unsafe StdVideoH265HrdFlags(uint nalHrdParametersPresentFlag = default, uint vclHrdParametersPresentFlag = default, uint subPicHrdParamsPresentFlag = default, uint subPicCpbParamsInPicTimingSeiFlag = default, uint fixedPicRateGeneralFlag = default, uint fixedPicRateWithinCvsFlag = default, uint lowDelayHrdFlag = default)
+		private uint _bitfield0;
+		public uint NalHrdParametersPresentFlag
 		{
-			NalHrdParametersPresentFlag = nalHrdParametersPresentFlag;
-			VclHrdParametersPresentFlag = vclHrdParametersPresentFlag;
-			SubPicHrdParamsPresentFlag = subPicHrdParamsPresentFlag;
-			SubPicCpbParamsInPicTimingSeiFlag = subPicCpbParamsInPicTimingSeiFlag;
-			FixedPicRateGeneralFlag = fixedPicRateGeneralFlag;
-			FixedPicRateWithinCvsFlag = fixedPicRateWithinCvsFlag;
-			LowDelayHrdFlag = lowDelayHrdFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint VclHrdParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint SubPicHrdParamsPresentFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint SubPicCpbParamsInPicTimingSeiFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint FixedPicRateGeneralFlag
+		{
+		    get => (_bitfield0 >> 4) & 255;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(255 << 4)) | ((value & 255) << 4));
+		}
+		public uint FixedPicRateWithinCvsFlag
+		{
+		    get => (_bitfield0 >> 12) & 255;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(255 << 12)) | ((value & 255) << 12));
+		}
+		public uint LowDelayHrdFlag
+		{
+		    get => (_bitfield0 >> 20) & 255;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(255 << 20)) | ((value & 255) << 20));
+		}
 	}
-
 }

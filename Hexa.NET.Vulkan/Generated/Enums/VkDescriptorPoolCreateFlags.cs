@@ -17,5 +17,23 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		FreeDescriptorSetBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		UpdateAfterBindBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		UpdateAfterBindBitExt = UpdateAfterBindBit,
+
+		/// <remarks></remarks>
+		HostOnlyBitValve = HostOnlyBitExt,
+
+		/// <remarks></remarks>
+		HostOnlyBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		AllowOverallocationSetsBitNv = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		AllowOverallocationPoolsBitNv = unchecked((uint)16),
 	}
 }

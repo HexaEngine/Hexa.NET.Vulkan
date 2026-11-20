@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264PictureInfo
+	public unsafe struct StdVideoEncodeH264PictureInfo
 	{
 		public StdVideoEncodeH264PictureInfoFlags Flags;
 		public byte SeqParameterSetId;
@@ -26,50 +25,7 @@ namespace Hexa.NET.Vulkan
 		public uint FrameNum;
 		public int PicOrderCnt;
 		public byte TemporalId;
-		public byte Reserved1_0;
-		public byte Reserved1_1;
-		public byte Reserved1_2;
-		public unsafe StdVideoEncodeH264ReferenceListsInfo* PRefLists;
-
-		public unsafe StdVideoEncodeH264PictureInfo(StdVideoEncodeH264PictureInfoFlags flags = default, byte seqParameterSetId = default, byte picParameterSetId = default, ushort idrPicId = default, StdVideoH264PictureType primaryPicType = default, uint frameNum = default, int picOrderCnt = default, byte temporalId = default, byte* reserved1 = default, StdVideoEncodeH264ReferenceListsInfo* pRefLists = default)
-		{
-			Flags = flags;
-			SeqParameterSetId = seqParameterSetId;
-			PicParameterSetId = picParameterSetId;
-			IdrPicId = idrPicId;
-			PrimaryPicType = primaryPicType;
-			FrameNum = frameNum;
-			PicOrderCnt = picOrderCnt;
-			TemporalId = temporalId;
-			if (reserved1 != default(byte*))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-			}
-			PRefLists = pRefLists;
-		}
-
-		public unsafe StdVideoEncodeH264PictureInfo(StdVideoEncodeH264PictureInfoFlags flags = default, byte seqParameterSetId = default, byte picParameterSetId = default, ushort idrPicId = default, StdVideoH264PictureType primaryPicType = default, uint frameNum = default, int picOrderCnt = default, byte temporalId = default, Span<byte> reserved1 = default, StdVideoEncodeH264ReferenceListsInfo* pRefLists = default)
-		{
-			Flags = flags;
-			SeqParameterSetId = seqParameterSetId;
-			PicParameterSetId = picParameterSetId;
-			IdrPicId = idrPicId;
-			PrimaryPicType = primaryPicType;
-			FrameNum = frameNum;
-			PicOrderCnt = picOrderCnt;
-			TemporalId = temporalId;
-			if (reserved1 != default(Span<byte>))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-			}
-			PRefLists = pRefLists;
-		}
-
-
+		public fixed byte Reserved1[3];
+		public StdVideoEncodeH264ReferenceListsInfo* PRefLists;
 	}
-
 }

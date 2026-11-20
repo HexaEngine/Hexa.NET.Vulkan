@@ -15,23 +15,11 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoEncodeH264WeightTableFlags
+	public unsafe struct StdVideoEncodeH264WeightTableFlags
 	{
 		public uint LumaWeightL0Flag;
 		public uint ChromaWeightL0Flag;
 		public uint LumaWeightL1Flag;
 		public uint ChromaWeightL1Flag;
-
-		public unsafe StdVideoEncodeH264WeightTableFlags(uint lumaWeightl0Flag = default, uint chromaWeightl0Flag = default, uint lumaWeightl1Flag = default, uint chromaWeightl1Flag = default)
-		{
-			LumaWeightL0Flag = lumaWeightl0Flag;
-			ChromaWeightL0Flag = chromaWeightl0Flag;
-			LumaWeightL1Flag = lumaWeightl1Flag;
-			ChromaWeightL1Flag = chromaWeightl1Flag;
-		}
-
-
 	}
-
 }

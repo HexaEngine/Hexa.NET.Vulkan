@@ -15,73 +15,17 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1TileInfo
+	public unsafe struct StdVideoAV1TileInfo
 	{
 		public StdVideoAV1TileInfoFlags Flags;
 		public byte TileCols;
 		public byte TileRows;
 		public ushort ContextUpdateTileId;
 		public byte TileSizeBytesMinus1;
-		public byte Reserved1_0;
-		public byte Reserved1_1;
-		public byte Reserved1_2;
-		public byte Reserved1_3;
-		public byte Reserved1_4;
-		public byte Reserved1_5;
-		public byte Reserved1_6;
-		public unsafe ushort* PMiColStarts;
-		public unsafe ushort* PMiRowStarts;
-		public unsafe ushort* PWidthInSbsMinus1;
-		public unsafe ushort* PHeightInSbsMinus1;
-
-		public unsafe StdVideoAV1TileInfo(StdVideoAV1TileInfoFlags flags = default, byte tileCols = default, byte tileRows = default, ushort contextUpdateTileId = default, byte tileSizeBytesMinus1 = default, byte* reserved1 = default, ushort* pMiColStarts = default, ushort* pMiRowStarts = default, ushort* pWidthInSbsMinus1 = default, ushort* pHeightInSbsMinus1 = default)
-		{
-			Flags = flags;
-			TileCols = tileCols;
-			TileRows = tileRows;
-			ContextUpdateTileId = contextUpdateTileId;
-			TileSizeBytesMinus1 = tileSizeBytesMinus1;
-			if (reserved1 != default(byte*))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-				Reserved1_5 = reserved1[5];
-				Reserved1_6 = reserved1[6];
-			}
-			PMiColStarts = pMiColStarts;
-			PMiRowStarts = pMiRowStarts;
-			PWidthInSbsMinus1 = pWidthInSbsMinus1;
-			PHeightInSbsMinus1 = pHeightInSbsMinus1;
-		}
-
-		public unsafe StdVideoAV1TileInfo(StdVideoAV1TileInfoFlags flags = default, byte tileCols = default, byte tileRows = default, ushort contextUpdateTileId = default, byte tileSizeBytesMinus1 = default, Span<byte> reserved1 = default, ushort* pMiColStarts = default, ushort* pMiRowStarts = default, ushort* pWidthInSbsMinus1 = default, ushort* pHeightInSbsMinus1 = default)
-		{
-			Flags = flags;
-			TileCols = tileCols;
-			TileRows = tileRows;
-			ContextUpdateTileId = contextUpdateTileId;
-			TileSizeBytesMinus1 = tileSizeBytesMinus1;
-			if (reserved1 != default(Span<byte>))
-			{
-				Reserved1_0 = reserved1[0];
-				Reserved1_1 = reserved1[1];
-				Reserved1_2 = reserved1[2];
-				Reserved1_3 = reserved1[3];
-				Reserved1_4 = reserved1[4];
-				Reserved1_5 = reserved1[5];
-				Reserved1_6 = reserved1[6];
-			}
-			PMiColStarts = pMiColStarts;
-			PMiRowStarts = pMiRowStarts;
-			PWidthInSbsMinus1 = pWidthInSbsMinus1;
-			PHeightInSbsMinus1 = pHeightInSbsMinus1;
-		}
-
-
+		public fixed byte Reserved1[7];
+		public ushort* PMiColStarts;
+		public ushort* PMiRowStarts;
+		public ushort* PWidthInSbsMinus1;
+		public ushort* PHeightInSbsMinus1;
 	}
-
 }

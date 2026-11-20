@@ -15,21 +15,23 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoAV1LoopFilterFlags
+	public unsafe struct StdVideoAV1LoopFilterFlags
 	{
-		public uint LoopFilterDeltaEnabled;
-		public uint LoopFilterDeltaUpdate;
-		public uint Reserved;
-
-		public unsafe StdVideoAV1LoopFilterFlags(uint loopFilterDeltaEnabled = default, uint loopFilterDeltaUpdate = default, uint reserved = default)
+		private uint _bitfield0;
+		public uint LoopFilterDeltaEnabled
 		{
-			LoopFilterDeltaEnabled = loopFilterDeltaEnabled;
-			LoopFilterDeltaUpdate = loopFilterDeltaUpdate;
-			Reserved = reserved;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint LoopFilterDeltaUpdate
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint Reserved
+		{
+		    get => (_bitfield0 >> 2) & 1073741823;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1073741823 << 2)) | ((value & 1073741823) << 2));
+		}
 	}
-
 }

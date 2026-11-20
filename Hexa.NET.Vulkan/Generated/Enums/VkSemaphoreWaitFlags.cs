@@ -17,5 +17,8 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		AnyBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		AnyBitKhr = AnyBit,
 	}
 }

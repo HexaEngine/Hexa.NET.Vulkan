@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRPipelineBinary
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 5);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 5);
 			funcTable.Load(0, "vkCreatePipelineBinariesKHR");
 			funcTable.Load(1, "vkDestroyPipelineBinaryKHR");
 			funcTable.Load(2, "vkGetPipelineKeyKHR");

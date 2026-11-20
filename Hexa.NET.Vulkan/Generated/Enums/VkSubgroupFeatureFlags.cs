@@ -38,5 +38,20 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		QuadBit = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		RotateBit = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		RotateClusteredBit = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		PartitionedBitNv = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		RotateBitKhr = RotateBit,
+
+		/// <remarks></remarks>
+		RotateClusteredBitKhr = RotateClusteredBit,
 	}
 }

@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265SequenceParameterSet
+	public unsafe struct StdVideoH265SequenceParameterSet
 	{
 		public StdVideoH265SpsFlags Flags;
 		public StdVideoH265ChromaFormatIdc ChromaFormatIdc;
@@ -50,58 +49,12 @@ namespace Hexa.NET.Vulkan
 		public uint ConfWinRightOffset;
 		public uint ConfWinTopOffset;
 		public uint ConfWinBottomOffset;
-		public unsafe StdVideoH265ProfileTierLevel* PProfileTierLevel;
-		public unsafe StdVideoH265DecPicBufMgr* PDecPicBufMgr;
-		public unsafe StdVideoH265ScalingLists* PScalingLists;
-		public unsafe StdVideoH265ShortTermRefPicSet* PShortTermRefPicSet;
-		public unsafe StdVideoH265LongTermRefPicsSps* PLongTermRefPicsSps;
-		public unsafe StdVideoH265SequenceParameterSetVui* PSequenceParameterSetVui;
-		public unsafe StdVideoH265PredictorPaletteEntries* PPredictorPaletteEntries;
-
-		public unsafe StdVideoH265SequenceParameterSet(StdVideoH265SpsFlags flags = default, StdVideoH265ChromaFormatIdc chromaFormatIdc = default, uint picWidthInLumaSamples = default, uint picHeightInLumaSamples = default, byte spsVideoParameterSetId = default, byte spsMaxSubLayersminus1 = default, byte spsSeqParameterSetId = default, byte bitDepthLumaminus8 = default, byte bitDepthChromaminus8 = default, byte log2MaxPicOrderCntLsbminus4 = default, byte log2MinLumaCodingBlockSizeminus3 = default, byte log2DiffMaxMinLumaCodingBlockSize = default, byte log2MinLumaTransformBlockSizeminus2 = default, byte log2DiffMaxMinLumaTransformBlockSize = default, byte maxTransformHierarchyDepthInter = default, byte maxTransformHierarchyDepthIntra = default, byte numShortTermRefPicSets = default, byte numLongTermRefPicsSps = default, byte pcmSampleBitDepthLumaminus1 = default, byte pcmSampleBitDepthChromaminus1 = default, byte log2MinPcmLumaCodingBlockSizeminus3 = default, byte log2DiffMaxMinPcmLumaCodingBlockSize = default, byte reserved1 = default, byte reserved2 = default, byte paletteMaxSize = default, byte deltaPaletteMaxPredictorSize = default, byte motionVectorResolutionControlIdc = default, byte spsNumPalettePredictorInitializersminus1 = default, uint confWinLeftOffset = default, uint confWinRightOffset = default, uint confWinTopOffset = default, uint confWinBottomOffset = default, StdVideoH265ProfileTierLevel* pProfileTierLevel = default, StdVideoH265DecPicBufMgr* pDecPicBufMgr = default, StdVideoH265ScalingLists* pScalingLists = default, StdVideoH265ShortTermRefPicSet* pShortTermRefPicSet = default, StdVideoH265LongTermRefPicsSps* pLongTermRefPicsSps = default, StdVideoH265SequenceParameterSetVui* pSequenceParameterSetVui = default, StdVideoH265PredictorPaletteEntries* pPredictorPaletteEntries = default)
-		{
-			Flags = flags;
-			ChromaFormatIdc = chromaFormatIdc;
-			PicWidthInLumaSamples = picWidthInLumaSamples;
-			PicHeightInLumaSamples = picHeightInLumaSamples;
-			SpsVideoParameterSetId = spsVideoParameterSetId;
-			SpsMaxSubLayersMinus1 = spsMaxSubLayersminus1;
-			SpsSeqParameterSetId = spsSeqParameterSetId;
-			BitDepthLumaMinus8 = bitDepthLumaminus8;
-			BitDepthChromaMinus8 = bitDepthChromaminus8;
-			Log2MaxPicOrderCntLsbMinus4 = log2MaxPicOrderCntLsbminus4;
-			Log2MinLumaCodingBlockSizeMinus3 = log2MinLumaCodingBlockSizeminus3;
-			Log2DiffMaxMinLumaCodingBlockSize = log2DiffMaxMinLumaCodingBlockSize;
-			Log2MinLumaTransformBlockSizeMinus2 = log2MinLumaTransformBlockSizeminus2;
-			Log2DiffMaxMinLumaTransformBlockSize = log2DiffMaxMinLumaTransformBlockSize;
-			MaxTransformHierarchyDepthInter = maxTransformHierarchyDepthInter;
-			MaxTransformHierarchyDepthIntra = maxTransformHierarchyDepthIntra;
-			NumShortTermRefPicSets = numShortTermRefPicSets;
-			NumLongTermRefPicsSps = numLongTermRefPicsSps;
-			PcmSampleBitDepthLumaMinus1 = pcmSampleBitDepthLumaminus1;
-			PcmSampleBitDepthChromaMinus1 = pcmSampleBitDepthChromaminus1;
-			Log2MinPcmLumaCodingBlockSizeMinus3 = log2MinPcmLumaCodingBlockSizeminus3;
-			Log2DiffMaxMinPcmLumaCodingBlockSize = log2DiffMaxMinPcmLumaCodingBlockSize;
-			Reserved1 = reserved1;
-			Reserved2 = reserved2;
-			PaletteMaxSize = paletteMaxSize;
-			DeltaPaletteMaxPredictorSize = deltaPaletteMaxPredictorSize;
-			MotionVectorResolutionControlIdc = motionVectorResolutionControlIdc;
-			SpsNumPalettePredictorInitializersMinus1 = spsNumPalettePredictorInitializersminus1;
-			ConfWinLeftOffset = confWinLeftOffset;
-			ConfWinRightOffset = confWinRightOffset;
-			ConfWinTopOffset = confWinTopOffset;
-			ConfWinBottomOffset = confWinBottomOffset;
-			PProfileTierLevel = pProfileTierLevel;
-			PDecPicBufMgr = pDecPicBufMgr;
-			PScalingLists = pScalingLists;
-			PShortTermRefPicSet = pShortTermRefPicSet;
-			PLongTermRefPicsSps = pLongTermRefPicsSps;
-			PSequenceParameterSetVui = pSequenceParameterSetVui;
-			PPredictorPaletteEntries = pPredictorPaletteEntries;
-		}
-
-
+		public StdVideoH265ProfileTierLevel* PProfileTierLevel;
+		public StdVideoH265DecPicBufMgr* PDecPicBufMgr;
+		public StdVideoH265ScalingLists* PScalingLists;
+		public StdVideoH265ShortTermRefPicSet* PShortTermRefPicSet;
+		public StdVideoH265LongTermRefPicsSps* PLongTermRefPicsSps;
+		public StdVideoH265SequenceParameterSetVui* PSequenceParameterSetVui;
+		public StdVideoH265PredictorPaletteEntries* PPredictorPaletteEntries;
 	}
-
 }

@@ -12,14 +12,21 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[Flags]
-	public enum StdVideoH265ChromaFormatIdc : int
+	public enum StdVideoH265ChromaFormatIdc : uint
 	{
-		Monochrome = unchecked(0),
-		Idc420 = unchecked(1),
-		Idc422 = unchecked(2),
-		Idc444 = unchecked(3),
-		Invalid = unchecked(2147483647),
-		MaxEnum = unchecked(2147483647),
+		/// <remarks></remarks>
+		Monochrome = unchecked((uint)0),
+
+		/// <remarks></remarks>
+		Idc420 = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Idc422 = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		Idc444 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		Invalid = unchecked((uint)0x7FFFFFFF),
 	}
 }

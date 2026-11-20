@@ -15,75 +15,158 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265SpsFlags
+	public unsafe struct StdVideoH265SpsFlags
 	{
-		public uint SpsTemporalIdNestingFlag;
-		public uint SeparateColourPlaneFlag;
-		public uint ConformanceWindowFlag;
-		public uint SpsSubLayerOrderingInfoPresentFlag;
-		public uint ScalingListEnabledFlag;
-		public uint SpsScalingListDataPresentFlag;
-		public uint AmpEnabledFlag;
-		public uint SampleAdaptiveOffsetEnabledFlag;
-		public uint PcmEnabledFlag;
-		public uint PcmLoopFilterDisabledFlag;
-		public uint LongTermRefPicsPresentFlag;
-		public uint SpsTemporalMvpEnabledFlag;
-		public uint StrongIntraSmoothingEnabledFlag;
-		public uint VuiParametersPresentFlag;
-		public uint SpsExtensionPresentFlag;
-		public uint SpsRangeExtensionFlag;
-		public uint TransformSkipRotationEnabledFlag;
-		public uint TransformSkipContextEnabledFlag;
-		public uint ImplicitRdpcmEnabledFlag;
-		public uint ExplicitRdpcmEnabledFlag;
-		public uint ExtendedPrecisionProcessingFlag;
-		public uint IntraSmoothingDisabledFlag;
-		public uint HighPrecisionOffsetsEnabledFlag;
-		public uint PersistentRiceAdaptationEnabledFlag;
-		public uint CabacBypassAlignmentEnabledFlag;
-		public uint SpsSccExtensionFlag;
-		public uint SpsCurrPicRefEnabledFlag;
-		public uint PaletteModeEnabledFlag;
-		public uint SpsPalettePredictorInitializersPresentFlag;
-		public uint IntraBoundaryFilteringDisabledFlag;
-
-		public unsafe StdVideoH265SpsFlags(uint spsTemporalIdNestingFlag = default, uint separateColourPlaneFlag = default, uint conformanceWindowFlag = default, uint spsSubLayerOrderingInfoPresentFlag = default, uint scalingListEnabledFlag = default, uint spsScalingListDataPresentFlag = default, uint ampEnabledFlag = default, uint sampleAdaptiveOffsetEnabledFlag = default, uint pcmEnabledFlag = default, uint pcmLoopFilterDisabledFlag = default, uint longTermRefPicsPresentFlag = default, uint spsTemporalMvpEnabledFlag = default, uint strongIntraSmoothingEnabledFlag = default, uint vuiParametersPresentFlag = default, uint spsExtensionPresentFlag = default, uint spsRangeExtensionFlag = default, uint transformSkipRotationEnabledFlag = default, uint transformSkipContextEnabledFlag = default, uint implicitRdpcmEnabledFlag = default, uint explicitRdpcmEnabledFlag = default, uint extendedPrecisionProcessingFlag = default, uint intraSmoothingDisabledFlag = default, uint highPrecisionOffsetsEnabledFlag = default, uint persistentRiceAdaptationEnabledFlag = default, uint cabacBypassAlignmentEnabledFlag = default, uint spsSccExtensionFlag = default, uint spsCurrPicRefEnabledFlag = default, uint paletteModeEnabledFlag = default, uint spsPalettePredictorInitializersPresentFlag = default, uint intraBoundaryFilteringDisabledFlag = default)
+		private uint _bitfield0;
+		public uint SpsTemporalIdNestingFlag
 		{
-			SpsTemporalIdNestingFlag = spsTemporalIdNestingFlag;
-			SeparateColourPlaneFlag = separateColourPlaneFlag;
-			ConformanceWindowFlag = conformanceWindowFlag;
-			SpsSubLayerOrderingInfoPresentFlag = spsSubLayerOrderingInfoPresentFlag;
-			ScalingListEnabledFlag = scalingListEnabledFlag;
-			SpsScalingListDataPresentFlag = spsScalingListDataPresentFlag;
-			AmpEnabledFlag = ampEnabledFlag;
-			SampleAdaptiveOffsetEnabledFlag = sampleAdaptiveOffsetEnabledFlag;
-			PcmEnabledFlag = pcmEnabledFlag;
-			PcmLoopFilterDisabledFlag = pcmLoopFilterDisabledFlag;
-			LongTermRefPicsPresentFlag = longTermRefPicsPresentFlag;
-			SpsTemporalMvpEnabledFlag = spsTemporalMvpEnabledFlag;
-			StrongIntraSmoothingEnabledFlag = strongIntraSmoothingEnabledFlag;
-			VuiParametersPresentFlag = vuiParametersPresentFlag;
-			SpsExtensionPresentFlag = spsExtensionPresentFlag;
-			SpsRangeExtensionFlag = spsRangeExtensionFlag;
-			TransformSkipRotationEnabledFlag = transformSkipRotationEnabledFlag;
-			TransformSkipContextEnabledFlag = transformSkipContextEnabledFlag;
-			ImplicitRdpcmEnabledFlag = implicitRdpcmEnabledFlag;
-			ExplicitRdpcmEnabledFlag = explicitRdpcmEnabledFlag;
-			ExtendedPrecisionProcessingFlag = extendedPrecisionProcessingFlag;
-			IntraSmoothingDisabledFlag = intraSmoothingDisabledFlag;
-			HighPrecisionOffsetsEnabledFlag = highPrecisionOffsetsEnabledFlag;
-			PersistentRiceAdaptationEnabledFlag = persistentRiceAdaptationEnabledFlag;
-			CabacBypassAlignmentEnabledFlag = cabacBypassAlignmentEnabledFlag;
-			SpsSccExtensionFlag = spsSccExtensionFlag;
-			SpsCurrPicRefEnabledFlag = spsCurrPicRefEnabledFlag;
-			PaletteModeEnabledFlag = paletteModeEnabledFlag;
-			SpsPalettePredictorInitializersPresentFlag = spsPalettePredictorInitializersPresentFlag;
-			IntraBoundaryFilteringDisabledFlag = intraBoundaryFilteringDisabledFlag;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint SeparateColourPlaneFlag
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint ConformanceWindowFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint SpsSubLayerOrderingInfoPresentFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint ScalingListEnabledFlag
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint SpsScalingListDataPresentFlag
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
+		public uint AmpEnabledFlag
+		{
+		    get => (_bitfield0 >> 6) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 6)) | ((value & 1) << 6));
+		}
+		public uint SampleAdaptiveOffsetEnabledFlag
+		{
+		    get => (_bitfield0 >> 7) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 7)) | ((value & 1) << 7));
+		}
+		public uint PcmEnabledFlag
+		{
+		    get => (_bitfield0 >> 8) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 8)) | ((value & 1) << 8));
+		}
+		public uint PcmLoopFilterDisabledFlag
+		{
+		    get => (_bitfield0 >> 9) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 9)) | ((value & 1) << 9));
+		}
+		public uint LongTermRefPicsPresentFlag
+		{
+		    get => (_bitfield0 >> 10) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 10)) | ((value & 1) << 10));
+		}
+		public uint SpsTemporalMvpEnabledFlag
+		{
+		    get => (_bitfield0 >> 11) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 11)) | ((value & 1) << 11));
+		}
+		public uint StrongIntraSmoothingEnabledFlag
+		{
+		    get => (_bitfield0 >> 12) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 12)) | ((value & 1) << 12));
+		}
+		public uint VuiParametersPresentFlag
+		{
+		    get => (_bitfield0 >> 13) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 13)) | ((value & 1) << 13));
+		}
+		public uint SpsExtensionPresentFlag
+		{
+		    get => (_bitfield0 >> 14) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 14)) | ((value & 1) << 14));
+		}
+		public uint SpsRangeExtensionFlag
+		{
+		    get => (_bitfield0 >> 15) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 15)) | ((value & 1) << 15));
+		}
+		public uint TransformSkipRotationEnabledFlag
+		{
+		    get => (_bitfield0 >> 16) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 16)) | ((value & 1) << 16));
+		}
+		public uint TransformSkipContextEnabledFlag
+		{
+		    get => (_bitfield0 >> 17) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 17)) | ((value & 1) << 17));
+		}
+		public uint ImplicitRdpcmEnabledFlag
+		{
+		    get => (_bitfield0 >> 18) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 18)) | ((value & 1) << 18));
+		}
+		public uint ExplicitRdpcmEnabledFlag
+		{
+		    get => (_bitfield0 >> 19) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 19)) | ((value & 1) << 19));
+		}
+		public uint ExtendedPrecisionProcessingFlag
+		{
+		    get => (_bitfield0 >> 20) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 20)) | ((value & 1) << 20));
+		}
+		public uint IntraSmoothingDisabledFlag
+		{
+		    get => (_bitfield0 >> 21) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 21)) | ((value & 1) << 21));
+		}
+		public uint HighPrecisionOffsetsEnabledFlag
+		{
+		    get => (_bitfield0 >> 22) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 22)) | ((value & 1) << 22));
+		}
+		public uint PersistentRiceAdaptationEnabledFlag
+		{
+		    get => (_bitfield0 >> 23) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 23)) | ((value & 1) << 23));
+		}
+		public uint CabacBypassAlignmentEnabledFlag
+		{
+		    get => (_bitfield0 >> 24) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 24)) | ((value & 1) << 24));
+		}
+		public uint SpsSccExtensionFlag
+		{
+		    get => (_bitfield0 >> 25) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 25)) | ((value & 1) << 25));
+		}
+		public uint SpsCurrPicRefEnabledFlag
+		{
+		    get => (_bitfield0 >> 26) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 26)) | ((value & 1) << 26));
+		}
+		public uint PaletteModeEnabledFlag
+		{
+		    get => (_bitfield0 >> 27) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 27)) | ((value & 1) << 27));
+		}
+		public uint SpsPalettePredictorInitializersPresentFlag
+		{
+		    get => (_bitfield0 >> 28) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 28)) | ((value & 1) << 28));
+		}
+		public uint IntraBoundaryFilteringDisabledFlag
+		{
+		    get => (_bitfield0 >> 29) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 29)) | ((value & 1) << 29));
+		}
 	}
-
 }

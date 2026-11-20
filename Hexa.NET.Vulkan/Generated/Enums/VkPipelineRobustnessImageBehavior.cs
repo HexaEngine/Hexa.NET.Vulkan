@@ -26,5 +26,17 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		RobustImageAccess2 = unchecked((uint)3),
+
+		/// <remarks></remarks>
+		DeviceDefaultExt = DeviceDefault,
+
+		/// <remarks></remarks>
+		DisabledExt = Disabled,
+
+		/// <remarks></remarks>
+		RobustImageAccessExt = RobustImageAccess,
+
+		/// <remarks></remarks>
+		RobustImageAccess2Ext = RobustImageAccess2,
 	}
 }

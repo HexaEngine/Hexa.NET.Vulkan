@@ -41,5 +41,125 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Create2ProtectedAccessOnlyBit = unchecked((uint)1073741824),
+
+		/// <remarks></remarks>
+		Create2ExecutionGraphBitAmdx = unchecked((uint)4294967296),
+
+		/// <remarks></remarks>
+		Reserved36BitKhr = unchecked((uint)68719476736),
+
+		/// <remarks></remarks>
+		Reserved39BitKhr = unchecked((uint)549755813888),
+
+		/// <remarks></remarks>
+		Create2Reserved33BitKhr = unchecked((uint)8589934592),
+
+		/// <remarks></remarks>
+		Create2EnableLegacyDitheringBitExt = unchecked((uint)17179869184),
+
+		/// <remarks></remarks>
+		Create2DisableOptimizationBitKhr = Create2DisableOptimizationBit,
+
+		/// <remarks></remarks>
+		Create2AllowDerivativesBitKhr = Create2AllowDerivativesBit,
+
+		/// <remarks></remarks>
+		Create2DerivativeBitKhr = Create2DerivativeBit,
+
+		/// <remarks></remarks>
+		Create2ViewIndexFromDeviceIndexBitKhr = Create2ViewIndexFromDeviceIndexBit,
+
+		/// <remarks></remarks>
+		Create2DispatchBaseBitKhr = Create2DispatchBaseBit,
+
+		/// <remarks></remarks>
+		Create2DeferCompileBitNv = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Create2CaptureStatisticsBitKhr = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		Create2CaptureInternalRepresentationsBitKhr = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		Create2FailOnPipelineCompileRequiredBitKhr = Create2FailOnPipelineCompileRequiredBit,
+
+		/// <remarks></remarks>
+		Create2EarlyReturnOnFailureBitKhr = Create2EarlyReturnOnFailureBit,
+
+		/// <remarks></remarks>
+		Create2LinkTimeOptimizationBitExt = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		Create2RetainLinkTimeOptimizationInfoBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		Create2LibraryBitKhr = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		Create2RayTracingSkipTrianglesBitKhr = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		Create2RayTracingSkipAabbsBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		Create2RayTracingNoNullAnyHitShadersBitKhr = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		Create2RayTracingNoNullClosestHitShadersBitKhr = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		Create2RayTracingNoNullMissShadersBitKhr = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		Create2RayTracingNoNullIntersectionShadersBitKhr = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		Create2RayTracingShaderGroupHandleCaptureReplayBitKhr = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		Create2IndirectBindableBitNv = unchecked((uint)262144),
+
+		/// <remarks></remarks>
+		Create2RayTracingAllowMotionBitNv = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		Create2RenderingFragmentShadingRateAttachmentBitKhr = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		Create2RenderingFragmentDensityMapAttachmentBitExt = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		Create2RayTracingOpacityMicromapBitExt = unchecked((uint)16777216),
+
+		/// <remarks></remarks>
+		Create2ColorAttachmentFeedbackLoopBitExt = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Create2DepthStencilAttachmentFeedbackLoopBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		Create2NoProtectedAccessBitExt = Create2NoProtectedAccessBit,
+
+		/// <remarks></remarks>
+		Create2ProtectedAccessOnlyBitExt = Create2ProtectedAccessOnlyBit,
+
+		/// <remarks></remarks>
+		Create2RayTracingDisplacementMicromapBitNv = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		Create2DescriptorBufferBitExt = unchecked((uint)536870912),
+
+		/// <remarks></remarks>
+		Create2CaptureDataBitKhr = unchecked((uint)2147483648),
+
+		/// <remarks></remarks>
+		Create2IndirectBindableBitExt = unchecked((uint)274877906944),
+
+		/// <remarks></remarks>
+		Create2Reserved35BitKhr = unchecked((uint)34359738368),
+
+		/// <remarks></remarks>
+		Create2Reserved37BitArm = unchecked((uint)137438953472),
 	}
 }

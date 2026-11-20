@@ -13,13 +13,13 @@ using System.Numerics;
 
 namespace Hexa.NET.Vulkan.KHR
 {
-	public static unsafe partial class ExtensionKHR
+	public unsafe partial class VKKHRSwapchain
 	{
-		internal static FunctionTable funcTable;
+		internal FunctionTable funcTable;
 
-		public static void InitApi()
+		public void InitApi()
 		{
-			funcTable = new FunctionTable(GetLibraryName(), 9);
+			funcTable = new FunctionTable(global::Hexa.NET.Vulkan.Vulkan.GetLibraryName(), 9);
 			funcTable.Load(0, "vkGetPhysicalDevicePresentRectanglesKHR");
 			funcTable.Load(1, "vkCreateSwapchainKHR");
 			funcTable.Load(2, "vkDestroySwapchainKHR");

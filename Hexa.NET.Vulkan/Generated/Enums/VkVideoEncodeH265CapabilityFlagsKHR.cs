@@ -44,5 +44,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		MultipleSliceSegmentsPerTileBitKhr = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		CuQpDiffWraparoundBitKhr = unchecked((uint)1024),
 	}
 }

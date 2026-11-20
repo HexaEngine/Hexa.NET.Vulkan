@@ -20,5 +20,11 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ImportableBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		ExportableBitKhr = ExportableBit,
+
+		/// <remarks></remarks>
+		ImportableBitKhr = ImportableBit,
 	}
 }

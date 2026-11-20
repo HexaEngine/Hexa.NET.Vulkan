@@ -41,5 +41,71 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		IndirectBufferBit = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		ShaderDeviceAddressBit = unchecked((uint)131072),
+
+		/// <remarks></remarks>
+		VideoDecodeSrcBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		VideoDecodeDstBitKhr = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		TransformFeedbackBufferBitExt = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		TransformFeedbackCounterBufferBitExt = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		ConditionalRenderingBitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		ExecutionGraphScratchBitAmdx = unchecked((uint)33554432),
+
+		/// <remarks></remarks>
+		Reserved28BitKhr = unchecked((uint)268435456),
+
+		/// <remarks></remarks>
+		AccelerationStructureBuildInputReadOnlyBitKhr = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		AccelerationStructureStorageBitKhr = unchecked((uint)1048576),
+
+		/// <remarks></remarks>
+		ShaderBindingTableBitKhr = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		RayTracingBitNv = ShaderBindingTableBitKhr,
+
+		/// <remarks></remarks>
+		ShaderDeviceAddressBitExt = ShaderDeviceAddressBit,
+
+		/// <remarks></remarks>
+		ShaderDeviceAddressBitKhr = ShaderDeviceAddressBit,
+
+		/// <remarks></remarks>
+		VideoEncodeDstBitKhr = unchecked((uint)32768),
+
+		/// <remarks></remarks>
+		VideoEncodeSrcBitKhr = unchecked((uint)65536),
+
+		/// <remarks></remarks>
+		Reserved27BitQcom = unchecked((uint)134217728),
+
+		/// <remarks></remarks>
+		SamplerDescriptorBufferBitExt = unchecked((uint)2097152),
+
+		/// <remarks></remarks>
+		ResourceDescriptorBufferBitExt = unchecked((uint)4194304),
+
+		/// <remarks></remarks>
+		PushDescriptorsDescriptorBufferBitExt = unchecked((uint)67108864),
+
+		/// <remarks></remarks>
+		MicromapBuildInputReadOnlyBitExt = unchecked((uint)8388608),
+
+		/// <remarks></remarks>
+		MicromapStorageBitExt = unchecked((uint)16777216),
 	}
 }

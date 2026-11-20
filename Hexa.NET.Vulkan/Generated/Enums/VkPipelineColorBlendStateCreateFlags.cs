@@ -15,5 +15,10 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkPipelineColorBlendStateCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentAccessBitArm = RasterizationOrderAttachmentAccessBitExt,
+
+		/// <remarks></remarks>
+		RasterizationOrderAttachmentAccessBitExt = unchecked((uint)1),
 	}
 }

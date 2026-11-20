@@ -15,5 +15,37 @@ namespace Hexa.NET.Vulkan
 {
 	public enum VkDescriptorSetLayoutCreateFlags : uint
 	{
+		/// <remarks></remarks>
+		UpdateAfterBindPoolBit = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		PushDescriptorBit = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		PushDescriptorBitKhr = PushDescriptorBit,
+
+		/// <remarks></remarks>
+		UpdateAfterBindPoolBitExt = UpdateAfterBindPoolBit,
+
+		/// <remarks></remarks>
+		BufferBitExt = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		EmbeddedImmutableSamplersBitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Reserved3BitAmd = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		HostOnlyPoolBitValve = HostOnlyPoolBitExt,
+
+		/// <remarks></remarks>
+		IndirectBindableBitNv = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		HostOnlyPoolBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		PerStageBitNv = unchecked((uint)64),
 	}
 }

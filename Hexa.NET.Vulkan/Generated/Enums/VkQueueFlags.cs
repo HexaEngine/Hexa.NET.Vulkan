@@ -26,5 +26,29 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		SparseBindingBit = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		ProtectedBit = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		VideoDecodeBitKhr = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		Reserved9BitExt = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		VideoEncodeBitKhr = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		Reserved7BitQcom = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		Reserved11BitArm = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		OpticalFlowBitNv = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		Reserved10BitExt = unchecked((uint)1024),
 	}
 }

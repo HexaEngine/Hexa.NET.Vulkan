@@ -23,5 +23,8 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		Point = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		FillRectangleNv = unchecked((uint)1000153000),
 	}
 }

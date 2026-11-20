@@ -17,5 +17,38 @@ namespace Hexa.NET.Vulkan
 	{
 		/// <remarks></remarks>
 		LinkStageBitExt = unchecked((uint)1),
+
+		/// <remarks></remarks>
+		Reserved10BitKhr = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		Reserved11BitKhr = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		AllowVaryingSubgroupSizeBitExt = unchecked((uint)2),
+
+		/// <remarks></remarks>
+		RequireFullSubgroupsBitExt = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		NoTaskShaderBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		DispatchBaseBitExt = unchecked((uint)16),
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentBitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		FragmentDensityMapAttachmentBitExt = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		IndirectBindableBitExt = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		Reserved8BitExt = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		Reserved9BitExt = unchecked((uint)512),
 	}
 }

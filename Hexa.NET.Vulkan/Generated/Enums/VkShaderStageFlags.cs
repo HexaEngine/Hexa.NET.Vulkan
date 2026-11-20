@@ -38,5 +38,62 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		All = unchecked((uint)0x7FFFFFFF),
+
+		/// <remarks></remarks>
+		RaygenBitKhr = unchecked((uint)256),
+
+		/// <remarks></remarks>
+		AnyHitBitKhr = unchecked((uint)512),
+
+		/// <remarks></remarks>
+		ClosestHitBitKhr = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		MissBitKhr = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		IntersectionBitKhr = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		CallableBitKhr = unchecked((uint)8192),
+
+		/// <remarks></remarks>
+		RaygenBitNv = RaygenBitKhr,
+
+		/// <remarks></remarks>
+		AnyHitBitNv = AnyHitBitKhr,
+
+		/// <remarks></remarks>
+		ClosestHitBitNv = ClosestHitBitKhr,
+
+		/// <remarks></remarks>
+		MissBitNv = MissBitKhr,
+
+		/// <remarks></remarks>
+		IntersectionBitNv = IntersectionBitKhr,
+
+		/// <remarks></remarks>
+		CallableBitNv = CallableBitKhr,
+
+		/// <remarks></remarks>
+		TaskBitNv = TaskBitExt,
+
+		/// <remarks></remarks>
+		MeshBitNv = MeshBitExt,
+
+		/// <remarks></remarks>
+		TaskBitExt = unchecked((uint)64),
+
+		/// <remarks></remarks>
+		MeshBitExt = unchecked((uint)128),
+
+		/// <remarks></remarks>
+		SubpassShadingBitHuawei = unchecked((uint)16384),
+
+		/// <remarks></remarks>
+		ClusterCullingBitHuawei = unchecked((uint)524288),
+
+		/// <remarks></remarks>
+		Reserved15BitNv = unchecked((uint)32768),
 	}
 }

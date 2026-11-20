@@ -164,5 +164,3557 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		LoaderDeviceCreateInfo = unchecked((uint)48),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubgroupProperties = unchecked((uint)1000094000),
+
+		/// <remarks></remarks>
+		BindBufferMemoryInfo = unchecked((uint)1000157000),
+
+		/// <remarks></remarks>
+		BindImageMemoryInfo = unchecked((uint)1000157001),
+
+		/// <remarks></remarks>
+		PhysicalDevice16BitStorageFeatures = unchecked((uint)1000083000),
+
+		/// <remarks></remarks>
+		MemoryDedicatedRequirements = unchecked((uint)1000127000),
+
+		/// <remarks></remarks>
+		MemoryDedicatedAllocateInfo = unchecked((uint)1000127001),
+
+		/// <remarks></remarks>
+		MemoryAllocateFlagsInfo = unchecked((uint)1000060000),
+
+		/// <remarks></remarks>
+		DeviceGroupRenderPassBeginInfo = unchecked((uint)1000060003),
+
+		/// <remarks></remarks>
+		DeviceGroupCommandBufferBeginInfo = unchecked((uint)1000060004),
+
+		/// <remarks></remarks>
+		DeviceGroupSubmitInfo = unchecked((uint)1000060005),
+
+		/// <remarks></remarks>
+		DeviceGroupBindSparseInfo = unchecked((uint)1000060006),
+
+		/// <remarks></remarks>
+		BindBufferMemoryDeviceGroupInfo = unchecked((uint)1000060013),
+
+		/// <remarks></remarks>
+		BindImageMemoryDeviceGroupInfo = unchecked((uint)1000060014),
+
+		/// <remarks></remarks>
+		PhysicalDeviceGroupProperties = unchecked((uint)1000070000),
+
+		/// <remarks></remarks>
+		DeviceGroupDeviceCreateInfo = unchecked((uint)1000070001),
+
+		/// <remarks></remarks>
+		BufferMemoryRequirementsInfo2 = unchecked((uint)1000146000),
+
+		/// <remarks></remarks>
+		ImageMemoryRequirementsInfo2 = unchecked((uint)1000146001),
+
+		/// <remarks></remarks>
+		ImageSparseMemoryRequirementsInfo2 = unchecked((uint)1000146002),
+
+		/// <remarks></remarks>
+		MemoryRequirements2 = unchecked((uint)1000146003),
+
+		/// <remarks></remarks>
+		SparseImageMemoryRequirements2 = unchecked((uint)1000146004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFeatures2 = unchecked((uint)1000059000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceProperties2 = unchecked((uint)1000059001),
+
+		/// <remarks></remarks>
+		FormatProperties2 = unchecked((uint)1000059002),
+
+		/// <remarks></remarks>
+		ImageFormatProperties2 = unchecked((uint)1000059003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageFormatInfo2 = unchecked((uint)1000059004),
+
+		/// <remarks></remarks>
+		QueueFamilyProperties2 = unchecked((uint)1000059005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryProperties2 = unchecked((uint)1000059006),
+
+		/// <remarks></remarks>
+		SparseImageFormatProperties2 = unchecked((uint)1000059007),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSparseImageFormatInfo2 = unchecked((uint)1000059008),
+
+		/// <remarks></remarks>
+		PhysicalDevicePointClippingProperties = unchecked((uint)1000117000),
+
+		/// <remarks></remarks>
+		RenderPassInputAttachmentAspectCreateInfo = unchecked((uint)1000117001),
+
+		/// <remarks></remarks>
+		ImageViewUsageCreateInfo = unchecked((uint)1000117002),
+
+		/// <remarks></remarks>
+		PipelineTessellationDomainOriginStateCreateInfo = unchecked((uint)1000117003),
+
+		/// <remarks></remarks>
+		RenderPassMultiviewCreateInfo = unchecked((uint)1000053000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewFeatures = unchecked((uint)1000053001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewProperties = unchecked((uint)1000053002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVariablePointersFeatures = unchecked((uint)1000120000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVariablePointerFeatures = PhysicalDeviceVariablePointersFeatures,
+
+		/// <remarks></remarks>
+		ProtectedSubmitInfo = unchecked((uint)1000145000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceProtectedMemoryFeatures = unchecked((uint)1000145001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceProtectedMemoryProperties = unchecked((uint)1000145002),
+
+		/// <remarks></remarks>
+		DeviceQueueInfo2 = unchecked((uint)1000145003),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionCreateInfo = unchecked((uint)1000156000),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionInfo = unchecked((uint)1000156001),
+
+		/// <remarks></remarks>
+		BindImagePlaneMemoryInfo = unchecked((uint)1000156002),
+
+		/// <remarks></remarks>
+		ImagePlaneMemoryRequirementsInfo = unchecked((uint)1000156003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSamplerYcbcrConversionFeatures = unchecked((uint)1000156004),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionImageFormatProperties = unchecked((uint)1000156005),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplateCreateInfo = unchecked((uint)1000085000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalImageFormatInfo = unchecked((uint)1000071000),
+
+		/// <remarks></remarks>
+		ExternalImageFormatProperties = unchecked((uint)1000071001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalBufferInfo = unchecked((uint)1000071002),
+
+		/// <remarks></remarks>
+		ExternalBufferProperties = unchecked((uint)1000071003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceIdProperties = unchecked((uint)1000071004),
+
+		/// <remarks></remarks>
+		ExternalMemoryBufferCreateInfo = unchecked((uint)1000072000),
+
+		/// <remarks></remarks>
+		ExternalMemoryImageCreateInfo = unchecked((uint)1000072001),
+
+		/// <remarks></remarks>
+		ExportMemoryAllocateInfo = unchecked((uint)1000072002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalFenceInfo = unchecked((uint)1000112000),
+
+		/// <remarks></remarks>
+		ExternalFenceProperties = unchecked((uint)1000112001),
+
+		/// <remarks></remarks>
+		ExportFenceCreateInfo = unchecked((uint)1000113000),
+
+		/// <remarks></remarks>
+		ExportSemaphoreCreateInfo = unchecked((uint)1000077000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalSemaphoreInfo = unchecked((uint)1000076000),
+
+		/// <remarks></remarks>
+		ExternalSemaphoreProperties = unchecked((uint)1000076001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance3Properties = unchecked((uint)1000168000),
+
+		/// <remarks></remarks>
+		DescriptorSetLayoutSupport = unchecked((uint)1000168001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderDrawParametersFeatures = unchecked((uint)1000063000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderDrawParameterFeatures = PhysicalDeviceShaderDrawParametersFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan11Features = unchecked((uint)49),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan11Properties = unchecked((uint)50),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan12Features = unchecked((uint)51),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan12Properties = unchecked((uint)52),
+
+		/// <remarks></remarks>
+		ImageFormatListCreateInfo = unchecked((uint)1000147000),
+
+		/// <remarks></remarks>
+		AttachmentDescription2 = unchecked((uint)1000109000),
+
+		/// <remarks></remarks>
+		AttachmentReference2 = unchecked((uint)1000109001),
+
+		/// <remarks></remarks>
+		SubpassDescription2 = unchecked((uint)1000109002),
+
+		/// <remarks></remarks>
+		SubpassDependency2 = unchecked((uint)1000109003),
+
+		/// <remarks></remarks>
+		RenderPassCreateInfo2 = unchecked((uint)1000109004),
+
+		/// <remarks></remarks>
+		SubpassBeginInfo = unchecked((uint)1000109005),
+
+		/// <remarks></remarks>
+		SubpassEndInfo = unchecked((uint)1000109006),
+
+		/// <remarks></remarks>
+		PhysicalDevice8BitStorageFeatures = unchecked((uint)1000177000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDriverProperties = unchecked((uint)1000196000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderAtomicInt64Features = unchecked((uint)1000180000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderFloat16Int8Features = unchecked((uint)1000082000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFloatControlsProperties = unchecked((uint)1000197000),
+
+		/// <remarks></remarks>
+		DescriptorSetLayoutBindingFlagsCreateInfo = unchecked((uint)1000161000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorIndexingFeatures = unchecked((uint)1000161001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorIndexingProperties = unchecked((uint)1000161002),
+
+		/// <remarks></remarks>
+		DescriptorSetVariableDescriptorCountAllocateInfo = unchecked((uint)1000161003),
+
+		/// <remarks></remarks>
+		DescriptorSetVariableDescriptorCountLayoutSupport = unchecked((uint)1000161004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthStencilResolveProperties = unchecked((uint)1000199000),
+
+		/// <remarks></remarks>
+		SubpassDescriptionDepthStencilResolve = unchecked((uint)1000199001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceScalarBlockLayoutFeatures = unchecked((uint)1000221000),
+
+		/// <remarks></remarks>
+		ImageStencilUsageCreateInfo = unchecked((uint)1000246000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSamplerFilterMinmaxProperties = unchecked((uint)1000130000),
+
+		/// <remarks></remarks>
+		SamplerReductionModeCreateInfo = unchecked((uint)1000130001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkanMemoryModelFeatures = unchecked((uint)1000211000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImagelessFramebufferFeatures = unchecked((uint)1000108000),
+
+		/// <remarks></remarks>
+		FramebufferAttachmentsCreateInfo = unchecked((uint)1000108001),
+
+		/// <remarks></remarks>
+		FramebufferAttachmentImageInfo = unchecked((uint)1000108002),
+
+		/// <remarks></remarks>
+		RenderPassAttachmentBeginInfo = unchecked((uint)1000108003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceUniformBufferStandardLayoutFeatures = unchecked((uint)1000253000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSubgroupExtendedTypesFeatures = unchecked((uint)1000175000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSeparateDepthStencilLayoutsFeatures = unchecked((uint)1000241000),
+
+		/// <remarks></remarks>
+		AttachmentReferenceStencilLayout = unchecked((uint)1000241001),
+
+		/// <remarks></remarks>
+		AttachmentDescriptionStencilLayout = unchecked((uint)1000241002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostQueryResetFeatures = unchecked((uint)1000261000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTimelineSemaphoreFeatures = unchecked((uint)1000207000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTimelineSemaphoreProperties = unchecked((uint)1000207001),
+
+		/// <remarks></remarks>
+		SemaphoreTypeCreateInfo = unchecked((uint)1000207002),
+
+		/// <remarks></remarks>
+		TimelineSemaphoreSubmitInfo = unchecked((uint)1000207003),
+
+		/// <remarks></remarks>
+		SemaphoreWaitInfo = unchecked((uint)1000207004),
+
+		/// <remarks></remarks>
+		SemaphoreSignalInfo = unchecked((uint)1000207005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceBufferDeviceAddressFeatures = unchecked((uint)1000257000),
+
+		/// <remarks></remarks>
+		BufferDeviceAddressInfo = unchecked((uint)1000244001),
+
+		/// <remarks></remarks>
+		BufferOpaqueCaptureAddressCreateInfo = unchecked((uint)1000257002),
+
+		/// <remarks></remarks>
+		MemoryOpaqueCaptureAddressAllocateInfo = unchecked((uint)1000257003),
+
+		/// <remarks></remarks>
+		DeviceMemoryOpaqueCaptureAddressInfo = unchecked((uint)1000257004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan13Features = unchecked((uint)53),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan13Properties = unchecked((uint)54),
+
+		/// <remarks></remarks>
+		PipelineCreationFeedbackCreateInfo = unchecked((uint)1000192000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderTerminateInvocationFeatures = unchecked((uint)1000215000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceToolProperties = unchecked((uint)1000245000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderDemoteToHelperInvocationFeatures = unchecked((uint)1000276000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePrivateDataFeatures = unchecked((uint)1000295000),
+
+		/// <remarks></remarks>
+		DevicePrivateDataCreateInfo = unchecked((uint)1000295001),
+
+		/// <remarks></remarks>
+		PrivateDataSlotCreateInfo = unchecked((uint)1000295002),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineCreationCacheControlFeatures = unchecked((uint)1000297000),
+
+		/// <remarks></remarks>
+		MemoryBarrier2 = unchecked((uint)1000314000),
+
+		/// <remarks></remarks>
+		BufferMemoryBarrier2 = unchecked((uint)1000314001),
+
+		/// <remarks></remarks>
+		ImageMemoryBarrier2 = unchecked((uint)1000314002),
+
+		/// <remarks></remarks>
+		DependencyInfo = unchecked((uint)1000314003),
+
+		/// <remarks></remarks>
+		SubmitInfo2 = unchecked((uint)1000314004),
+
+		/// <remarks></remarks>
+		SemaphoreSubmitInfo = unchecked((uint)1000314005),
+
+		/// <remarks></remarks>
+		CommandBufferSubmitInfo = unchecked((uint)1000314006),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSynchronization2Features = unchecked((uint)1000314007),
+
+		/// <remarks></remarks>
+		PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures = unchecked((uint)1000325000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageRobustnessFeatures = unchecked((uint)1000335000),
+
+		/// <remarks></remarks>
+		CopyBufferInfo2 = unchecked((uint)1000337000),
+
+		/// <remarks></remarks>
+		CopyImageInfo2 = unchecked((uint)1000337001),
+
+		/// <remarks></remarks>
+		CopyBufferToImageInfo2 = unchecked((uint)1000337002),
+
+		/// <remarks></remarks>
+		CopyImageToBufferInfo2 = unchecked((uint)1000337003),
+
+		/// <remarks></remarks>
+		BlitImageInfo2 = unchecked((uint)1000337004),
+
+		/// <remarks></remarks>
+		ResolveImageInfo2 = unchecked((uint)1000337005),
+
+		/// <remarks></remarks>
+		BufferCopy2 = unchecked((uint)1000337006),
+
+		/// <remarks></remarks>
+		ImageCopy2 = unchecked((uint)1000337007),
+
+		/// <remarks></remarks>
+		ImageBlit2 = unchecked((uint)1000337008),
+
+		/// <remarks></remarks>
+		BufferImageCopy2 = unchecked((uint)1000337009),
+
+		/// <remarks></remarks>
+		ImageResolve2 = unchecked((uint)1000337010),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubgroupSizeControlProperties = unchecked((uint)1000225000),
+
+		/// <remarks></remarks>
+		PipelineShaderStageRequiredSubgroupSizeCreateInfo = unchecked((uint)1000225001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubgroupSizeControlFeatures = unchecked((uint)1000225002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceInlineUniformBlockFeatures = unchecked((uint)1000138000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceInlineUniformBlockProperties = unchecked((uint)1000138001),
+
+		/// <remarks></remarks>
+		WriteDescriptorSetInlineUniformBlock = unchecked((uint)1000138002),
+
+		/// <remarks></remarks>
+		DescriptorPoolInlineUniformBlockCreateInfo = unchecked((uint)1000138003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTextureCompressionAstcHdrFeatures = unchecked((uint)1000066000),
+
+		/// <remarks></remarks>
+		RenderingInfo = unchecked((uint)1000044000),
+
+		/// <remarks></remarks>
+		RenderingAttachmentInfo = unchecked((uint)1000044001),
+
+		/// <remarks></remarks>
+		PipelineRenderingCreateInfo = unchecked((uint)1000044002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDynamicRenderingFeatures = unchecked((uint)1000044003),
+
+		/// <remarks></remarks>
+		CommandBufferInheritanceRenderingInfo = unchecked((uint)1000044004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderIntegerDotProductFeatures = unchecked((uint)1000280000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderIntegerDotProductProperties = unchecked((uint)1000280001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTexelBufferAlignmentProperties = unchecked((uint)1000281001),
+
+		/// <remarks></remarks>
+		FormatProperties3 = unchecked((uint)1000360000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance4Features = unchecked((uint)1000413000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance4Properties = unchecked((uint)1000413001),
+
+		/// <remarks></remarks>
+		DeviceBufferMemoryRequirements = unchecked((uint)1000413002),
+
+		/// <remarks></remarks>
+		DeviceImageMemoryRequirements = unchecked((uint)1000413003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan14Features = unchecked((uint)55),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkan14Properties = unchecked((uint)56),
+
+		/// <remarks></remarks>
+		DeviceQueueGlobalPriorityCreateInfo = unchecked((uint)1000174000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceGlobalPriorityQueryFeatures = unchecked((uint)1000388000),
+
+		/// <remarks></remarks>
+		QueueFamilyGlobalPriorityProperties = unchecked((uint)1000388001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSubgroupRotateFeatures = unchecked((uint)1000416000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderFloatControls2Features = unchecked((uint)1000528000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderExpectAssumeFeatures = unchecked((uint)1000544000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationFeatures = unchecked((uint)1000259000),
+
+		/// <remarks></remarks>
+		PipelineRasterizationLineStateCreateInfo = unchecked((uint)1000259001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationProperties = unchecked((uint)1000259002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorProperties = unchecked((uint)1000525000),
+
+		/// <remarks></remarks>
+		PipelineVertexInputDivisorStateCreateInfo = unchecked((uint)1000190001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorFeatures = unchecked((uint)1000190002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceIndexTypeUint8Features = unchecked((uint)1000265000),
+
+		/// <remarks></remarks>
+		MemoryMapInfo = unchecked((uint)1000271000),
+
+		/// <remarks></remarks>
+		MemoryUnmapInfo = unchecked((uint)1000271001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance5Features = unchecked((uint)1000470000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance5Properties = unchecked((uint)1000470001),
+
+		/// <remarks></remarks>
+		RenderingAreaInfo = unchecked((uint)1000470003),
+
+		/// <remarks></remarks>
+		DeviceImageSubresourceInfo = unchecked((uint)1000470004),
+
+		/// <remarks></remarks>
+		SubresourceLayout2 = unchecked((uint)1000338002),
+
+		/// <remarks></remarks>
+		ImageSubresource2 = unchecked((uint)1000338003),
+
+		/// <remarks></remarks>
+		PipelineCreateFlags2CreateInfo = unchecked((uint)1000470005),
+
+		/// <remarks></remarks>
+		BufferUsageFlags2CreateInfo = unchecked((uint)1000470006),
+
+		/// <remarks></remarks>
+		PhysicalDevicePushDescriptorProperties = unchecked((uint)1000080000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDynamicRenderingLocalReadFeatures = unchecked((uint)1000232000),
+
+		/// <remarks></remarks>
+		RenderingAttachmentLocationInfo = unchecked((uint)1000232001),
+
+		/// <remarks></remarks>
+		RenderingInputAttachmentIndexInfo = unchecked((uint)1000232002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance6Features = unchecked((uint)1000545000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance6Properties = unchecked((uint)1000545001),
+
+		/// <remarks></remarks>
+		BindMemoryStatus = unchecked((uint)1000545002),
+
+		/// <remarks></remarks>
+		BindDescriptorSetsInfo = unchecked((uint)1000545003),
+
+		/// <remarks></remarks>
+		PushConstantsInfo = unchecked((uint)1000545004),
+
+		/// <remarks></remarks>
+		PushDescriptorSetInfo = unchecked((uint)1000545005),
+
+		/// <remarks></remarks>
+		PushDescriptorSetWithTemplateInfo = unchecked((uint)1000545006),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineProtectedAccessFeatures = unchecked((uint)1000466000),
+
+		/// <remarks></remarks>
+		PipelineRobustnessCreateInfo = unchecked((uint)1000068000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineRobustnessFeatures = unchecked((uint)1000068001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineRobustnessProperties = unchecked((uint)1000068002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostImageCopyFeatures = unchecked((uint)1000270000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostImageCopyProperties = unchecked((uint)1000270001),
+
+		/// <remarks></remarks>
+		MemoryToImageCopy = unchecked((uint)1000270002),
+
+		/// <remarks></remarks>
+		ImageToMemoryCopy = unchecked((uint)1000270003),
+
+		/// <remarks></remarks>
+		CopyImageToMemoryInfo = unchecked((uint)1000270004),
+
+		/// <remarks></remarks>
+		CopyMemoryToImageInfo = unchecked((uint)1000270005),
+
+		/// <remarks></remarks>
+		HostImageLayoutTransitionInfo = unchecked((uint)1000270006),
+
+		/// <remarks></remarks>
+		CopyImageToImageInfo = unchecked((uint)1000270007),
+
+		/// <remarks></remarks>
+		SubresourceHostMemcpySize = unchecked((uint)1000270008),
+
+		/// <remarks></remarks>
+		HostImageCopyDevicePerformanceQuery = unchecked((uint)1000270009),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkanSc10Features = unchecked((uint)1000298000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkanSc10Properties = unchecked((uint)1000298001),
+
+		/// <remarks></remarks>
+		DeviceObjectReservationCreateInfo = unchecked((uint)1000298002),
+
+		/// <remarks></remarks>
+		CommandPoolMemoryReservationCreateInfo = unchecked((uint)1000298003),
+
+		/// <remarks></remarks>
+		CommandPoolMemoryConsumption = unchecked((uint)1000298004),
+
+		/// <remarks></remarks>
+		PipelinePoolSize = unchecked((uint)1000298005),
+
+		/// <remarks></remarks>
+		FaultData = unchecked((uint)1000298007),
+
+		/// <remarks></remarks>
+		FaultCallbackInfo = unchecked((uint)1000298008),
+
+		/// <remarks></remarks>
+		PipelineOfflineCreateInfo = unchecked((uint)1000298010),
+
+		/// <remarks></remarks>
+		SwapchainCreateInfoKhr = unchecked((uint)1000001000),
+
+		/// <remarks></remarks>
+		PresentInfoKhr = unchecked((uint)1000001001),
+
+		/// <remarks></remarks>
+		DeviceGroupPresentCapabilitiesKhr = unchecked((uint)1000060007),
+
+		/// <remarks></remarks>
+		ImageSwapchainCreateInfoKhr = unchecked((uint)1000060008),
+
+		/// <remarks></remarks>
+		BindImageMemorySwapchainInfoKhr = unchecked((uint)1000060009),
+
+		/// <remarks></remarks>
+		AcquireNextImageInfoKhr = unchecked((uint)1000060010),
+
+		/// <remarks></remarks>
+		DeviceGroupPresentInfoKhr = unchecked((uint)1000060011),
+
+		/// <remarks></remarks>
+		DeviceGroupSwapchainCreateInfoKhr = unchecked((uint)1000060012),
+
+		/// <remarks></remarks>
+		DisplayModeCreateInfoKhr = unchecked((uint)1000002000),
+
+		/// <remarks></remarks>
+		DisplaySurfaceCreateInfoKhr = unchecked((uint)1000002001),
+
+		/// <remarks></remarks>
+		DisplayPresentInfoKhr = unchecked((uint)1000003000),
+
+		/// <remarks></remarks>
+		XlibSurfaceCreateInfoKhr = unchecked((uint)1000004000),
+
+		/// <remarks></remarks>
+		XcbSurfaceCreateInfoKhr = unchecked((uint)1000005000),
+
+		/// <remarks></remarks>
+		WaylandSurfaceCreateInfoKhr = unchecked((uint)1000006000),
+
+		/// <remarks></remarks>
+		AndroidSurfaceCreateInfoKhr = unchecked((uint)1000008000),
+
+		/// <remarks></remarks>
+		Win32SurfaceCreateInfoKhr = unchecked((uint)1000009000),
+
+		/// <remarks></remarks>
+		NativeBufferAndroid = unchecked((uint)1000010000),
+
+		/// <remarks></remarks>
+		SwapchainImageCreateInfoAndroid = unchecked((uint)1000010001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePresentationPropertiesAndroid = unchecked((uint)1000010002),
+
+		/// <remarks></remarks>
+		DebugReportCallbackCreateInfoExt = unchecked((uint)1000011000),
+
+		/// <remarks></remarks>
+		PipelineRasterizationStateRasterizationOrderAmd = unchecked((uint)1000018000),
+
+		/// <remarks></remarks>
+		DebugMarkerObjectNameInfoExt = unchecked((uint)1000022000),
+
+		/// <remarks></remarks>
+		DebugMarkerObjectTagInfoExt = unchecked((uint)1000022001),
+
+		/// <remarks></remarks>
+		DebugMarkerMarkerInfoExt = unchecked((uint)1000022002),
+
+		/// <remarks></remarks>
+		VideoProfileInfoKhr = unchecked((uint)1000023000),
+
+		/// <remarks></remarks>
+		VideoCapabilitiesKhr = unchecked((uint)1000023001),
+
+		/// <remarks></remarks>
+		VideoPictureResourceInfoKhr = unchecked((uint)1000023002),
+
+		/// <remarks></remarks>
+		VideoSessionMemoryRequirementsKhr = unchecked((uint)1000023003),
+
+		/// <remarks></remarks>
+		BindVideoSessionMemoryInfoKhr = unchecked((uint)1000023004),
+
+		/// <remarks></remarks>
+		VideoSessionCreateInfoKhr = unchecked((uint)1000023005),
+
+		/// <remarks></remarks>
+		VideoSessionParametersCreateInfoKhr = unchecked((uint)1000023006),
+
+		/// <remarks></remarks>
+		VideoSessionParametersUpdateInfoKhr = unchecked((uint)1000023007),
+
+		/// <remarks></remarks>
+		VideoBeginCodingInfoKhr = unchecked((uint)1000023008),
+
+		/// <remarks></remarks>
+		VideoEndCodingInfoKhr = unchecked((uint)1000023009),
+
+		/// <remarks></remarks>
+		VideoCodingControlInfoKhr = unchecked((uint)1000023010),
+
+		/// <remarks></remarks>
+		VideoReferenceSlotInfoKhr = unchecked((uint)1000023011),
+
+		/// <remarks></remarks>
+		QueueFamilyVideoPropertiesKhr = unchecked((uint)1000023012),
+
+		/// <remarks></remarks>
+		VideoProfileListInfoKhr = unchecked((uint)1000023013),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVideoFormatInfoKhr = unchecked((uint)1000023014),
+
+		/// <remarks></remarks>
+		VideoFormatPropertiesKhr = unchecked((uint)1000023015),
+
+		/// <remarks></remarks>
+		QueueFamilyQueryResultStatusPropertiesKhr = unchecked((uint)1000023016),
+
+		/// <remarks></remarks>
+		VideoDecodeInfoKhr = unchecked((uint)1000024000),
+
+		/// <remarks></remarks>
+		VideoDecodeCapabilitiesKhr = unchecked((uint)1000024001),
+
+		/// <remarks></remarks>
+		VideoDecodeUsageInfoKhr = unchecked((uint)1000024002),
+
+		/// <remarks></remarks>
+		DedicatedAllocationImageCreateInfoNv = unchecked((uint)1000026000),
+
+		/// <remarks></remarks>
+		DedicatedAllocationBufferCreateInfoNv = unchecked((uint)1000026001),
+
+		/// <remarks></remarks>
+		DedicatedAllocationMemoryAllocateInfoNv = unchecked((uint)1000026002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTransformFeedbackFeaturesExt = unchecked((uint)1000028000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTransformFeedbackPropertiesExt = unchecked((uint)1000028001),
+
+		/// <remarks></remarks>
+		PipelineRasterizationStateStreamCreateInfoExt = unchecked((uint)1000028002),
+
+		/// <remarks></remarks>
+		CuModuleCreateInfoNvx = unchecked((uint)1000029000),
+
+		/// <remarks></remarks>
+		CuFunctionCreateInfoNvx = unchecked((uint)1000029001),
+
+		/// <remarks></remarks>
+		CuLaunchInfoNvx = unchecked((uint)1000029002),
+
+		/// <remarks></remarks>
+		CuModuleTexturingModeCreateInfoNvx = unchecked((uint)1000029004),
+
+		/// <remarks></remarks>
+		ImageViewHandleInfoNvx = unchecked((uint)1000030000),
+
+		/// <remarks></remarks>
+		ImageViewAddressPropertiesNvx = unchecked((uint)1000030001),
+
+		/// <remarks></remarks>
+		VideoEncodeH264CapabilitiesKhr = unchecked((uint)1000038000),
+
+		/// <remarks></remarks>
+		VideoEncodeH264SessionParametersCreateInfoKhr = unchecked((uint)1000038001),
+
+		/// <remarks></remarks>
+		VideoEncodeH264SessionParametersAddInfoKhr = unchecked((uint)1000038002),
+
+		/// <remarks></remarks>
+		VideoEncodeH264PictureInfoKhr = unchecked((uint)1000038003),
+
+		/// <remarks></remarks>
+		VideoEncodeH264DpbSlotInfoKhr = unchecked((uint)1000038004),
+
+		/// <remarks></remarks>
+		VideoEncodeH264NaluSliceInfoKhr = unchecked((uint)1000038005),
+
+		/// <remarks></remarks>
+		VideoEncodeH264GopRemainingFrameInfoKhr = unchecked((uint)1000038006),
+
+		/// <remarks></remarks>
+		VideoEncodeH264ProfileInfoKhr = unchecked((uint)1000038007),
+
+		/// <remarks></remarks>
+		VideoEncodeH264RateControlInfoKhr = unchecked((uint)1000038008),
+
+		/// <remarks></remarks>
+		VideoEncodeH264RateControlLayerInfoKhr = unchecked((uint)1000038009),
+
+		/// <remarks></remarks>
+		VideoEncodeH264SessionCreateInfoKhr = unchecked((uint)1000038010),
+
+		/// <remarks></remarks>
+		VideoEncodeH264QualityLevelPropertiesKhr = unchecked((uint)1000038011),
+
+		/// <remarks></remarks>
+		VideoEncodeH264SessionParametersGetInfoKhr = unchecked((uint)1000038012),
+
+		/// <remarks></remarks>
+		VideoEncodeH264SessionParametersFeedbackInfoKhr = unchecked((uint)1000038013),
+
+		/// <remarks></remarks>
+		VideoEncodeH265CapabilitiesKhr = unchecked((uint)1000039000),
+
+		/// <remarks></remarks>
+		VideoEncodeH265SessionParametersCreateInfoKhr = unchecked((uint)1000039001),
+
+		/// <remarks></remarks>
+		VideoEncodeH265SessionParametersAddInfoKhr = unchecked((uint)1000039002),
+
+		/// <remarks></remarks>
+		VideoEncodeH265PictureInfoKhr = unchecked((uint)1000039003),
+
+		/// <remarks></remarks>
+		VideoEncodeH265DpbSlotInfoKhr = unchecked((uint)1000039004),
+
+		/// <remarks></remarks>
+		VideoEncodeH265NaluSliceSegmentInfoKhr = unchecked((uint)1000039005),
+
+		/// <remarks></remarks>
+		VideoEncodeH265GopRemainingFrameInfoKhr = unchecked((uint)1000039006),
+
+		/// <remarks></remarks>
+		VideoEncodeH265ProfileInfoKhr = unchecked((uint)1000039007),
+
+		/// <remarks></remarks>
+		VideoEncodeH265RateControlInfoKhr = unchecked((uint)1000039009),
+
+		/// <remarks></remarks>
+		VideoEncodeH265RateControlLayerInfoKhr = unchecked((uint)1000039010),
+
+		/// <remarks></remarks>
+		VideoEncodeH265SessionCreateInfoKhr = unchecked((uint)1000039011),
+
+		/// <remarks></remarks>
+		VideoEncodeH265QualityLevelPropertiesKhr = unchecked((uint)1000039012),
+
+		/// <remarks></remarks>
+		VideoEncodeH265SessionParametersGetInfoKhr = unchecked((uint)1000039013),
+
+		/// <remarks></remarks>
+		VideoEncodeH265SessionParametersFeedbackInfoKhr = unchecked((uint)1000039014),
+
+		/// <remarks></remarks>
+		VideoDecodeH264CapabilitiesKhr = unchecked((uint)1000040000),
+
+		/// <remarks></remarks>
+		VideoDecodeH264PictureInfoKhr = unchecked((uint)1000040001),
+
+		/// <remarks></remarks>
+		VideoDecodeH264ProfileInfoKhr = unchecked((uint)1000040003),
+
+		/// <remarks></remarks>
+		VideoDecodeH264SessionParametersCreateInfoKhr = unchecked((uint)1000040004),
+
+		/// <remarks></remarks>
+		VideoDecodeH264SessionParametersAddInfoKhr = unchecked((uint)1000040005),
+
+		/// <remarks></remarks>
+		VideoDecodeH264DpbSlotInfoKhr = unchecked((uint)1000040006),
+
+		/// <remarks></remarks>
+		TextureLodGatherFormatPropertiesAmd = unchecked((uint)1000041000),
+
+		/// <remarks></remarks>
+		RenderingInfoKhr = RenderingInfo,
+
+		/// <remarks></remarks>
+		RenderingAttachmentInfoKhr = RenderingAttachmentInfo,
+
+		/// <remarks></remarks>
+		PipelineRenderingCreateInfoKhr = PipelineRenderingCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDynamicRenderingFeaturesKhr = PhysicalDeviceDynamicRenderingFeatures,
+
+		/// <remarks></remarks>
+		CommandBufferInheritanceRenderingInfoKhr = CommandBufferInheritanceRenderingInfo,
+
+		/// <remarks></remarks>
+		StreamDescriptorSurfaceCreateInfoGgp = unchecked((uint)1000049000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCornerSampledImageFeaturesNv = unchecked((uint)1000050000),
+
+		/// <remarks></remarks>
+		PrivateVendorInfoPlaceholderOffset0Nv = unchecked((uint)1000051000),
+
+		/// <remarks></remarks>
+		RenderPassMultiviewCreateInfoKhr = RenderPassMultiviewCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewFeaturesKhr = PhysicalDeviceMultiviewFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewPropertiesKhr = PhysicalDeviceMultiviewProperties,
+
+		/// <remarks></remarks>
+		ExternalMemoryImageCreateInfoNv = unchecked((uint)1000056000),
+
+		/// <remarks></remarks>
+		ExportMemoryAllocateInfoNv = unchecked((uint)1000056001),
+
+		/// <remarks></remarks>
+		ImportMemoryWin32HandleInfoNv = unchecked((uint)1000057000),
+
+		/// <remarks></remarks>
+		ExportMemoryWin32HandleInfoNv = unchecked((uint)1000057001),
+
+		/// <remarks></remarks>
+		Win32KeyedMutexAcquireReleaseInfoNv = unchecked((uint)1000058000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFeatures2Khr = PhysicalDeviceFeatures2,
+
+		/// <remarks></remarks>
+		PhysicalDeviceProperties2Khr = PhysicalDeviceProperties2,
+
+		/// <remarks></remarks>
+		FormatProperties2Khr = FormatProperties2,
+
+		/// <remarks></remarks>
+		ImageFormatProperties2Khr = ImageFormatProperties2,
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageFormatInfo2Khr = PhysicalDeviceImageFormatInfo2,
+
+		/// <remarks></remarks>
+		QueueFamilyProperties2Khr = QueueFamilyProperties2,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryProperties2Khr = PhysicalDeviceMemoryProperties2,
+
+		/// <remarks></remarks>
+		SparseImageFormatProperties2Khr = SparseImageFormatProperties2,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSparseImageFormatInfo2Khr = PhysicalDeviceSparseImageFormatInfo2,
+
+		/// <remarks></remarks>
+		MemoryAllocateFlagsInfoKhr = MemoryAllocateFlagsInfo,
+
+		/// <remarks></remarks>
+		DeviceGroupRenderPassBeginInfoKhr = DeviceGroupRenderPassBeginInfo,
+
+		/// <remarks></remarks>
+		DeviceGroupCommandBufferBeginInfoKhr = DeviceGroupCommandBufferBeginInfo,
+
+		/// <remarks></remarks>
+		DeviceGroupSubmitInfoKhr = DeviceGroupSubmitInfo,
+
+		/// <remarks></remarks>
+		DeviceGroupBindSparseInfoKhr = DeviceGroupBindSparseInfo,
+
+		/// <remarks></remarks>
+		BindBufferMemoryDeviceGroupInfoKhr = BindBufferMemoryDeviceGroupInfo,
+
+		/// <remarks></remarks>
+		BindImageMemoryDeviceGroupInfoKhr = BindImageMemoryDeviceGroupInfo,
+
+		/// <remarks></remarks>
+		ValidationFlagsExt = unchecked((uint)1000061000),
+
+		/// <remarks></remarks>
+		ViSurfaceCreateInfoNn = unchecked((uint)1000062000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTextureCompressionAstcHdrFeaturesExt = PhysicalDeviceTextureCompressionAstcHdrFeatures,
+
+		/// <remarks></remarks>
+		ImageViewAstcDecodeModeExt = unchecked((uint)1000067000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAstcDecodeFeaturesExt = unchecked((uint)1000067001),
+
+		/// <remarks></remarks>
+		PipelineRobustnessCreateInfoExt = PipelineRobustnessCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineRobustnessFeaturesExt = PhysicalDevicePipelineRobustnessFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineRobustnessPropertiesExt = PhysicalDevicePipelineRobustnessProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceGroupPropertiesKhr = PhysicalDeviceGroupProperties,
+
+		/// <remarks></remarks>
+		DeviceGroupDeviceCreateInfoKhr = DeviceGroupDeviceCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalImageFormatInfoKhr = PhysicalDeviceExternalImageFormatInfo,
+
+		/// <remarks></remarks>
+		ExternalImageFormatPropertiesKhr = ExternalImageFormatProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalBufferInfoKhr = PhysicalDeviceExternalBufferInfo,
+
+		/// <remarks></remarks>
+		ExternalBufferPropertiesKhr = ExternalBufferProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceIdPropertiesKhr = PhysicalDeviceIdProperties,
+
+		/// <remarks></remarks>
+		ExternalMemoryBufferCreateInfoKhr = ExternalMemoryBufferCreateInfo,
+
+		/// <remarks></remarks>
+		ExternalMemoryImageCreateInfoKhr = ExternalMemoryImageCreateInfo,
+
+		/// <remarks></remarks>
+		ExportMemoryAllocateInfoKhr = ExportMemoryAllocateInfo,
+
+		/// <remarks></remarks>
+		ImportMemoryWin32HandleInfoKhr = unchecked((uint)1000073000),
+
+		/// <remarks></remarks>
+		ExportMemoryWin32HandleInfoKhr = unchecked((uint)1000073001),
+
+		/// <remarks></remarks>
+		MemoryWin32HandlePropertiesKhr = unchecked((uint)1000073002),
+
+		/// <remarks></remarks>
+		MemoryGetWin32HandleInfoKhr = unchecked((uint)1000073003),
+
+		/// <remarks></remarks>
+		ImportMemoryFdInfoKhr = unchecked((uint)1000074000),
+
+		/// <remarks></remarks>
+		MemoryFdPropertiesKhr = unchecked((uint)1000074001),
+
+		/// <remarks></remarks>
+		MemoryGetFdInfoKhr = unchecked((uint)1000074002),
+
+		/// <remarks></remarks>
+		Win32KeyedMutexAcquireReleaseInfoKhr = unchecked((uint)1000075000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalSemaphoreInfoKhr = PhysicalDeviceExternalSemaphoreInfo,
+
+		/// <remarks></remarks>
+		ExternalSemaphorePropertiesKhr = ExternalSemaphoreProperties,
+
+		/// <remarks></remarks>
+		ExportSemaphoreCreateInfoKhr = ExportSemaphoreCreateInfo,
+
+		/// <remarks></remarks>
+		ImportSemaphoreWin32HandleInfoKhr = unchecked((uint)1000078000),
+
+		/// <remarks></remarks>
+		ExportSemaphoreWin32HandleInfoKhr = unchecked((uint)1000078001),
+
+		/// <remarks></remarks>
+		D3D12FenceSubmitInfoKhr = unchecked((uint)1000078002),
+
+		/// <remarks></remarks>
+		SemaphoreGetWin32HandleInfoKhr = unchecked((uint)1000078003),
+
+		/// <remarks></remarks>
+		ImportSemaphoreFdInfoKhr = unchecked((uint)1000079000),
+
+		/// <remarks></remarks>
+		SemaphoreGetFdInfoKhr = unchecked((uint)1000079001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePushDescriptorPropertiesKhr = PhysicalDevicePushDescriptorProperties,
+
+		/// <remarks></remarks>
+		CommandBufferInheritanceConditionalRenderingInfoExt = unchecked((uint)1000081000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceConditionalRenderingFeaturesExt = unchecked((uint)1000081001),
+
+		/// <remarks></remarks>
+		ConditionalRenderingBeginInfoExt = unchecked((uint)1000081002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderFloat16Int8FeaturesKhr = PhysicalDeviceShaderFloat16Int8Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceFloat16Int8FeaturesKhr = PhysicalDeviceShaderFloat16Int8Features,
+
+		/// <remarks></remarks>
+		PhysicalDevice16BitStorageFeaturesKhr = PhysicalDevice16BitStorageFeatures,
+
+		/// <remarks></remarks>
+		PresentRegionsKhr = unchecked((uint)1000084000),
+
+		/// <remarks></remarks>
+		DescriptorUpdateTemplateCreateInfoKhr = DescriptorUpdateTemplateCreateInfo,
+
+		/// <remarks></remarks>
+		PipelineViewportWScalingStateCreateInfoNv = unchecked((uint)1000087000),
+
+		/// <remarks></remarks>
+		SurfaceCapabilities2Ext = unchecked((uint)1000090000),
+
+		/// <remarks></remarks>
+		DisplayPowerInfoExt = unchecked((uint)1000091000),
+
+		/// <remarks></remarks>
+		DeviceEventInfoExt = unchecked((uint)1000091001),
+
+		/// <remarks></remarks>
+		DisplayEventInfoExt = unchecked((uint)1000091002),
+
+		/// <remarks></remarks>
+		SwapchainCounterCreateInfoExt = unchecked((uint)1000091003),
+
+		/// <remarks></remarks>
+		PresentTimesInfoGoogle = unchecked((uint)1000092000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewPerViewAttributesPropertiesNvx = unchecked((uint)1000097000),
+
+		/// <remarks></remarks>
+		MultiviewPerViewAttributesInfoNvx = unchecked((uint)1000044009),
+
+		/// <remarks></remarks>
+		PipelineViewportSwizzleStateCreateInfoNv = unchecked((uint)1000098000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDiscardRectanglePropertiesExt = unchecked((uint)1000099000),
+
+		/// <remarks></remarks>
+		PipelineDiscardRectangleStateCreateInfoExt = unchecked((uint)1000099001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceConservativeRasterizationPropertiesExt = unchecked((uint)1000101000),
+
+		/// <remarks></remarks>
+		PipelineRasterizationConservativeStateCreateInfoExt = unchecked((uint)1000101001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthClipEnableFeaturesExt = unchecked((uint)1000102000),
+
+		/// <remarks></remarks>
+		PipelineRasterizationDepthClipStateCreateInfoExt = unchecked((uint)1000102001),
+
+		/// <remarks></remarks>
+		HdrMetadataExt = unchecked((uint)1000105000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImagelessFramebufferFeaturesKhr = PhysicalDeviceImagelessFramebufferFeatures,
+
+		/// <remarks></remarks>
+		FramebufferAttachmentsCreateInfoKhr = FramebufferAttachmentsCreateInfo,
+
+		/// <remarks></remarks>
+		FramebufferAttachmentImageInfoKhr = FramebufferAttachmentImageInfo,
+
+		/// <remarks></remarks>
+		RenderPassAttachmentBeginInfoKhr = RenderPassAttachmentBeginInfo,
+
+		/// <remarks></remarks>
+		AttachmentDescription2Khr = AttachmentDescription2,
+
+		/// <remarks></remarks>
+		AttachmentReference2Khr = AttachmentReference2,
+
+		/// <remarks></remarks>
+		SubpassDescription2Khr = SubpassDescription2,
+
+		/// <remarks></remarks>
+		SubpassDependency2Khr = SubpassDependency2,
+
+		/// <remarks></remarks>
+		RenderPassCreateInfo2Khr = RenderPassCreateInfo2,
+
+		/// <remarks></remarks>
+		SubpassBeginInfoKhr = SubpassBeginInfo,
+
+		/// <remarks></remarks>
+		SubpassEndInfoKhr = SubpassEndInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceRelaxedLineRasterizationFeaturesImg = unchecked((uint)1000110000),
+
+		/// <remarks></remarks>
+		SharedPresentSurfaceCapabilitiesKhr = unchecked((uint)1000111000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalFenceInfoKhr = PhysicalDeviceExternalFenceInfo,
+
+		/// <remarks></remarks>
+		ExternalFencePropertiesKhr = ExternalFenceProperties,
+
+		/// <remarks></remarks>
+		ExportFenceCreateInfoKhr = ExportFenceCreateInfo,
+
+		/// <remarks></remarks>
+		ImportFenceWin32HandleInfoKhr = unchecked((uint)1000114000),
+
+		/// <remarks></remarks>
+		ExportFenceWin32HandleInfoKhr = unchecked((uint)1000114001),
+
+		/// <remarks></remarks>
+		FenceGetWin32HandleInfoKhr = unchecked((uint)1000114002),
+
+		/// <remarks></remarks>
+		ImportFenceFdInfoKhr = unchecked((uint)1000115000),
+
+		/// <remarks></remarks>
+		FenceGetFdInfoKhr = unchecked((uint)1000115001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePerformanceQueryFeaturesKhr = unchecked((uint)1000116000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePerformanceQueryPropertiesKhr = unchecked((uint)1000116001),
+
+		/// <remarks></remarks>
+		QueryPoolPerformanceCreateInfoKhr = unchecked((uint)1000116002),
+
+		/// <remarks></remarks>
+		PerformanceQuerySubmitInfoKhr = unchecked((uint)1000116003),
+
+		/// <remarks></remarks>
+		AcquireProfilingLockInfoKhr = unchecked((uint)1000116004),
+
+		/// <remarks></remarks>
+		PerformanceCounterKhr = unchecked((uint)1000116005),
+
+		/// <remarks></remarks>
+		PerformanceCounterDescriptionKhr = unchecked((uint)1000116006),
+
+		/// <remarks></remarks>
+		PerformanceQueryReservationInfoKhr = unchecked((uint)1000116007),
+
+		/// <remarks></remarks>
+		PhysicalDevicePointClippingPropertiesKhr = PhysicalDevicePointClippingProperties,
+
+		/// <remarks></remarks>
+		RenderPassInputAttachmentAspectCreateInfoKhr = RenderPassInputAttachmentAspectCreateInfo,
+
+		/// <remarks></remarks>
+		ImageViewUsageCreateInfoKhr = ImageViewUsageCreateInfo,
+
+		/// <remarks></remarks>
+		PipelineTessellationDomainOriginStateCreateInfoKhr = PipelineTessellationDomainOriginStateCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSurfaceInfo2Khr = unchecked((uint)1000119000),
+
+		/// <remarks></remarks>
+		SurfaceCapabilities2Khr = unchecked((uint)1000119001),
+
+		/// <remarks></remarks>
+		SurfaceFormat2Khr = unchecked((uint)1000119002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVariablePointersFeaturesKhr = PhysicalDeviceVariablePointersFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceVariablePointerFeaturesKhr = PhysicalDeviceVariablePointersFeaturesKhr,
+
+		/// <remarks></remarks>
+		DisplayProperties2Khr = unchecked((uint)1000121000),
+
+		/// <remarks></remarks>
+		DisplayPlaneProperties2Khr = unchecked((uint)1000121001),
+
+		/// <remarks></remarks>
+		DisplayModeProperties2Khr = unchecked((uint)1000121002),
+
+		/// <remarks></remarks>
+		DisplayPlaneInfo2Khr = unchecked((uint)1000121003),
+
+		/// <remarks></remarks>
+		DisplayPlaneCapabilities2Khr = unchecked((uint)1000121004),
+
+		/// <remarks></remarks>
+		IosSurfaceCreateInfoMvk = unchecked((uint)1000122000),
+
+		/// <remarks></remarks>
+		MacosSurfaceCreateInfoMvk = unchecked((uint)1000123000),
+
+		/// <remarks></remarks>
+		MemoryDedicatedRequirementsKhr = MemoryDedicatedRequirements,
+
+		/// <remarks></remarks>
+		MemoryDedicatedAllocateInfoKhr = MemoryDedicatedAllocateInfo,
+
+		/// <remarks></remarks>
+		DebugUtilsObjectNameInfoExt = unchecked((uint)1000128000),
+
+		/// <remarks></remarks>
+		DebugUtilsObjectTagInfoExt = unchecked((uint)1000128001),
+
+		/// <remarks></remarks>
+		DebugUtilsLabelExt = unchecked((uint)1000128002),
+
+		/// <remarks></remarks>
+		DebugUtilsMessengerCallbackDataExt = unchecked((uint)1000128003),
+
+		/// <remarks></remarks>
+		DebugUtilsMessengerCreateInfoExt = unchecked((uint)1000128004),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferUsageAndroid = unchecked((uint)1000129000),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferPropertiesAndroid = unchecked((uint)1000129001),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferFormatPropertiesAndroid = unchecked((uint)1000129002),
+
+		/// <remarks></remarks>
+		ImportAndroidHardwareBufferInfoAndroid = unchecked((uint)1000129003),
+
+		/// <remarks></remarks>
+		MemoryGetAndroidHardwareBufferInfoAndroid = unchecked((uint)1000129004),
+
+		/// <remarks></remarks>
+		ExternalFormatAndroid = unchecked((uint)1000129005),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferFormatProperties2Android = unchecked((uint)1000129006),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSamplerFilterMinmaxPropertiesExt = PhysicalDeviceSamplerFilterMinmaxProperties,
+
+		/// <remarks></remarks>
+		SamplerReductionModeCreateInfoExt = SamplerReductionModeCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderEnqueueFeaturesAmdx = unchecked((uint)1000134000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderEnqueuePropertiesAmdx = unchecked((uint)1000134001),
+
+		/// <remarks></remarks>
+		ExecutionGraphPipelineScratchSizeAmdx = unchecked((uint)1000134002),
+
+		/// <remarks></remarks>
+		ExecutionGraphPipelineCreateInfoAmdx = unchecked((uint)1000134003),
+
+		/// <remarks></remarks>
+		PipelineShaderStageNodeCreateInfoAmdx = unchecked((uint)1000134004),
+
+		/// <remarks></remarks>
+		AttachmentSampleCountInfoAmd = unchecked((uint)1000044008),
+
+		/// <remarks></remarks>
+		PhysicalDeviceInlineUniformBlockFeaturesExt = PhysicalDeviceInlineUniformBlockFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceInlineUniformBlockPropertiesExt = PhysicalDeviceInlineUniformBlockProperties,
+
+		/// <remarks></remarks>
+		WriteDescriptorSetInlineUniformBlockExt = WriteDescriptorSetInlineUniformBlock,
+
+		/// <remarks></remarks>
+		DescriptorPoolInlineUniformBlockCreateInfoExt = DescriptorPoolInlineUniformBlockCreateInfo,
+
+		/// <remarks></remarks>
+		SampleLocationsInfoExt = unchecked((uint)1000143000),
+
+		/// <remarks></remarks>
+		RenderPassSampleLocationsBeginInfoExt = unchecked((uint)1000143001),
+
+		/// <remarks></remarks>
+		PipelineSampleLocationsStateCreateInfoExt = unchecked((uint)1000143002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSampleLocationsPropertiesExt = unchecked((uint)1000143003),
+
+		/// <remarks></remarks>
+		MultisamplePropertiesExt = unchecked((uint)1000143004),
+
+		/// <remarks></remarks>
+		BufferMemoryRequirementsInfo2Khr = BufferMemoryRequirementsInfo2,
+
+		/// <remarks></remarks>
+		ImageMemoryRequirementsInfo2Khr = ImageMemoryRequirementsInfo2,
+
+		/// <remarks></remarks>
+		ImageSparseMemoryRequirementsInfo2Khr = ImageSparseMemoryRequirementsInfo2,
+
+		/// <remarks></remarks>
+		MemoryRequirements2Khr = MemoryRequirements2,
+
+		/// <remarks></remarks>
+		SparseImageMemoryRequirements2Khr = SparseImageMemoryRequirements2,
+
+		/// <remarks></remarks>
+		ImageFormatListCreateInfoKhr = ImageFormatListCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceBlendOperationAdvancedFeaturesExt = unchecked((uint)1000148000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceBlendOperationAdvancedPropertiesExt = unchecked((uint)1000148001),
+
+		/// <remarks></remarks>
+		PipelineColorBlendAdvancedStateCreateInfoExt = unchecked((uint)1000148002),
+
+		/// <remarks></remarks>
+		PipelineCoverageToColorStateCreateInfoNv = unchecked((uint)1000149000),
+
+		/// <remarks></remarks>
+		WriteDescriptorSetAccelerationStructureKhr = unchecked((uint)1000150007),
+
+		/// <remarks></remarks>
+		AccelerationStructureBuildGeometryInfoKhr = unchecked((uint)1000150000),
+
+		/// <remarks></remarks>
+		AccelerationStructureDeviceAddressInfoKhr = unchecked((uint)1000150002),
+
+		/// <remarks></remarks>
+		AccelerationStructureGeometryAabbsDataKhr = unchecked((uint)1000150003),
+
+		/// <remarks></remarks>
+		AccelerationStructureGeometryInstancesDataKhr = unchecked((uint)1000150004),
+
+		/// <remarks></remarks>
+		AccelerationStructureGeometryTrianglesDataKhr = unchecked((uint)1000150005),
+
+		/// <remarks></remarks>
+		AccelerationStructureGeometryKhr = unchecked((uint)1000150006),
+
+		/// <remarks></remarks>
+		AccelerationStructureVersionInfoKhr = unchecked((uint)1000150009),
+
+		/// <remarks></remarks>
+		CopyAccelerationStructureInfoKhr = unchecked((uint)1000150010),
+
+		/// <remarks></remarks>
+		CopyAccelerationStructureToMemoryInfoKhr = unchecked((uint)1000150011),
+
+		/// <remarks></remarks>
+		CopyMemoryToAccelerationStructureInfoKhr = unchecked((uint)1000150012),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAccelerationStructureFeaturesKhr = unchecked((uint)1000150013),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAccelerationStructurePropertiesKhr = unchecked((uint)1000150014),
+
+		/// <remarks></remarks>
+		AccelerationStructureCreateInfoKhr = unchecked((uint)1000150017),
+
+		/// <remarks></remarks>
+		AccelerationStructureBuildSizesInfoKhr = unchecked((uint)1000150020),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingPipelineFeaturesKhr = unchecked((uint)1000347000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingPipelinePropertiesKhr = unchecked((uint)1000347001),
+
+		/// <remarks></remarks>
+		RayTracingPipelineCreateInfoKhr = unchecked((uint)1000150015),
+
+		/// <remarks></remarks>
+		RayTracingShaderGroupCreateInfoKhr = unchecked((uint)1000150016),
+
+		/// <remarks></remarks>
+		RayTracingPipelineInterfaceCreateInfoKhr = unchecked((uint)1000150018),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayQueryFeaturesKhr = unchecked((uint)1000348013),
+
+		/// <remarks></remarks>
+		PipelineCoverageModulationStateCreateInfoNv = unchecked((uint)1000152000),
+
+		/// <remarks></remarks>
+		AttachmentSampleCountInfoNv = AttachmentSampleCountInfoAmd,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSmBuiltinsFeaturesNv = unchecked((uint)1000154000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSmBuiltinsPropertiesNv = unchecked((uint)1000154001),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionCreateInfoKhr = SamplerYcbcrConversionCreateInfo,
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionInfoKhr = SamplerYcbcrConversionInfo,
+
+		/// <remarks></remarks>
+		BindImagePlaneMemoryInfoKhr = BindImagePlaneMemoryInfo,
+
+		/// <remarks></remarks>
+		ImagePlaneMemoryRequirementsInfoKhr = ImagePlaneMemoryRequirementsInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSamplerYcbcrConversionFeaturesKhr = PhysicalDeviceSamplerYcbcrConversionFeatures,
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionImageFormatPropertiesKhr = SamplerYcbcrConversionImageFormatProperties,
+
+		/// <remarks></remarks>
+		BindBufferMemoryInfoKhr = BindBufferMemoryInfo,
+
+		/// <remarks></remarks>
+		BindImageMemoryInfoKhr = BindImageMemoryInfo,
+
+		/// <remarks></remarks>
+		DrmFormatModifierPropertiesListExt = unchecked((uint)1000158000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageDrmFormatModifierInfoExt = unchecked((uint)1000158002),
+
+		/// <remarks></remarks>
+		ImageDrmFormatModifierListCreateInfoExt = unchecked((uint)1000158003),
+
+		/// <remarks></remarks>
+		ImageDrmFormatModifierExplicitCreateInfoExt = unchecked((uint)1000158004),
+
+		/// <remarks></remarks>
+		ImageDrmFormatModifierPropertiesExt = unchecked((uint)1000158005),
+
+		/// <remarks></remarks>
+		DrmFormatModifierPropertiesList2Ext = unchecked((uint)1000158006),
+
+		/// <remarks></remarks>
+		ValidationCacheCreateInfoExt = unchecked((uint)1000160000),
+
+		/// <remarks></remarks>
+		ShaderModuleValidationCacheCreateInfoExt = unchecked((uint)1000160001),
+
+		/// <remarks></remarks>
+		DescriptorSetLayoutBindingFlagsCreateInfoExt = DescriptorSetLayoutBindingFlagsCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorIndexingFeaturesExt = PhysicalDeviceDescriptorIndexingFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorIndexingPropertiesExt = PhysicalDeviceDescriptorIndexingProperties,
+
+		/// <remarks></remarks>
+		DescriptorSetVariableDescriptorCountAllocateInfoExt = DescriptorSetVariableDescriptorCountAllocateInfo,
+
+		/// <remarks></remarks>
+		DescriptorSetVariableDescriptorCountLayoutSupportExt = DescriptorSetVariableDescriptorCountLayoutSupport,
+
+		/// <remarks></remarks>
+		PhysicalDevicePortabilitySubsetFeaturesKhr = unchecked((uint)1000163000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePortabilitySubsetPropertiesKhr = unchecked((uint)1000163001),
+
+		/// <remarks></remarks>
+		PipelineViewportShadingRateImageStateCreateInfoNv = unchecked((uint)1000164000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShadingRateImageFeaturesNv = unchecked((uint)1000164001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShadingRateImagePropertiesNv = unchecked((uint)1000164002),
+
+		/// <remarks></remarks>
+		PipelineViewportCoarseSampleOrderStateCreateInfoNv = unchecked((uint)1000164005),
+
+		/// <remarks></remarks>
+		RayTracingPipelineCreateInfoNv = unchecked((uint)1000165000),
+
+		/// <remarks></remarks>
+		AccelerationStructureCreateInfoNv = unchecked((uint)1000165001),
+
+		/// <remarks></remarks>
+		GeometryNv = unchecked((uint)1000165003),
+
+		/// <remarks></remarks>
+		GeometryTrianglesNv = unchecked((uint)1000165004),
+
+		/// <remarks></remarks>
+		GeometryAabbNv = unchecked((uint)1000165005),
+
+		/// <remarks></remarks>
+		BindAccelerationStructureMemoryInfoNv = unchecked((uint)1000165006),
+
+		/// <remarks></remarks>
+		WriteDescriptorSetAccelerationStructureNv = unchecked((uint)1000165007),
+
+		/// <remarks></remarks>
+		AccelerationStructureMemoryRequirementsInfoNv = unchecked((uint)1000165008),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingPropertiesNv = unchecked((uint)1000165009),
+
+		/// <remarks></remarks>
+		RayTracingShaderGroupCreateInfoNv = unchecked((uint)1000165011),
+
+		/// <remarks></remarks>
+		AccelerationStructureInfoNv = unchecked((uint)1000165012),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRepresentativeFragmentTestFeaturesNv = unchecked((uint)1000166000),
+
+		/// <remarks></remarks>
+		PipelineRepresentativeFragmentTestStateCreateInfoNv = unchecked((uint)1000166001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance3PropertiesKhr = PhysicalDeviceMaintenance3Properties,
+
+		/// <remarks></remarks>
+		DescriptorSetLayoutSupportKhr = DescriptorSetLayoutSupport,
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageViewImageFormatInfoExt = unchecked((uint)1000170000),
+
+		/// <remarks></remarks>
+		FilterCubicImageViewImageFormatPropertiesExt = unchecked((uint)1000170001),
+
+		/// <remarks></remarks>
+		DeviceQueueGlobalPriorityCreateInfoExt = DeviceQueueGlobalPriorityCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKhr = PhysicalDeviceShaderSubgroupExtendedTypesFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDevice8BitStorageFeaturesKhr = PhysicalDevice8BitStorageFeatures,
+
+		/// <remarks></remarks>
+		ImportMemoryHostPointerInfoExt = unchecked((uint)1000178000),
+
+		/// <remarks></remarks>
+		MemoryHostPointerPropertiesExt = unchecked((uint)1000178001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalMemoryHostPropertiesExt = unchecked((uint)1000178002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderAtomicInt64FeaturesKhr = PhysicalDeviceShaderAtomicInt64Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderClockFeaturesKhr = unchecked((uint)1000181000),
+
+		/// <remarks></remarks>
+		PipelineCompilerControlCreateInfoAmd = unchecked((uint)1000183000),
+
+		/// <remarks></remarks>
+		CalibratedTimestampInfoExt = CalibratedTimestampInfoKhr,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderCorePropertiesAmd = unchecked((uint)1000185000),
+
+		/// <remarks></remarks>
+		VideoDecodeH265CapabilitiesKhr = unchecked((uint)1000187000),
+
+		/// <remarks></remarks>
+		VideoDecodeH265SessionParametersCreateInfoKhr = unchecked((uint)1000187001),
+
+		/// <remarks></remarks>
+		VideoDecodeH265SessionParametersAddInfoKhr = unchecked((uint)1000187002),
+
+		/// <remarks></remarks>
+		VideoDecodeH265ProfileInfoKhr = unchecked((uint)1000187003),
+
+		/// <remarks></remarks>
+		VideoDecodeH265PictureInfoKhr = unchecked((uint)1000187004),
+
+		/// <remarks></remarks>
+		VideoDecodeH265DpbSlotInfoKhr = unchecked((uint)1000187005),
+
+		/// <remarks></remarks>
+		DeviceQueueGlobalPriorityCreateInfoKhr = DeviceQueueGlobalPriorityCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceGlobalPriorityQueryFeaturesKhr = PhysicalDeviceGlobalPriorityQueryFeatures,
+
+		/// <remarks></remarks>
+		QueueFamilyGlobalPriorityPropertiesKhr = QueueFamilyGlobalPriorityProperties,
+
+		/// <remarks></remarks>
+		DeviceMemoryOverallocationCreateInfoAmd = unchecked((uint)1000189000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorPropertiesExt = unchecked((uint)1000190000),
+
+		/// <remarks></remarks>
+		PipelineVertexInputDivisorStateCreateInfoExt = PipelineVertexInputDivisorStateCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorFeaturesExt = PhysicalDeviceVertexAttributeDivisorFeatures,
+
+		/// <remarks></remarks>
+		PresentFrameTokenGgp = unchecked((uint)1000191000),
+
+		/// <remarks></remarks>
+		PipelineCreationFeedbackCreateInfoExt = PipelineCreationFeedbackCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDriverPropertiesKhr = PhysicalDeviceDriverProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceFloatControlsPropertiesKhr = PhysicalDeviceFloatControlsProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthStencilResolvePropertiesKhr = PhysicalDeviceDepthStencilResolveProperties,
+
+		/// <remarks></remarks>
+		SubpassDescriptionDepthStencilResolveKhr = SubpassDescriptionDepthStencilResolve,
+
+		/// <remarks></remarks>
+		PhysicalDeviceComputeShaderDerivativesFeaturesNv = PhysicalDeviceComputeShaderDerivativesFeaturesKhr,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMeshShaderFeaturesNv = unchecked((uint)1000202000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMeshShaderPropertiesNv = unchecked((uint)1000202001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShaderBarycentricFeaturesNv = PhysicalDeviceFragmentShaderBarycentricFeaturesKhr,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderImageFootprintFeaturesNv = unchecked((uint)1000204000),
+
+		/// <remarks></remarks>
+		PipelineViewportExclusiveScissorStateCreateInfoNv = unchecked((uint)1000205000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExclusiveScissorFeaturesNv = unchecked((uint)1000205002),
+
+		/// <remarks></remarks>
+		CheckpointDataNv = unchecked((uint)1000206000),
+
+		/// <remarks></remarks>
+		QueueFamilyCheckpointPropertiesNv = unchecked((uint)1000206001),
+
+		/// <remarks></remarks>
+		QueueFamilyCheckpointProperties2Nv = unchecked((uint)1000314008),
+
+		/// <remarks></remarks>
+		CheckpointData2Nv = unchecked((uint)1000314009),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTimelineSemaphoreFeaturesKhr = PhysicalDeviceTimelineSemaphoreFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceTimelineSemaphorePropertiesKhr = PhysicalDeviceTimelineSemaphoreProperties,
+
+		/// <remarks></remarks>
+		SemaphoreTypeCreateInfoKhr = SemaphoreTypeCreateInfo,
+
+		/// <remarks></remarks>
+		TimelineSemaphoreSubmitInfoKhr = TimelineSemaphoreSubmitInfo,
+
+		/// <remarks></remarks>
+		SemaphoreWaitInfoKhr = SemaphoreWaitInfo,
+
+		/// <remarks></remarks>
+		SemaphoreSignalInfoKhr = SemaphoreSignalInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderIntegerFunctions2FeaturesIntel = unchecked((uint)1000209000),
+
+		/// <remarks></remarks>
+		QueryPoolPerformanceQueryCreateInfoIntel = unchecked((uint)1000210000),
+
+		/// <remarks></remarks>
+		InitializePerformanceApiInfoIntel = unchecked((uint)1000210001),
+
+		/// <remarks></remarks>
+		PerformanceMarkerInfoIntel = unchecked((uint)1000210002),
+
+		/// <remarks></remarks>
+		PerformanceStreamMarkerInfoIntel = unchecked((uint)1000210003),
+
+		/// <remarks></remarks>
+		PerformanceOverrideInfoIntel = unchecked((uint)1000210004),
+
+		/// <remarks></remarks>
+		PerformanceConfigurationAcquireInfoIntel = unchecked((uint)1000210005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVulkanMemoryModelFeaturesKhr = PhysicalDeviceVulkanMemoryModelFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDevicePciBusInfoPropertiesExt = unchecked((uint)1000212000),
+
+		/// <remarks></remarks>
+		DisplayNativeHdrSurfaceCapabilitiesAmd = unchecked((uint)1000213000),
+
+		/// <remarks></remarks>
+		SwapchainDisplayNativeHdrCreateInfoAmd = unchecked((uint)1000213001),
+
+		/// <remarks></remarks>
+		ImagepipeSurfaceCreateInfoFuchsia = unchecked((uint)1000214000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderTerminateInvocationFeaturesKhr = PhysicalDeviceShaderTerminateInvocationFeatures,
+
+		/// <remarks></remarks>
+		MetalSurfaceCreateInfoExt = unchecked((uint)1000217000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMapFeaturesExt = unchecked((uint)1000218000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMapPropertiesExt = unchecked((uint)1000218001),
+
+		/// <remarks></remarks>
+		RenderPassFragmentDensityMapCreateInfoExt = unchecked((uint)1000218002),
+
+		/// <remarks></remarks>
+		RenderingFragmentDensityMapAttachmentInfoExt = unchecked((uint)1000044007),
+
+		/// <remarks></remarks>
+		PhysicalDeviceScalarBlockLayoutFeaturesExt = PhysicalDeviceScalarBlockLayoutFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubgroupSizeControlPropertiesExt = PhysicalDeviceSubgroupSizeControlProperties,
+
+		/// <remarks></remarks>
+		PipelineShaderStageRequiredSubgroupSizeCreateInfoExt = PipelineShaderStageRequiredSubgroupSizeCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubgroupSizeControlFeaturesExt = PhysicalDeviceSubgroupSizeControlFeatures,
+
+		/// <remarks></remarks>
+		FragmentShadingRateAttachmentInfoKhr = unchecked((uint)1000226000),
+
+		/// <remarks></remarks>
+		PipelineFragmentShadingRateStateCreateInfoKhr = unchecked((uint)1000226001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShadingRatePropertiesKhr = unchecked((uint)1000226002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShadingRateFeaturesKhr = unchecked((uint)1000226003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShadingRateKhr = unchecked((uint)1000226004),
+
+		/// <remarks></remarks>
+		RenderingFragmentShadingRateAttachmentInfoKhr = unchecked((uint)1000044006),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderCoreProperties2Amd = unchecked((uint)1000227000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCoherentMemoryFeaturesAmd = unchecked((uint)1000229000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDynamicRenderingLocalReadFeaturesKhr = PhysicalDeviceDynamicRenderingLocalReadFeatures,
+
+		/// <remarks></remarks>
+		RenderingAttachmentLocationInfoKhr = RenderingAttachmentLocationInfo,
+
+		/// <remarks></remarks>
+		RenderingInputAttachmentIndexInfoKhr = RenderingInputAttachmentIndexInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderImageAtomicInt64FeaturesExt = unchecked((uint)1000234000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderQuadControlFeaturesKhr = unchecked((uint)1000235000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryBudgetPropertiesExt = unchecked((uint)1000237000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryPriorityFeaturesExt = unchecked((uint)1000238000),
+
+		/// <remarks></remarks>
+		MemoryPriorityAllocateInfoExt = unchecked((uint)1000238001),
+
+		/// <remarks></remarks>
+		SurfaceProtectedCapabilitiesKhr = unchecked((uint)1000239000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNv = unchecked((uint)1000240000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKhr = PhysicalDeviceSeparateDepthStencilLayoutsFeatures,
+
+		/// <remarks></remarks>
+		AttachmentReferenceStencilLayoutKhr = AttachmentReferenceStencilLayout,
+
+		/// <remarks></remarks>
+		AttachmentDescriptionStencilLayoutKhr = AttachmentDescriptionStencilLayout,
+
+		/// <remarks></remarks>
+		PhysicalDeviceBufferDeviceAddressFeaturesExt = unchecked((uint)1000244000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceBufferAddressFeaturesExt = PhysicalDeviceBufferDeviceAddressFeaturesExt,
+
+		/// <remarks></remarks>
+		BufferDeviceAddressInfoExt = BufferDeviceAddressInfo,
+
+		/// <remarks></remarks>
+		BufferDeviceAddressCreateInfoExt = unchecked((uint)1000244002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceToolPropertiesExt = PhysicalDeviceToolProperties,
+
+		/// <remarks></remarks>
+		ImageStencilUsageCreateInfoExt = ImageStencilUsageCreateInfo,
+
+		/// <remarks></remarks>
+		ValidationFeaturesExt = unchecked((uint)1000247000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePresentWaitFeaturesKhr = unchecked((uint)1000248000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrixFeaturesNv = unchecked((uint)1000249000),
+
+		/// <remarks></remarks>
+		CooperativeMatrixPropertiesNv = unchecked((uint)1000249001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrixPropertiesNv = unchecked((uint)1000249002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCoverageReductionModeFeaturesNv = unchecked((uint)1000250000),
+
+		/// <remarks></remarks>
+		PipelineCoverageReductionStateCreateInfoNv = unchecked((uint)1000250001),
+
+		/// <remarks></remarks>
+		FramebufferMixedSamplesCombinationNv = unchecked((uint)1000250002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShaderInterlockFeaturesExt = unchecked((uint)1000251000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceYcbcrImageArraysFeaturesExt = unchecked((uint)1000252000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceUniformBufferStandardLayoutFeaturesKhr = PhysicalDeviceUniformBufferStandardLayoutFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceProvokingVertexFeaturesExt = unchecked((uint)1000254000),
+
+		/// <remarks></remarks>
+		PipelineRasterizationProvokingVertexStateCreateInfoExt = unchecked((uint)1000254001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceProvokingVertexPropertiesExt = unchecked((uint)1000254002),
+
+		/// <remarks></remarks>
+		SurfaceFullScreenExclusiveInfoExt = unchecked((uint)1000255000),
+
+		/// <remarks></remarks>
+		SurfaceCapabilitiesFullScreenExclusiveExt = unchecked((uint)1000255002),
+
+		/// <remarks></remarks>
+		SurfaceFullScreenExclusiveWin32InfoExt = unchecked((uint)1000255001),
+
+		/// <remarks></remarks>
+		HeadlessSurfaceCreateInfoExt = unchecked((uint)1000256000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceBufferDeviceAddressFeaturesKhr = PhysicalDeviceBufferDeviceAddressFeatures,
+
+		/// <remarks></remarks>
+		BufferDeviceAddressInfoKhr = BufferDeviceAddressInfo,
+
+		/// <remarks></remarks>
+		BufferOpaqueCaptureAddressCreateInfoKhr = BufferOpaqueCaptureAddressCreateInfo,
+
+		/// <remarks></remarks>
+		MemoryOpaqueCaptureAddressAllocateInfoKhr = MemoryOpaqueCaptureAddressAllocateInfo,
+
+		/// <remarks></remarks>
+		DeviceMemoryOpaqueCaptureAddressInfoKhr = DeviceMemoryOpaqueCaptureAddressInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationFeaturesExt = PhysicalDeviceLineRasterizationFeatures,
+
+		/// <remarks></remarks>
+		PipelineRasterizationLineStateCreateInfoExt = PipelineRasterizationLineStateCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationPropertiesExt = PhysicalDeviceLineRasterizationProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderAtomicFloatFeaturesExt = unchecked((uint)1000260000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostQueryResetFeaturesExt = PhysicalDeviceHostQueryResetFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceIndexTypeUint8FeaturesExt = PhysicalDeviceIndexTypeUint8Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedDynamicStateFeaturesExt = unchecked((uint)1000267000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineExecutablePropertiesFeaturesKhr = unchecked((uint)1000269000),
+
+		/// <remarks></remarks>
+		PipelineInfoKhr = unchecked((uint)1000269001),
+
+		/// <remarks></remarks>
+		PipelineExecutablePropertiesKhr = unchecked((uint)1000269002),
+
+		/// <remarks></remarks>
+		PipelineExecutableInfoKhr = unchecked((uint)1000269003),
+
+		/// <remarks></remarks>
+		PipelineExecutableStatisticKhr = unchecked((uint)1000269004),
+
+		/// <remarks></remarks>
+		PipelineExecutableInternalRepresentationKhr = unchecked((uint)1000269005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostImageCopyFeaturesExt = PhysicalDeviceHostImageCopyFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceHostImageCopyPropertiesExt = PhysicalDeviceHostImageCopyProperties,
+
+		/// <remarks></remarks>
+		MemoryToImageCopyExt = MemoryToImageCopy,
+
+		/// <remarks></remarks>
+		ImageToMemoryCopyExt = ImageToMemoryCopy,
+
+		/// <remarks></remarks>
+		CopyImageToMemoryInfoExt = CopyImageToMemoryInfo,
+
+		/// <remarks></remarks>
+		CopyMemoryToImageInfoExt = CopyMemoryToImageInfo,
+
+		/// <remarks></remarks>
+		HostImageLayoutTransitionInfoExt = HostImageLayoutTransitionInfo,
+
+		/// <remarks></remarks>
+		CopyImageToImageInfoExt = CopyImageToImageInfo,
+
+		/// <remarks></remarks>
+		SubresourceHostMemcpySizeExt = SubresourceHostMemcpySize,
+
+		/// <remarks></remarks>
+		HostImageCopyDevicePerformanceQueryExt = HostImageCopyDevicePerformanceQuery,
+
+		/// <remarks></remarks>
+		MemoryMapInfoKhr = MemoryMapInfo,
+
+		/// <remarks></remarks>
+		MemoryUnmapInfoKhr = MemoryUnmapInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMapMemoryPlacedFeaturesExt = unchecked((uint)1000272000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMapMemoryPlacedPropertiesExt = unchecked((uint)1000272001),
+
+		/// <remarks></remarks>
+		MemoryMapPlacedInfoExt = unchecked((uint)1000272002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderAtomicFloat2FeaturesExt = unchecked((uint)1000273000),
+
+		/// <remarks></remarks>
+		SurfacePresentModeExt = unchecked((uint)1000274000),
+
+		/// <remarks></remarks>
+		SurfacePresentScalingCapabilitiesExt = unchecked((uint)1000274001),
+
+		/// <remarks></remarks>
+		SurfacePresentModeCompatibilityExt = unchecked((uint)1000274002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSwapchainMaintenance1FeaturesExt = unchecked((uint)1000275000),
+
+		/// <remarks></remarks>
+		SwapchainPresentFenceInfoExt = unchecked((uint)1000275001),
+
+		/// <remarks></remarks>
+		SwapchainPresentModesCreateInfoExt = unchecked((uint)1000275002),
+
+		/// <remarks></remarks>
+		SwapchainPresentModeInfoExt = unchecked((uint)1000275003),
+
+		/// <remarks></remarks>
+		SwapchainPresentScalingCreateInfoExt = unchecked((uint)1000275004),
+
+		/// <remarks></remarks>
+		ReleaseSwapchainImagesInfoExt = unchecked((uint)1000275005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderDemoteToHelperInvocationFeaturesExt = PhysicalDeviceShaderDemoteToHelperInvocationFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceGeneratedCommandsPropertiesNv = unchecked((uint)1000277000),
+
+		/// <remarks></remarks>
+		GraphicsShaderGroupCreateInfoNv = unchecked((uint)1000277001),
+
+		/// <remarks></remarks>
+		GraphicsPipelineShaderGroupsCreateInfoNv = unchecked((uint)1000277002),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutTokenNv = unchecked((uint)1000277003),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutCreateInfoNv = unchecked((uint)1000277004),
+
+		/// <remarks></remarks>
+		GeneratedCommandsInfoNv = unchecked((uint)1000277005),
+
+		/// <remarks></remarks>
+		GeneratedCommandsMemoryRequirementsInfoNv = unchecked((uint)1000277006),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceGeneratedCommandsFeaturesNv = unchecked((uint)1000277007),
+
+		/// <remarks></remarks>
+		PhysicalDeviceInheritedViewportScissorFeaturesNv = unchecked((uint)1000278000),
+
+		/// <remarks></remarks>
+		CommandBufferInheritanceViewportScissorInfoNv = unchecked((uint)1000278001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderIntegerDotProductFeaturesKhr = PhysicalDeviceShaderIntegerDotProductFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderIntegerDotProductPropertiesKhr = PhysicalDeviceShaderIntegerDotProductProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceTexelBufferAlignmentFeaturesExt = unchecked((uint)1000281000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTexelBufferAlignmentPropertiesExt = PhysicalDeviceTexelBufferAlignmentProperties,
+
+		/// <remarks></remarks>
+		CommandBufferInheritanceRenderPassTransformInfoQcom = unchecked((uint)1000282000),
+
+		/// <remarks></remarks>
+		RenderPassTransformBeginInfoQcom = unchecked((uint)1000282001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthBiasControlFeaturesExt = unchecked((uint)1000283000),
+
+		/// <remarks></remarks>
+		DepthBiasInfoExt = unchecked((uint)1000283001),
+
+		/// <remarks></remarks>
+		DepthBiasRepresentationInfoExt = unchecked((uint)1000283002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceMemoryReportFeaturesExt = unchecked((uint)1000284000),
+
+		/// <remarks></remarks>
+		DeviceDeviceMemoryReportCreateInfoExt = unchecked((uint)1000284001),
+
+		/// <remarks></remarks>
+		DeviceMemoryReportCallbackDataExt = unchecked((uint)1000284002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRobustness2FeaturesExt = unchecked((uint)1000286000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRobustness2PropertiesExt = unchecked((uint)1000286001),
+
+		/// <remarks></remarks>
+		SamplerCustomBorderColorCreateInfoExt = unchecked((uint)1000287000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCustomBorderColorPropertiesExt = unchecked((uint)1000287001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCustomBorderColorFeaturesExt = unchecked((uint)1000287002),
+
+		/// <remarks></remarks>
+		PipelineLibraryCreateInfoKhr = unchecked((uint)1000290000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePresentBarrierFeaturesNv = unchecked((uint)1000292000),
+
+		/// <remarks></remarks>
+		SurfaceCapabilitiesPresentBarrierNv = unchecked((uint)1000292001),
+
+		/// <remarks></remarks>
+		SwapchainPresentBarrierCreateInfoNv = unchecked((uint)1000292002),
+
+		/// <remarks></remarks>
+		PresentIdKhr = unchecked((uint)1000294000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePresentIdFeaturesKhr = unchecked((uint)1000294001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePrivateDataFeaturesExt = PhysicalDevicePrivateDataFeatures,
+
+		/// <remarks></remarks>
+		DevicePrivateDataCreateInfoExt = DevicePrivateDataCreateInfo,
+
+		/// <remarks></remarks>
+		PrivateDataSlotCreateInfoExt = PrivateDataSlotCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineCreationCacheControlFeaturesExt = PhysicalDevicePipelineCreationCacheControlFeatures,
+
+		/// <remarks></remarks>
+		VideoEncodeInfoKhr = unchecked((uint)1000299000),
+
+		/// <remarks></remarks>
+		VideoEncodeRateControlInfoKhr = unchecked((uint)1000299001),
+
+		/// <remarks></remarks>
+		VideoEncodeRateControlLayerInfoKhr = unchecked((uint)1000299002),
+
+		/// <remarks></remarks>
+		VideoEncodeCapabilitiesKhr = unchecked((uint)1000299003),
+
+		/// <remarks></remarks>
+		VideoEncodeUsageInfoKhr = unchecked((uint)1000299004),
+
+		/// <remarks></remarks>
+		QueryPoolVideoEncodeFeedbackCreateInfoKhr = unchecked((uint)1000299005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVideoEncodeQualityLevelInfoKhr = unchecked((uint)1000299006),
+
+		/// <remarks></remarks>
+		VideoEncodeQualityLevelPropertiesKhr = unchecked((uint)1000299007),
+
+		/// <remarks></remarks>
+		VideoEncodeQualityLevelInfoKhr = unchecked((uint)1000299008),
+
+		/// <remarks></remarks>
+		VideoEncodeSessionParametersGetInfoKhr = unchecked((uint)1000299009),
+
+		/// <remarks></remarks>
+		VideoEncodeSessionParametersFeedbackInfoKhr = unchecked((uint)1000299010),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDiagnosticsConfigFeaturesNv = unchecked((uint)1000300000),
+
+		/// <remarks></remarks>
+		DeviceDiagnosticsConfigCreateInfoNv = unchecked((uint)1000300001),
+
+		/// <remarks></remarks>
+		CudaModuleCreateInfoNv = unchecked((uint)1000307000),
+
+		/// <remarks></remarks>
+		CudaFunctionCreateInfoNv = unchecked((uint)1000307001),
+
+		/// <remarks></remarks>
+		CudaLaunchInfoNv = unchecked((uint)1000307002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCudaKernelLaunchFeaturesNv = unchecked((uint)1000307003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCudaKernelLaunchPropertiesNv = unchecked((uint)1000307004),
+
+		/// <remarks></remarks>
+		RefreshObjectListKhr = unchecked((uint)1000308000),
+
+		/// <remarks></remarks>
+		QueryLowLatencySupportNv = unchecked((uint)1000310000),
+
+		/// <remarks></remarks>
+		ExportMetalObjectCreateInfoExt = unchecked((uint)1000311000),
+
+		/// <remarks></remarks>
+		ExportMetalObjectsInfoExt = unchecked((uint)1000311001),
+
+		/// <remarks></remarks>
+		ExportMetalDeviceInfoExt = unchecked((uint)1000311002),
+
+		/// <remarks></remarks>
+		ExportMetalCommandQueueInfoExt = unchecked((uint)1000311003),
+
+		/// <remarks></remarks>
+		ExportMetalBufferInfoExt = unchecked((uint)1000311004),
+
+		/// <remarks></remarks>
+		ImportMetalBufferInfoExt = unchecked((uint)1000311005),
+
+		/// <remarks></remarks>
+		ExportMetalTextureInfoExt = unchecked((uint)1000311006),
+
+		/// <remarks></remarks>
+		ImportMetalTextureInfoExt = unchecked((uint)1000311007),
+
+		/// <remarks></remarks>
+		ExportMetalIoSurfaceInfoExt = unchecked((uint)1000311008),
+
+		/// <remarks></remarks>
+		ImportMetalIoSurfaceInfoExt = unchecked((uint)1000311009),
+
+		/// <remarks></remarks>
+		ExportMetalSharedEventInfoExt = unchecked((uint)1000311010),
+
+		/// <remarks></remarks>
+		ImportMetalSharedEventInfoExt = unchecked((uint)1000311011),
+
+		/// <remarks></remarks>
+		MemoryBarrier2Khr = MemoryBarrier2,
+
+		/// <remarks></remarks>
+		BufferMemoryBarrier2Khr = BufferMemoryBarrier2,
+
+		/// <remarks></remarks>
+		ImageMemoryBarrier2Khr = ImageMemoryBarrier2,
+
+		/// <remarks></remarks>
+		DependencyInfoKhr = DependencyInfo,
+
+		/// <remarks></remarks>
+		SubmitInfo2Khr = SubmitInfo2,
+
+		/// <remarks></remarks>
+		SemaphoreSubmitInfoKhr = SemaphoreSubmitInfo,
+
+		/// <remarks></remarks>
+		CommandBufferSubmitInfoKhr = CommandBufferSubmitInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceSynchronization2FeaturesKhr = PhysicalDeviceSynchronization2Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorBufferPropertiesExt = unchecked((uint)1000316000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorBufferDensityMapPropertiesExt = unchecked((uint)1000316001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorBufferFeaturesExt = unchecked((uint)1000316002),
+
+		/// <remarks></remarks>
+		DescriptorAddressInfoExt = unchecked((uint)1000316003),
+
+		/// <remarks></remarks>
+		DescriptorGetInfoExt = unchecked((uint)1000316004),
+
+		/// <remarks></remarks>
+		BufferCaptureDescriptorDataInfoExt = unchecked((uint)1000316005),
+
+		/// <remarks></remarks>
+		ImageCaptureDescriptorDataInfoExt = unchecked((uint)1000316006),
+
+		/// <remarks></remarks>
+		ImageViewCaptureDescriptorDataInfoExt = unchecked((uint)1000316007),
+
+		/// <remarks></remarks>
+		SamplerCaptureDescriptorDataInfoExt = unchecked((uint)1000316008),
+
+		/// <remarks></remarks>
+		OpaqueCaptureDescriptorDataCreateInfoExt = unchecked((uint)1000316010),
+
+		/// <remarks></remarks>
+		DescriptorBufferBindingInfoExt = unchecked((uint)1000316011),
+
+		/// <remarks></remarks>
+		DescriptorBufferBindingPushDescriptorBufferHandleExt = unchecked((uint)1000316012),
+
+		/// <remarks></remarks>
+		AccelerationStructureCaptureDescriptorDataInfoExt = unchecked((uint)1000316009),
+
+		/// <remarks></remarks>
+		PhysicalDeviceGraphicsPipelineLibraryFeaturesExt = unchecked((uint)1000320000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceGraphicsPipelineLibraryPropertiesExt = unchecked((uint)1000320001),
+
+		/// <remarks></remarks>
+		GraphicsPipelineLibraryCreateInfoExt = unchecked((uint)1000320002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAmd = unchecked((uint)1000321000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShaderBarycentricFeaturesKhr = unchecked((uint)1000203000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShaderBarycentricPropertiesKhr = unchecked((uint)1000322000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKhr = unchecked((uint)1000323000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKhr = PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShadingRateEnumsPropertiesNv = unchecked((uint)1000326000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentShadingRateEnumsFeaturesNv = unchecked((uint)1000326001),
+
+		/// <remarks></remarks>
+		PipelineFragmentShadingRateEnumStateCreateInfoNv = unchecked((uint)1000326002),
+
+		/// <remarks></remarks>
+		AccelerationStructureGeometryMotionTrianglesDataNv = unchecked((uint)1000327000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingMotionBlurFeaturesNv = unchecked((uint)1000327001),
+
+		/// <remarks></remarks>
+		AccelerationStructureMotionInfoNv = unchecked((uint)1000327002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMeshShaderFeaturesExt = unchecked((uint)1000328000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMeshShaderPropertiesExt = unchecked((uint)1000328001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceYcbcr2Plane444FormatsFeaturesExt = unchecked((uint)1000330000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMap2FeaturesExt = unchecked((uint)1000332000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMap2PropertiesExt = unchecked((uint)1000332001),
+
+		/// <remarks></remarks>
+		CopyCommandTransformInfoQcom = unchecked((uint)1000333000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageRobustnessFeaturesExt = PhysicalDeviceImageRobustnessFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKhr = unchecked((uint)1000336000),
+
+		/// <remarks></remarks>
+		CopyBufferInfo2Khr = CopyBufferInfo2,
+
+		/// <remarks></remarks>
+		CopyImageInfo2Khr = CopyImageInfo2,
+
+		/// <remarks></remarks>
+		CopyBufferToImageInfo2Khr = CopyBufferToImageInfo2,
+
+		/// <remarks></remarks>
+		CopyImageToBufferInfo2Khr = CopyImageToBufferInfo2,
+
+		/// <remarks></remarks>
+		BlitImageInfo2Khr = BlitImageInfo2,
+
+		/// <remarks></remarks>
+		ResolveImageInfo2Khr = ResolveImageInfo2,
+
+		/// <remarks></remarks>
+		BufferCopy2Khr = BufferCopy2,
+
+		/// <remarks></remarks>
+		ImageCopy2Khr = ImageCopy2,
+
+		/// <remarks></remarks>
+		ImageBlit2Khr = ImageBlit2,
+
+		/// <remarks></remarks>
+		BufferImageCopy2Khr = BufferImageCopy2,
+
+		/// <remarks></remarks>
+		ImageResolve2Khr = ImageResolve2,
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageCompressionControlFeaturesExt = unchecked((uint)1000338000),
+
+		/// <remarks></remarks>
+		ImageCompressionControlExt = unchecked((uint)1000338001),
+
+		/// <remarks></remarks>
+		SubresourceLayout2Ext = SubresourceLayout2,
+
+		/// <remarks></remarks>
+		ImageSubresource2Ext = ImageSubresource2,
+
+		/// <remarks></remarks>
+		ImageCompressionPropertiesExt = unchecked((uint)1000338004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesExt = unchecked((uint)1000339000),
+
+		/// <remarks></remarks>
+		PhysicalDevice4444FormatsFeaturesExt = unchecked((uint)1000340000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFaultFeaturesExt = unchecked((uint)1000341000),
+
+		/// <remarks></remarks>
+		DeviceFaultCountsExt = unchecked((uint)1000341001),
+
+		/// <remarks></remarks>
+		DeviceFaultInfoExt = unchecked((uint)1000341002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesArm = PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesExt,
+
+		/// <remarks></remarks>
+		PhysicalDeviceRgba10X6FormatsFeaturesExt = unchecked((uint)1000344000),
+
+		/// <remarks></remarks>
+		DirectfbSurfaceCreateInfoExt = unchecked((uint)1000346000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMutableDescriptorTypeFeaturesValve = PhysicalDeviceMutableDescriptorTypeFeaturesExt,
+
+		/// <remarks></remarks>
+		MutableDescriptorTypeCreateInfoValve = MutableDescriptorTypeCreateInfoExt,
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexInputDynamicStateFeaturesExt = unchecked((uint)1000352000),
+
+		/// <remarks></remarks>
+		VertexInputBindingDescription2Ext = unchecked((uint)1000352001),
+
+		/// <remarks></remarks>
+		VertexInputAttributeDescription2Ext = unchecked((uint)1000352002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDrmPropertiesExt = unchecked((uint)1000353000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAddressBindingReportFeaturesExt = unchecked((uint)1000354000),
+
+		/// <remarks></remarks>
+		DeviceAddressBindingCallbackDataExt = unchecked((uint)1000354001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthClipControlFeaturesExt = unchecked((uint)1000355000),
+
+		/// <remarks></remarks>
+		PipelineViewportDepthClipControlCreateInfoExt = unchecked((uint)1000355001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePrimitiveTopologyListRestartFeaturesExt = unchecked((uint)1000356000),
+
+		/// <remarks></remarks>
+		FormatProperties3Khr = FormatProperties3,
+
+		/// <remarks></remarks>
+		PhysicalDevicePresentModeFifoLatestReadyFeaturesExt = unchecked((uint)1000361000),
+
+		/// <remarks></remarks>
+		ImportMemoryZirconHandleInfoFuchsia = unchecked((uint)1000364000),
+
+		/// <remarks></remarks>
+		MemoryZirconHandlePropertiesFuchsia = unchecked((uint)1000364001),
+
+		/// <remarks></remarks>
+		MemoryGetZirconHandleInfoFuchsia = unchecked((uint)1000364002),
+
+		/// <remarks></remarks>
+		ImportSemaphoreZirconHandleInfoFuchsia = unchecked((uint)1000365000),
+
+		/// <remarks></remarks>
+		SemaphoreGetZirconHandleInfoFuchsia = unchecked((uint)1000365001),
+
+		/// <remarks></remarks>
+		BufferCollectionCreateInfoFuchsia = unchecked((uint)1000366000),
+
+		/// <remarks></remarks>
+		ImportMemoryBufferCollectionFuchsia = unchecked((uint)1000366001),
+
+		/// <remarks></remarks>
+		BufferCollectionImageCreateInfoFuchsia = unchecked((uint)1000366002),
+
+		/// <remarks></remarks>
+		BufferCollectionPropertiesFuchsia = unchecked((uint)1000366003),
+
+		/// <remarks></remarks>
+		BufferConstraintsInfoFuchsia = unchecked((uint)1000366004),
+
+		/// <remarks></remarks>
+		BufferCollectionBufferCreateInfoFuchsia = unchecked((uint)1000366005),
+
+		/// <remarks></remarks>
+		ImageConstraintsInfoFuchsia = unchecked((uint)1000366006),
+
+		/// <remarks></remarks>
+		ImageFormatConstraintsInfoFuchsia = unchecked((uint)1000366007),
+
+		/// <remarks></remarks>
+		SysmemColorSpaceFuchsia = unchecked((uint)1000366008),
+
+		/// <remarks></remarks>
+		BufferCollectionConstraintsInfoFuchsia = unchecked((uint)1000366009),
+
+		/// <remarks></remarks>
+		SubpassShadingPipelineCreateInfoHuawei = unchecked((uint)1000369000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubpassShadingFeaturesHuawei = unchecked((uint)1000369001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubpassShadingPropertiesHuawei = unchecked((uint)1000369002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceInvocationMaskFeaturesHuawei = unchecked((uint)1000370000),
+
+		/// <remarks></remarks>
+		MemoryGetRemoteAddressInfoNv = unchecked((uint)1000371000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalMemoryRdmaFeaturesNv = unchecked((uint)1000371001),
+
+		/// <remarks></remarks>
+		PipelinePropertiesIdentifierExt = unchecked((uint)1000372000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelinePropertiesFeaturesExt = unchecked((uint)1000372001),
+
+		/// <remarks></remarks>
+		PipelineInfoExt = PipelineInfoKhr,
+
+		/// <remarks></remarks>
+		ImportFenceSciSyncInfoNv = unchecked((uint)1000373000),
+
+		/// <remarks></remarks>
+		ExportFenceSciSyncInfoNv = unchecked((uint)1000373001),
+
+		/// <remarks></remarks>
+		FenceGetSciSyncInfoNv = unchecked((uint)1000373002),
+
+		/// <remarks></remarks>
+		SciSyncAttributesInfoNv = unchecked((uint)1000373003),
+
+		/// <remarks></remarks>
+		ImportSemaphoreSciSyncInfoNv = unchecked((uint)1000373004),
+
+		/// <remarks></remarks>
+		ExportSemaphoreSciSyncInfoNv = unchecked((uint)1000373005),
+
+		/// <remarks></remarks>
+		SemaphoreGetSciSyncInfoNv = unchecked((uint)1000373006),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalSciSyncFeaturesNv = unchecked((uint)1000373007),
+
+		/// <remarks></remarks>
+		ImportMemorySciBufInfoNv = unchecked((uint)1000374000),
+
+		/// <remarks></remarks>
+		ExportMemorySciBufInfoNv = unchecked((uint)1000374001),
+
+		/// <remarks></remarks>
+		MemoryGetSciBufInfoNv = unchecked((uint)1000374002),
+
+		/// <remarks></remarks>
+		MemorySciBufPropertiesNv = unchecked((uint)1000374003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalMemorySciBufFeaturesNv = unchecked((uint)1000374004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalSciBufFeaturesNv = PhysicalDeviceExternalMemorySciBufFeaturesNv,
+
+		/// <remarks></remarks>
+		PhysicalDeviceFrameBoundaryFeaturesExt = unchecked((uint)1000375000),
+
+		/// <remarks></remarks>
+		FrameBoundaryExt = unchecked((uint)1000375001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultisampledRenderToSingleSampledFeaturesExt = unchecked((uint)1000376000),
+
+		/// <remarks></remarks>
+		SubpassResolvePerformanceQueryExt = unchecked((uint)1000376001),
+
+		/// <remarks></remarks>
+		MultisampledRenderToSingleSampledInfoExt = unchecked((uint)1000376002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedDynamicState2FeaturesExt = unchecked((uint)1000377000),
+
+		/// <remarks></remarks>
+		ScreenSurfaceCreateInfoQnx = unchecked((uint)1000378000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceColorWriteEnableFeaturesExt = unchecked((uint)1000381000),
+
+		/// <remarks></remarks>
+		PipelineColorWriteCreateInfoExt = unchecked((uint)1000381001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePrimitivesGeneratedQueryFeaturesExt = unchecked((uint)1000382000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingMaintenance1FeaturesKhr = unchecked((uint)1000386000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceGlobalPriorityQueryFeaturesExt = PhysicalDeviceGlobalPriorityQueryFeatures,
+
+		/// <remarks></remarks>
+		QueueFamilyGlobalPriorityPropertiesExt = QueueFamilyGlobalPriorityProperties,
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageViewMinLodFeaturesExt = unchecked((uint)1000391000),
+
+		/// <remarks></remarks>
+		ImageViewMinLodCreateInfoExt = unchecked((uint)1000391001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiDrawFeaturesExt = unchecked((uint)1000392000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiDrawPropertiesExt = unchecked((uint)1000392001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImage2DViewOf3DFeaturesExt = unchecked((uint)1000393000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderTileImageFeaturesExt = unchecked((uint)1000395000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderTileImagePropertiesExt = unchecked((uint)1000395001),
+
+		/// <remarks></remarks>
+		MicromapBuildInfoExt = unchecked((uint)1000396000),
+
+		/// <remarks></remarks>
+		MicromapVersionInfoExt = unchecked((uint)1000396001),
+
+		/// <remarks></remarks>
+		CopyMicromapInfoExt = unchecked((uint)1000396002),
+
+		/// <remarks></remarks>
+		CopyMicromapToMemoryInfoExt = unchecked((uint)1000396003),
+
+		/// <remarks></remarks>
+		CopyMemoryToMicromapInfoExt = unchecked((uint)1000396004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceOpacityMicromapFeaturesExt = unchecked((uint)1000396005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceOpacityMicromapPropertiesExt = unchecked((uint)1000396006),
+
+		/// <remarks></remarks>
+		MicromapCreateInfoExt = unchecked((uint)1000396007),
+
+		/// <remarks></remarks>
+		MicromapBuildSizesInfoExt = unchecked((uint)1000396008),
+
+		/// <remarks></remarks>
+		AccelerationStructureTrianglesOpacityMicromapExt = unchecked((uint)1000396009),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDisplacementMicromapFeaturesNv = unchecked((uint)1000397000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDisplacementMicromapPropertiesNv = unchecked((uint)1000397001),
+
+		/// <remarks></remarks>
+		AccelerationStructureTrianglesDisplacementMicromapNv = unchecked((uint)1000397002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceClusterCullingShaderFeaturesHuawei = unchecked((uint)1000404000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceClusterCullingShaderPropertiesHuawei = unchecked((uint)1000404001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceClusterCullingShaderVrsFeaturesHuawei = unchecked((uint)1000404002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceBorderColorSwizzleFeaturesExt = unchecked((uint)1000411000),
+
+		/// <remarks></remarks>
+		SamplerBorderColorComponentMappingCreateInfoExt = unchecked((uint)1000411001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePageableDeviceLocalMemoryFeaturesExt = unchecked((uint)1000412000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance4FeaturesKhr = PhysicalDeviceMaintenance4Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance4PropertiesKhr = PhysicalDeviceMaintenance4Properties,
+
+		/// <remarks></remarks>
+		DeviceBufferMemoryRequirementsKhr = DeviceBufferMemoryRequirements,
+
+		/// <remarks></remarks>
+		DeviceImageMemoryRequirementsKhr = DeviceImageMemoryRequirements,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderCorePropertiesArm = unchecked((uint)1000415000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderSubgroupRotateFeaturesKhr = PhysicalDeviceShaderSubgroupRotateFeatures,
+
+		/// <remarks></remarks>
+		DeviceQueueShaderCoreControlCreateInfoArm = unchecked((uint)1000417000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSchedulingControlsFeaturesArm = unchecked((uint)1000417001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSchedulingControlsPropertiesArm = unchecked((uint)1000417002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageSlicedViewOf3DFeaturesExt = unchecked((uint)1000418000),
+
+		/// <remarks></remarks>
+		ImageViewSlicedCreateInfoExt = unchecked((uint)1000418001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorSetHostMappingFeaturesValve = unchecked((uint)1000420000),
+
+		/// <remarks></remarks>
+		DescriptorSetBindingReferenceValve = unchecked((uint)1000420001),
+
+		/// <remarks></remarks>
+		DescriptorSetLayoutHostMappingInfoValve = unchecked((uint)1000420002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthClampZeroOneFeaturesExt = unchecked((uint)1000421000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceNonSeamlessCubeMapFeaturesExt = unchecked((uint)1000422000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRenderPassStripedFeaturesArm = unchecked((uint)1000424000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRenderPassStripedPropertiesArm = unchecked((uint)1000424001),
+
+		/// <remarks></remarks>
+		RenderPassStripeBeginInfoArm = unchecked((uint)1000424002),
+
+		/// <remarks></remarks>
+		RenderPassStripeInfoArm = unchecked((uint)1000424003),
+
+		/// <remarks></remarks>
+		RenderPassStripeSubmitInfoArm = unchecked((uint)1000424004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMapOffsetFeaturesQcom = unchecked((uint)1000425000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceFragmentDensityMapOffsetPropertiesQcom = unchecked((uint)1000425001),
+
+		/// <remarks></remarks>
+		SubpassFragmentDensityMapOffsetEndInfoQcom = unchecked((uint)1000425002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCopyMemoryIndirectFeaturesNv = unchecked((uint)1000426000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCopyMemoryIndirectPropertiesNv = unchecked((uint)1000426001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryDecompressionFeaturesNv = unchecked((uint)1000427000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMemoryDecompressionPropertiesNv = unchecked((uint)1000427001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNv = unchecked((uint)1000428000),
+
+		/// <remarks></remarks>
+		ComputePipelineIndirectBufferInfoNv = unchecked((uint)1000428001),
+
+		/// <remarks></remarks>
+		PipelineIndirectDeviceAddressInfoNv = unchecked((uint)1000428002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLinearColorAttachmentFeaturesNv = unchecked((uint)1000430000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderMaximalReconvergenceFeaturesKhr = unchecked((uint)1000434000),
+
+		/// <remarks></remarks>
+		ApplicationParametersExt = unchecked((uint)1000435000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageCompressionControlSwapchainFeaturesExt = unchecked((uint)1000437000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageProcessingFeaturesQcom = unchecked((uint)1000440000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageProcessingPropertiesQcom = unchecked((uint)1000440001),
+
+		/// <remarks></remarks>
+		ImageViewSampleWeightCreateInfoQcom = unchecked((uint)1000440002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceNestedCommandBufferFeaturesExt = unchecked((uint)1000451000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceNestedCommandBufferPropertiesExt = unchecked((uint)1000451001),
+
+		/// <remarks></remarks>
+		ExternalMemoryAcquireUnmodifiedExt = unchecked((uint)1000453000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedDynamicState3FeaturesExt = unchecked((uint)1000455000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedDynamicState3PropertiesExt = unchecked((uint)1000455001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceSubpassMergeFeedbackFeaturesExt = unchecked((uint)1000458000),
+
+		/// <remarks></remarks>
+		RenderPassCreationControlExt = unchecked((uint)1000458001),
+
+		/// <remarks></remarks>
+		RenderPassCreationFeedbackCreateInfoExt = unchecked((uint)1000458002),
+
+		/// <remarks></remarks>
+		RenderPassSubpassFeedbackCreateInfoExt = unchecked((uint)1000458003),
+
+		/// <remarks></remarks>
+		DirectDriverLoadingInfoLunarg = unchecked((uint)1000459000),
+
+		/// <remarks></remarks>
+		DirectDriverLoadingListLunarg = unchecked((uint)1000459001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderModuleIdentifierFeaturesExt = unchecked((uint)1000462000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderModuleIdentifierPropertiesExt = unchecked((uint)1000462001),
+
+		/// <remarks></remarks>
+		PipelineShaderStageModuleIdentifierCreateInfoExt = unchecked((uint)1000462002),
+
+		/// <remarks></remarks>
+		ShaderModuleIdentifierExt = unchecked((uint)1000462003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesExt = unchecked((uint)1000342000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceOpticalFlowFeaturesNv = unchecked((uint)1000464000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceOpticalFlowPropertiesNv = unchecked((uint)1000464001),
+
+		/// <remarks></remarks>
+		OpticalFlowImageFormatInfoNv = unchecked((uint)1000464002),
+
+		/// <remarks></remarks>
+		OpticalFlowImageFormatPropertiesNv = unchecked((uint)1000464003),
+
+		/// <remarks></remarks>
+		OpticalFlowSessionCreateInfoNv = unchecked((uint)1000464004),
+
+		/// <remarks></remarks>
+		OpticalFlowExecuteInfoNv = unchecked((uint)1000464005),
+
+		/// <remarks></remarks>
+		OpticalFlowSessionCreatePrivateDataInfoNv = unchecked((uint)1000464010),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLegacyDitheringFeaturesExt = unchecked((uint)1000465000),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineProtectedAccessFeaturesExt = PhysicalDevicePipelineProtectedAccessFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalFormatResolveFeaturesAndroid = unchecked((uint)1000468000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalFormatResolvePropertiesAndroid = unchecked((uint)1000468001),
+
+		/// <remarks></remarks>
+		AndroidHardwareBufferFormatResolvePropertiesAndroid = unchecked((uint)1000468002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance5FeaturesKhr = PhysicalDeviceMaintenance5Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance5PropertiesKhr = PhysicalDeviceMaintenance5Properties,
+
+		/// <remarks></remarks>
+		RenderingAreaInfoKhr = RenderingAreaInfo,
+
+		/// <remarks></remarks>
+		DeviceImageSubresourceInfoKhr = DeviceImageSubresourceInfo,
+
+		/// <remarks></remarks>
+		SubresourceLayout2Khr = SubresourceLayout2,
+
+		/// <remarks></remarks>
+		ImageSubresource2Khr = ImageSubresource2,
+
+		/// <remarks></remarks>
+		PipelineCreateFlags2CreateInfoKhr = PipelineCreateFlags2CreateInfo,
+
+		/// <remarks></remarks>
+		BufferUsageFlags2CreateInfoKhr = BufferUsageFlags2CreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceAntiLagFeaturesAmd = unchecked((uint)1000476000),
+
+		/// <remarks></remarks>
+		AntiLagDataAmd = unchecked((uint)1000476001),
+
+		/// <remarks></remarks>
+		AntiLagPresentationInfoAmd = unchecked((uint)1000476002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingPositionFetchFeaturesKhr = unchecked((uint)1000481000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderObjectFeaturesExt = unchecked((uint)1000482000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderObjectPropertiesExt = unchecked((uint)1000482001),
+
+		/// <remarks></remarks>
+		ShaderCreateInfoExt = unchecked((uint)1000482002),
+
+		/// <remarks></remarks>
+		ShaderRequiredSubgroupSizeCreateInfoExt = PipelineShaderStageRequiredSubgroupSizeCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineBinaryFeaturesKhr = unchecked((uint)1000483000),
+
+		/// <remarks></remarks>
+		PipelineBinaryCreateInfoKhr = unchecked((uint)1000483001),
+
+		/// <remarks></remarks>
+		PipelineBinaryInfoKhr = unchecked((uint)1000483002),
+
+		/// <remarks></remarks>
+		PipelineBinaryKeyKhr = unchecked((uint)1000483003),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineBinaryPropertiesKhr = unchecked((uint)1000483004),
+
+		/// <remarks></remarks>
+		ReleaseCapturedPipelineDataInfoKhr = unchecked((uint)1000483005),
+
+		/// <remarks></remarks>
+		PipelineBinaryDataInfoKhr = unchecked((uint)1000483006),
+
+		/// <remarks></remarks>
+		PipelineCreateInfoKhr = unchecked((uint)1000483007),
+
+		/// <remarks></remarks>
+		DevicePipelineBinaryInternalCacheControlKhr = unchecked((uint)1000483008),
+
+		/// <remarks></remarks>
+		PipelineBinaryHandlesInfoKhr = unchecked((uint)1000483009),
+
+		/// <remarks></remarks>
+		PhysicalDeviceTilePropertiesFeaturesQcom = unchecked((uint)1000484000),
+
+		/// <remarks></remarks>
+		TilePropertiesQcom = unchecked((uint)1000484001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAmigoProfilingFeaturesSec = unchecked((uint)1000485000),
+
+		/// <remarks></remarks>
+		AmigoProfilingSubmitInfoSec = unchecked((uint)1000485001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewPerViewViewportsFeaturesQcom = unchecked((uint)1000488000),
+
+		/// <remarks></remarks>
+		SemaphoreSciSyncPoolCreateInfoNv = unchecked((uint)1000489000),
+
+		/// <remarks></remarks>
+		SemaphoreSciSyncCreateInfoNv = unchecked((uint)1000489001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalSciSync2FeaturesNv = unchecked((uint)1000489002),
+
+		/// <remarks></remarks>
+		DeviceSemaphoreSciSyncPoolReservationCreateInfoNv = unchecked((uint)1000489003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingInvocationReorderFeaturesNv = unchecked((uint)1000490000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingInvocationReorderPropertiesNv = unchecked((uint)1000490001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedSparseAddressSpaceFeaturesNv = unchecked((uint)1000492000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExtendedSparseAddressSpacePropertiesNv = unchecked((uint)1000492001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMutableDescriptorTypeFeaturesExt = unchecked((uint)1000351000),
+
+		/// <remarks></remarks>
+		MutableDescriptorTypeCreateInfoExt = unchecked((uint)1000351002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLegacyVertexAttributesFeaturesExt = unchecked((uint)1000495000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLegacyVertexAttributesPropertiesExt = unchecked((uint)1000495001),
+
+		/// <remarks></remarks>
+		LayerSettingsCreateInfoExt = unchecked((uint)1000496000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderCoreBuiltinsFeaturesArm = unchecked((uint)1000497000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderCoreBuiltinsPropertiesArm = unchecked((uint)1000497001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePipelineLibraryGroupHandlesFeaturesExt = unchecked((uint)1000498000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesExt = unchecked((uint)1000499000),
+
+		/// <remarks></remarks>
+		LatencySleepModeInfoNv = unchecked((uint)1000505000),
+
+		/// <remarks></remarks>
+		LatencySleepInfoNv = unchecked((uint)1000505001),
+
+		/// <remarks></remarks>
+		SetLatencyMarkerInfoNv = unchecked((uint)1000505002),
+
+		/// <remarks></remarks>
+		GetLatencyMarkerInfoNv = unchecked((uint)1000505003),
+
+		/// <remarks></remarks>
+		LatencyTimingsFrameReportNv = unchecked((uint)1000505004),
+
+		/// <remarks></remarks>
+		LatencySubmissionPresentIdNv = unchecked((uint)1000505005),
+
+		/// <remarks></remarks>
+		OutOfBandQueueTypeInfoNv = unchecked((uint)1000505006),
+
+		/// <remarks></remarks>
+		SwapchainLatencyCreateInfoNv = unchecked((uint)1000505007),
+
+		/// <remarks></remarks>
+		LatencySurfaceCapabilitiesNv = unchecked((uint)1000505008),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrixFeaturesKhr = unchecked((uint)1000506000),
+
+		/// <remarks></remarks>
+		CooperativeMatrixPropertiesKhr = unchecked((uint)1000506001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrixPropertiesKhr = unchecked((uint)1000506002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMultiviewPerViewRenderAreasFeaturesQcom = unchecked((uint)1000510000),
+
+		/// <remarks></remarks>
+		MultiviewPerViewRenderAreasRenderPassBeginInfoQcom = unchecked((uint)1000510001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceComputeShaderDerivativesFeaturesKhr = unchecked((uint)1000201000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceComputeShaderDerivativesPropertiesKhr = unchecked((uint)1000511000),
+
+		/// <remarks></remarks>
+		VideoDecodeAv1CapabilitiesKhr = unchecked((uint)1000512000),
+
+		/// <remarks></remarks>
+		VideoDecodeAv1PictureInfoKhr = unchecked((uint)1000512001),
+
+		/// <remarks></remarks>
+		VideoDecodeAv1ProfileInfoKhr = unchecked((uint)1000512003),
+
+		/// <remarks></remarks>
+		VideoDecodeAv1SessionParametersCreateInfoKhr = unchecked((uint)1000512004),
+
+		/// <remarks></remarks>
+		VideoDecodeAv1DpbSlotInfoKhr = unchecked((uint)1000512005),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1CapabilitiesKhr = unchecked((uint)1000513000),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1SessionParametersCreateInfoKhr = unchecked((uint)1000513001),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1PictureInfoKhr = unchecked((uint)1000513002),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1DpbSlotInfoKhr = unchecked((uint)1000513003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVideoEncodeAv1FeaturesKhr = unchecked((uint)1000513004),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1ProfileInfoKhr = unchecked((uint)1000513005),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1RateControlInfoKhr = unchecked((uint)1000513006),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1RateControlLayerInfoKhr = unchecked((uint)1000513007),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1QualityLevelPropertiesKhr = unchecked((uint)1000513008),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1SessionCreateInfoKhr = unchecked((uint)1000513009),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1GopRemainingFrameInfoKhr = unchecked((uint)1000513010),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVideoMaintenance1FeaturesKhr = unchecked((uint)1000515000),
+
+		/// <remarks></remarks>
+		VideoInlineQueryInfoKhr = unchecked((uint)1000515001),
+
+		/// <remarks></remarks>
+		PhysicalDevicePerStageDescriptorSetFeaturesNv = unchecked((uint)1000516000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageProcessing2FeaturesQcom = unchecked((uint)1000518000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageProcessing2PropertiesQcom = unchecked((uint)1000518001),
+
+		/// <remarks></remarks>
+		SamplerBlockMatchWindowCreateInfoQcom = unchecked((uint)1000518002),
+
+		/// <remarks></remarks>
+		SamplerCubicWeightsCreateInfoQcom = unchecked((uint)1000519000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCubicWeightsFeaturesQcom = unchecked((uint)1000519001),
+
+		/// <remarks></remarks>
+		BlitImageCubicWeightsInfoQcom = unchecked((uint)1000519002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceYcbcrDegammaFeaturesQcom = unchecked((uint)1000520000),
+
+		/// <remarks></remarks>
+		SamplerYcbcrConversionYcbcrDegammaCreateInfoQcom = unchecked((uint)1000520001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCubicClampFeaturesQcom = unchecked((uint)1000521000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesExt = unchecked((uint)1000524000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorPropertiesKhr = PhysicalDeviceVertexAttributeDivisorProperties,
+
+		/// <remarks></remarks>
+		PipelineVertexInputDivisorStateCreateInfoKhr = PipelineVertexInputDivisorStateCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeDivisorFeaturesKhr = PhysicalDeviceVertexAttributeDivisorFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderFloatControls2FeaturesKhr = PhysicalDeviceShaderFloatControls2Features,
+
+		/// <remarks></remarks>
+		ScreenBufferPropertiesQnx = unchecked((uint)1000529000),
+
+		/// <remarks></remarks>
+		ScreenBufferFormatPropertiesQnx = unchecked((uint)1000529001),
+
+		/// <remarks></remarks>
+		ImportScreenBufferInfoQnx = unchecked((uint)1000529002),
+
+		/// <remarks></remarks>
+		ExternalFormatQnx = unchecked((uint)1000529003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceExternalMemoryScreenBufferFeaturesQnx = unchecked((uint)1000529004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLayeredDriverPropertiesMsft = unchecked((uint)1000530000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceIndexTypeUint8FeaturesKhr = PhysicalDeviceIndexTypeUint8Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationFeaturesKhr = PhysicalDeviceLineRasterizationFeatures,
+
+		/// <remarks></remarks>
+		PipelineRasterizationLineStateCreateInfoKhr = PipelineRasterizationLineStateCreateInfo,
+
+		/// <remarks></remarks>
+		PhysicalDeviceLineRasterizationPropertiesKhr = PhysicalDeviceLineRasterizationProperties,
+
+		/// <remarks></remarks>
+		CalibratedTimestampInfoKhr = unchecked((uint)1000184000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderExpectAssumeFeaturesKhr = PhysicalDeviceShaderExpectAssumeFeatures,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance6FeaturesKhr = PhysicalDeviceMaintenance6Features,
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance6PropertiesKhr = PhysicalDeviceMaintenance6Properties,
+
+		/// <remarks></remarks>
+		BindMemoryStatusKhr = BindMemoryStatus,
+
+		/// <remarks></remarks>
+		BindDescriptorSetsInfoKhr = BindDescriptorSetsInfo,
+
+		/// <remarks></remarks>
+		PushConstantsInfoKhr = PushConstantsInfo,
+
+		/// <remarks></remarks>
+		PushDescriptorSetInfoKhr = PushDescriptorSetInfo,
+
+		/// <remarks></remarks>
+		PushDescriptorSetWithTemplateInfoKhr = PushDescriptorSetWithTemplateInfo,
+
+		/// <remarks></remarks>
+		SetDescriptorBufferOffsetsInfoExt = unchecked((uint)1000545007),
+
+		/// <remarks></remarks>
+		BindDescriptorBufferEmbeddedSamplersInfoExt = unchecked((uint)1000545008),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDescriptorPoolOverallocationFeaturesNv = unchecked((uint)1000546000),
+
+		/// <remarks></remarks>
+		DisplaySurfaceStereoCreateInfoNv = unchecked((uint)1000551000),
+
+		/// <remarks></remarks>
+		DisplayModeStereoPropertiesNv = unchecked((uint)1000551001),
+
+		/// <remarks></remarks>
+		VideoEncodeQuantizationMapCapabilitiesKhr = unchecked((uint)1000553000),
+
+		/// <remarks></remarks>
+		VideoFormatQuantizationMapPropertiesKhr = unchecked((uint)1000553001),
+
+		/// <remarks></remarks>
+		VideoEncodeQuantizationMapInfoKhr = unchecked((uint)1000553002),
+
+		/// <remarks></remarks>
+		VideoEncodeQuantizationMapSessionParametersCreateInfoKhr = unchecked((uint)1000553005),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVideoEncodeQuantizationMapFeaturesKhr = unchecked((uint)1000553009),
+
+		/// <remarks></remarks>
+		VideoEncodeH264QuantizationMapCapabilitiesKhr = unchecked((uint)1000553003),
+
+		/// <remarks></remarks>
+		VideoEncodeH265QuantizationMapCapabilitiesKhr = unchecked((uint)1000553004),
+
+		/// <remarks></remarks>
+		VideoFormatH265QuantizationMapPropertiesKhr = unchecked((uint)1000553006),
+
+		/// <remarks></remarks>
+		VideoEncodeAv1QuantizationMapCapabilitiesKhr = unchecked((uint)1000553007),
+
+		/// <remarks></remarks>
+		VideoFormatAv1QuantizationMapPropertiesKhr = unchecked((uint)1000553008),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRawAccessChainsFeaturesNv = unchecked((uint)1000555000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderRelaxedExtendedInstructionFeaturesKhr = unchecked((uint)1000558000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCommandBufferInheritanceFeaturesNv = unchecked((uint)1000559000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance7FeaturesKhr = unchecked((uint)1000562000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceMaintenance7PropertiesKhr = unchecked((uint)1000562001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLayeredApiPropertiesListKhr = unchecked((uint)1000562002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLayeredApiPropertiesKhr = unchecked((uint)1000562003),
+
+		/// <remarks></remarks>
+		PhysicalDeviceLayeredApiVulkanPropertiesKhr = unchecked((uint)1000562004),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderAtomicFloat16VectorFeaturesNv = unchecked((uint)1000563000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceShaderReplicatedCompositesFeaturesExt = unchecked((uint)1000564000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceRayTracingValidationFeaturesNv = unchecked((uint)1000568000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceGeneratedCommandsFeaturesExt = unchecked((uint)1000572000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDeviceGeneratedCommandsPropertiesExt = unchecked((uint)1000572001),
+
+		/// <remarks></remarks>
+		GeneratedCommandsMemoryRequirementsInfoExt = unchecked((uint)1000572002),
+
+		/// <remarks></remarks>
+		IndirectExecutionSetCreateInfoExt = unchecked((uint)1000572003),
+
+		/// <remarks></remarks>
+		GeneratedCommandsInfoExt = unchecked((uint)1000572004),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutCreateInfoExt = unchecked((uint)1000572006),
+
+		/// <remarks></remarks>
+		IndirectCommandsLayoutTokenExt = unchecked((uint)1000572007),
+
+		/// <remarks></remarks>
+		WriteIndirectExecutionSetPipelineExt = unchecked((uint)1000572008),
+
+		/// <remarks></remarks>
+		WriteIndirectExecutionSetShaderExt = unchecked((uint)1000572009),
+
+		/// <remarks></remarks>
+		IndirectExecutionSetPipelineInfoExt = unchecked((uint)1000572010),
+
+		/// <remarks></remarks>
+		IndirectExecutionSetShaderInfoExt = unchecked((uint)1000572011),
+
+		/// <remarks></remarks>
+		IndirectExecutionSetShaderLayoutInfoExt = unchecked((uint)1000572012),
+
+		/// <remarks></remarks>
+		GeneratedCommandsPipelineInfoExt = unchecked((uint)1000572013),
+
+		/// <remarks></remarks>
+		GeneratedCommandsShaderInfoExt = unchecked((uint)1000572014),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageAlignmentControlFeaturesMesa = unchecked((uint)1000575000),
+
+		/// <remarks></remarks>
+		PhysicalDeviceImageAlignmentControlPropertiesMesa = unchecked((uint)1000575001),
+
+		/// <remarks></remarks>
+		ImageAlignmentControlCreateInfoMesa = unchecked((uint)1000575002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceDepthClampControlFeaturesExt = unchecked((uint)1000582000),
+
+		/// <remarks></remarks>
+		PipelineViewportDepthClampControlCreateInfoExt = unchecked((uint)1000582001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceHdrVividFeaturesHuawei = unchecked((uint)1000590000),
+
+		/// <remarks></remarks>
+		HdrVividDynamicMetadataHuawei = unchecked((uint)1000590001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrix2FeaturesNv = unchecked((uint)1000593000),
+
+		/// <remarks></remarks>
+		CooperativeMatrixFlexibleDimensionsPropertiesNv = unchecked((uint)1000593001),
+
+		/// <remarks></remarks>
+		PhysicalDeviceCooperativeMatrix2PropertiesNv = unchecked((uint)1000593002),
+
+		/// <remarks></remarks>
+		PhysicalDeviceVertexAttributeRobustnessFeaturesExt = unchecked((uint)1000608000),
 	}
 }

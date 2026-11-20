@@ -15,27 +15,38 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoDecodeH264PictureInfoFlags
+	public unsafe struct StdVideoDecodeH264PictureInfoFlags
 	{
-		public uint FieldPicFlag;
-		public uint IsIntra;
-		public uint IdrPicFlag;
-		public uint BottomFieldFlag;
-		public uint IsReference;
-		public uint ComplementaryFieldPair;
-
-		public unsafe StdVideoDecodeH264PictureInfoFlags(uint fieldPicFlag = default, uint isIntra = default, uint idrPicFlag = default, uint bottomFieldFlag = default, uint isReference = default, uint complementaryFieldPair = default)
+		private uint _bitfield0;
+		public uint FieldPicFlag
 		{
-			FieldPicFlag = fieldPicFlag;
-			IsIntra = isIntra;
-			IdrPicFlag = idrPicFlag;
-			BottomFieldFlag = bottomFieldFlag;
-			IsReference = isReference;
-			ComplementaryFieldPair = complementaryFieldPair;
+		    get => (_bitfield0 >> 0) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 0)) | ((value & 1) << 0));
 		}
-
-
+		public uint IsIntra
+		{
+		    get => (_bitfield0 >> 1) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 1)) | ((value & 1) << 1));
+		}
+		public uint IdrPicFlag
+		{
+		    get => (_bitfield0 >> 2) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 2)) | ((value & 1) << 2));
+		}
+		public uint BottomFieldFlag
+		{
+		    get => (_bitfield0 >> 3) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 3)) | ((value & 1) << 3));
+		}
+		public uint IsReference
+		{
+		    get => (_bitfield0 >> 4) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 4)) | ((value & 1) << 4));
+		}
+		public uint ComplementaryFieldPair
+		{
+		    get => (_bitfield0 >> 5) & 1;
+		    set => _bitfield0 = (uint)((_bitfield0 & ~(1 << 5)) | ((value & 1) << 5));
+		}
 	}
-
 }

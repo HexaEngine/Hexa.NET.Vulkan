@@ -23,5 +23,26 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ResumingBit = unchecked((uint)4),
+
+		/// <remarks></remarks>
+		ContentsSecondaryCommandBuffersBitKhr = ContentsSecondaryCommandBuffersBit,
+
+		/// <remarks></remarks>
+		SuspendingBitKhr = SuspendingBit,
+
+		/// <remarks></remarks>
+		ResumingBitKhr = ResumingBit,
+
+		/// <remarks></remarks>
+		ContentsInlineBitExt = ContentsInlineBitKhr,
+
+		/// <remarks></remarks>
+		EnableLegacyDitheringBitExt = unchecked((uint)8),
+
+		/// <remarks></remarks>
+		Extension505BitExt = unchecked((uint)32),
+
+		/// <remarks></remarks>
+		ContentsInlineBitKhr = unchecked((uint)16),
 	}
 }

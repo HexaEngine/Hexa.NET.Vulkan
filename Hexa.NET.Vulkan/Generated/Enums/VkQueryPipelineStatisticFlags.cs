@@ -47,5 +47,14 @@ namespace Hexa.NET.Vulkan
 
 		/// <remarks></remarks>
 		ComputeShaderInvocationsBit = unchecked((uint)1024),
+
+		/// <remarks></remarks>
+		TaskShaderInvocationsBitExt = unchecked((uint)2048),
+
+		/// <remarks></remarks>
+		MeshShaderInvocationsBitExt = unchecked((uint)4096),
+
+		/// <remarks></remarks>
+		ClusterCullingShaderInvocationsBitHuawei = unchecked((uint)8192),
 	}
 }

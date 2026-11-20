@@ -15,8 +15,7 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH264PictureParameterSet
+	public unsafe struct StdVideoH264PictureParameterSet
 	{
 		public StdVideoH264PpsFlags Flags;
 		public byte SeqParameterSetId;
@@ -28,24 +27,6 @@ namespace Hexa.NET.Vulkan
 		public sbyte PicInitQsMinus26;
 		public sbyte ChromaQpIndexOffset;
 		public sbyte SecondChromaQpIndexOffset;
-		public unsafe StdVideoH264ScalingLists* PScalingLists;
-
-		public unsafe StdVideoH264PictureParameterSet(StdVideoH264PpsFlags flags = default, byte seqParameterSetId = default, byte picParameterSetId = default, byte numRefIdxl0DefaultActiveminus1 = default, byte numRefIdxl1DefaultActiveminus1 = default, StdVideoH264WeightedBipredIdc weightedBipredIdc = default, sbyte picInitQpminus26 = default, sbyte picInitQsminus26 = default, sbyte chromaQpIndexOffset = default, sbyte secondChromaQpIndexOffset = default, StdVideoH264ScalingLists* pScalingLists = default)
-		{
-			Flags = flags;
-			SeqParameterSetId = seqParameterSetId;
-			PicParameterSetId = picParameterSetId;
-			NumRefIdxL0DefaultActiveMinus1 = numRefIdxl0DefaultActiveminus1;
-			NumRefIdxL1DefaultActiveMinus1 = numRefIdxl1DefaultActiveminus1;
-			WeightedBipredIdc = weightedBipredIdc;
-			PicInitQpMinus26 = picInitQpminus26;
-			PicInitQsMinus26 = picInitQsminus26;
-			ChromaQpIndexOffset = chromaQpIndexOffset;
-			SecondChromaQpIndexOffset = secondChromaQpIndexOffset;
-			PScalingLists = pScalingLists;
-		}
-
-
+		public StdVideoH264ScalingLists* PScalingLists;
 	}
-
 }

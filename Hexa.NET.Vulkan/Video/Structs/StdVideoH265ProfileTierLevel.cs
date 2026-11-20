@@ -15,21 +15,10 @@ using HexaGen.Runtime;
 
 namespace Hexa.NET.Vulkan
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public partial struct StdVideoH265ProfileTierLevel
+	public unsafe struct StdVideoH265ProfileTierLevel
 	{
 		public StdVideoH265ProfileTierLevelFlags Flags;
 		public StdVideoH265ProfileIdc GeneralProfileIdc;
 		public StdVideoH265LevelIdc GeneralLevelIdc;
-
-		public unsafe StdVideoH265ProfileTierLevel(StdVideoH265ProfileTierLevelFlags flags = default, StdVideoH265ProfileIdc generalProfileIdc = default, StdVideoH265LevelIdc generalLevelIdc = default)
-		{
-			Flags = flags;
-			GeneralProfileIdc = generalProfileIdc;
-			GeneralLevelIdc = generalLevelIdc;
-		}
-
-
 	}
-
 }
